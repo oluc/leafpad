@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(Leafpad, 0.7.6, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.7.7, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AC_CONFIG_SRCDIR([src/leafpad.h])
 AM_CONFIG_HEADER([config.h])
@@ -23,7 +23,7 @@ AM_PATH_GTK_2_0
 #AC_CHECK_FUNCS([setenv strcasecmp strncasecmp strstr])
 
 # gettext
-ALL_LINGUAS="de es fr ja ru sv zh_CN zh_TW"
+ALL_LINGUAS="cs de es fr ja ru sv zh_CN zh_TW"
 AM_GNU_GETTEXT([external])
 
 AC_CONFIG_FILES([Makefile

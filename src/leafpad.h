@@ -43,6 +43,7 @@
 #include "font.h"
 #include "encoding.h"
 #include "utils.h"
+#include "keyevent.h"
 #include "undo.h"
 #include "indent.h"
 #include "linenum.h"

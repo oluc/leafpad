@@ -1,5 +1,5 @@
 /*
- *  indent.h
+ *  keyevent.h
  *  This file is part of Leafpad
  *
  *  Copyright (C) 2004 Tarot Osuji
@@ -19,16 +19,11 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _INDENT_H
-#define _INDENT_H
+#ifndef _KEYEVENT_H
+#define _KEYEVENT_H
 
-void indent_set_state(gboolean state);
-gboolean indent_get_state(void);
-void indent_real(GtkWidget *text_view);
-void indent_refresh_tab_width(GtkWidget *text_view);
-void indent_toggle_tab_width(GtkWidget *text_view);
-void indent_multi_line_indent(GtkTextBuffer *buffer);
-void indent_multi_line_unindent(GtkTextBuffer *buffer);
-//void indent_init(GtkWidget *text_view);
+guint keyevent_getval(void);
+void keyevent_setval(guint val);
+void keyevent_init(GtkWidget *text_view);
 
-#endif /* _INDENT_H */
+#endif /* _KEYEVENT_H */

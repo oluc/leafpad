@@ -1,15 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
+# German translation of Leafpad
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the Leafpad package.
 # Sebastian Stach <sebsta@t-online.de>, 2004.
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.7.4\n"
+"Project-Id-Version: Leafpad 0.7.6\n"
 "POT-Creation-Date: 2004-11-09 19:58+0900\n"
-"PO-Revision-Date: 2004-10-27 16:43+0200\n"
-"Last-Translator: Sebastian Stach <sebsta@t-online.de>\n"
-"Language-Team: de_DE\n"
+"PO-Revision-Date: 2004-11-14 18:33+0100\n"
+"Last-Translator: Ruediger Arp <ruediger@gmx.net>\n"
+"Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,7 +18,7 @@ msgstr ""
 #: src/callback.c:33
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Speichere Anderungen unter '%s'?"
+msgstr "Änderungen an '%s' speichern?"
 
 #: src/callback.c:268
 msgid "GTK+ based simple text editor"
@@ -67,7 +67,7 @@ msgstr "Der Zeichensatz kann nicht nach '%s' konvertiert werden"
 
 #: src/file.c:174
 msgid "Can't open file to write"
-msgstr "Die Datei kann nicht zum Schreiben geoffnet werden"
+msgstr "Die Datei kann nicht zum Schreiben geöffnet werden"
 
 #: src/file.c:179
 msgid "Can't write file"
@@ -93,11 +93,11 @@ msgstr "_Zeichensatz: "
 #: src/file.c:276
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' wird nicht unterstutzt"
+msgstr "'%s' wird nicht unterstützt"
 
 #: src/file.c:350
 msgid "Open"
-msgstr "Offnen"
+msgstr "Öffnen"
 
 #: src/file.c:352
 msgid "Save As"
@@ -114,7 +114,7 @@ msgstr "Automatisch erkennen"
 #: src/file.c:472
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' existiert bereits. Uberschreiben?"
+msgstr "'%s' existiert bereits. Überschreiben?"
 
 #: src/font.c:49
 msgid "Font"
@@ -130,7 +130,7 @@ msgstr "/Datei/_Neu"
 
 #: src/menu.c:41
 msgid "/File/_Open..."
-msgstr "/Datei/O_ffnen"
+msgstr "/Datei/Ö_ffnen"
 
 #: src/menu.c:43
 msgid "/File/_Save"
@@ -150,7 +150,7 @@ msgstr "/_Bearbeiten"
 
 #: src/menu.c:59
 msgid "/Edit/_Undo"
-msgstr "/Bearbeiten/_Ruckgangig"
+msgstr "/Bearbeiten/_Rückgängig"
 
 #: src/menu.c:61
 msgid "/Edit/_Redo"
@@ -166,11 +166,11 @@ msgstr "/Bearbeiten/_Kopieren"
 
 #: src/menu.c:69
 msgid "/Edit/_Paste"
-msgstr "/Bearbeiten/E_infugen"
+msgstr "/Bearbeiten/E_infügen"
 
 #: src/menu.c:71
 msgid "/Edit/_Delete"
-msgstr "/Bearbeiten/_Loschen"
+msgstr "/Bearbeiten/_Löschen"
 
 #: src/menu.c:75
 msgid "/Edit/Select _All"
@@ -190,7 +190,7 @@ msgstr "/Suchen/_Weitersuchen"
 
 #: src/menu.c:83
 msgid "/Search/Find _Previous"
-msgstr "/Suchen/_Ruckwarts suchen"
+msgstr "/Suchen/_Rückwärts suchen"
 
 #: src/menu.c:85
 msgid "/Search/_Replace..."
@@ -259,7 +259,7 @@ msgstr "_Ersetzen durch: "
 
 #: src/search.c:222
 msgid "_Match case"
-msgstr "_Gros-/Kleinschreibung berucksichtigen"
+msgstr "_Groß-/Kleinschreibung berücksichtigen"
 
 #: src/search.c:227
 msgid "Replace _all at once"

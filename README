@@ -18,8 +18,8 @@ features:
     * Word Wrap
     * Character coding selection (some preferred MIME types)
     * Auto character coding detection (UTF-8 and some codesets)
-    * Manual codeset application
-    * Infinite Undo/Redo
+    * Manual codeset setting
+    * Infinite Undo/Redo by word
     * Auto Indent
     * Multi-line Indent
     * Display line numbers

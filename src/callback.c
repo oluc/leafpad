@@ -253,7 +253,7 @@ void cb_option_auto_indent(StructData *sd, guint action, GtkWidget *widget)
 	ifactory = gtk_item_factory_from_widget(widget);
 	state = gtk_check_menu_item_get_active(
 		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory, "/Options/Auto Indent")));
-	indent_change_state(state);
+	indent_set_state(state);
 }
 
 void cb_help_about(StructData *sd)

@@ -133,6 +133,8 @@ void run_dialog_about(GtkWidget *window, const gchar *name, const gchar *version
 	if (!env)
 		env = g_getenv("LANG");
 	if (env) {
+		if (strncmp(env, "cs", 2) == 0)
+			translator = "2004 Petr Vyslou&#382;il";
 		if (strncmp(env, "de", 2) == 0)
 			translator = "2004 Sebastian Stach";
 		if (strncmp(env, "es", 2) == 0)

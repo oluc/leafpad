@@ -122,8 +122,6 @@ static void create_new_process(gchar *argv)
 	load_config_file(sd);
 	sd->mainwin = create_main_window(sd);
 	gtk_widget_show_all(sd->mainwin->window);
-//	dnd_init(sd->mainwin->window);
-	dnd_init(sd->mainwin->textview);
 	
 	set_text_font_by_name(sd->mainwin->textview, sd->conf.fontname);
 	ifactory = gtk_item_factory_from_widget(sd->mainwin->menubar);
@@ -133,7 +131,7 @@ static void create_new_process(gchar *argv)
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
 		gtk_item_factory_get_widget(ifactory, "<main>/Options/Line Numbers")),
 		sd->conf.linenumbers);
-	indent_init(sd->mainwin->textview);
+	indent_refresh_tab_width(sd->mainwin->textview);
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
 		gtk_item_factory_get_widget(ifactory, "<main>/Options/Auto Indent")),
 		sd->conf.autoindent);
@@ -157,14 +155,18 @@ static void create_new_process(gchar *argv)
 	} else
 		cb_file_new(sd);
 	
+//	dnd_init(sd->mainwin->window);
+	dnd_init(sd->mainwin->textview);
+	keyevent_init(sd->mainwin->textview);
+	
 	gtk_main();
 	
 	save_config_file(sd);
-	gtk_widget_destroy(sd->mainwin->window);
+/*	gtk_widget_destroy(sd->mainwin->window);
 	g_free(sd->fi);
 	g_free(sd->mainwin);
 	g_free(sd->conf.fontname);
-	g_free(sd);
+	g_free(sd); */
 }
 
 gint main(gint argc, gchar *argv[])

@@ -21,6 +21,7 @@
 
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
+#include "keyevent.h"
 #include "undo.h"
 
 #define DV(x)
@@ -34,17 +35,20 @@ typedef struct {
 } UndoInfo;
 
 enum {
-	DEL = 0,
-	BS,
+	BS = 0,
+	DEL,
 	INS
 };
 
 static GList *undo_list = NULL;
 static GList *redo_list = NULL;
+static GString *undo_gstr;
+static UndoInfo *ui_tmp;
 static gint step_modif;
 static GtkWidget *view;
 static gboolean overwrite_mode = FALSE;
-static guint prev_keyval = 0;//, keyval = 0;
+static guint keyval;
+static guint prev_keyval;//, keyevent_setval(0);
 
 static void cb_toggle_overwrite(void)
 {
@@ -59,7 +63,6 @@ static void undo_clear_undo_info(void)
 		g_free(undo_list->data);
 		undo_list = g_list_delete_link(undo_list, undo_list);
 	}
-//DV(g_print("undo_cb: Undo list cleared by %d\n", g_list_length(undo_list)));
 }
 
 static void undo_clear_redo_info(void)
@@ -69,179 +72,137 @@ static void undo_clear_redo_info(void)
 		g_free(redo_list->data);
 		redo_list = g_list_delete_link(redo_list, redo_list);
 	}
-//DV(g_print("undo_cb: Redo list cleared by %d\n", g_list_length(redo_list)));
 }
 
-static void undo_append_undo_info(GtkTextBuffer *buffer, gint command, gint start, gint end, gboolean seq)
+static void undo_append_undo_info(GtkTextBuffer *buffer, gint command, gint start, gint end, gchar *str)
 {
-	GtkTextIter start_iter, end_iter;
 	UndoInfo *ui = g_malloc(sizeof(UndoInfo));
 	
-	gtk_text_buffer_get_iter_at_offset(buffer, &start_iter, start);
-	gtk_text_buffer_get_iter_at_offset(buffer, &end_iter, end);
 	ui->command = command;
 	ui->start = start;
 	ui->end = end;
-	ui->seq = seq;
-	ui->str = gtk_text_buffer_get_text(buffer, &start_iter, &end_iter, FALSE);
+	ui->seq = FALSE;
+	ui->str = str;
 	undo_list = g_list_append(undo_list, ui);
-DV(g_print("undo_cb: %d %s (%d-%d) %d\n", command, ui->str, start, end, seq));
-	undo_clear_redo_info();
+DV(g_print("undo_cb: %d %s (%d-%d)\n", command, str, start, end));
 }
-/*
-static void cb_delete_range(GtkTextBuffer *buffer, GdkEventKey *event)
+
+static void undo_create_undo_info(GtkTextBuffer *buffer, gint command, gint start, gint end)
 {
 	GtkTextIter start_iter, end_iter;
-	gint start, end;
-	gboolean seq = FALSE;
+	gboolean seq_flag = FALSE;
+	gchar *str;
 	
-	gtk_text_buffer_get_selection_bounds(buffer, &start_iter, &end_iter);
-	start = gtk_text_iter_get_offset(&start_iter);
-	end = gtk_text_iter_get_offset(&end_iter);
-	if (start == end) {
-		switch (event->keyval) {
-		case GDK_BackSpace:
-		case GDK_Delete:
-			--start;
-g_print("delkey: BS or DEL\n");		
-			break;
-		default:
-			if (overwrite_mode) {
-				++end;
-				seq = TRUE;
-			} else
-				--start;
+	gtk_text_buffer_get_iter_at_offset(buffer, &start_iter, start);
+	gtk_text_buffer_get_iter_at_offset(buffer, &end_iter, end);
+	str = gtk_text_buffer_get_text(buffer, &start_iter, &end_iter, FALSE);
+	
+	if (undo_gstr->len) {
+		if (end - start == 1 && command == ui_tmp->command) {
+			switch (keyval) {
+			case GDK_BackSpace:
+				if (end == ui_tmp->start)
+					seq_flag = TRUE;
+				break;
+			case GDK_Delete:
+				if (start == ui_tmp->start)
+					seq_flag = TRUE;
+				break;
+		/*	case GDK_Return:
+				if (start == ui_tmp->end) {
+					if (prev_keyval == GDK_Return)
+						if (!g_strstr_len(undo_gstr->str, 1, "\n"))
+							break;
+					seq_flag = TRUE;
+				}
+				break; */
+			case GDK_Tab:
+			case GDK_space:
+				if (start == ui_tmp->end)
+					seq_flag = TRUE;
+				break;
+			default:
+				if (start == ui_tmp->end)
+					if (keyval && keyval < 0xF000)
+						switch (prev_keyval) {
+						case GDK_Return:
+						case GDK_Tab:
+						case GDK_space:
+							break;
+						default:
+							seq_flag = TRUE;
+						}
+			}
 		}
+		if (seq_flag) {
+			switch (command) {
+			case BS:
+				undo_gstr = g_string_prepend(undo_gstr, str);
+				ui_tmp->start--;
+				break;
+			default:
+				undo_gstr = g_string_append(undo_gstr, str);
+				ui_tmp->end++;
+			}
+			undo_clear_redo_info();
+			prev_keyval = keyval;
+			keyevent_setval(0);
+			return;
+		}
+		undo_append_undo_info(buffer, ui_tmp->command, ui_tmp->start, ui_tmp->end, g_strdup(undo_gstr->str));
+		undo_gstr = g_string_erase(undo_gstr, 0, -1);
 	}
-	undo_append_undo_info(buffer, DELETE, start, end, seq);
+	
+	if (end - start == 1 &&
+		((keyval && keyval < 0xF000) ||
+		  keyval == GDK_BackSpace || keyval == GDK_Delete || keyval == GDK_Tab)) {
+		ui_tmp->command = command;
+		ui_tmp->start = start;
+		ui_tmp->end = end;
+		g_string_printf(undo_gstr, str);
+	} else 
+		undo_append_undo_info(buffer, command, start, end, g_strdup(str));
+	
+	undo_clear_redo_info();
+	prev_keyval = keyval;
+	keyevent_setval(0);
 }
-*/
+
 static void cb_delete_range(GtkTextBuffer *buffer, GtkTextIter *start_iter, GtkTextIter *end_iter)
 {
 	gint start, end;
 	gint command;
-//	gboolean seq = FALSE;
 	
+	keyval = keyevent_getval();
 	start = gtk_text_iter_get_offset(start_iter);
 	end = gtk_text_iter_get_offset(end_iter);
+	
+DV(g_print("delete-range: keyval = 0x%x\n", keyval));
+	
 	if (!keyval && prev_keyval)
 		undo_set_sequency(TRUE);
 	if (keyval == GDK_BackSpace)
 		command = BS;
 	else
 		command = DEL;
-	undo_append_undo_info(buffer, command, start, end, FALSE);//seq);
-	
-DV(g_print("delete-range: keyval = %d\n", keyval));
-	prev_keyval = keyval;
-	keyval = 0;
+	undo_create_undo_info(buffer, command, start, end);
 }
 
 static void cb_insert_text(GtkTextBuffer *buffer, GtkTextIter *iter, gchar *str)
 {
-	gint start, end;/*, len;
-	static gboolean after = FALSE, block = FALSE;
+	gint start, end;
 	
-	if (!after) {
-		after = TRUE;
-		if (overwrite_mode) {
-			len = g_utf8_strlen(str, -1);
-			if (len > 1) {
-				GtkTextIter *ovw_iter = gtk_text_iter_copy(iter);
-				
-				block = TRUE;
-				g_signal_handlers_block_by_func(G_OBJECT(view), G_CALLBACK(cb_toggle_overwrite), NULL);
-				g_signal_emit_by_name(G_OBJECT(view), "toggle-overwrite");
-				gtk_text_iter_forward_chars(ovw_iter, len - 1);
-				gtk_text_buffer_delete(buffer, iter, ovw_iter);
-				gtk_text_iter_free(ovw_iter);
-			}
-		}
-		return;
-	}
-	after = FALSE;
-	if (block) {
-		g_signal_emit_by_name(G_OBJECT(view), "toggle-overwrite");
-		g_signal_handlers_unblock_by_func(G_OBJECT(view), G_CALLBACK(cb_toggle_overwrite), NULL);
-		block = FALSE;
-	}
-*/	
+	keyval = keyevent_getval();
 	end = gtk_text_iter_get_offset(iter);
 	start = end - g_utf8_strlen(str, -1);
+	
+DV(g_print("insert-text: keyval = 0x%x\n", keyevent_getval()));
+	
 	if (!keyval && prev_keyval)
 		undo_set_sequency(TRUE);
-	undo_append_undo_info(buffer, INS, start, end, FALSE);
-	
-DV(g_print("insert-text: keyval = %d\n", keyval));
-	prev_keyval = keyval;
-	keyval = 0;
+	undo_create_undo_info(buffer, INS, start, end);
 }
-/* v3
-static void cb_insert_text(GtkTextBuffer *buffer, GtkTextIter *iter, gchar *str, gint len)
-{
-	static gint start, end;
-	static gboolean after = FALSE;
-	
-	if (!after) {
-		after = TRUE;
-		start = gtk_text_iter_get_offset(iter);
-DV(g_print("insert-text: len = %d\n", len));
-		return;
-	}
-	after = FALSE;
-	end = gtk_text_iter_get_offset(iter);
-	if (!keyval && prev_keyval)
-		undo_set_sequency(TRUE);
-	undo_append_undo_info(buffer, INS, start, end, FALSE);
-	
-DV(g_print("insert-text: keyval = %d\n", keyval));
-	prev_keyval = keyval;
-	keyval = 0;
-}
-*//* v2 (cannot manage xim input)
-static void cb_insert_text(GtkTextBuffer *buffer, GtkTextIter *iter, gchar *str, gint len)
-{
-	gint start, end;
-//	gboolean seq = FALSE;
-	
-//	start = gtk_text_iter_get_offset(iter);
-//	end = start + len;
-	end = gtk_text_iter_get_offset(iter);
-	start = end - len;
-	if (!keyval && prev_keyval)
-//		seq = TRUE;
-//	if (!keyval)
-		undo_set_sequency(TRUE);
-	undo_append_undo_info(buffer, INS, start, end, FALSE);//seq);
-	
-DV(g_print("insert-text: keyval = %d\n", keyval));
-	prev_keyval = keyval;
-	keyval = 0;
-}
-*//* v1
-static void cb_insert_text(GtkTextBuffer *buffer)
-{
-	GtkTextIter start_iter, end_iter;
-	gboolean seq = FALSE;
-	static gint start, end;
-	static gboolean after = FALSE;
-	
-	gtk_text_buffer_get_selection_bounds(buffer, &start_iter, &end_iter);
-	if (!after) {
-		start = gtk_text_iter_get_offset(&start_iter);
-		after = TRUE;
-	} else {
-g_print("insert-text\n");
-		end = gtk_text_iter_get_offset(&start_iter);
-		after = FALSE;
-		if (gtk_text_iter_compare(&start_iter, &end_iter) != 0)
-			seq = TRUE; // for selection bound over write
-		undo_append_undo_info(buffer, INSERT, start, end, seq);
-	}
-	g_print("keyval: %d\n", keyval);
-	keyval = 0;
-}
-*/
+
 static void set_main_window_title_with_asterisk(gboolean flag)
 {
 	const gchar *old_title =
@@ -258,46 +219,10 @@ static void set_main_window_title_with_asterisk(gboolean flag)
 	gtk_window_set_title(GTK_WINDOW(gtk_widget_get_toplevel(view)), new_title);
 	g_free(new_title);
 }
-/*
-static void set_main_window_title_toggle_asterisk(void)
-{
-	const gchar *old_title =
-		gtk_window_get_title(GTK_WINDOW(gtk_widget_get_toplevel(view)));
-	gchar *new_title;
-	
-	if (g_str_has_prefix(old_title, "*")) {
-		GString *gstr = g_string_new(old_title);
-		gstr = g_string_erase(gstr, 0, 1);
-		new_title = g_string_free(gstr, FALSE);
-	} else {
-		new_title = g_strconcat("*", old_title, NULL);
-	}
-	gtk_window_set_title(GTK_WINDOW(gtk_widget_get_toplevel(view)), new_title);
-	g_free(new_title);
-}
-*/
+
 static void cb_modified_changed(void)
 {
 	set_main_window_title_with_asterisk(TRUE);
-}
-
-static gboolean cb_key_press_event(GtkWidget *widget, GdkEventKey *event)
-{
-/*	switch (event->keyval) {
-	case GDK_BackSpace:
-		g_print("BS pushed\n");
-		break;
-	case GDK_Delete:
-		g_print("DEL pushed\n");
-		break;
-	default:
-		g_print("any other key pushed\n");
-	} */
-//	if (keyval == GDK_Return) g_print("[Return]");
-//	g_print("cb_key_press_event: %d\n", keyval);
-	if (event->keyval) keyval = event->keyval;
-	
-	return FALSE;
 }
 
 void undo_reset_step_modif(void)
@@ -320,10 +245,6 @@ static gint undo_connect_signal(GtkTextBuffer *buffer)
 {
 	g_signal_connect(G_OBJECT(buffer), "delete-range",
 		G_CALLBACK(cb_delete_range), buffer);
-//	g_signal_connect(G_OBJECT(buffer), "insert-text",
-//		G_CALLBACK(cb_insert_text), buffer);
-//	g_signal_connect_after(G_OBJECT(buffer), "delete-range",
-//		G_CALLBACK(cb_delete_range), buffer);
 	g_signal_connect_after(G_OBJECT(buffer), "insert-text",
 		G_CALLBACK(cb_insert_text), buffer);
 	return 
@@ -333,7 +254,7 @@ static gint undo_connect_signal(GtkTextBuffer *buffer)
 
 void undo_init(GtkWidget *textview, GtkTextBuffer *buffer)
 {
-	static guint flag = 0;
+	static guint init_flag = 0; // TODO: divide to undo_clear()
 	
 	if (undo_list)
 		undo_clear_undo_info();
@@ -342,15 +263,18 @@ void undo_init(GtkWidget *textview, GtkTextBuffer *buffer)
 	undo_reset_step_modif();
 DV(g_print("undo_init: list reseted\n"));
 	
-	if (!flag) {
-		g_signal_connect(G_OBJECT(textview), "key-press-event",
-			G_CALLBACK(cb_key_press_event), NULL);
+	if (!init_flag) {
 		g_signal_connect(G_OBJECT(textview), "toggle-overwrite",
 			G_CALLBACK(cb_toggle_overwrite), NULL);
 		view = textview;
-		flag = undo_connect_signal(buffer);
-		keyval = 0;
+		init_flag = undo_connect_signal(buffer);
+		keyevent_setval(0);
+		ui_tmp = g_malloc(sizeof(UndoInfo));
+		//ui_tmp->str = g_strdup("");
+		undo_gstr = g_string_new("");
 	}
+	ui_tmp->command = INS;
+	undo_gstr = g_string_erase(undo_gstr, 0, -1);
 }
 
 gint undo_block_signal(GtkTextBuffer *buffer)
@@ -385,6 +309,7 @@ void undo_set_sequency(gboolean seq)
 		ui = g_list_last(undo_list)->data;
 		ui->seq = seq;
 	}
+DV(g_print("<undo_set_sequency: %d>\n", seq));	
 }
 
 gboolean undo_undo(GtkTextBuffer *buffer)
@@ -392,6 +317,10 @@ gboolean undo_undo(GtkTextBuffer *buffer)
 	GtkTextIter start_iter, end_iter;
 	UndoInfo *ui;
 	
+	if (undo_gstr->len) {
+		undo_append_undo_info(buffer, ui_tmp->command, ui_tmp->start, ui_tmp->end, g_strdup(undo_gstr->str));
+		undo_gstr = g_string_erase(undo_gstr, 0, -1);
+	}
 	if (g_list_length(undo_list)) {
 		undo_block_signal(buffer);
 		ui = g_list_last(undo_list)->data;

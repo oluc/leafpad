@@ -110,6 +110,7 @@ leafpad_SOURCES = \
 	window.h window.c \
 	menu.h menu.c \
 	callback.h callback.c \
+	keyevent.h keyevent.c \
 	dnd.h dnd.c \
 	dialog.h dialog.c \
 	file.h file.c \
@@ -140,12 +141,12 @@ PROGRAMS = $(bin_PROGRAMS)
 
 am_leafpad_OBJECTS = leafpad-main.$(OBJEXT) leafpad-window.$(OBJEXT) \
 	leafpad-menu.$(OBJEXT) leafpad-callback.$(OBJEXT) \
-	leafpad-dnd.$(OBJEXT) leafpad-dialog.$(OBJEXT) \
-	leafpad-file.$(OBJEXT) leafpad-encoding.$(OBJEXT) \
-	leafpad-search.$(OBJEXT) leafpad-font.$(OBJEXT) \
-	leafpad-utils.$(OBJEXT) leafpad-undo.$(OBJEXT) \
-	leafpad-indent.$(OBJEXT) leafpad-linenum.$(OBJEXT) \
-	leafpad-gtksourceiter.$(OBJEXT)
+	leafpad-keyevent.$(OBJEXT) leafpad-dnd.$(OBJEXT) \
+	leafpad-dialog.$(OBJEXT) leafpad-file.$(OBJEXT) \
+	leafpad-encoding.$(OBJEXT) leafpad-search.$(OBJEXT) \
+	leafpad-font.$(OBJEXT) leafpad-utils.$(OBJEXT) \
+	leafpad-undo.$(OBJEXT) leafpad-indent.$(OBJEXT) \
+	leafpad-linenum.$(OBJEXT) leafpad-gtksourceiter.$(OBJEXT)
 leafpad_OBJECTS = $(am_leafpad_OBJECTS)
 leafpad_DEPENDENCIES =
 leafpad_LDFLAGS =
@@ -165,6 +166,7 @@ am__depfiles_maybe = depfiles
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-font.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-gtksourceiter.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-indent.Po \
+@AMDEP_TRUE@	./$(DEPDIR)/leafpad-keyevent.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-linenum.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-main.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-menu.Po \
@@ -218,6 +220,7 @@ leafpad-main.$(OBJEXT): main.c
 leafpad-window.$(OBJEXT): window.c
 leafpad-menu.$(OBJEXT): menu.c
 leafpad-callback.$(OBJEXT): callback.c
+leafpad-keyevent.$(OBJEXT): keyevent.c
 leafpad-dnd.$(OBJEXT): dnd.c
 leafpad-dialog.$(OBJEXT): dialog.c
 leafpad-file.$(OBJEXT): file.c
@@ -247,6 +250,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-font.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-gtksourceiter.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-indent.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-keyevent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-linenum.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-menu.Po@am__quote@
@@ -317,6 +321,18 @@ leafpad-callback.obj: callback.c
 @AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-callback.Po' tmpdepfile='$(DEPDIR)/leafpad-callback.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-callback.obj `cygpath -w callback.c`
+
+leafpad-keyevent.o: keyevent.c
+@AMDEP_TRUE@	source='keyevent.c' object='leafpad-keyevent.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-keyevent.Po' tmpdepfile='$(DEPDIR)/leafpad-keyevent.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-keyevent.o `test -f 'keyevent.c' || echo '$(srcdir)/'`keyevent.c
+
+leafpad-keyevent.obj: keyevent.c
+@AMDEP_TRUE@	source='keyevent.c' object='leafpad-keyevent.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-keyevent.Po' tmpdepfile='$(DEPDIR)/leafpad-keyevent.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-keyevent.obj `cygpath -w keyevent.c`
 
 leafpad-dnd.o: dnd.c
 @AMDEP_TRUE@	source='dnd.c' object='leafpad-dnd.o' libtool=no @AMDEPBACKSLASH@

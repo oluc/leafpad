@@ -22,15 +22,19 @@
 #include <string.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
-#include "undo.h"
-#include "indent.h"
+#include <undo.h>
 
 static gboolean auto_indent = FALSE;
 static gint current_tab_width = 8;
 
-void indent_change_state(gboolean state)
+void indent_set_state(gboolean state)
 {
 	auto_indent = state;
+}
+
+gboolean indent_get_state(void)
+{
+	return auto_indent;
 }
 
 static gchar *compute_indentation(GtkTextBuffer *buffer, gint line) // from gedit
@@ -52,7 +56,7 @@ static gchar *compute_indentation(GtkTextBuffer *buffer, gint line) // from gedi
 	return gtk_text_iter_get_text(&start_iter, &end_iter);
 }
 
-static void indent_real(GtkWidget *text_view)
+void indent_real(GtkWidget *text_view)
 {
 	GtkTextIter iter;
 	gchar *ind, *str;
@@ -105,7 +109,7 @@ void indent_refresh_tab_width(GtkWidget *text_view)
 	pango_tab_array_free(tab_array);
 }
 
-static void toggle_tab_width(GtkWidget *text_view)
+void indent_toggle_tab_width(GtkWidget *text_view)
 {
 //	PangoTabArray *tab_array;
 	gint width = 8;
@@ -121,7 +125,7 @@ static void toggle_tab_width(GtkWidget *text_view)
 	pango_tab_array_free(tab_array); */
 }
 
-static void multi_line_indent(GtkTextBuffer *buffer)
+void indent_multi_line_indent(GtkTextBuffer *buffer)
 {
 	GtkTextIter start_iter, end_iter, iter;
 	gint start_line, end_line, i;
@@ -153,17 +157,17 @@ static void multi_line_indent(GtkTextBuffer *buffer)
 
 static gint compute_indent_offset_length(const gchar *ind)
 {
-	guint8 c = *ind++;
+	guint8 c = *ind;
 	gint len = 1;
 	
-	while ((len < current_tab_width) && (c = *ind++) == 0x20) {
-		len++;
-	}
+	if (c == 0x20)
+		while ((len < current_tab_width) && (c = *++ind) == 0x20)
+			len++;
 	
 	return len;
 }
 
-static void multi_line_unindent(GtkTextBuffer *buffer)
+void indent_multi_line_unindent(GtkTextBuffer *buffer)
 {
 	GtkTextIter start_iter, end_iter, iter;
 	gint start_line, end_line, i, len;
@@ -204,74 +208,4 @@ static void multi_line_unindent(GtkTextBuffer *buffer)
 		gtk_text_buffer_place_cursor(buffer, &start_iter);
 		gtk_text_buffer_move_mark_by_name(buffer, "insert", &end_iter);
 	}
-}
-
-static gboolean check_preedit(GtkWidget *text_view)
-{
-	gchar *str;
-	
-	gtk_im_context_get_preedit_string(
-		GTK_TEXT_VIEW(text_view)->im_context, &str, NULL, NULL);
-	if (strlen(str)) {
-		g_free(str);
-		return TRUE;
-	}
-	g_free(str);
-	return FALSE;
-}
-
-static gboolean check_selection_bound(GtkTextBuffer *buffer)
-{
-	GtkTextIter start_iter, end_iter;
-	gchar *str;
-	
-	if (gtk_text_buffer_get_selection_bounds(buffer, &start_iter, &end_iter)) {
-		str = gtk_text_iter_get_text(&start_iter, &end_iter);
-		if (g_strrstr(str, "\n")) {
-			g_free(str);
-			return TRUE;
-		}
-		g_free(str);
-	}
-	return FALSE;
-}
-
-static gboolean cb_key_press_event(GtkWidget *text_view, GdkEventKey *event)
-{
-	GtkTextBuffer *buffer =
-		gtk_text_view_get_buffer(GTK_TEXT_VIEW(text_view));
-	
-	if (event->keyval) keyval = event->keyval; // for undo.c (this line only!)
-	switch (event->keyval) {
-	case GDK_Return:
-		if (check_preedit(text_view))
-			return FALSE;
-		if ((auto_indent && !(event->state &= GDK_SHIFT_MASK)) ||
-			(!auto_indent && (event->state &= GDK_SHIFT_MASK))) {
-			indent_real(text_view);
-			return TRUE;
-		}
-		break;
-	case GDK_Tab:
-		if (event->state &= GDK_CONTROL_MASK) {
-			toggle_tab_width(text_view);
-			return TRUE;
-		}
-	case GDK_ISO_Left_Tab:
-		if (event->state &= GDK_SHIFT_MASK)
-			multi_line_unindent(buffer);
-		else if (!check_selection_bound(buffer))
-			break;
-		else
-			multi_line_indent(buffer);
-		return TRUE;
-	}
-	return FALSE;
-}
-
-void indent_init(GtkWidget *text_view)
-{
-	indent_refresh_tab_width(text_view);
-	g_signal_connect(G_OBJECT(text_view), "key-press-event",
-		G_CALLBACK(cb_key_press_event), NULL);
 }

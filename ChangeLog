@@ -1,7 +1,15 @@
+2004-11-19
+
+  version 0.7.7:
+	* Improved undo behavior (by word).
+	* Fixed multi-line unindent properly.
+	* Updated German translation (thanks Ruediger Arp).
+	* Added Czech translation (thanks Petr Vyslouzil).
+
 2004-11-12
 
   version 0.7.6:
-	* Improved command line recognization of filename (uri & space-separated).
+	* Improved command line recognition of filename (uri & space-separated).
 	* Added MimeType entry to leafpad.desktop (suggested by Carlos).
 	* Assigned Ctrl+G & Shift+Ctrl+G to Find Next/Previous.
 	* Added statements of copying permission to all source codes.

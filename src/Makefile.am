@@ -5,6 +5,7 @@ leafpad_SOURCES = \
 	window.h window.c \
 	menu.h menu.c \
 	callback.h callback.c \
+	keyevent.h keyevent.c \
 	dnd.h dnd.c \
 	dialog.h dialog.c \
 	file.h file.c \

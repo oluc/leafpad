@@ -31,6 +31,4 @@ void undo_set_sequency(gboolean seq);
 gboolean undo_undo(GtkTextBuffer *buffer);
 gboolean undo_redo(GtkTextBuffer *buffer);
 
-guint keyval;
-
 #endif /* _UNDO_H */

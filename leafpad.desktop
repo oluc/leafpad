@@ -3,6 +3,7 @@ Type=Application
 Encoding=UTF-8
 Name=Leafpad
 Comment=Simple text editor
+Comment[cs]=Jednoduchý textový editor
 Comment[de]=Einfacher Texteditor
 Comment[es]=Editor de texto simple
 Comment[fr]=Un éditeur de texte tout simple
