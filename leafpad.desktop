@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Leafpad
+Comment=Simple text editor
+Comment[de]=Einfacher Texteditor
+Comment[es]=Editor de texto simple
+Comment[fr]=Un éditeur de texte tout simple
+Comment[ja]=シンプルなテキストエディタ
+Comment[ru]=Простой текстовый редактор
+Comment[sv]=Enkel texteditor
+Comment[zh_CN]=简易文字编辑器
+Comment[zh_TW]=簡易文字編輯器
+Exec=leafpad %f
+Icon=leafpad.png
+Terminal=false
+MimeType=text/plain
+Categories=Application;Utility;TextEditor;

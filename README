@@ -1,0 +1,72 @@
+Leafpad - GTK+ based simple text editor
+
+
+Description
+===========
+
+Leafpad is a GTK+ based simple text editor. The user interface is similar to 
+Notepad. It aims to be lighter than GEdit and KWrite, and to be as useful
+as them.
+
+Although some features are under development, currently Leafpad has folowing
+features:
+
+    * Complete support for UTF-8 text
+    * Cut/Copy/Paste and Select All text
+    * Search and Replace
+    * Font selecton
+    * Word Wrap
+    * Character coding selection (some preferred MIME types)
+    * Auto character coding detection (UTF-8 and some codesets)
+    * Manual codeset application
+    * Infinite Undo/Redo
+    * Auto Indent
+    * Multi-line Indent
+    * Display line numbers
+    * Drag and Drop
+
+Leafpad is released under the GNU General Public License (GPL) version 2, see
+the file 'COPYING' for more information.
+
+
+Installation
+============
+
+Leafpad requires GTK+-2.x.x libraries.
+
+Simple install procedure:
+
+  $ tar xzvf leafpad-x.x.x.tar.gz       # unpack the sources
+  $ cd leafpad-x.x.x                    # change to the toplevel directory
+  $ ./configure                         # run the `configure' script
+  $ make                                # build Leafpad
+  [ Become root if necessary ]
+  # make install-strip                  # install Leafpad
+
+See the file 'INSTALL' for more detailed information.
+
+
+Keybindings
+===========
+Ctrl+N                          New
+Ctrl+O                          Open
+Ctrl+S                          Save
+Shift+Ctrl+S                    Save As
+Ctrl+W                          Close
+Ctrl+Q                          Quit
+Ctrl+Z                          Undo
+Ctrl+Y (Shift+Ctrl+Z)           Redo
+Ctrl+X                          Cut
+Ctrl+C                          Copy
+Ctrl+V                          Paste
+Ctrl+A                          Select All
+Ctrl+F                          Find
+F3 (Ctrl+G)                     Find Next
+Shift+F3 (Shift+Ctrl+G)         Find Previous
+Ctrl+H (Ctrl+R)                 Replace
+Ctrl+J                          Jump To
+F1                              About
+Ctrl+Tab                        toggle tab width
+Tab with selection bound        multi-line indent
+Shift+Tab with selection bound  multi-line unindent
+Shift+Return                    new-line with/without indent

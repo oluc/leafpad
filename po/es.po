@@ -1,0 +1,283 @@
+# Spanish/Spain translation of Leafpad
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the leafpad package.
+# Lucas Vieites <lucas@asixinformatica.com>, 2004.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Leafpad 0.7.5\n"
+"POT-Creation-Date: 2004-11-09 19:58+0900\n"
+"PO-Revision-Date: 2004-11-04 10:10+0100\n"
+"Last-Translator: Lucas Vieites <lucas@asixinformatica.com>\n"
+"Language-Team: Spanish/Spain <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
+
+#: src/callback.c:33
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "¿Desea guardar los cambios a «%s»?"
+
+#: src/callback.c:268
+msgid "GTK+ based simple text editor"
+msgstr "Editor de texto simple, basado en GTK+"
+
+#: src/dialog.c:113
+msgid "About"
+msgstr "Acerca de..."
+
+#: src/encoding.c:65
+msgid "Current Locale"
+msgstr "Locale actual"
+
+#: src/encoding.c:67
+msgid "Unicode"
+msgstr "Unicode"
+
+#: src/encoding.c:68
+msgid "Western"
+msgstr "Occidental"
+
+#: src/encoding.c:72 src/encoding.c:82
+msgid "Cyrillic"
+msgstr "Cirílico"
+
+#: src/encoding.c:83
+msgid "Chinese Simplified"
+msgstr "Chino simplificado"
+
+#: src/encoding.c:84
+msgid "Chinese Traditional"
+msgstr "Chino tradicional"
+
+#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
+msgid "Japanese"
+msgstr "Japonés"
+
+#: src/encoding.c:89 src/encoding.c:90
+msgid "Korean"
+msgstr "Coreano"
+
+#: src/file.c:161
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "No se puede convertir el conjunto de códigos a «%s»"
+
+#: src/file.c:174
+msgid "Can't open file to write"
+msgstr "No se puede abrir el archivo para escritura"
+
+#: src/file.c:179
+msgid "Can't write file"
+msgstr "No se puede escribir en el archivo"
+
+#: src/file.c:230
+msgid "Other Codeset..."
+msgstr "Otro conjunto de códigos..."
+
+#: src/file.c:234
+#, c-format
+msgid "Other Codeset (%s)"
+msgstr "Otro conjunto de códigos (%s)"
+
+#: src/file.c:250
+msgid "Enter Codeset"
+msgstr "Introduzca conjunto de códigos"
+
+#: src/file.c:258
+msgid "Code_set: "
+msgstr "Con_junto de códigos: "
+
+#: src/file.c:276
+#, c-format
+msgid "'%s' is not supported"
+msgstr "No se soporta «%s»"
+
+#: src/file.c:350
+msgid "Open"
+msgstr "Abrir"
+
+#: src/file.c:352
+msgid "Save As"
+msgstr "Guardar como"
+
+#: src/file.c:360
+msgid "Ch_aracter Coding: "
+msgstr "Codificación de c_aracteres: "
+
+#: src/file.c:387
+msgid "Auto-Detect"
+msgstr "Autodetectar"
+
+#: src/file.c:472
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "«%s» ya existe. ¿Desea sobrescribirlo?"
+
+#: src/font.c:49
+msgid "Font"
+msgstr "Tipografía"
+
+#: src/menu.c:35
+msgid "/_File"
+msgstr "/_Archivo"
+
+#: src/menu.c:37
+msgid "/File/_New"
+msgstr "/Archivo/_Nuevo"
+
+#: src/menu.c:41
+msgid "/File/_Open..."
+msgstr "/Archivo/_Abrir..."
+
+#: src/menu.c:43
+msgid "/File/_Save"
+msgstr "/Archivo/_Guardar"
+
+#: src/menu.c:45
+msgid "/File/Save _As..."
+msgstr "/Archivo/Guardar _como..."
+
+#: src/menu.c:55
+msgid "/File/_Quit"
+msgstr "/Archivo/_Salir"
+
+#: src/menu.c:57
+msgid "/_Edit"
+msgstr "/_Editar"
+
+#: src/menu.c:59
+msgid "/Edit/_Undo"
+msgstr "/Editar/_Deshacer"
+
+#: src/menu.c:61
+msgid "/Edit/_Redo"
+msgstr "/Editar/_Rehacer"
+
+#: src/menu.c:65
+msgid "/Edit/Cu_t"
+msgstr "/Editar/Cor_tar"
+
+#: src/menu.c:67
+msgid "/Edit/_Copy"
+msgstr "/Editar/_Copiar"
+
+#: src/menu.c:69
+msgid "/Edit/_Paste"
+msgstr "/Editar/_Pegar"
+
+#: src/menu.c:71
+msgid "/Edit/_Delete"
+msgstr "/Editar/_Borrar"
+
+#: src/menu.c:75
+msgid "/Edit/Select _All"
+msgstr "/Editar/Seleccionar _todo"
+
+#: src/menu.c:77
+msgid "/_Search"
+msgstr "/_Buscar"
+
+#: src/menu.c:79
+msgid "/Search/_Find..."
+msgstr "/Buscar/_Buscar"
+
+#: src/menu.c:81
+msgid "/Search/Find _Next"
+msgstr "/Buscar/Buscar el _siguiente"
+
+#: src/menu.c:83
+msgid "/Search/Find _Previous"
+msgstr "/Buscar/Buscar el an_terior"
+
+#: src/menu.c:85
+msgid "/Search/_Replace..."
+msgstr "/Buscar/_Reemplazar"
+
+#: src/menu.c:89
+msgid "/Search/_Jump To..."
+msgstr "/Buscar/Ira a la _línea"
+
+#: src/menu.c:91
+msgid "/_Options"
+msgstr "/_Opciones"
+
+#: src/menu.c:93
+msgid "/Options/_Font..."
+msgstr "/Opciones/Tipogra_fía..."
+
+#: src/menu.c:95
+msgid "/Options/_Word Wrap"
+msgstr "/Opciones/Ajus_te de línea"
+
+#: src/menu.c:97
+msgid "/Options/_Line Numbers"
+msgstr "/Opciones/_Numeración de líneas"
+
+#: src/menu.c:101
+msgid "/Options/_Auto Indent"
+msgstr "/Opciones/_Autoindentación"
+
+#: src/menu.c:103
+msgid "/_Help"
+msgstr "/A_yuda"
+
+#: src/menu.c:105
+msgid "/Help/_About"
+msgstr "/Ayuda/_Acerca de"
+
+#: src/search.c:83
+msgid "Search string not found"
+msgstr "No se ha encontrado la cadena buscada"
+
+#: src/search.c:125
+msgid "Replace?"
+msgstr "¿Desea reemplazar?"
+
+#: src/search.c:153
+#, c-format
+msgid "%d strings replaced"
+msgstr "Se han reemplazado %d cadenas"
+
+#: src/search.c:180
+msgid "Replace"
+msgstr "Reemplazar"
+
+#: src/search.c:187
+msgid "Find"
+msgstr "Buscar"
+
+#: src/search.c:199
+msgid "Fi_nd what: "
+msgstr "Buscar: "
+
+#: src/search.c:208
+msgid "Re_place with: "
+msgstr "Reem_plazar con: "
+
+#: src/search.c:222
+msgid "_Match case"
+msgstr "Coi_ncidir con capitalización"
+
+#: src/search.c:227
+msgid "Replace _all at once"
+msgstr "Reemplaz_ar todos"
+
+#: src/search.c:276
+msgid "Jump To"
+msgstr "Ir a"
+
+#: src/search.c:281
+msgid "_Jump"
+msgstr "_Saltar"
+
+#: src/search.c:287
+msgid "_Line number: "
+msgstr "Número de _línea: "
+
+#: src/window.c:95
+msgid "Untitled"
+msgstr "Sin nombre"
