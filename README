@@ -16,7 +16,7 @@ features:
     * Search and Replace
     * Font selecton
     * Word Wrap
-    * Character coding selection (some preferred MIME types)
+    * Character coding selection
     * Auto character coding detection (UTF-8 and some codesets)
     * Manual codeset setting
     * Infinite Undo/Redo by word

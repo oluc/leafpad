@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
 "PO-Revision-Date: 2004-10-01 03:34+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -20,102 +20,27 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "将更改保存到“%s”吗？"
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr "基于 GTK+ 的简易文字编辑器"
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr "关于 %s"
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr "当前区域"
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr "统一码"
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr "西欧"
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr "西里尔文"
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr "简体中文"
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr "繁体中文"
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr "日语"
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr "朝鲜语"
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "无法将编码转换到“%s”"
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr "无法打开要写入的文件"
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
 msgstr "无法写入文件"
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr "其它编码..."
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr "其它编码(%s)"
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr "输入编码"
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr "编码(_S)："
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr "“%s”不被支持"
-
-#: src/file.c:350
-msgid "Open"
-msgstr "打开"
-
-#: src/file.c:352
-msgid "Save As"
-msgstr "另存为"
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr "字符编码(_A)："
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr "自动检测"
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
-msgstr "文件“%s”已经存在。覆盖它吗？"
 
 #: src/font.c:49
 msgid "Font"
@@ -278,9 +203,79 @@ msgstr "跳转(_J)"
 msgid "_Line number: "
 msgstr "行号(_L)："
 
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "当前区域 (%s)"
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr "其它编码"
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr "编码(_S)："
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr "“%s”不被支持"
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr "自动检测"
+
+#: src/selector.c:323
+msgid "Open"
+msgstr "打开"
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr "另存为"
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr "字符编码(_A)："
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "文件“%s”已经存在。覆盖它吗？"
+
 #: src/window.c:141
 msgid "Untitled"
 msgstr "无标题"
+
+#~ msgid "Other Codeset (%s)"
+#~ msgstr "其它编码(%s)"
+
+#~ msgid "Other Codeset..."
+#~ msgstr "其它编码..."
+
+#, fuzzy
+#~ msgid "Unicode (UTF-8)"
+#~ msgstr "统一码"
+
+#~ msgid "Western"
+#~ msgstr "西欧"
+
+#~ msgid "Cyrillic"
+#~ msgstr "西里尔文"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "简体中文"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "繁体中文"
+
+#~ msgid "Japanese"
+#~ msgstr "日语"
+
+#~ msgid "Korean"
+#~ msgstr "朝鲜语"
+
+#~ msgid "Enter Codeset"
+#~ msgstr "输入编码"
 
 #~ msgid "GTK-based Notepad clone"
 #~ msgstr "基于 GTK 的记事本克隆"

@@ -1,280 +1,273 @@
-# Leafpad - GTK+ based simple text editor
-# Copyright (C) 2004 Tarot Osuji <tarot@sdf.lonestar.org>
-# 
-# This file is distributed under the GPL.
-# Luc Pionchon <luc@handhelds.org>, 2004.
+# Polish translation of Leafpad
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the Leafpad package.
+# Michal Wrobel <wrobel@task.gda.pl>, 2004.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.7.5\n"
+"Project-Id-Version: Leafpad 0.7.7\n"
 "POT-Creation-Date: 2004-12-24 22:16+0900\n"
-"PO-Revision-Date: 2004-11-02 20:47+0200\n"
-"Last-Translator: Luc Pionchon <luc@handhelds.org>\n"
-"Language-Team: French <traduc@traduc.org>\n"
+"PO-Revision-Date: 2004-12-21 11:05+0100\n"
+"Last-Translator: Michał Wróbel <wrobel@task.gda.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
 
 #: src/callback.c:33
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Enregistrer les changements pour '%s' ?"
+msgstr "Zachować zmiany w '%s'?"
 
 #: src/callback.c:291
 msgid "GTK+ based simple text editor"
-msgstr "Un éditeur de texte tout simple, basé sur GTK+"
+msgstr "Prosty edytor tekstowy oparty na GTK+"
 
 #: src/dialog.c:135
 #, c-format
 msgid "About %s"
-msgstr "À propos de %s"
+msgstr "O %s"
 
 #: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Erreur de conversion avec le jeu de caractères '%s'"
+msgstr "Nie można przekonwertować strony kodowej do '%s'"
 
 #: src/file.c:163
 msgid "Can't open file to write"
-msgstr "Impossible d'ouvrir le fichier en écriture"
+msgstr "Nie można otworzyć pliku do zapisu"
 
 #: src/file.c:168
 msgid "Can't write file"
-msgstr "Impossible d'enregistrer le fichier"
+msgstr "Nie można zapisać pliku"
 
 #: src/font.c:49
 msgid "Font"
-msgstr "Fonte"
+msgstr "Czcionka"
 
 #: src/menu.c:59
 msgid "/_File"
-msgstr "/_Fichier"
+msgstr "/_Plik"
 
 #: src/menu.c:61
 msgid "/File/_New"
-msgstr "/Fichier/_Nouveau"
+msgstr "/Plik/_Nowy"
 
 #: src/menu.c:65
 msgid "/File/_Open..."
-msgstr "/Fichier/_Ouvrir..."
+msgstr "/Plik/_Otwórz"
 
 #: src/menu.c:67
 msgid "/File/_Save"
-msgstr "/Fichier/_Enregistrer"
+msgstr "/Plik/_Zapisz"
 
 #: src/menu.c:69
 msgid "/File/Save _As..."
-msgstr "/Fichier/Enregistrer _sous..."
+msgstr "/Plik/Zapisz j_ako"
 
 #: src/menu.c:79
 msgid "/File/_Quit"
-msgstr "/Fichier/_Quitter"
+msgstr "/Plik/Za_kończ"
 
 #: src/menu.c:81
 msgid "/_Edit"
-msgstr "/_Édition"
+msgstr "/_Edycja"
 
 #: src/menu.c:83
 msgid "/Edit/_Undo"
-msgstr "/Édition/_Annuler"
+msgstr "/Edycja/C_ofnij"
 
 #: src/menu.c:85
 msgid "/Edit/_Redo"
-msgstr "/Édition/_Refaire"
+msgstr "/Edycja/Anuluj _cofnięcie"
 
 #: src/menu.c:89
 msgid "/Edit/Cu_t"
-msgstr "/Édition/Co_uper"
+msgstr "/Edycja/Wyt_nij"
 
 #: src/menu.c:91
 msgid "/Edit/_Copy"
-msgstr "/Édition/_Copier"
+msgstr "/Edycja/S_kopiuj"
 
 #: src/menu.c:93
 msgid "/Edit/_Paste"
-msgstr "/Édition/C_oller"
+msgstr "/Edycja/Wkl_ej"
 
 #: src/menu.c:95
 msgid "/Edit/_Delete"
-msgstr "/Édition/_Supprimer"
+msgstr "/Edycja/_Usuń"
 
 #: src/menu.c:99
 msgid "/Edit/Select _All"
-msgstr "/Édition/_Tout sélectionner"
+msgstr "/Edycja/_Zaznacz wszystko"
 
 #: src/menu.c:101
 msgid "/_Search"
-msgstr "/_Rechercher"
+msgstr "/_Szukaj"
 
 #: src/menu.c:103
 msgid "/Search/_Find..."
-msgstr "/Rechercher/_Rechercher..."
+msgstr "/Szukaj/_Znajdź"
 
 #: src/menu.c:105
 msgid "/Search/Find _Next"
-msgstr "/Rechercher/Rechercher le _suivant"
+msgstr "/Szukaj/Znajdź _następny"
 
 #: src/menu.c:107
 msgid "/Search/Find _Previous"
-msgstr "/Rechercher/Rechercher le _précédent"
+msgstr "/Szukaj/Znajdź _poprzedni"
 
 #: src/menu.c:109
 msgid "/Search/_Replace..."
-msgstr "/Rechercher/Re_mplacer..."
+msgstr "/Szukaj/Z_astąp"
 
 #: src/menu.c:113
 msgid "/Search/_Jump To..."
-msgstr "/Rechercher/Aller à la _ligne..."
+msgstr "/Szukaj/_Idź do..."
 
 #: src/menu.c:115
 msgid "/_Options"
-msgstr "/_Options"
+msgstr "/_Opcje"
 
 #: src/menu.c:117
 msgid "/Options/_Font..."
-msgstr "/Options/_Fonte..."
+msgstr "/Opcje/_Czcionka"
 
 #: src/menu.c:119
 msgid "/Options/_Word Wrap"
-msgstr "/Options/_Retour à la ligne automatique"
+msgstr "/Opcje/_Zawijanie linii"
 
 #: src/menu.c:121
 msgid "/Options/_Line Numbers"
-msgstr "/Options/_Numérotation des lignes"
+msgstr "/Opcje/_Numerowanie linii"
 
 #: src/menu.c:125
 msgid "/Options/_Auto Indent"
-msgstr "/Options/_Indentation automatique"
+msgstr "/Opcje/_Automatyczne wcięcia"
 
 #: src/menu.c:127
 msgid "/_Help"
-msgstr "/_Aide"
+msgstr "/Pomo_c"
 
 #: src/menu.c:129
 msgid "/Help/_About"
-msgstr "/_Aide/À _propos"
+msgstr "/Pomoc/_O programie"
 
 #: src/search.c:83
 msgid "Search string not found"
-msgstr "Le texte recherché n'a pas été trouvé"
+msgstr "Szukany łańcuch nie został znaleziony"
 
 #: src/search.c:125
 msgid "Replace?"
-msgstr "Remplacer ?"
+msgstr "Zastąpić?"
 
 #: src/search.c:153
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d occurences trouvées et remplacées."
+msgstr "%d łańcuchów zastąpiono"
 
 #: src/search.c:199
 msgid "Replace"
-msgstr "Remplacer"
+msgstr "Zastąp"
 
 #: src/search.c:206
 msgid "Find"
-msgstr "Trouver"
+msgstr "Znajdź"
 
 #: src/search.c:218
 msgid "Fi_nd what: "
-msgstr "_Rechercher :"
+msgstr "_Znajdź: "
 
 #: src/search.c:234
 msgid "Re_place with: "
-msgstr "Remplacer _avec :"
+msgstr "Z_amień na: "
 
 #: src/search.c:248
 msgid "_Match case"
-msgstr "Respecter la _casse"
+msgstr "_Uwzględniaj wielkość liter"
 
 #: src/search.c:253
 msgid "Replace _all at once"
-msgstr "_Tout remplacer"
+msgstr "Zamień _wszystko"
 
 #: src/search.c:304
 msgid "Jump To"
-msgstr "Aller à la ligne"
+msgstr "Idź do"
 
 #: src/search.c:309
 msgid "_Jump"
-msgstr "Aller à la ligne"
+msgstr "_Idź"
 
 #: src/search.c:315
 msgid "_Line number: "
-msgstr "Numéro de _ligne : "
+msgstr "Numer _linii: "
 
 #: src/selector.c:103
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Locale courante (%s)"
+msgstr "Derzeitige Standorteinstellung (%s)"
 
 #: src/selector.c:147
 msgid "Other Codeset"
-msgstr "Autre jeu de caractères"
+msgstr "Inna strona kodowa"
 
 #: src/selector.c:186
 msgid "Code_set:"
-msgstr "Jeu de _caractères : "
+msgstr "Strona kodowa:"
 
 #: src/selector.c:207
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' n'est pas supporté"
+msgstr "'%s' nie jest obsługiwany(a)"
 
 #: src/selector.c:271
 msgid "Auto Detect"
-msgstr "Auto-détecté"
+msgstr "Autowykrywanie"
 
 #: src/selector.c:323
 msgid "Open"
-msgstr "Ouvrir"
+msgstr "Otwórz"
 
 #: src/selector.c:323
 msgid "Save As"
-msgstr "Enregistrer sous"
+msgstr "Zapisz jako"
 
 #: src/selector.c:336
 msgid "Ch_aracter Coding: "
-msgstr "Jeu de _caractères : "
+msgstr "Strona kodowa: "
 
 #: src/selector.c:392
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr ""
-"Le fichier '%s' existe déjà. Voulez-vous remplacer le fichier existant par "
-"celui-ci ?"
+msgstr "'%s' już instnieje. Czy go zastąpić?"
 
 #: src/window.c:141
 msgid "Untitled"
-msgstr "Sans titre"
+msgstr "Dokument"
 
-#~ msgid "Other Codeset (%s)"
-#~ msgstr "Autre jeu de caractères (%s)"
-
-#~ msgid "Other Codeset..."
-#~ msgstr "Autre jeu de caractères..."
-
-#, fuzzy
-#~ msgid "Unicode (UTF-8)"
+#~ msgid "Unicode"
 #~ msgstr "Unicode"
 
 #~ msgid "Western"
-#~ msgstr "Occidental"
+#~ msgstr "Zachodnie"
 
 #~ msgid "Cyrillic"
-#~ msgstr "Cyrillique"
+#~ msgstr "Curylica"
 
 #~ msgid "Chinese Simplified"
-#~ msgstr "Chinois simplifié"
+#~ msgstr "Chiński uproszczony"
 
 #~ msgid "Chinese Traditional"
-#~ msgstr "Chinois traditionnel"
+#~ msgstr "Chiński tradycyjny"
 
 #~ msgid "Japanese"
-#~ msgstr "Japonais"
+#~ msgstr "Japoński"
 
 #~ msgid "Korean"
-#~ msgstr "Koréen"
+#~ msgstr "Koreański"
+
+#~ msgid "Other Codeset (%s)"
+#~ msgstr "Inna strona kodowa (%s)"
 
 #~ msgid "Enter Codeset"
-#~ msgstr "Saisir le jeu de caractères"
+#~ msgstr "Wprowadź stronę kodową"

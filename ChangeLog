@@ -1,3 +1,14 @@
+2004-12-26
+
+  version 0.7.9:
+	* Shrinked codeset menu.
+	* Fixed destroy response for question dialog (thanks Richard S).
+	* Removed local "G_BROKEN_FILENAMES" setting.
+	* Removed scrollbar_spacing manipulation.
+	* Updated Swedish translation (by Isak Savo).
+	* Added Lithuanian translation (thanks Lech Jankovski).
+	* Added Polish translation (thanks Michal Wrobel).
+
 2004-12-03
 
   version 0.7.8:

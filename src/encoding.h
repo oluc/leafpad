@@ -22,27 +22,30 @@
 #ifndef _ENCODING_H
 #define _ENCODING_H
 
+//#define ENCODING_MAX_ITEM_NUM 3
+
+enum {
+	IANA = 0,
+	OPENI18N,
+	CODEPAGE,
+	ENCODING_MAX_ITEM_NUM
+};
+
 typedef struct {
-	gint index;
-	gchar *charset;
-	gchar *desc;
-} CharsetInfo;
-
-const gchar *get_default_charset(void);
-void init_charset_info(void);
-const CharsetInfo *get_charset_info_from_charset(const gchar *charset);
-const CharsetInfo *get_charset_info_from_index(gint index);
-gchar *get_string_from_charset_info(const CharsetInfo *ci);
-const gchar *get_charset_from_charset_info(const CharsetInfo* ci);
-
-gint detect_line_ending(const gchar *text);
-void convert_line_ending_to_lf(gchar *text);
-void convert_line_ending(gchar **text, gint retcode);
-gchar *detect_charset(const gchar *text);
+	const gchar *item[ENCODING_MAX_ITEM_NUM];
+} EncArray;
 
 enum {
 	LF = 0x0A,
 	CR = 0x0D,
 };
+
+guint get_encoding_code(void);
+EncArray *get_encoding_items(guint code);
+const gchar *get_default_charset(void);
+gint detect_line_ending(const gchar *text);
+void convert_line_ending_to_lf(gchar *text);
+void convert_line_ending(gchar **text, gint retcode);
+const gchar *detect_charset(const gchar *text);
 
 #endif  /* _ENCODING_H */

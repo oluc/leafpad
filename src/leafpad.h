@@ -38,6 +38,7 @@
 
 /* Original Functions */
 #include "dialog.h"
+#include "selector.h"
 #include "file.h"
 #include "search.h"
 #include "font.h"

@@ -8,6 +8,7 @@ leafpad_SOURCES = \
 	keyevent.h keyevent.c \
 	dnd.h dnd.c \
 	dialog.h dialog.c \
+	selector.h selector.c \
 	file.h file.c \
 	encoding.h encoding.c \
 	search.h search.c \

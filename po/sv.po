@@ -1,121 +1,46 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Swedish translation of Leafpad text editor.
+# Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Isak Savo <iso01001@student.mdh.se>, 2004.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.7.4\n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
-"PO-Revision-Date: 2004-10-27 16:26+0200\n"
+"Project-Id-Version: Leafpad 0.7.8\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
+"PO-Revision-Date: 2004-12-14 13:06+0200\n"
 "Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
+"Report-Msgid-Bugs-To: \n"
 
 #: src/callback.c:33
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Spara ändringar för '%s'?"
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr "Enkel GTK+-baserad texteditor"
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr "Om %s"
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr "Nuvarande språk"
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr "Unicode"
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr "Västlig"
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr "Kyryllisk"
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr "Kinesisk (Enkel)"
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr "Kinesisk (Traditionell)"
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr "Japansk"
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr "Koreansk"
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Kan inte konvertera kodning till '%s'"
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr "Kan inte öppna fil att skriva till"
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
 msgstr "Kan inte skriva till fil"
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr "Annan kodning..."
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr "Annan kodning (%s)"
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr "Ange kodning"
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr "_Kodning: "
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr "'%s' stöds inte"
-
-#: src/file.c:350
-msgid "Open"
-msgstr "Öppna"
-
-#: src/file.c:352
-msgid "Save As"
-msgstr "Spara som"
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr "Tecken_kodning: "
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr "Automatiskts"
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' finns redan. Vill du skriva över?"
 
 #: src/font.c:49
 msgid "Font"
@@ -278,6 +203,73 @@ msgstr "_Hoppa"
 msgid "_Line number: "
 msgstr "_Radnummer: "
 
+# Här syftar 'Locale' på teckenkodning när man sparar/öppnar dokument
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Nuvarande kodning (%s)"
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr "Annan kodning"
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr "_Kodning:"
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' stöds inte"
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr "Automatisk"
+
+#: src/selector.c:323
+msgid "Open"
+msgstr "Öppna"
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr "Spara som"
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr "Tecken_kodning: "
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' finns redan. Vill du skriva över?"
+
 #: src/window.c:141
 msgid "Untitled"
 msgstr "Namnlös"
+
+#~ msgid "Unicode"
+#~ msgstr "Unicode"
+
+#~ msgid "Western"
+#~ msgstr "Västlig"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Kyryllisk"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "Kinesisk (Enkel)"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Kinesisk (Traditionell)"
+
+#~ msgid "Japanese"
+#~ msgstr "Japansk"
+
+#~ msgid "Korean"
+#~ msgstr "Koreansk"
+
+#~ msgid "Other Codeset (%s)"
+#~ msgstr "Annan kodning (%s)"
+
+#~ msgid "Enter Codeset"
+#~ msgstr "Ange kodning"

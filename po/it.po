@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
 "PO-Revision-Date: 2004-11-26 16:55+0100\n"
 "Last-Translator: Alessio D'Ascanio <g3ntaro@gmail.com>\n"
 "Language-Team: \n"
@@ -17,102 +17,27 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "Salvare le modifiche a '%s'?"
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr "Semplice editor testuale basato su GTK+"
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr "Informazioni su %s"
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr "Localizzazione Corrente"
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr "Unicode"
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr "Occidentale"
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr "Cirillico"
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr "Cinese semplificato"
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr "Cinese tradizionale"
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr "Giapponese"
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr "Coreano"
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Impossibile convertire nel set di caratteri '%s'"
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr "impossibile scrivere sul file"
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
 msgstr "Impossibile scrivere il file"
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr "Altra Codifica..."
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr "Altra Codifica (%s)"
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr "Inserire altra Codifica"
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr "Codifica: "
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr "'%s' non è supportato"
-
-#: src/file.c:350
-msgid "Open"
-msgstr "Apri"
-
-#: src/file.c:352
-msgid "Save As"
-msgstr "Salva con nome"
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr "_Codifica: "
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr "Automatica"
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' esiste già. Sovrascrivere?"
 
 #: src/font.c:49
 msgid "Font"
@@ -275,6 +200,76 @@ msgstr "_Vai"
 msgid "_Line number: "
 msgstr "_Numero di riga: "
 
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Localizzazione Corrente (%s)"
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr "Altra Codifica"
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr "Codifica:"
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' non è supportato"
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr "Automatica"
+
+#: src/selector.c:323
+msgid "Open"
+msgstr "Apri"
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr "Salva con nome"
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr "_Codifica: "
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' esiste già. Sovrascrivere?"
+
 #: src/window.c:141
 msgid "Untitled"
 msgstr "Senza titolo"
+
+#~ msgid "Other Codeset (%s)"
+#~ msgstr "Altra Codifica (%s)"
+
+#~ msgid "Other Codeset..."
+#~ msgstr "Altra Codifica..."
+
+#, fuzzy
+#~ msgid "Unicode (UTF-8)"
+#~ msgstr "Unicode"
+
+#~ msgid "Western"
+#~ msgstr "Occidentale"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Cirillico"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "Cinese semplificato"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Cinese tradizionale"
+
+#~ msgid "Japanese"
+#~ msgstr "Giapponese"
+
+#~ msgid "Korean"
+#~ msgstr "Coreano"
+
+#~ msgid "Enter Codeset"
+#~ msgstr "Inserire altra Codifica"

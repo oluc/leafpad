@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.4\n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
 "PO-Revision-Date:2004-10-24 00:40+0400\n"
 "Last-Translator: Artem Vakhitov <temcat@mail.ru>\n"
 "Language-Team: RUSSIAN <ru@li.org>\n"
@@ -20,102 +20,27 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "Сохранить изменения в '%s'?"
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr "Простой текстовый редактор на основе GTK+"
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr "О программе \"%s\""
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr "Текущая локаль"
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr "Юникод"
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr "Западноевропейская"
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr "Кириллица"
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr "Упрощенная китайская"
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr "Традиционная китайская"
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr "Японская"
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr "Корейская"
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Не удалось преобразовать кодировку в '%s'"
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr "Не удалось открыть файл для записи"
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
 msgstr "Не удалось записать файл"
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr "Другая кодировка..."
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr "Другая кодировка (%s)"
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr "Введите название кодировки"
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr "_Кодировка"
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr "'%s' не поддерживается"
-
-#: src/file.c:350
-msgid "Open"
-msgstr "Открытие файла"
-
-#: src/file.c:352
-msgid "Save As"
-msgstr "Сохранение файла"
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr "Ко_дировка символов"
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr "Автоопределение"
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' уже существует. Переписать?"
 
 #: src/font.c:49
 msgid "Font"
@@ -278,6 +203,76 @@ msgstr "_Перейти"
 msgid "_Line number: "
 msgstr "_Номер строки: "
 
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Текущая локаль (%s)"
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr "Другая кодировка"
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr "_Кодировка:"
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' не поддерживается"
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr "Автоопределение"
+
+#: src/selector.c:323
+msgid "Open"
+msgstr "Открытие файла"
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr "Сохранение файла"
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr "Ко_дировка символов"
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' уже существует. Переписать?"
+
 #: src/window.c:141
 msgid "Untitled"
 msgstr "Без имени"
+
+#~ msgid "Other Codeset (%s)"
+#~ msgstr "Другая кодировка (%s)"
+
+#~ msgid "Other Codeset..."
+#~ msgstr "Другая кодировка..."
+
+#, fuzzy
+#~ msgid "Unicode (UTF-8)"
+#~ msgstr "Юникод"
+
+#~ msgid "Western"
+#~ msgstr "Западноевропейская"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Кириллица"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "Упрощенная китайская"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Традиционная китайская"
+
+#~ msgid "Japanese"
+#~ msgstr "Японская"
+
+#~ msgid "Korean"
+#~ msgstr "Корейская"
+
+#~ msgid "Enter Codeset"
+#~ msgstr "Введите название кодировки"

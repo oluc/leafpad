@@ -1,280 +1,269 @@
-# Leafpad - GTK+ based simple text editor
-# Copyright (C) 2004 Tarot Osuji <tarot@sdf.lonestar.org>
+# Lithuanian translation of leafpad.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the leafpad package.
+# Lech Jankovski <godgard@gmail.com>, 2004.
 # 
-# This file is distributed under the GPL.
-# Luc Pionchon <luc@handhelds.org>, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.7.5\n"
+"Project-Id-Version: leafpad 0.7.8\n"
 "POT-Creation-Date: 2004-12-24 22:16+0900\n"
-"PO-Revision-Date: 2004-11-02 20:47+0200\n"
-"Last-Translator: Luc Pionchon <luc@handhelds.org>\n"
-"Language-Team: French <traduc@traduc.org>\n"
+"PO-Revision-Date: 2004-12-06 17:38+0200\n"
+"Last-Translator: Lech Jankovski <godgard@gmail.com>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
+"Report-Msgid-Bugs-To: \n"
 
 #: src/callback.c:33
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Enregistrer les changements pour '%s' ?"
+msgstr "Išsaugoti pokyčius į '%s'?"
 
 #: src/callback.c:291
 msgid "GTK+ based simple text editor"
-msgstr "Un éditeur de texte tout simple, basé sur GTK+"
+msgstr "Paprastas teksto redaktorius paremtas GTK+"
 
 #: src/dialog.c:135
 #, c-format
 msgid "About %s"
-msgstr "À propos de %s"
+msgstr "Apie %s"
 
 #: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Erreur de conversion avec le jeu de caractères '%s'"
+msgstr ""
 
 #: src/file.c:163
 msgid "Can't open file to write"
-msgstr "Impossible d'ouvrir le fichier en écriture"
+msgstr "Neįmanoma atidaryti bylos rašymui"
 
 #: src/file.c:168
 msgid "Can't write file"
-msgstr "Impossible d'enregistrer le fichier"
+msgstr "Neįmanoma įrašyti bylos"
 
 #: src/font.c:49
 msgid "Font"
-msgstr "Fonte"
+msgstr "Šriftas"
 
 #: src/menu.c:59
 msgid "/_File"
-msgstr "/_Fichier"
+msgstr "/_Byla"
 
 #: src/menu.c:61
 msgid "/File/_New"
-msgstr "/Fichier/_Nouveau"
+msgstr "/Byla/_Nauja"
 
 #: src/menu.c:65
 msgid "/File/_Open..."
-msgstr "/Fichier/_Ouvrir..."
+msgstr "/Byla/_Atidaryti..."
 
 #: src/menu.c:67
 msgid "/File/_Save"
-msgstr "/Fichier/_Enregistrer"
+msgstr "/Byla/_Išsaugoti"
 
 #: src/menu.c:69
 msgid "/File/Save _As..."
-msgstr "/Fichier/Enregistrer _sous..."
+msgstr "/Byla/Išsaugoti _kaip..."
 
 #: src/menu.c:79
 msgid "/File/_Quit"
-msgstr "/Fichier/_Quitter"
+msgstr "/Byla/Iš_eiti"
 
 #: src/menu.c:81
 msgid "/_Edit"
-msgstr "/_Édition"
+msgstr "/_Keisti"
 
 #: src/menu.c:83
 msgid "/Edit/_Undo"
-msgstr "/Édition/_Annuler"
+msgstr "/Keisti/_Atšaukti"
 
 #: src/menu.c:85
 msgid "/Edit/_Redo"
-msgstr "/Édition/_Refaire"
+msgstr "/Keisti/_Grąžinti"
 
 #: src/menu.c:89
 msgid "/Edit/Cu_t"
-msgstr "/Édition/Co_uper"
+msgstr "/Keisti/_Iškirpti"
 
 #: src/menu.c:91
 msgid "/Edit/_Copy"
-msgstr "/Édition/_Copier"
+msgstr "/Keisti/_Kopijuoti"
 
 #: src/menu.c:93
 msgid "/Edit/_Paste"
-msgstr "/Édition/C_oller"
+msgstr "/Keisti/Įdė_ti"
 
 #: src/menu.c:95
 msgid "/Edit/_Delete"
-msgstr "/Édition/_Supprimer"
+msgstr "/Keisti/_Pašalinti"
 
 #: src/menu.c:99
 msgid "/Edit/Select _All"
-msgstr "/Édition/_Tout sélectionner"
+msgstr "/Keisti/Pažymėti _viską"
 
 #: src/menu.c:101
 msgid "/_Search"
-msgstr "/_Rechercher"
+msgstr "/_Paieška"
 
 #: src/menu.c:103
 msgid "/Search/_Find..."
-msgstr "/Rechercher/_Rechercher..."
+msgstr "/Paieška/_Ieškoti..."
 
 #: src/menu.c:105
 msgid "/Search/Find _Next"
-msgstr "/Rechercher/Rechercher le _suivant"
+msgstr "/Paieška/Surask _sekantį"
 
 #: src/menu.c:107
 msgid "/Search/Find _Previous"
-msgstr "/Rechercher/Rechercher le _précédent"
+msgstr "/Paieška/Surask p_raeitą"
 
 #: src/menu.c:109
 msgid "/Search/_Replace..."
-msgstr "/Rechercher/Re_mplacer..."
+msgstr "/Paieška/P_akeisti..."
 
 #: src/menu.c:113
 msgid "/Search/_Jump To..."
-msgstr "/Rechercher/Aller à la _ligne..."
+msgstr "/Paieška/_Peršokti į..."
 
 #: src/menu.c:115
 msgid "/_Options"
-msgstr "/_Options"
+msgstr "/_Nustatymai"
 
 #: src/menu.c:117
 msgid "/Options/_Font..."
-msgstr "/Options/_Fonte..."
+msgstr "/Nustatymai/Š_riftas..."
 
 #: src/menu.c:119
 msgid "/Options/_Word Wrap"
-msgstr "/Options/_Retour à la ligne automatique"
+msgstr "/Nustatymai/Teksto _laužymas"
 
 #: src/menu.c:121
 msgid "/Options/_Line Numbers"
-msgstr "/Options/_Numérotation des lignes"
+msgstr "/Nustatymai/_Eilučių numeracija"
 
 #: src/menu.c:125
 msgid "/Options/_Auto Indent"
-msgstr "/Options/_Indentation automatique"
+msgstr "/Nustatymai/_Automatinis atitraukimas"
 
 #: src/menu.c:127
 msgid "/_Help"
-msgstr "/_Aide"
+msgstr "/P_agalba"
 
 #: src/menu.c:129
 msgid "/Help/_About"
-msgstr "/_Aide/À _propos"
+msgstr "/Pagalba/A_pie"
 
 #: src/search.c:83
 msgid "Search string not found"
-msgstr "Le texte recherché n'a pas été trouvé"
+msgstr "Ieškomas tekstas nerastas"
 
 #: src/search.c:125
 msgid "Replace?"
-msgstr "Remplacer ?"
+msgstr "Pakeisti?"
 
 #: src/search.c:153
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d occurences trouvées et remplacées."
+msgstr "%d tekstų pakeista"
 
 #: src/search.c:199
 msgid "Replace"
-msgstr "Remplacer"
+msgstr "Pakeisti"
 
 #: src/search.c:206
 msgid "Find"
-msgstr "Trouver"
+msgstr "Ieškoti"
 
 #: src/search.c:218
 msgid "Fi_nd what: "
-msgstr "_Rechercher :"
+msgstr "_Ieškoti ko: "
 
 #: src/search.c:234
 msgid "Re_place with: "
-msgstr "Remplacer _avec :"
+msgstr "P_akeisti kuo: "
 
 #: src/search.c:248
 msgid "_Match case"
-msgstr "Respecter la _casse"
+msgstr "_Skirti raidžių dydį"
 
 #: src/search.c:253
 msgid "Replace _all at once"
-msgstr "_Tout remplacer"
+msgstr "Pakeisti _visus vienu metu"
 
 #: src/search.c:304
 msgid "Jump To"
-msgstr "Aller à la ligne"
+msgstr "Peršokti į"
 
 #: src/search.c:309
 msgid "_Jump"
-msgstr "Aller à la ligne"
+msgstr "_Nušok"
 
 #: src/search.c:315
 msgid "_Line number: "
-msgstr "Numéro de _ligne : "
+msgstr "_Eilutės numeris: "
 
 #: src/selector.c:103
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Locale courante (%s)"
+msgstr "Esama lokalė (%s)"
 
 #: src/selector.c:147
 msgid "Other Codeset"
-msgstr "Autre jeu de caractères"
+msgstr ""
 
 #: src/selector.c:186
 msgid "Code_set:"
-msgstr "Jeu de _caractères : "
+msgstr ""
 
 #: src/selector.c:207
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' n'est pas supporté"
+msgstr "'%s' nepalaikomas"
 
 #: src/selector.c:271
 msgid "Auto Detect"
-msgstr "Auto-détecté"
+msgstr "Automatiškai aptikti"
 
 #: src/selector.c:323
 msgid "Open"
-msgstr "Ouvrir"
+msgstr "Atidaryti"
 
 #: src/selector.c:323
 msgid "Save As"
-msgstr "Enregistrer sous"
+msgstr "Išsaugoti kaip"
 
 #: src/selector.c:336
 msgid "Ch_aracter Coding: "
-msgstr "Jeu de _caractères : "
+msgstr "Si_mbolių kodavimas: "
 
 #: src/selector.c:392
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr ""
-"Le fichier '%s' existe déjà. Voulez-vous remplacer le fichier existant par "
-"celui-ci ?"
+msgstr "'%s' jau egzistuoja. Perrašyti?"
 
 #: src/window.c:141
 msgid "Untitled"
-msgstr "Sans titre"
-
-#~ msgid "Other Codeset (%s)"
-#~ msgstr "Autre jeu de caractères (%s)"
-
-#~ msgid "Other Codeset..."
-#~ msgstr "Autre jeu de caractères..."
+msgstr "Bevardis"
 
 #, fuzzy
 #~ msgid "Unicode (UTF-8)"
-#~ msgstr "Unicode"
+#~ msgstr "Universali koduotė"
 
 #~ msgid "Western"
-#~ msgstr "Occidental"
+#~ msgstr "Vakarų"
 
 #~ msgid "Cyrillic"
-#~ msgstr "Cyrillique"
+#~ msgstr "Kirilica"
 
 #~ msgid "Chinese Simplified"
-#~ msgstr "Chinois simplifié"
+#~ msgstr "Supaprastinta kinų"
 
 #~ msgid "Chinese Traditional"
-#~ msgstr "Chinois traditionnel"
+#~ msgstr "Kinų tradicinė"
 
 #~ msgid "Japanese"
-#~ msgstr "Japonais"
+#~ msgstr "Japonų"
 
 #~ msgid "Korean"
-#~ msgstr "Koréen"
-
-#~ msgid "Enter Codeset"
-#~ msgstr "Saisir le jeu de caractères"
+#~ msgstr "Korėjiečių"

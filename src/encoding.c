@@ -24,131 +24,129 @@
 #include "intl.h"
 #include "encoding.h"
 
-/* Imported from gdit */
-struct _CharsetInfo {
-	gint index;
-	gchar *charset;
-	const gchar *desc;
-};
+#define MAX_COUNTRY_NUM 10
 
 enum {
-//	USASCII = 1,
-	UTF8 = 1,
-	ISO88591,
-/*	ISO88592,
-	ISO88593,
-	ISO88594,*/
-	ISO88595,
-/*	ISO88596,
-	ISO88596E,
-	ISO88596I,
-	ISO88597,
-	ISO88598,
-	ISO88598E,
-	ISO88598I,
-	ISO88599,
-	ISO885910, */
-	KOI8R,
-	GB2312,
-	BIG5,
-	ISO2022JP,
-//	ISO2022JP2,
-	EUCJP,
-	SHIFTJIS,
-	ISO2022KR,
-	EUCKR,
-//	OTHER,
-	END
+	LATIN1 = 0,
+	LATIN2,
+	LATIN3,
+	LATIN4,
+	LATINC,
+	LATINC_UA,
+	LATINC_TJ,
+	LATINA,
+	LATING,
+	LATINH,
+	LATIN5,
+	CHINESE_CN,
+	CHINESE_TW,
+	CHINESE_HK,
+	JAPANESE,
+	KOREAN,
+	VIETNAMESE,
+	THAI,
+	GEORGIAN,
+	END_CODE
 };
 
-static CharsetInfo charsets[] = {
-	{ 0, "DUMMY", N_("Current Locale") },
-//	{ USASCII, "US-ASCII", N_("ANSI") },
-	{ UTF8, "UTF-8", N_("Unicode") },
-	{ ISO88591, "ISO-8859-1", N_("Western") },
-/*	{ ISO88592, "ISO-8859-2", N_("Central European") },
-	{ ISO88593, "ISO-8859-3", N_("South European") },
-	{ ISO88594, "ISO-8859-4", N_("Baltic") }, */
-	{ ISO88595, "ISO-8859-5", N_("Cyrillic") },
-/*	{ ISO88596, "ISO-8859-6", N_("Arabic") },
-	{ ISO88596, "ISO-8859-6-E", N_("Arabic") },
-	{ ISO88596, "ISO-8859-6-I", N_("Arabic") },
-	{ ISO88597, "ISO-8859-7", N_("Greek") },
-	{ ISO88598, "ISO-8859-8", N_("Hebrew") },
-	{ ISO88598E, "ISO-8859-8-E", N_("Hebrew") },
-	{ ISO88598I, "ISO-8859-8-I", N_("Hebrew") },
-	{ ISO88599, "ISO-8859-9", N_("Turkish") },
-	{ ISO885910, "ISO-8859-10", N_("Nordic") }, */
-	{ KOI8R, "KOI8-R", N_("Cyrillic") },
-	{ GB2312, "GB2312", N_("Chinese Simplified") },
-	{ BIG5, "Big5", N_("Chinese Traditional") },
-	{ ISO2022JP, "ISO-2022-JP", N_("Japanese") },
-//	{ ISO2022JP2, "ISO-2022-JP-2", N_("Japanese") },
-	{ EUCJP, "EUC-JP", N_("Japanese") },
-	{ SHIFTJIS, "Shift_JIS", N_("Japanese") },
-	{ ISO2022KR, "ISO-2022-KR", N_("Korean") },
-	{ EUCKR, "EUC-KR", N_("Korean") },
-//	{ OTHER, "DUMMY", N_("Other Codeset") },
+static const gchar *country_table[][MAX_COUNTRY_NUM] =
+{
+	/* LATIN1 */        {NULL},
+	/* LATIN2 */        {"cs", "hr", "hu", "pl", "ro", "sk", "sl", "sq", "sr", "uz"},
+	/* LATIN3 */        {"eo", "mt", NULL},
+	/* LATIN4 */        {"et", "lt", "lv", "mi", NULL},
+	/* LATINC */        {"be", "bg", "ky", "mk", "mn", "ru", "tt", NULL},
+	/* LATINC_UA */     {"uk", NULL},
+	/* LATINC_TJ */     {"tg", NULL},
+	/* LATINA */        {"ar", "fa", "ur", NULL},
+	/* LATING */        {"el", NULL},
+	/* LATINH */        {"he", "yi", NULL},
+	/* LATIN5 */        {"az", "tr", NULL},
+	/* CHINESE_CN */    {"zh_CN", NULL},
+	/* CHINESE_TW */    {"zh_TW", NULL},
+	/* CHINESE_HK */    {"zh_HK", NULL},
+	/* JAPANESE */      {"ja", NULL},
+	/* KOREAN */        {"ko", NULL},
+	/* VIETNAMESE */    {"vi", NULL},
+	/* THAI */          {"th", NULL},
+	/* GEORGIAN */      {"ka", NULL},
 };
+
+static const gchar *encoding_table[][ENCODING_MAX_ITEM_NUM] =
+{
+	                  /*  IANA           OpenI18N       Codepage */
+	/* LATIN1 */        { "ISO-8859-1",  "ISO-8859-15", "CP1252" },
+	/* LATIN2 */        { "ISO-8859-2",  "ISO-8859-16", "CP1250" },
+	/* LATIN3 */        { "ISO-8859-3",  NULL,          NULL },
+	/* LATIN4 */        { "ISO-8859-4",  "ISO-8859-13", "CP1257" },
+	/* LATINC */        { "ISO-8859-5",  "KOI8-R",      "CP1251" },
+	/* LATINC_UA */     { "ISO-8859-5",  "KOI8-U",      "CP1251" },
+	/* LATINC_TJ */     { "ISO-8859-5",  "KOI8-T",      "CP1251" },
+	/* LATINA */        { "ISO-8859-6",  NULL,          "CP1256" },
+	/* LATING */        { "ISO-8859-7",  NULL,          "CP1253" },
+	/* LATINH */        { "ISO-8859-8",  NULL,          "CP1255" },
+	/* LATIN5 */        { "ISO-8859-9",  NULL,          "CP1254" },
+	/* CHINESE_CN */    { "GB2312",      "GB18030",     "CP936" },
+	/* CHINESE_TW */    { "BIG5",        "EUC-TW",      "CP950" },
+	/* CHINESE_HK */    { "BIG5",        "BIG5-HKSCS",  "CP950" },
+	/* JAPANESE */      { "ISO-2022-JP", "EUC-JP",      "CP932" },
+	/* KOREAN */        { "ISO-2022-KR", "EUC-KR",      "CP949" },
+	/* VIETNAMESE */    { NULL,          "VISCII",      "CP1258" },
+	/* THAI */          { NULL,          "TIS-620",     "CP874" },
+	/* GEORGIAN */      { NULL,          "GEORGIAN-PS", NULL },
+};
+
+guint get_encoding_code(void)
+{
+	static guint code = END_CODE;
+	const gchar *env;
+	guint i, j = 1;
+	
+	if (code == END_CODE) {
+		env = g_getenv("LC_ALL");
+		if (!env)
+			env = g_getenv("LANG");
+		if (env && strlen(env) >= 2)
+			while (code == END_CODE && j < END_CODE) {
+				for (i = 0; i < MAX_COUNTRY_NUM; i++) {
+					if (!country_table[j][i])
+						break;
+					if (strncmp(env, country_table[j][i], strlen(country_table[j][i])) == 0) {
+						code = j;
+						break;
+					}
+				}
+				j++;
+			}
+		if (code == END_CODE)
+			code = 0;
+	}
+	
+	return code;
+}
+
+EncArray *get_encoding_items(guint code)
+{
+	gint i;
+	static EncArray *array = NULL;
+	
+	if (!array) {
+		array = g_malloc(sizeof(EncArray));
+		for (i = 0; i < ENCODING_MAX_ITEM_NUM; i++)
+			array->item[i] = encoding_table[code][i] ?
+				encoding_table[code][i] : NULL;
+	}
+	
+	return array;
+}
 
 const gchar *get_default_charset(void)
 {
 	const gchar *charset;
 	
 	g_get_charset(&charset);
-	if (g_strrstr(charset, "ANSI_X3.4"))
-		return "US-ASCII";
 	
 	return charset;
-}
-
-void init_charset_info(void)
-{
-	charsets[0].charset = (gchar *) get_default_charset();
-}
-
-const CharsetInfo *get_charset_info_from_charset(const gchar *charset)
-{
-//	gint i = 1;
-	gint i = 0;
-
-	while (i < END) {
-		if (charset == charsets[i].charset)
-			return &charsets[i];
-      
-		++i;
-	}
- 
-	return NULL;
-}
-
-const CharsetInfo *get_charset_info_from_index(gint index)
-{
-//	g_return_val_if_fail(index >= 1, NULL);
-//	g_return_val_if_fail(index < END, NULL);
-	
-	if (index >= END)
-		return NULL;
-	
-	return &charsets[index];
-}
-
-/* TODO: deprecate... */
-gchar *get_string_from_charset_info(const CharsetInfo *ci)
-{
-	g_return_val_if_fail(ci != NULL, NULL);
-	g_return_val_if_fail(ci->desc != NULL, NULL);
-	g_return_val_if_fail(ci->charset != NULL, NULL);
-
-	return g_strdup_printf("%s (%s)", ci->desc, ci->charset);
-}
-
-const gchar *get_charset_from_charset_info(const CharsetInfo* ci)
-{
-	g_return_val_if_fail(ci != NULL, NULL);
-	g_return_val_if_fail(ci->charset != NULL, NULL);
-
-	return ci->charset;
 }
 
 /*
@@ -180,7 +178,6 @@ void convert_line_ending(gchar **text, gint retcode)
 	gint i, j, LFNum = 0;
 	
 	switch (retcode) {
-		
 	case CR:
 		while (*str != '0') {
 			if (*str == LF)
@@ -188,7 +185,6 @@ void convert_line_ending(gchar **text, gint retcode)
 			str++;
 		}
 		break;
-		
 	case CR+LF:
 		for (i = 0; *(str + i) != '\0'; i++) {
 			if (*(str + i) == LF)
@@ -206,7 +202,6 @@ void convert_line_ending(gchar **text, gint retcode)
 		}
 		g_free(*text);
 		*text = buf;
-		
 	}
 }
 
@@ -225,12 +220,13 @@ gint detect_line_ending(const gchar *text)
 	return LF;
 }
 
-static gchar *detect_charset_ru(const gchar *text)
+static const gchar *detect_charset_cylillic(const gchar *text)
 {
 	guint8 c = *text;
-	gchar *charset = "KOI8-R";
 	gboolean noniso = FALSE;
 	guint32 xc = 0, xd = 0, xef = 0;
+	
+	const gchar *charset = get_encoding_items(get_encoding_code())->item[OPENI18N];
 	
 	while ((c = *text++) != '\0') {
 		if (c >= 0x80 && c <= 0x9F)
@@ -246,15 +242,16 @@ static gchar *detect_charset_ru(const gchar *text)
 	if (!noniso && ((xc + xef) < xd))
 		charset = "ISO-8859-5";
 	else if ((xc + xd) < xef)
-		charset = "windows-1251";
+		charset = "CP1251";
 	
 	return charset;
 }
 
-static gchar *detect_charset_zh(const gchar *text)
+static const gchar *detect_charset_chinese(const gchar *text)
 {
 	guint8 c = *text;
-	gchar *charset = "GB2312";
+	
+	const gchar *charset = get_encoding_items(get_encoding_code())->item[IANA];
 	
 	while ((c = *text++) != '\0') {
 		if (c >= 0x81 && c <= 0x87) {
@@ -271,7 +268,7 @@ static gchar *detect_charset_zh(const gchar *text)
 		else if ((c >= 0xA1 && c <= 0xC6) || (c >= 0xC9 && c <= 0xF9)) {
 			c = *text++;
 			if (c >= 0x40 && c <= 0x7E)
-				charset = "Big5";
+				charset = "BIG5";
 			else if ((c >= 0x30 && c <= 0x39) || (c >= 0x80 && c <= 0xA0)) {
 				charset = "GB18030";
 				break;
@@ -289,7 +286,7 @@ static gchar *detect_charset_zh(const gchar *text)
 	return charset;
 }
 
-static gchar *detect_charset_ja(const gchar *text)
+static const gchar *detect_charset_japanese(const gchar *text)
 {
 	guint8 c = *text;
 	gchar *charset = NULL;
@@ -299,29 +296,29 @@ static gchar *detect_charset_ja(const gchar *text)
 			if (c == 0x8E) /* SS2 */ {
 				c = *text++;
 				if ((c >= 0x40 && c <= 0xA0) || (c >= 0xE0 && c <= 0xFC))
-					charset = "Shift_JIS";
+					charset = "CP932";
 			}
 			else if (c == 0x8F) /* SS3 */ {
 				c = *text++;
 				if (c >= 0x40 && c <= 0xA0)
-					charset = "Shift_JIS";
+					charset = "CP932";
 				else if (c >= 0xFD)
 					break;
 			}
 			else
-				charset = "Shift_JIS";
+				charset = "CP932";
 		}
 		else if (c >= 0xA1 && c <= 0xDF) {
 			c = *text++;
 			if (c <= 0x9F)
-				charset = "Shift_JIS";
+				charset = "CP932";
 			else if (c >= 0xFD)
 				break;
 		}
 		else if (c >= 0xE0 && c <= 0xEF) {
 			c = *text++;
 			if (c >= 0x40 && c <= 0xA0)
-				charset = "Shift_JIS";
+				charset = "CP932";
 			else if (c >= 0xFD)
 				break;
 		}
@@ -346,16 +343,17 @@ static gboolean detect_noniso(const gchar *text)
 	return FALSE;
 }
 
-gchar *detect_charset(const gchar *text)
+const gchar *detect_charset(const gchar *text)
 {
 	guint8 c = *text;
-	const gchar *env;
-	gchar *charset = NULL;
+	const gchar *charset = NULL;
 	
 	if (g_utf8_validate(text, -1, NULL)) {
 		while ((c = *text++) != '\0') {
-			if (c > 0x7F)
-				return "UTF-8";
+			if (c > 0x7F) {
+				charset = "UTF-8";
+				break;
+			}
 			if (c == 0x1B) /* ESC */ {
 				c = *text++;
 				if (c == '$') {
@@ -364,7 +362,7 @@ gchar *detect_charset(const gchar *text)
 					case 'B': // JIS X 0208-1983
 					case '@': // JIS X 0208-1978
 						charset = "ISO-2022-JP";
-						break;
+						continue;
 					case 'A': // GB2312-1980
 						charset = "ISO-2022-JP-2";
 						break;
@@ -381,70 +379,44 @@ gchar *detect_charset(const gchar *text)
 						if (c == 'C')
 							charset = "ISO-2022-KR"; // KSC5601-1987
 					}
-					if (strcmp(charset, "ISO-2022-JP-2") == 0 ||
-						strcmp(charset, "ISO-2022-KR") == 0)
-						break;
+					break;
 				}
 			}
 		}
-		if (!charset) {
-			charset = "US-ASCII";
-		}
+		if (!charset)
+			charset = get_default_charset();
 	}
 	
 	if (!charset) {
-		env = g_getenv("LC_ALL");
-/*		if (!env)
-			env = g_getenv("LC_CTYPE");
-*/		if (!env)
-			env = g_getenv("LANG");
-		
-		if (env) {
-			if (strncmp(env, "ru", 2) == 0)
-				charset = detect_charset_ru(text);
-			else if (strncmp(env, "zh", 2) == 0)
-				charset = detect_charset_zh(text);
-			else if (strncmp(env, "ja", 2) == 0)
-				charset = detect_charset_ja(text);
-			else if (strncmp(env, "ko", 2) == 0)
-				charset = "EUC-KR";
-			else {
-				if (strncasecmp(get_default_charset(), "ISO", 3) == 0) {
-					if (detect_noniso(text)) {
-						charset = (gchar *) get_default_charset();
-						if (g_strrstr(charset, "8859-2"))
-							charset = "windows-1250";
-						else if (g_strrstr(charset, "8859-3"))
-							charset = NULL;
-						else if (g_strrstr(charset, "8859-4"))
-							charset = "windows-1257";
-						else if (g_strrstr(charset, "8859-5"))
-							charset = "windows-1251";
-						else if (g_strrstr(charset, "8859-6"))
-							charset = "windows-1256";
-						else if (g_strrstr(charset, "8859-7"))
-							charset = "windows-1253";
-						else if (g_strrstr(charset, "8859-8"))
-							charset = "windows-1255";
-						else if (g_strrstr(charset, "8859-9"))
-							charset = "windows-1254";
-						else if (g_strrstr(charset, "8859-10"))
-							charset = NULL; //? "windows-1257";
-				//		else if (g_strrstr(charset, "8859-11"))
-				//			charset = NULL;
-				//		else if (g_strrstr(charset, "8859-12"))
-				//			charset = NULL;
-						else if (g_strrstr(charset, "8859-13"))
-							charset = "windows-1257";
-						else if (g_strrstr(charset, "8859-14"))
-							charset = NULL; //? "windows-1254";
-						else if (g_strrstr(charset, "8859-16"))
-							charset = NULL;
-						else
-							charset = "windows-1252";
-					}
-				}
-			}
+		switch (get_encoding_code()) {
+		case LATINC:
+		case LATINC_UA:
+		case LATINC_TJ:
+			charset = detect_charset_cylillic(text); // fuzzy...
+			break;
+		case CHINESE_CN:
+		case CHINESE_TW:
+		case CHINESE_HK:
+			charset = detect_charset_chinese(text);
+			break;
+		case JAPANESE:
+			charset = detect_charset_japanese(text);
+			break;
+		case KOREAN:
+		case VIETNAMESE:
+		case THAI:
+		case GEORGIAN:
+			charset = get_encoding_items(get_encoding_code())->item[OPENI18N];
+			break;
+		default:
+			if (strcmp(get_default_charset(), "UTF-8") != 0)
+				charset = get_default_charset();
+			else if (detect_noniso(text))
+				charset = get_encoding_items(get_encoding_code())->item[CODEPAGE];
+			else
+				charset = get_encoding_items(get_encoding_code())->item[OPENI18N];
+			if (!charset)
+				charset = get_encoding_items(get_encoding_code())->item[IANA];					
 		}
 	}
 	

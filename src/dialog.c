@@ -25,7 +25,7 @@
 #include "intl.h"
 #include "dialog.h"
 
-/*	GTK_MESSAGE_INFO, GTK_MESSAGE_WARNING, GTK_MESSAGE_ERROR */
+/* GTK_MESSAGE_INFO, GTK_MESSAGE_WARNING, GTK_MESSAGE_ERROR */
 void run_dialog_message(GtkWidget *window, GtkMessageType type, gchar *message, ...)
 {
 	va_list ap;
@@ -39,10 +39,12 @@ void run_dialog_message(GtkWidget *window, GtkMessageType type, gchar *message, 
 	dialog = gtk_message_dialog_new(GTK_WINDOW(window),
 		GTK_DIALOG_DESTROY_WITH_PARENT,
 		type,
-		GTK_BUTTONS_OK,
+		GTK_BUTTONS_NONE,
 		str);
-	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
+	gtk_dialog_add_buttons(GTK_DIALOG(dialog),
+		GTK_STOCK_OK, GTK_RESPONSE_CANCEL, NULL);
+	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_CANCEL);
 	g_free(str);
 	
 	gtk_dialog_run(GTK_DIALOG(dialog));
@@ -65,7 +67,7 @@ GtkWidget *create_dialog_message_question(GtkWidget *window, gchar *message, ...
 		GTK_BUTTONS_NONE,
 		str);
 	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
-	gtk_dialog_add_buttons (GTK_DIALOG (dialog),
+	gtk_dialog_add_buttons(GTK_DIALOG(dialog),
 		GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 		GTK_STOCK_NO, GTK_RESPONSE_NO,
 		GTK_STOCK_YES, GTK_RESPONSE_YES,
@@ -96,6 +98,25 @@ gint run_dialog_message_question(GtkWidget *window, gchar *message, ...)
 	return res;
 }
 
+static const gchar *translator_table[][2] =
+{
+	{ "ca", "2004 David Rosal" },
+	{ "cs", "2004 Petr Vyslou&#382;il" },
+	{ "de", "2004 Sebastian Stach" },
+	{ "es", "2004 Lucas Vieites" },
+	{ "fr", "2004 Luc Pionchon" },
+	{ "hu", "2004 Reviczky &#193;d&#225;m J&#225;nos" },
+	{ "it", "2004 Alessio D'Ascanio" },
+	{ "lt", "2004 Lech Jankovski" },
+	{ "pl", "2004 Michal Wrobel" },
+	{ "ru", "2004 Artem Vakhitov" },
+	{ "sv", "2004 Isak Savo" },
+	{ "ta", "2004 Vijay Durairaj" },
+	{ "zh_CN", "2004 Carlos Z.F. Liu" },
+	{ "zh_TW", "2004 OLS3" },
+	{ NULL, NULL },
+};
+
 void run_dialog_about(GtkWidget *window, const gchar *name, const gchar *version,
 	const gchar *description, const gchar *copyright, gchar *iconpath)
 {
@@ -105,9 +126,10 @@ void run_dialog_about(GtkWidget *window, const gchar *name, const gchar *version
 	GtkWidget *margin;
 	GtkWidget *label;
 	gchar *str;
+	gint i = 0;
 	
 	const gchar *env;
-	gchar *translator = NULL;
+	const gchar *translator = NULL;
 	gchar *translation;
 	
 	str = g_strdup_printf(_("About %s"), PACKAGE_NAME);
@@ -135,35 +157,16 @@ void run_dialog_about(GtkWidget *window, const gchar *name, const gchar *version
 	env = g_getenv("LC_ALL");
 	if (!env)
 		env = g_getenv("LANG");
-	if (env) {
-		if (strncmp(env, "ca", 2) == 0)
-			translator = "2004 David Rosal";
-		if (strncmp(env, "cs", 2) == 0)
-			translator = "2004 Petr Vyslou&#382;il";
-		if (strncmp(env, "de", 2) == 0)
-			translator = "2004 Sebastian Stach";
-		if (strncmp(env, "es", 2) == 0)
-			translator = "2004 Lucas Vieites";
-		if (strncmp(env, "fr", 2) == 0)
-			translator = "2004 Luc Pionchon";
-		if (strncmp(env, "hu", 2) == 0)
-			translator = "2004 Reviczky &#193;d&#225;m J&#225;nos";
-		if (strncmp(env, "it", 2) == 0)
-			translator = "2004 Alessio D'Ascanio";
-		if (strncmp(env, "ru", 2) == 0)
-			translator = "2004 Artem Vakhitov";
-		if (strncmp(env, "sv", 2) == 0)
-			translator = "2004 Isak Savo";
-		if (strncmp(env, "ta", 2) == 0)
-			translator = "2004 Vijay Durairaj";
-		if (strncmp(env, "zh_CN", 5) == 0)
-			translator = "2004 Carlos Z.F. Liu";
-		if (strncmp(env, "zh_TW", 5) == 0)
-			translator = "2004 OLS3";
-	}
+	if (env)
+		while (translator_table[i][0]) {
+			if (strncmp(env, translator_table[i][0], strlen(translator_table[i][0])) == 0) {
+				translator = translator_table[i][1];
+				break;
+			}
+			i++;
+		}
 	if (translator)
 		translation = g_strdup_printf("\n<small>Translation &#169; %s</small>", translator);
-//		translation = g_strdup_printf("\n\n<small>Translated by\n%s</small>", translator);
 	else
 		translation = g_strdup("");
  	

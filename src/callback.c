@@ -29,18 +29,19 @@ static gint check_text_modification(StructData *sd)
 	GtkTextBuffer *textbuffer = sd->mainwin->textbuffer;
 	
 	if (gtk_text_buffer_get_modified(textbuffer)) {
-		basename = get_current_file_basename(sd->fi->filepath);
+		basename = get_current_file_basename(sd->fi->filename);
 		str = g_strdup_printf(_("Save changes to '%s'?"), basename);
 		res = run_dialog_message_question(sd->mainwin->window, str);
 		g_free(str);
 		g_free(basename);
 		switch (res) {
-		case GTK_RESPONSE_CANCEL:
-			return -1;
+		case GTK_RESPONSE_NO:
+			return 0;
 		case GTK_RESPONSE_YES:
-			if (cb_file_save(sd))
-				return -1;
+			if (!cb_file_save(sd))
+				return 0;
 		}
+		return -1;
 	}
 	
 	return 0;
@@ -68,9 +69,13 @@ void cb_file_new(StructData *sd)
 		undo_block_signal(textbuffer);
 		gtk_text_buffer_set_text(textbuffer, "", 0);
 		gtk_text_buffer_set_modified(textbuffer, FALSE);
-		sd->fi->filepath = NULL;
+		if (sd->fi->filename)
+			g_free(sd->fi->filename);
+		sd->fi->filename = NULL;
+		if (sd->fi->charset)
+			g_free(sd->fi->charset);
 		sd->fi->charset = NULL;
-		sd->fi->line_ending = LF;
+		sd->fi->lineend = LF;
 		set_main_window_title(sd);
 		undo_unblock_signal(textbuffer);
 		undo_init(sd->mainwin->textview, textbuffer, sd->mainwin->menubar);
@@ -87,7 +92,8 @@ void cb_file_open(StructData *sd)
 	FileInfo *fi;
 	
 	if (!check_text_modification(sd)) {
-		fi = get_file_info_by_selector(sd->mainwin->window, OPEN, sd->fi);
+//		fi = get_file_info_by_selector(OPEN, sd->fi);
+		fi = get_fileinfo_from_selector(sd->mainwin->window, sd->fi, OPEN);
 		if (fi) {
 			if (file_open_real(sd->mainwin->textview, fi)) {
 				g_free(fi);
@@ -103,7 +109,7 @@ void cb_file_open(StructData *sd)
 
 gint cb_file_save(StructData *sd)
 {
-	if (sd->fi->filepath == NULL)
+	if (sd->fi->filename == NULL)
 		return cb_file_save_as(sd);
 	if (!file_save_real(sd->mainwin->textview, sd->fi)) {
 		set_main_window_title(sd);
@@ -117,7 +123,7 @@ gint cb_file_save_as(StructData *sd)
 {
 	FileInfo *fi;
 	
-	fi = get_file_info_by_selector(sd->mainwin->window, SAVE, sd->fi);
+	fi = get_fileinfo_from_selector(sd->mainwin->window, sd->fi, SAVE);
 	if (fi) {
 		if (file_save_real(sd->mainwin->textview, fi))
 			g_free(fi);

@@ -5,8 +5,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.7.2\n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"Project-Id-Version: Leafpad 0.7.9\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
 "PO-Revision-Date: 2004-09-09 21:32+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -20,102 +20,27 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "'%s' の変更を保存しますか?"
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ ベースのシンプルなテキストエディタ"
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr "%s について"
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr "現在のロケール"
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr "Unicode"
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr "西欧"
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr "キリル文字"
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr "簡体字中国語"
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr "繁体字中国語"
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr "日本語"
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr "韓国語"
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "文字コードを '%s' に変換できませんでした"
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr "ファイルを作成できませんでした"
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
 msgstr "ファイルに書きこめませんでした"
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr "その他の文字コード..."
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr "その他の文字コード (%s)"
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr "文字コードを入力"
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr "文字コード(_S): "
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr "'%s' はサポートされていません"
-
-#: src/file.c:350
-msgid "Open"
-msgstr "開く"
-
-#: src/file.c:352
-msgid "Save As"
-msgstr "別名で保存"
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr "文字コード(_A): "
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr "自動検出"
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' は既に存在します. 上書きしますか?"
 
 #: src/font.c:49
 msgid "Font"
@@ -277,6 +202,45 @@ msgstr "ジャンプ(_J)"
 #: src/search.c:315
 msgid "_Line number: "
 msgstr "行番号(_L): "
+
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "現在のロケール (%s)"
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr "その他の文字コード"
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr "文字コード(_S):"
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' はサポートされていません"
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr "自動検出"
+
+#: src/selector.c:323
+msgid "Open"
+msgstr "開く"
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr "別名で保存"
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr "文字コード(_A): "
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' は既に存在します. 上書きしますか?"
 
 #: src/window.c:141
 msgid "Untitled"

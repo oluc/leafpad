@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,101 +20,26 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr ""
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr ""
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr ""
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr ""
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr ""
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr ""
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr ""
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr ""
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr ""
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr ""
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr ""
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr ""
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr ""
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
-msgstr ""
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr ""
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr ""
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr ""
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr ""
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr ""
-
-#: src/file.c:350
-msgid "Open"
-msgstr ""
-
-#: src/file.c:352
-msgid "Save As"
-msgstr ""
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr ""
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr ""
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
 msgstr ""
 
 #: src/font.c:49
@@ -276,6 +201,45 @@ msgstr ""
 
 #: src/search.c:315
 msgid "_Line number: "
+msgstr ""
+
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr ""
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr ""
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr ""
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr ""
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr ""
+
+#: src/selector.c:323
+msgid "Open"
+msgstr ""
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr ""
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr ""
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
 msgstr ""
 
 #: src/window.c:141

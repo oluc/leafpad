@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.7\n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
 "PO-Revision-Date: 2004-11-25 03:24-0700\n"
 "Last-Translator: Vijay Durairaj <vjd81@yahoo.com>\n"
 "Language-Team: Tamil <tamilinix@yahoogroups.com>\n"
@@ -22,102 +22,27 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "மாற்றங்களை '%s' இல் சேமி?"
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ சார்ந்த ஒரு எளிமையான உரை பதிப்பான்"
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr "பற்றி %s"
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr "தற்பொழுதுள்ள Locale"
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr "யூனிகோட்"
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr "Western"
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr "கிரைலிக் "
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr "இலகு சீனமொழி   "
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr "பாரம்பரிய சீனமொழி "
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr "ஜப்பானிய"
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr "கொரிய "
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr ""
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr "கோப்பை எழுதுவதற்காக திறக்க முடியவில்லை"
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
 msgstr "கோப்பை எழுத முடியவில்லை"
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr ""
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr ""
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr ""
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr ""
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr "'%s' க்கு ஆதரவு எதுவும் இல்லை"
-
-#: src/file.c:350
-msgid "Open"
-msgstr "திற"
-
-#: src/file.c:352
-msgid "Save As"
-msgstr "எனச் சேமி..."
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr ""
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr "தானாக கண்டுபிடி"
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' ஏற்கனவே உள்ளது. மேல் எழுதவா?"
 
 #: src/font.c:49
 msgid "Font"
@@ -280,6 +205,67 @@ msgstr "தாவு(_J)"
 msgid "_Line number: "
 msgstr "வரி எண்(_L): "
 
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "தற்பொழுதுள்ள Locale (%s)"
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr ""
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr ""
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' க்கு ஆதரவு எதுவும் இல்லை"
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr "தானாக கண்டுபிடி"
+
+#: src/selector.c:323
+msgid "Open"
+msgstr "திற"
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr "எனச் சேமி..."
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr ""
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' ஏற்கனவே உள்ளது. மேல் எழுதவா?"
+
 #: src/window.c:141
 msgid "Untitled"
 msgstr "தலைப்பில்லாதது"
+
+#, fuzzy
+#~ msgid "Unicode (UTF-8)"
+#~ msgstr "யூனிகோட்"
+
+#~ msgid "Western"
+#~ msgstr "Western"
+
+#~ msgid "Cyrillic"
+#~ msgstr "கிரைலிக் "
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "இலகு சீனமொழி   "
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "பாரம்பரிய சீனமொழி "
+
+#~ msgid "Japanese"
+#~ msgstr "ஜப்பானிய"
+
+#~ msgid "Korean"
+#~ msgstr "கொரிய "

@@ -24,21 +24,13 @@
 
 /* File Information */
 typedef struct {
-	gchar *filepath;
+	gchar *filename;
 	gchar *charset;
-	gint line_ending;
+	gchar lineend;
 	gchar *manual_charset;
 } FileInfo;
 
-/* Dialog Mode */
-enum {
-	OPEN = 0,
-	SAVE
-};
-
 gint file_open_real(GtkWidget *textview, FileInfo *fi);
 gint file_save_real(GtkWidget *textview, FileInfo *fi);
-//gchar *get_file_name_by_selector(GtkWidget *window, const gchar *title, gchar *default_filepath);
-FileInfo *get_file_info_by_selector(GtkWidget *window, gint mode, FileInfo *fi);
 
 #endif /* _FILE_H */

@@ -1,5 +1,5 @@
 /*
- *  window.h
+ *  selector.h
  *  This file is part of Leafpad
  *
  *  Copyright (C) 2004 Tarot Osuji
@@ -19,15 +19,17 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _WINDOW_H
-#define _WINDOW_H
+#ifndef _SELECTOR_H
+#define _SELECTOR_H
 
-//#include "leafpad.h"
+#include "file.h"
 
-MainWindow *create_main_window(StructData *sd);
-gchar *get_current_file_basename(gchar *filename);
-void set_main_window_title(StructData *sd);
-//void set_main_window_title_with_asterisk(gboolean flag);
-//void set_main_window_title_toggle_asterisk(void);
+/* Dialog Mode */
+enum {
+	SAVE = 0,
+	OPEN
+};
 
-#endif /* _WINDOW_H */
+FileInfo *get_fileinfo_from_selector(GtkWidget *window, FileInfo *fi, gint requested_mode);
+
+#endif  /* _SELECTOR_H */

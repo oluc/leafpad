@@ -21,12 +21,12 @@
 
 #include "leafpad.h"
 
-static void remove_scrollbar_spacing(GtkScrolledWindow *sw)
+/*static void remove_scrollbar_spacing(GtkScrolledWindow *sw)
 {
 	GtkScrolledWindowClass *sw_class = GTK_SCROLLED_WINDOW_GET_CLASS(sw);
 	
 	sw_class->scrollbar_spacing = 0;
-}
+}*/
 
 static gboolean cb_delete_event(GtkWidget *widget, GdkEvent *event, gpointer data)
 {
@@ -93,7 +93,7 @@ MainWindow *create_main_window(StructData *sd)
 		GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
 //	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(sw),
 //		GTK_SHADOW_IN);
-	remove_scrollbar_spacing(GTK_SCROLLED_WINDOW(sw));
+//	remove_scrollbar_spacing(GTK_SCROLLED_WINDOW(sw));
 	gtk_box_pack_start(GTK_BOX(vbox), sw, TRUE, TRUE, 0);
 	
 	textview = gtk_text_view_new();
@@ -131,12 +131,12 @@ MainWindow *create_main_window(StructData *sd)
 	return mainwin;
 }
 
-gchar *get_current_file_basename(gchar *filepath)
+gchar *get_current_file_basename(gchar *filename)
 {
 	gchar *basename;
 	
-	if (filepath)
-		basename = g_path_get_basename(g_filename_to_utf8(filepath, -1, NULL, NULL, NULL));
+	if (filename)
+		basename = g_path_get_basename(g_filename_to_utf8(filename, -1, NULL, NULL, NULL));
 	else
 		basename = g_strdup(_("Untitled"));
 	
@@ -147,9 +147,9 @@ void set_main_window_title(StructData *sd)
 {
 	gchar *basename, *title;
 	
-	basename = get_current_file_basename(sd->fi->filepath);
-	if (sd->fi->filepath) {
-		if (g_file_test(g_filename_to_utf8(sd->fi->filepath, -1, NULL, NULL, NULL),
+	basename = get_current_file_basename(sd->fi->filename);
+	if (sd->fi->filename) {
+		if (g_file_test(g_filename_to_utf8(sd->fi->filename, -1, NULL, NULL, NULL),
 			G_FILE_TEST_EXISTS))
 			title = g_strdup(basename);
 		else

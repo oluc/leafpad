@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.7\n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
 "PO-Revision-Date: 2004-11-04 10:10+0100\n"
 "Last-Translator: David Rosal <davidrr@users.sourceforge.net>\n"
 "Language-Team: Catalan\n"
@@ -20,102 +20,27 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "Vols desar els canvis fets a '%s'?"
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr "Editor de text simple, basat en GTK+"
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr "Respecte a %s"
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr "Locale actual"
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr "Unicode"
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr "Occidental"
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr "Ciríl.lic"
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr "Xinès simplificat"
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr "Xinès tradicional"
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr "Japonès"
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr "Coreà"
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "No es pot convertir la codificació a '%s'"
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr "No es pot obrir el fitxer per a escriure"
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
 msgstr "No es pot escriure al fitxer"
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr "Una altra codificació..."
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr "Una altra codificació (%s)"
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr "Introduiex la codificació"
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr "Codificació: "
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr "'%s' no és suportat"
-
-#: src/file.c:350
-msgid "Open"
-msgstr "Obrir"
-
-#: src/file.c:352
-msgid "Save As"
-msgstr "Guardar com a"
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr "Codificació de c_aràcters: "
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr "Autodetectar"
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' ja existeix. Vols sobreescriure'l?"
 
 #: src/font.c:49
 msgid "Font"
@@ -278,6 +203,76 @@ msgstr "_Saltar"
 msgid "_Line number: "
 msgstr "Número de _línia: "
 
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Locale actual (%s)"
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr "Una altra codificació"
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr "Codificació:"
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' no és suportat"
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr "Autodetectar"
+
+#: src/selector.c:323
+msgid "Open"
+msgstr "Obrir"
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr "Guardar com a"
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr "Codificació de c_aràcters: "
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' ja existeix. Vols sobreescriure'l?"
+
 #: src/window.c:141
 msgid "Untitled"
 msgstr "Sense nom"
+
+#~ msgid "Other Codeset (%s)"
+#~ msgstr "Una altra codificació (%s)"
+
+#~ msgid "Other Codeset..."
+#~ msgstr "Una altra codificació..."
+
+#, fuzzy
+#~ msgid "Unicode (UTF-8)"
+#~ msgstr "Unicode"
+
+#~ msgid "Western"
+#~ msgstr "Occidental"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Ciríl.lic"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "Xinès simplificat"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Xinès tradicional"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonès"
+
+#~ msgid "Korean"
+#~ msgstr "Coreà"
+
+#~ msgid "Enter Codeset"
+#~ msgstr "Introduiex la codificació"

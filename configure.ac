@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(Leafpad, 0.7.8, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.7.9, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AC_CONFIG_SRCDIR([src/leafpad.h])
 AM_CONFIG_HEADER([config.h])

@@ -113,7 +113,7 @@ static gint save_config_file(StructData *sd)
 	return 0;
 }
 
-static void create_new_process(gchar *argv)
+static void create_new_process(gchar *filename)
 {
 	StructData *sd = g_malloc(sizeof(StructData));
 	FileInfo *fi;
@@ -137,15 +137,15 @@ static void create_new_process(gchar *argv)
 		sd->conf.autoindent);
 	
 	fi = g_malloc(sizeof(FileInfo));
-	fi->filepath = argv;
+	fi->filename = filename;
 	fi->charset = NULL;
-	fi->line_ending = 0;
+	fi->lineend = 0;
 	if (sd->conf.charset)
 		fi->manual_charset = sd->conf.charset;
 	else
 		fi->manual_charset = NULL;
 	sd->fi = fi;
- 	if (sd->fi->filepath) {
+ 	if (sd->fi->filename) {
 		if (file_open_real(sd->mainwin->textview, sd->fi))
 			cb_file_new(sd);
 		else {
@@ -178,11 +178,11 @@ gint main(gint argc, gchar *argv[])
 	bind_textdomain_codeset(PACKAGE, "UTF-8");
 	textdomain(PACKAGE);
 	
+/*	if (getenv("G_BROKEN_FILENAMES") == NULL)
+		if (strcmp(get_default_charset(), "UTF-8") != 0)
+			setenv("G_BROKEN_FILENAMES", "1", 0);
+*/	
 	gtk_init(&argc, &argv);
-	
-	init_charset_info();
-	if (strcmp(get_default_charset(), "UTF-8") != 0)
-		setenv("G_BROKEN_FILENAMES", "1", 0);
 	
 	if (argv[1]) {
 		if (g_strstr_len(argv[1], 5, "file:")) {
@@ -197,7 +197,7 @@ gint main(gint argc, gchar *argv[])
 		/*	if  (!g_path_is_absolute(argv[1]))
 				filename = g_build_filename(g_get_current_dir(), argv[1], NULL);
 			else */
-				filename = argv[1];
+				filename = g_strdup(argv[1]);
 		}
 	}
 	

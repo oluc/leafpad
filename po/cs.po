@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.6\n"
-"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"POT-Creation-Date: 2004-12-24 22:16+0900\n"
 "PO-Revision-Date: 2004-11-18 23:58+0100\n"
 "Last-Translator: Petr Vysloužil <evyslouz@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -20,102 +20,27 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "Uložit změny v '%s'?"
 
-#: src/callback.c:285
+#: src/callback.c:291
 msgid "GTK+ based simple text editor"
 msgstr "Jednoduchý GTK+ textový editor"
 
-#: src/dialog.c:113
+#: src/dialog.c:135
 #, c-format
 msgid "About %s"
 msgstr "O %s"
 
-#: src/encoding.c:65
-msgid "Current Locale"
-msgstr "Aktuální locale"
-
-#: src/encoding.c:67
-msgid "Unicode"
-msgstr "Unicode"
-
-#: src/encoding.c:68
-msgid "Western"
-msgstr "Západní"
-
-#: src/encoding.c:72 src/encoding.c:82
-msgid "Cyrillic"
-msgstr "Azbuka"
-
-#: src/encoding.c:83
-msgid "Chinese Simplified"
-msgstr "Čínské zjednodušené"
-
-#: src/encoding.c:84
-msgid "Chinese Traditional"
-msgstr "Čínské tradiční"
-
-#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
-msgid "Japanese"
-msgstr "Japonské"
-
-#: src/encoding.c:89 src/encoding.c:90
-msgid "Korean"
-msgstr "Korejské"
-
-#: src/file.c:161
+#: src/file.c:150
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Nemohu převést znakovou sadu na '%s'"
 
-#: src/file.c:174
+#: src/file.c:163
 msgid "Can't open file to write"
 msgstr "Nemohu otevřít soubor k zápisu"
 
-#: src/file.c:179
+#: src/file.c:168
 msgid "Can't write file"
 msgstr "Nemohu zapsat soubor"
-
-#: src/file.c:230
-msgid "Other Codeset..."
-msgstr "Jiná znaková sada..."
-
-#: src/file.c:234
-#, c-format
-msgid "Other Codeset (%s)"
-msgstr "Jiná znaková sada (%s)"
-
-#: src/file.c:250
-msgid "Enter Codeset"
-msgstr "Zadat znakovou sadu"
-
-#: src/file.c:258
-msgid "Code_set: "
-msgstr "Znaková _sada:"
-
-#: src/file.c:276
-#, c-format
-msgid "'%s' is not supported"
-msgstr "'%s' není podporována"
-
-#: src/file.c:350
-msgid "Open"
-msgstr "Otevřít"
-
-#: src/file.c:352
-msgid "Save As"
-msgstr "Uložit jako"
-
-#: src/file.c:360
-msgid "Ch_aracter Coding: "
-msgstr "_Kódování znaků:"
-
-#: src/file.c:387
-msgid "Auto-Detect"
-msgstr "Autodetekce"
-
-#: src/file.c:485
-#, c-format
-msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' již existuje. Přepsat?"
 
 #: src/font.c:49
 msgid "Font"
@@ -278,6 +203,76 @@ msgstr "_Přejít"
 msgid "_Line number: "
 msgstr "_Číslo řádku:"
 
+#: src/selector.c:103
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Aktuální locale (%s)"
+
+#: src/selector.c:147
+msgid "Other Codeset"
+msgstr "Jiná znaková sada"
+
+#: src/selector.c:186
+msgid "Code_set:"
+msgstr "Znaková _sada:"
+
+#: src/selector.c:207
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' není podporována"
+
+#: src/selector.c:271
+msgid "Auto Detect"
+msgstr "Autodetekce"
+
+#: src/selector.c:323
+msgid "Open"
+msgstr "Otevřít"
+
+#: src/selector.c:323
+msgid "Save As"
+msgstr "Uložit jako"
+
+#: src/selector.c:336
+msgid "Ch_aracter Coding: "
+msgstr "_Kódování znaků:"
+
+#: src/selector.c:392
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' již existuje. Přepsat?"
+
 #: src/window.c:141
 msgid "Untitled"
 msgstr "Nepojmenovaný"
+
+#~ msgid "Other Codeset (%s)"
+#~ msgstr "Jiná znaková sada (%s)"
+
+#~ msgid "Other Codeset..."
+#~ msgstr "Jiná znaková sada..."
+
+#, fuzzy
+#~ msgid "Unicode (UTF-8)"
+#~ msgstr "Unicode"
+
+#~ msgid "Western"
+#~ msgstr "Západní"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Azbuka"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "Čínské zjednodušené"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Čínské tradiční"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonské"
+
+#~ msgid "Korean"
+#~ msgstr "Korejské"
+
+#~ msgid "Enter Codeset"
+#~ msgstr "Zadat znakovou sadu"
