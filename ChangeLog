@@ -1,3 +1,20 @@
+2004-12-03
+
+  version 0.7.8:
+	* Implemented widget sesnsitivity.
+  	* Changed scrollbar_spacing to zero.
+  	* Changed about dialog caption.
+	* Fixed undo sequency for Ctrl+V overwrite.
+	* Added Hungarian translation (thanks Reviczky Adam Janos).
+	* Added Catalan translation (thanks David Rosal).
+	* Added Tamil translation (thanks Vijay Durairaj).
+	* Added Italian translation (thanks Alessio D'Ascanio).
+
+2004-11-21
+
+  version 0.7.7.1:
+	* Fixed undo function for the case start from '%' character.
+
 2004-11-19
 
   version 0.7.7:

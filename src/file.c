@@ -465,6 +465,19 @@ FileInfo *get_file_info_by_selector(GtkWidget *window, gint mode, FileInfo *fi)
 	do {
 		if (gtk_dialog_run(GTK_DIALOG(filesel)) == GTK_RESPONSE_OK) {
 			selected_filename = (gchar *) gtk_file_selection_get_filename(GTK_FILE_SELECTION(filesel));
+			if (g_file_test(selected_filename, G_FILE_TEST_IS_DIR)) {
+				gchar *str;
+				gint len;
+				len = strlen(selected_filename);
+//				if (g_str_has_suffix(selected_filename, G_DIR_SEPARATOR_S))
+				if (len < 1 || selected_filename[len - 1] != G_DIR_SEPARATOR)
+					str = g_strconcat(selected_filename, G_DIR_SEPARATOR_S, NULL);
+				else
+					str = g_strdup(selected_filename);
+				gtk_file_selection_set_filename(GTK_FILE_SELECTION(filesel), str);
+				g_free(str);
+				continue;
+			}
 			if (mode == SAVE && g_file_test(selected_filename, G_FILE_TEST_EXISTS)) {
 				gchar *basename, *str;
 				gint res;

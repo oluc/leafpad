@@ -1,37 +1,37 @@
-# Czech translation of leafpad.
+# Catalan translation of Leafpad
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the leafpad package.
-# Petr Vysloužil <evyslouz@volny.cz>, 2004.
-#
+# David Rosal <davidrr@users.sourceforge.net> 2004.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.7.6\n"
+"Project-Id-Version: Leafpad 0.7.7\n"
 "POT-Creation-Date: 2004-12-03 22:44+0900\n"
-"PO-Revision-Date: 2004-11-18 23:58+0100\n"
-"Last-Translator: Petr Vysloužil <evyslouz@volny.cz>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"PO-Revision-Date: 2004-11-04 10:10+0100\n"
+"Last-Translator: David Rosal <davidrr@users.sourceforge.net>\n"
+"Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bitReport-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
-"Report-Msgid-Bugs-To: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
 
 #: src/callback.c:33
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Uložit změny v '%s'?"
+msgstr "Vols desar els canvis fets a '%s'?"
 
 #: src/callback.c:285
 msgid "GTK+ based simple text editor"
-msgstr "Jednoduchý GTK+ textový editor"
+msgstr "Editor de text simple, basat en GTK+"
 
 #: src/dialog.c:113
 #, c-format
 msgid "About %s"
-msgstr "O %s"
+msgstr "Respecte a %s"
 
 #: src/encoding.c:65
 msgid "Current Locale"
-msgstr "Aktuální locale"
+msgstr "Locale actual"
 
 #: src/encoding.c:67
 msgid "Unicode"
@@ -39,245 +39,245 @@ msgstr "Unicode"
 
 #: src/encoding.c:68
 msgid "Western"
-msgstr "Západní"
+msgstr "Occidental"
 
 #: src/encoding.c:72 src/encoding.c:82
 msgid "Cyrillic"
-msgstr "Azbuka"
+msgstr "Ciríl.lic"
 
 #: src/encoding.c:83
 msgid "Chinese Simplified"
-msgstr "Čínské zjednodušené"
+msgstr "Xinès simplificat"
 
 #: src/encoding.c:84
 msgid "Chinese Traditional"
-msgstr "Čínské tradiční"
+msgstr "Xinès tradicional"
 
 #: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
 msgid "Japanese"
-msgstr "Japonské"
+msgstr "Japonès"
 
 #: src/encoding.c:89 src/encoding.c:90
 msgid "Korean"
-msgstr "Korejské"
+msgstr "Coreà"
 
 #: src/file.c:161
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Nemohu převést znakovou sadu na '%s'"
+msgstr "No es pot convertir la codificació a '%s'"
 
 #: src/file.c:174
 msgid "Can't open file to write"
-msgstr "Nemohu otevřít soubor k zápisu"
+msgstr "No es pot obrir el fitxer per a escriure"
 
 #: src/file.c:179
 msgid "Can't write file"
-msgstr "Nemohu zapsat soubor"
+msgstr "No es pot escriure al fitxer"
 
 #: src/file.c:230
 msgid "Other Codeset..."
-msgstr "Jiná znaková sada..."
+msgstr "Una altra codificació..."
 
 #: src/file.c:234
 #, c-format
 msgid "Other Codeset (%s)"
-msgstr "Jiná znaková sada (%s)"
+msgstr "Una altra codificació (%s)"
 
 #: src/file.c:250
 msgid "Enter Codeset"
-msgstr "Zadat znakovou sadu"
+msgstr "Introduiex la codificació"
 
 #: src/file.c:258
 msgid "Code_set: "
-msgstr "Znaková _sada:"
+msgstr "Codificació: "
 
 #: src/file.c:276
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' není podporována"
+msgstr "'%s' no és suportat"
 
 #: src/file.c:350
 msgid "Open"
-msgstr "Otevřít"
+msgstr "Obrir"
 
 #: src/file.c:352
 msgid "Save As"
-msgstr "Uložit jako"
+msgstr "Guardar com a"
 
 #: src/file.c:360
 msgid "Ch_aracter Coding: "
-msgstr "_Kódování znaků:"
+msgstr "Codificació de c_aràcters: "
 
 #: src/file.c:387
 msgid "Auto-Detect"
-msgstr "Autodetekce"
+msgstr "Autodetectar"
 
 #: src/file.c:485
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' již existuje. Přepsat?"
+msgstr "'%s' ja existeix. Vols sobreescriure'l?"
 
 #: src/font.c:49
 msgid "Font"
-msgstr "Písmo"
+msgstr "Tipografia"
 
 #: src/menu.c:59
 msgid "/_File"
-msgstr "/_Soubor"
+msgstr "/_Fitxer"
 
 #: src/menu.c:61
 msgid "/File/_New"
-msgstr "/Soubor/_Nový"
+msgstr "/Fitxer/_Nou"
 
 #: src/menu.c:65
 msgid "/File/_Open..."
-msgstr "/Soubor/_Otevřít"
+msgstr "/Fitxer/_Obrir..."
 
 #: src/menu.c:67
 msgid "/File/_Save"
-msgstr "/Soubor/_Uložit"
+msgstr "/Fitxer/_Guardar"
 
 #: src/menu.c:69
 msgid "/File/Save _As..."
-msgstr "/Soubor/Uložit _jako..."
+msgstr "/Fitxer/Guardar com _a..."
 
 #: src/menu.c:79
 msgid "/File/_Quit"
-msgstr "/Soubor/_Konec"
+msgstr "/Fitxer/_Sortir"
 
 #: src/menu.c:81
 msgid "/_Edit"
-msgstr "/Ú_pravy"
+msgstr "/_Editar"
 
 #: src/menu.c:83
 msgid "/Edit/_Undo"
-msgstr "/Ú_pravy/_Zpět"
+msgstr "/Editar/_Desfer"
 
 #: src/menu.c:85
 msgid "/Edit/_Redo"
-msgstr "/Ú_pravy/Zn_ovu"
+msgstr "/Editar/_Refer"
 
 #: src/menu.c:89
 msgid "/Edit/Cu_t"
-msgstr "/Ú_pravy/_Vyjmout"
+msgstr "/Editar/_Tallar"
 
 #: src/menu.c:91
 msgid "/Edit/_Copy"
-msgstr "/Ú_pravy/_Kopírovat"
+msgstr "/Editar/_Copiar"
 
 #: src/menu.c:93
 msgid "/Edit/_Paste"
-msgstr "/Ú_pravy/V_ložit"
+msgstr "/Editar/_Enganxar"
 
 #: src/menu.c:95
 msgid "/Edit/_Delete"
-msgstr "/Ú_pravy/_Odstranit"
+msgstr "/Editar/Es_borrar"
 
 #: src/menu.c:99
 msgid "/Edit/Select _All"
-msgstr "/Ú_pravy/_Vybrat vše"
+msgstr "/Editar/_Seleccionar-ho tot"
 
 #: src/menu.c:101
 msgid "/_Search"
-msgstr "/_Hledat"
+msgstr "/_Cercar"
 
 #: src/menu.c:103
 msgid "/Search/_Find..."
-msgstr "/Hledat/_Hledat"
+msgstr "/Cercar/_Cercar..."
 
 #: src/menu.c:105
 msgid "/Search/Find _Next"
-msgstr "/Hledat/Hledat _následující"
+msgstr "/Cercar/Cercar el _següent"
 
 #: src/menu.c:107
 msgid "/Search/Find _Previous"
-msgstr "/Hledat/Hledat _předchozí"
+msgstr "/Cercar/Cercar l'_anterior"
 
 #: src/menu.c:109
 msgid "/Search/_Replace..."
-msgstr "/Hledat/Nah_radit"
+msgstr "/Cercar/_Substituir"
 
 #: src/menu.c:113
 msgid "/Search/_Jump To..."
-msgstr "/Hledat/_Přejít na"
+msgstr "/Cercar/Saltar a la _línia..."
 
 #: src/menu.c:115
 msgid "/_Options"
-msgstr "/_Nástroje"
+msgstr "/_Opcions"
 
 #: src/menu.c:117
 msgid "/Options/_Font..."
-msgstr "/_Nástroje/_Písmo"
+msgstr "/Opcions/_Tipografia..."
 
 #: src/menu.c:119
 msgid "/Options/_Word Wrap"
-msgstr "/Nástroje/_Zalamovat řádky"
+msgstr "/Opcions/_Ajust de línia"
 
 #: src/menu.c:121
 msgid "/Options/_Line Numbers"
-msgstr "/_Nástroje/Čí_slovat řádky"
+msgstr "/Opcions/_Numerar les línies"
 
 #: src/menu.c:125
 msgid "/Options/_Auto Indent"
-msgstr "/Nastavení/_Automatické odsazování"
+msgstr "/Opcions/Auto_indentació"
 
 #: src/menu.c:127
 msgid "/_Help"
-msgstr "/_Nápověda"
+msgstr "/A_jut"
 
 #: src/menu.c:129
 msgid "/Help/_About"
-msgstr "/Nápověda/O _aplikaci"
+msgstr "/Ajut/_Respecte a"
 
 #: src/search.c:83
 msgid "Search string not found"
-msgstr "Hledaný řetězec nenalezen"
+msgstr "No s'ha trobat la cadena desitjada"
 
 #: src/search.c:125
 msgid "Replace?"
-msgstr "Nahradit?"
+msgstr "Substituir?"
 
 #: src/search.c:153
 #, c-format
 msgid "%d strings replaced"
-msgstr "nahrazeno '%d' řetězců"
+msgstr "S'han substituit %d cadenes"
 
 #: src/search.c:199
 msgid "Replace"
-msgstr "Nahradit"
+msgstr "Substituir"
 
 #: src/search.c:206
 msgid "Find"
-msgstr "Hledat"
+msgstr "Cercar"
 
 #: src/search.c:218
 msgid "Fi_nd what: "
-msgstr "_Hledat:"
+msgstr "_Cercar: "
 
 #: src/search.c:234
 msgid "Re_place with: "
-msgstr "Nahra_dit čím:"
+msgstr "_Substituir per: "
 
 #: src/search.c:248
 msgid "_Match case"
-msgstr "_Rozlišovat velikost písmen"
+msgstr "Distingir _majúscules / minúscules"
 
 #: src/search.c:253
 msgid "Replace _all at once"
-msgstr "Nahradit vš_e"
+msgstr "Substituir-les _totes de cop"
 
 #: src/search.c:304
 msgid "Jump To"
-msgstr "Jit na _řádek"
+msgstr "Saltar a"
 
 #: src/search.c:309
 msgid "_Jump"
-msgstr "_Přejít"
+msgstr "_Saltar"
 
 #: src/search.c:315
 msgid "_Line number: "
-msgstr "_Číslo řádku:"
+msgstr "Número de _línia: "
 
 #: src/window.c:141
 msgid "Untitled"
-msgstr "Nepojmenovaný"
+msgstr "Sense nom"

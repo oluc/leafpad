@@ -1,0 +1,285 @@
+# Tamil translation of leafpad.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the leafpad package.
+# Vijay Durairaj <vjd81@yahoo.com>, 2004.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: leafpad 0.7.7\n"
+"POT-Creation-Date: 2004-12-03 22:44+0900\n"
+"PO-Revision-Date: 2004-11-25 03:24-0700\n"
+"Last-Translator: Vijay Durairaj <vjd81@yahoo.com>\n"
+"Language-Team: Tamil <tamilinix@yahoogroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
+
+#: src/callback.c:33
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "மாற்றங்களை '%s' இல் சேமி?"
+
+#: src/callback.c:285
+msgid "GTK+ based simple text editor"
+msgstr "GTK+ சார்ந்த ஒரு எளிமையான உரை பதிப்பான்"
+
+#: src/dialog.c:113
+#, c-format
+msgid "About %s"
+msgstr "பற்றி %s"
+
+#: src/encoding.c:65
+msgid "Current Locale"
+msgstr "தற்பொழுதுள்ள Locale"
+
+#: src/encoding.c:67
+msgid "Unicode"
+msgstr "யூனிகோட்"
+
+#: src/encoding.c:68
+msgid "Western"
+msgstr "Western"
+
+#: src/encoding.c:72 src/encoding.c:82
+msgid "Cyrillic"
+msgstr "கிரைலிக் "
+
+#: src/encoding.c:83
+msgid "Chinese Simplified"
+msgstr "இலகு சீனமொழி   "
+
+#: src/encoding.c:84
+msgid "Chinese Traditional"
+msgstr "பாரம்பரிய சீனமொழி "
+
+#: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
+msgid "Japanese"
+msgstr "ஜப்பானிய"
+
+#: src/encoding.c:89 src/encoding.c:90
+msgid "Korean"
+msgstr "கொரிய "
+
+#: src/file.c:161
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr ""
+
+#: src/file.c:174
+msgid "Can't open file to write"
+msgstr "கோப்பை எழுதுவதற்காக திறக்க முடியவில்லை"
+
+#: src/file.c:179
+msgid "Can't write file"
+msgstr "கோப்பை எழுத முடியவில்லை"
+
+#: src/file.c:230
+msgid "Other Codeset..."
+msgstr ""
+
+#: src/file.c:234
+#, c-format
+msgid "Other Codeset (%s)"
+msgstr ""
+
+#: src/file.c:250
+msgid "Enter Codeset"
+msgstr ""
+
+#: src/file.c:258
+msgid "Code_set: "
+msgstr ""
+
+#: src/file.c:276
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' க்கு ஆதரவு எதுவும் இல்லை"
+
+#: src/file.c:350
+msgid "Open"
+msgstr "திற"
+
+#: src/file.c:352
+msgid "Save As"
+msgstr "எனச் சேமி..."
+
+#: src/file.c:360
+msgid "Ch_aracter Coding: "
+msgstr ""
+
+#: src/file.c:387
+msgid "Auto-Detect"
+msgstr "தானாக கண்டுபிடி"
+
+#: src/file.c:485
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' ஏற்கனவே உள்ளது. மேல் எழுதவா?"
+
+#: src/font.c:49
+msgid "Font"
+msgstr "எழுத்துரு"
+
+#: src/menu.c:59
+msgid "/_File"
+msgstr "/கோப்பு(_F)"
+
+#: src/menu.c:61
+msgid "/File/_New"
+msgstr "/கோப்பு(F)/புதிது(_N)"
+
+#: src/menu.c:65
+msgid "/File/_Open..."
+msgstr "/கோப்பு(F)/திற(_O)..."
+
+#: src/menu.c:67
+msgid "/File/_Save"
+msgstr "/கோப்பு(F)/சேமி(_S)"
+
+#: src/menu.c:69
+msgid "/File/Save _As..."
+msgstr "/கோப்பு(F)/வேறு பேரில் சேமி(_A)..."
+
+#: src/menu.c:79
+msgid "/File/_Quit"
+msgstr "/கோப்பு(F)/வெளிச்செல்(_Q)"
+
+#: src/menu.c:81
+msgid "/_Edit"
+msgstr "/தொகு(_E)"
+
+#: src/menu.c:83
+msgid "/Edit/_Undo"
+msgstr "/தொகு(E)/கவில் செய்(_U)"
+
+#: src/menu.c:85
+msgid "/Edit/_Redo"
+msgstr "/தொகு(E)/மீண்டும்(_R)"
+
+#: src/menu.c:89
+msgid "/Edit/Cu_t"
+msgstr "/தொகு(E)/வெட்டு(_T)"
+
+#: src/menu.c:91
+msgid "/Edit/_Copy"
+msgstr "/தொகு(E)/நகல்(_C)"
+
+#: src/menu.c:93
+msgid "/Edit/_Paste"
+msgstr "/தொகு(E)/ஒட்டு(_P)"
+
+#: src/menu.c:95
+msgid "/Edit/_Delete"
+msgstr "/தொகு(E)/நீக்கு(_D)"
+
+#: src/menu.c:99
+msgid "/Edit/Select _All"
+msgstr "/தொகு(E)/அனைத்தையும் தேர்வு செய்க(_A)"
+
+#: src/menu.c:101
+msgid "/_Search"
+msgstr "/தேடுக(_S)"
+
+#: src/menu.c:103
+msgid "/Search/_Find..."
+msgstr "/தேடுக(S)/கண்டுபிடி(_F).."
+
+#: src/menu.c:105
+msgid "/Search/Find _Next"
+msgstr "/தேடுக(S)/அடுத்ததை கண்டுபிடி(_N)"
+
+#: src/menu.c:107
+msgid "/Search/Find _Previous"
+msgstr "/தேர்வுகள்(O)/தேடலை பின்னோக்கு(_p)"
+
+#: src/menu.c:109
+msgid "/Search/_Replace..."
+msgstr "/தேடுக(S)/இடமாற்று(_R)..."
+
+#: src/menu.c:113
+msgid "/Search/_Jump To..."
+msgstr "/தேடுக(S)/இங்கு போ(_J)..."
+
+#: src/menu.c:115
+msgid "/_Options"
+msgstr "/தேர்வுகள்(_O)"
+
+#: src/menu.c:117
+msgid "/Options/_Font..."
+msgstr "/தேர்வுகள்(O)/எழுத்துரு(_F).."
+
+#: src/menu.c:119
+msgid "/Options/_Word Wrap"
+msgstr "/தேர்வுகள்(O)/சொல் மடிப்பு(_W)"
+
+#: src/menu.c:121
+msgid "/Options/_Line Numbers"
+msgstr "/தேர்வுகள்(O)/வரி எண்கள்(_L)"
+
+#: src/menu.c:125
+msgid "/Options/_Auto Indent"
+msgstr "/தேர்வுகள்(O)/தன்னியக்க தள்ளல்(_A)"
+
+#: src/menu.c:127
+msgid "/_Help"
+msgstr "/உதவி(_H)"
+
+#: src/menu.c:129
+msgid "/Help/_About"
+msgstr "/உதவி(_H)/பற்றி(_A)"
+
+#: src/search.c:83
+msgid "Search string not found"
+msgstr "தேடல் சரம் கண்டுபிடிக்க முடியவில்லை"
+
+#: src/search.c:125
+msgid "Replace?"
+msgstr "மாற்றவா?"
+
+#: src/search.c:153
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d சரங்கள் மாற்றப்பட்டுள்ளது"
+
+#: src/search.c:199
+msgid "Replace"
+msgstr "மாற்று"
+
+#: src/search.c:206
+msgid "Find"
+msgstr "கண்டுபிடி"
+
+#: src/search.c:218
+msgid "Fi_nd what: "
+msgstr "எதை கண்டுப்பிடிக்க: (_N)"
+
+#: src/search.c:234
+msgid "Re_place with: "
+msgstr "எதை கொண்டு மாற்ற(_P)): "
+
+#: src/search.c:248
+msgid "_Match case"
+msgstr "எழுத்து வகை பொருத்து(_M)"
+
+#: src/search.c:253
+msgid "Replace _all at once"
+msgstr "எல்லாவற்றையும் ஒரே நேரத்தில் மாற்று(_A)"
+
+#: src/search.c:304
+msgid "Jump To"
+msgstr "இங்கு போ"
+
+#: src/search.c:309
+msgid "_Jump"
+msgstr "தாவு(_J)"
+
+#: src/search.c:315
+msgid "_Line number: "
+msgstr "வரி எண்(_L): "
+
+#: src/window.c:141
+msgid "Untitled"
+msgstr "தலைப்பில்லாதது"

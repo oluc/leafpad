@@ -73,7 +73,7 @@ void cb_file_new(StructData *sd)
 		sd->fi->line_ending = LF;
 		set_main_window_title(sd);
 		undo_unblock_signal(textbuffer);
-		undo_init(sd->mainwin->textview, textbuffer);
+		undo_init(sd->mainwin->textview, textbuffer, sd->mainwin->menubar);
 	}
 }
 
@@ -95,7 +95,7 @@ void cb_file_open(StructData *sd)
 				g_free(sd->fi);
 				sd->fi = fi;
 				set_main_window_title(sd);
-				undo_init(sd->mainwin->textview, sd->mainwin->textbuffer);
+				undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 			}
 		}
 	}
@@ -163,19 +163,21 @@ void cb_edit_redo(StructData *sd)
 void cb_edit_cut(StructData *sd)
 {
 	gtk_text_buffer_cut_clipboard(sd->mainwin->textbuffer,
-		gtk_clipboard_get(GDK_NONE), TRUE);
+		gtk_clipboard_get(GDK_SELECTION_CLIPBOARD), TRUE);
+	menu_toggle_paste_item(); // TODO: remove this line
 }
 
 void cb_edit_copy(StructData *sd)
 {
 	gtk_text_buffer_copy_clipboard(sd->mainwin->textbuffer,
-		gtk_clipboard_get(GDK_NONE));
+		gtk_clipboard_get(GDK_SELECTION_CLIPBOARD));
+	menu_toggle_paste_item(); // TODO: remove this line
 }
 
 void cb_edit_paste(StructData *sd)
 {
 	gtk_text_buffer_paste_clipboard(sd->mainwin->textbuffer,
-		gtk_clipboard_get(GDK_NONE), NULL, TRUE);
+		gtk_clipboard_get(GDK_SELECTION_CLIPBOARD), NULL, TRUE);
 	gtk_text_view_scroll_mark_onscreen(
 		GTK_TEXT_VIEW(sd->mainwin->textview),
 		gtk_text_buffer_get_insert(sd->mainwin->textbuffer));
@@ -192,9 +194,27 @@ void cb_edit_select_all(StructData *sd)
 	set_text_selection_bound(sd->mainwin->textbuffer, 0, -1);
 }
 
+static void activate_quick_find(StructData *sd)
+{
+	GtkItemFactory *ifactory;
+	static gboolean flag = FALSE;
+	
+	if (!flag) {
+		ifactory = gtk_item_factory_from_widget(sd->mainwin->menubar);
+		gtk_widget_set_sensitive(
+			gtk_item_factory_get_widget(ifactory, "/Search/Find Next"),
+			TRUE);
+		gtk_widget_set_sensitive(
+			gtk_item_factory_get_widget(ifactory, "/Search/Find Previous"),
+			TRUE);
+		flag = TRUE;
+	}
+}
+	
 void cb_search_find(StructData *sd)
 {
-	run_dialog_search(sd->mainwin->textview, 0);
+	if (run_dialog_search(sd->mainwin->textview, 0) == GTK_RESPONSE_OK)
+		activate_quick_find(sd);
 }
 
 void cb_search_find_next(StructData *sd)
@@ -209,7 +229,8 @@ void cb_search_find_prev(StructData *sd)
 
 void cb_search_replace(StructData *sd)
 {
-	run_dialog_search(sd->mainwin->textview, 1);
+	if (run_dialog_search(sd->mainwin->textview, 1) == GTK_RESPONSE_OK)
+		activate_quick_find(sd);
 }
 
 void cb_search_jump_to(StructData *sd)
@@ -258,17 +279,10 @@ void cb_option_auto_indent(StructData *sd, guint action, GtkWidget *widget)
 
 void cb_help_about(StructData *sd)
 {
-//	gchar *iconfile;
-	
-//	iconpath = g_build_filename(PREFIX, "/share/icons/leafpad.png", NULL);
-//	iconfile = g_strconcat(PACKAGE, ".png", NULL);
 	run_dialog_about(sd->mainwin->window,
 		PACKAGE_NAME,
 		PACKAGE_VERSION,
 		_("GTK+ based simple text editor"),
 		"Copyright &#169; 2004 Tarot Osuji",
 		ICONDIR G_DIR_SEPARATOR_S PACKAGE ".png");
-//		iconfile);
-//		iconpath);
-//	g_free(iconfile);
 }

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
-"POT-Creation-Date: 2004-11-09 19:58+0900\n"
+"POT-Creation-Date: 2004-12-03 22:44+0900\n"
 "PO-Revision-Date: 2004-10-04 08:21+0800\n"
 "Last-Translator: OLS3 <ols3@lxer.idv.tw>\n"
 "Language-Team: OLS3 <ols3@lxer.idv.tw>\n"
@@ -20,13 +20,14 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "要將變更儲存到“%s”?"
 
-#: src/callback.c:268
+#: src/callback.c:285
 msgid "GTK+ based simple text editor"
 msgstr "基於 GTK+ 的簡易文字編輯器"
 
 #: src/dialog.c:113
-msgid "About"
-msgstr "關於"
+#, c-format
+msgid "About %s"
+msgstr "關於 %s"
 
 #: src/encoding.c:65
 msgid "Current Locale"
@@ -111,7 +112,7 @@ msgstr "字元編碼(_A): "
 msgid "Auto-Detect"
 msgstr "自動偵測"
 
-#: src/file.c:472
+#: src/file.c:485
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "檔案“%s”已經存在. 要覆蓋它嗎?"
@@ -120,111 +121,111 @@ msgstr "檔案“%s”已經存在. 要覆蓋它嗎?"
 msgid "Font"
 msgstr "字型"
 
-#: src/menu.c:35
+#: src/menu.c:59
 msgid "/_File"
 msgstr "/檔案(_F)"
 
-#: src/menu.c:37
+#: src/menu.c:61
 msgid "/File/_New"
 msgstr "/檔案(F)/新建(_N)"
 
-#: src/menu.c:41
+#: src/menu.c:65
 msgid "/File/_Open..."
 msgstr "/檔案(F)/開啟(_O)..."
 
-#: src/menu.c:43
+#: src/menu.c:67
 msgid "/File/_Save"
 msgstr "/檔案(F)/儲存(_S)"
 
-#: src/menu.c:45
+#: src/menu.c:69
 msgid "/File/Save _As..."
 msgstr "/檔案(F)/另存為(_A)..."
 
-#: src/menu.c:55
+#: src/menu.c:79
 msgid "/File/_Quit"
 msgstr "/檔案(F)/離開(_Q)"
 
-#: src/menu.c:57
+#: src/menu.c:81
 msgid "/_Edit"
 msgstr "/編輯(_E)"
 
-#: src/menu.c:59
+#: src/menu.c:83
 msgid "/Edit/_Undo"
 msgstr "/編輯(E)/回復(_U)"
 
-#: src/menu.c:61
+#: src/menu.c:85
 msgid "/Edit/_Redo"
 msgstr "/編輯(E)/重做(_R)"
 
-#: src/menu.c:65
+#: src/menu.c:89
 msgid "/Edit/Cu_t"
 msgstr "/編輯(E)/剪下(_T)"
 
-#: src/menu.c:67
+#: src/menu.c:91
 msgid "/Edit/_Copy"
 msgstr "/編輯(E)/複製(_C)"
 
-#: src/menu.c:69
+#: src/menu.c:93
 msgid "/Edit/_Paste"
 msgstr "/編輯(E)/貼上(_P)"
 
-#: src/menu.c:71
+#: src/menu.c:95
 msgid "/Edit/_Delete"
 msgstr "/編輯(E)/刪除(_D)"
 
-#: src/menu.c:75
+#: src/menu.c:99
 msgid "/Edit/Select _All"
 msgstr "/編輯(E)/全選(_A)"
 
-#: src/menu.c:77
+#: src/menu.c:101
 msgid "/_Search"
 msgstr "/搜尋(_S)"
 
-#: src/menu.c:79
+#: src/menu.c:103
 msgid "/Search/_Find..."
 msgstr "/搜尋(S)/尋找(_F)..."
 
-#: src/menu.c:81
+#: src/menu.c:105
 msgid "/Search/Find _Next"
 msgstr "/搜尋(S)/尋找下一個(_N)"
 
-#: src/menu.c:83
+#: src/menu.c:107
 msgid "/Search/Find _Previous"
 msgstr "/搜尋(S)/尋找上一個(_P)"
 
-#: src/menu.c:85
+#: src/menu.c:109
 msgid "/Search/_Replace..."
 msgstr "/搜尋/置換(_R)..."
 
-#: src/menu.c:89
+#: src/menu.c:113
 msgid "/Search/_Jump To..."
 msgstr "/搜尋(S)/跳到(_J)..."
 
-#: src/menu.c:91
+#: src/menu.c:115
 msgid "/_Options"
 msgstr "/選項(_O)"
 
-#: src/menu.c:93
+#: src/menu.c:117
 msgid "/Options/_Font..."
 msgstr "/選項(O)/字型(_F)..."
 
-#: src/menu.c:95
+#: src/menu.c:119
 msgid "/Options/_Word Wrap"
 msgstr "/選項(O)/自動換行(_W)"
 
-#: src/menu.c:97
+#: src/menu.c:121
 msgid "/Options/_Line Numbers"
 msgstr "/選項(O)/列號(_L)"
 
-#: src/menu.c:101
+#: src/menu.c:125
 msgid "/Options/_Auto Indent"
 msgstr "/選項(O)/自動縮排(_A)"
 
-#: src/menu.c:103
+#: src/menu.c:127
 msgid "/_Help"
 msgstr "/說明(_H)"
 
-#: src/menu.c:105
+#: src/menu.c:129
 msgid "/Help/_About"
 msgstr "/說明(H)/關於(_A)"
 
@@ -241,43 +242,43 @@ msgstr "要置換嗎?"
 msgid "%d strings replaced"
 msgstr "置換了 %d 個字串"
 
-#: src/search.c:180
+#: src/search.c:199
 msgid "Replace"
 msgstr "置換"
 
-#: src/search.c:187
+#: src/search.c:206
 msgid "Find"
 msgstr "查找"
 
-#: src/search.c:199
+#: src/search.c:218
 msgid "Fi_nd what: "
 msgstr "查找(_N): "
 
-#: src/search.c:208
+#: src/search.c:234
 msgid "Re_place with: "
 msgstr "置換成(_A): "
 
-#: src/search.c:222
+#: src/search.c:248
 msgid "_Match case"
 msgstr "區分大小寫(_M)"
 
-#: src/search.c:227
+#: src/search.c:253
 msgid "Replace _all at once"
 msgstr "全部置換(_A)"
 
-#: src/search.c:276
+#: src/search.c:304
 msgid "Jump To"
 msgstr "跳到"
 
-#: src/search.c:281
+#: src/search.c:309
 msgid "_Jump"
 msgstr "跳(_J)"
 
-#: src/search.c:287
+#: src/search.c:315
 msgid "_Line number: "
 msgstr "列號(_L): "
 
-#: src/window.c:95
+#: src/window.c:141
 msgid "Untitled"
 msgstr "無標題"
 

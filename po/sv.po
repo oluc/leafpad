@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.4\n"
-"POT-Creation-Date: 2004-11-09 19:58+0900\n"
+"POT-Creation-Date: 2004-12-03 22:44+0900\n"
 "PO-Revision-Date: 2004-10-27 16:26+0200\n"
 "Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -20,13 +20,14 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "Spara ändringar för '%s'?"
 
-#: src/callback.c:268
+#: src/callback.c:285
 msgid "GTK+ based simple text editor"
 msgstr "Enkel GTK+-baserad texteditor"
 
 #: src/dialog.c:113
-msgid "About"
-msgstr "Om"
+#, c-format
+msgid "About %s"
+msgstr "Om %s"
 
 #: src/encoding.c:65
 msgid "Current Locale"
@@ -111,7 +112,7 @@ msgstr "Tecken_kodning: "
 msgid "Auto-Detect"
 msgstr "Automatiskts"
 
-#: src/file.c:472
+#: src/file.c:485
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' finns redan. Vill du skriva över?"
@@ -120,111 +121,111 @@ msgstr "'%s' finns redan. Vill du skriva över?"
 msgid "Font"
 msgstr "Typsnitt"
 
-#: src/menu.c:35
+#: src/menu.c:59
 msgid "/_File"
 msgstr "/_Arkiv"
 
-#: src/menu.c:37
+#: src/menu.c:61
 msgid "/File/_New"
 msgstr "/Arkiv/_Ny"
 
-#: src/menu.c:41
+#: src/menu.c:65
 msgid "/File/_Open..."
 msgstr "/Arkiv/_Öppna..."
 
-#: src/menu.c:43
+#: src/menu.c:67
 msgid "/File/_Save"
 msgstr "/Arkiv/_Spara"
 
-#: src/menu.c:45
+#: src/menu.c:69
 msgid "/File/Save _As..."
 msgstr "/Arkiv/S_para som..."
 
-#: src/menu.c:55
+#: src/menu.c:79
 msgid "/File/_Quit"
 msgstr "Arkiv/_Avsluta"
 
-#: src/menu.c:57
+#: src/menu.c:81
 msgid "/_Edit"
 msgstr "/_Redigera"
 
-#: src/menu.c:59
+#: src/menu.c:83
 msgid "/Edit/_Undo"
 msgstr "/Redigera/_Ångra"
 
-#: src/menu.c:61
+#: src/menu.c:85
 msgid "/Edit/_Redo"
 msgstr "/Redigera/_Upprepa"
 
-#: src/menu.c:65
+#: src/menu.c:89
 msgid "/Edit/Cu_t"
 msgstr "/Redigera/Klipp _ut"
 
-#: src/menu.c:67
+#: src/menu.c:91
 msgid "/Edit/_Copy"
 msgstr "/Redigera/K_opiera"
 
-#: src/menu.c:69
+#: src/menu.c:93
 msgid "/Edit/_Paste"
 msgstr "/Redigera/Klistra _in"
 
-#: src/menu.c:71
+#: src/menu.c:95
 msgid "/Edit/_Delete"
 msgstr "/Redigera/_Radera"
 
-#: src/menu.c:75
+#: src/menu.c:99
 msgid "/Edit/Select _All"
 msgstr "/Redigera/Markera _allt"
 
-#: src/menu.c:77
+#: src/menu.c:101
 msgid "/_Search"
 msgstr "/_Sök"
 
-#: src/menu.c:79
+#: src/menu.c:103
 msgid "/Search/_Find..."
 msgstr "/Sök/_Sök..."
 
-#: src/menu.c:81
+#: src/menu.c:105
 msgid "/Search/Find _Next"
 msgstr "/Sök/Sök _nästa"
 
-#: src/menu.c:83
+#: src/menu.c:107
 msgid "/Search/Find _Previous"
 msgstr "/Sök/Sök _föregående"
 
-#: src/menu.c:85
+#: src/menu.c:109
 msgid "/Search/_Replace..."
 msgstr "/Sök/_Ersätt..."
 
-#: src/menu.c:89
+#: src/menu.c:113
 msgid "/Search/_Jump To..."
 msgstr "/Sök/_Hoppa till..."
 
-#: src/menu.c:91
+#: src/menu.c:115
 msgid "/_Options"
 msgstr "/_Inställningar"
 
-#: src/menu.c:93
+#: src/menu.c:117
 msgid "/Options/_Font..."
 msgstr "/Inställningar/_Typsnitt..."
 
-#: src/menu.c:95
+#: src/menu.c:119
 msgid "/Options/_Word Wrap"
 msgstr "/Inställningar/_Radbrytning"
 
-#: src/menu.c:97
+#: src/menu.c:121
 msgid "/Options/_Line Numbers"
 msgstr "/Inställningar/Rad_nummer"
 
-#: src/menu.c:101
+#: src/menu.c:125
 msgid "/Options/_Auto Indent"
 msgstr "/Inställningar/Automatisk _indentering"
 
-#: src/menu.c:103
+#: src/menu.c:127
 msgid "/_Help"
 msgstr "/_Hjälp"
 
-#: src/menu.c:105
+#: src/menu.c:129
 msgid "/Help/_About"
 msgstr "/Hjälp/_Om"
 
@@ -241,42 +242,42 @@ msgstr "Ersätt?"
 msgid "%d strings replaced"
 msgstr "%d strängar har ersatts"
 
-#: src/search.c:180
+#: src/search.c:199
 msgid "Replace"
 msgstr "Ersätt"
 
-#: src/search.c:187
+#: src/search.c:206
 msgid "Find"
 msgstr "Sök"
 
-#: src/search.c:199
+#: src/search.c:218
 msgid "Fi_nd what: "
 msgstr "S_öksträng: "
 
-#: src/search.c:208
+#: src/search.c:234
 msgid "Re_place with: "
 msgstr "Ersätt _med: "
 
-#: src/search.c:222
+#: src/search.c:248
 msgid "_Match case"
 msgstr "Matcha _gemener/VERSALER"
 
-#: src/search.c:227
+#: src/search.c:253
 msgid "Replace _all at once"
 msgstr "_Ändra alla på en gång"
 
-#: src/search.c:276
+#: src/search.c:304
 msgid "Jump To"
 msgstr "Hoppa till"
 
-#: src/search.c:281
+#: src/search.c:309
 msgid "_Jump"
 msgstr "_Hoppa"
 
-#: src/search.c:287
+#: src/search.c:315
 msgid "_Line number: "
 msgstr "_Radnummer: "
 
-#: src/window.c:95
+#: src/window.c:141
 msgid "Untitled"
 msgstr "Namnlös"

@@ -23,7 +23,7 @@
 #define _UNDO_H
 
 void undo_reset_step_modif(void);
-void undo_init(GtkWidget *textview, GtkTextBuffer *buffer);
+void undo_init(GtkWidget *textview, GtkTextBuffer *buffer, GtkWidget *menubar);
 gint undo_block_signal(GtkTextBuffer *buffer);
 gint undo_unblock_signal(GtkTextBuffer *buffer);
 gint undo_disconnect_signal(GtkTextBuffer *buffer);

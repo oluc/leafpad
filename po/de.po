@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.6\n"
-"POT-Creation-Date: 2004-11-09 19:58+0900\n"
+"POT-Creation-Date: 2004-12-03 22:44+0900\n"
 "PO-Revision-Date: 2004-11-14 18:33+0100\n"
 "Last-Translator: Ruediger Arp <ruediger@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -20,13 +20,14 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "Änderungen an '%s' speichern?"
 
-#: src/callback.c:268
+#: src/callback.c:285
 msgid "GTK+ based simple text editor"
 msgstr "Einfacher GTK+ Texteditor"
 
 #: src/dialog.c:113
-msgid "About"
-msgstr "Info"
+#, c-format
+msgid "About %s"
+msgstr "Info zu %s"
 
 #: src/encoding.c:65
 msgid "Current Locale"
@@ -111,7 +112,7 @@ msgstr "Zeichenkodierung: "
 msgid "Auto-Detect"
 msgstr "Automatisch erkennen"
 
-#: src/file.c:472
+#: src/file.c:485
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' existiert bereits. Überschreiben?"
@@ -120,111 +121,111 @@ msgstr "'%s' existiert bereits. Überschreiben?"
 msgid "Font"
 msgstr "Schriftart"
 
-#: src/menu.c:35
+#: src/menu.c:59
 msgid "/_File"
 msgstr "/_Datei"
 
-#: src/menu.c:37
+#: src/menu.c:61
 msgid "/File/_New"
 msgstr "/Datei/_Neu"
 
-#: src/menu.c:41
+#: src/menu.c:65
 msgid "/File/_Open..."
 msgstr "/Datei/Ö_ffnen"
 
-#: src/menu.c:43
+#: src/menu.c:67
 msgid "/File/_Save"
 msgstr "/Datei/_Speichern"
 
-#: src/menu.c:45
+#: src/menu.c:69
 msgid "/File/Save _As..."
 msgstr "/Datei/Speichern _unter"
 
-#: src/menu.c:55
+#: src/menu.c:79
 msgid "/File/_Quit"
 msgstr "/Datei/_Beenden"
 
-#: src/menu.c:57
+#: src/menu.c:81
 msgid "/_Edit"
 msgstr "/_Bearbeiten"
 
-#: src/menu.c:59
+#: src/menu.c:83
 msgid "/Edit/_Undo"
 msgstr "/Bearbeiten/_Rückgängig"
 
-#: src/menu.c:61
+#: src/menu.c:85
 msgid "/Edit/_Redo"
 msgstr "/Bearbeiten/_Wiederholen"
 
-#: src/menu.c:65
+#: src/menu.c:89
 msgid "/Edit/Cu_t"
 msgstr "/Bearbeiten/A_usschneiden"
 
-#: src/menu.c:67
+#: src/menu.c:91
 msgid "/Edit/_Copy"
 msgstr "/Bearbeiten/_Kopieren"
 
-#: src/menu.c:69
+#: src/menu.c:93
 msgid "/Edit/_Paste"
 msgstr "/Bearbeiten/E_infügen"
 
-#: src/menu.c:71
+#: src/menu.c:95
 msgid "/Edit/_Delete"
 msgstr "/Bearbeiten/_Löschen"
 
-#: src/menu.c:75
+#: src/menu.c:99
 msgid "/Edit/Select _All"
 msgstr "/Bearbeiten/_Alles markieren"
 
-#: src/menu.c:77
+#: src/menu.c:101
 msgid "/_Search"
 msgstr "/_Suchen"
 
-#: src/menu.c:79
+#: src/menu.c:103
 msgid "/Search/_Find..."
 msgstr "/Suchen/_Suchen"
 
-#: src/menu.c:81
+#: src/menu.c:105
 msgid "/Search/Find _Next"
 msgstr "/Suchen/_Weitersuchen"
 
-#: src/menu.c:83
+#: src/menu.c:107
 msgid "/Search/Find _Previous"
 msgstr "/Suchen/_Rückwärts suchen"
 
-#: src/menu.c:85
+#: src/menu.c:109
 msgid "/Search/_Replace..."
 msgstr "/Suchen/_Ersetzen..."
 
-#: src/menu.c:89
+#: src/menu.c:113
 msgid "/Search/_Jump To..."
 msgstr "/Suchen/_Gehe zu..."
 
-#: src/menu.c:91
+#: src/menu.c:115
 msgid "/_Options"
 msgstr "/_Optionen"
 
-#: src/menu.c:93
+#: src/menu.c:117
 msgid "/Options/_Font..."
 msgstr "/Optionen/_Schriftart"
 
-#: src/menu.c:95
+#: src/menu.c:119
 msgid "/Options/_Word Wrap"
 msgstr "/Optionen/_Zeilenumbruch"
 
-#: src/menu.c:97
+#: src/menu.c:121
 msgid "/Options/_Line Numbers"
 msgstr "/Optionen/Zeilen_nummern"
 
-#: src/menu.c:101
+#: src/menu.c:125
 msgid "/Options/_Auto Indent"
 msgstr "/Optionen/_Auto-Einzug"
 
-#: src/menu.c:103
+#: src/menu.c:127
 msgid "/_Help"
 msgstr "/_Hilfe"
 
-#: src/menu.c:105
+#: src/menu.c:129
 msgid "/Help/_About"
 msgstr "/Hilfe/_Info"
 
@@ -241,42 +242,42 @@ msgstr "Ersetzen?"
 msgid "%d strings replaced"
 msgstr "%d Mal gefunden und ersetzt"
 
-#: src/search.c:180
+#: src/search.c:199
 msgid "Replace"
 msgstr "Ersetzen"
 
-#: src/search.c:187
+#: src/search.c:206
 msgid "Find"
 msgstr "Suchen"
 
-#: src/search.c:199
+#: src/search.c:218
 msgid "Fi_nd what: "
 msgstr "_Suchen nach: "
 
-#: src/search.c:208
+#: src/search.c:234
 msgid "Re_place with: "
 msgstr "_Ersetzen durch: "
 
-#: src/search.c:222
+#: src/search.c:248
 msgid "_Match case"
 msgstr "_Groß-/Kleinschreibung berücksichtigen"
 
-#: src/search.c:227
+#: src/search.c:253
 msgid "Replace _all at once"
 msgstr "_Alles ersetzen"
 
-#: src/search.c:276
+#: src/search.c:304
 msgid "Jump To"
 msgstr "Gehe zu"
 
-#: src/search.c:281
+#: src/search.c:309
 msgid "_Jump"
 msgstr "_Gehe zu"
 
-#: src/search.c:287
+#: src/search.c:315
 msgid "_Line number: "
 msgstr "Zeilen_nummer: "
 
-#: src/window.c:95
+#: src/window.c:141
 msgid "Untitled"
 msgstr "Unbenannt"

@@ -40,6 +40,9 @@ enum {
 	INS
 };
 
+static GtkWidget *undo_menu_item = NULL;
+static GtkWidget *redo_menu_item = NULL;
+
 static GList *undo_list = NULL;
 static GList *redo_list = NULL;
 static GString *undo_gstr;
@@ -147,6 +150,8 @@ static void undo_create_undo_info(GtkTextBuffer *buffer, gint command, gint star
 			undo_clear_redo_info();
 			prev_keyval = keyval;
 			keyevent_setval(0);
+			gtk_widget_set_sensitive(undo_menu_item, TRUE);
+			gtk_widget_set_sensitive(redo_menu_item, FALSE);
 			return;
 		}
 		undo_append_undo_info(buffer, ui_tmp->command, ui_tmp->start, ui_tmp->end, g_strdup(undo_gstr->str));
@@ -159,13 +164,16 @@ static void undo_create_undo_info(GtkTextBuffer *buffer, gint command, gint star
 		ui_tmp->command = command;
 		ui_tmp->start = start;
 		ui_tmp->end = end;
-		g_string_printf(undo_gstr, str);
+		undo_gstr = g_string_erase(undo_gstr, 0, -1);
+		g_string_append(undo_gstr, str);
 	} else 
 		undo_append_undo_info(buffer, command, start, end, g_strdup(str));
 	
 	undo_clear_redo_info();
 	prev_keyval = keyval;
 	keyevent_setval(0);
+	gtk_widget_set_sensitive(undo_menu_item, TRUE);
+	gtk_widget_set_sensitive(redo_menu_item, FALSE);
 }
 
 static void cb_delete_range(GtkTextBuffer *buffer, GtkTextIter *start_iter, GtkTextIter *end_iter)
@@ -180,6 +188,8 @@ static void cb_delete_range(GtkTextBuffer *buffer, GtkTextIter *start_iter, GtkT
 DV(g_print("delete-range: keyval = 0x%x\n", keyval));
 	
 	if (!keyval && prev_keyval)
+		undo_set_sequency(TRUE);
+	if (keyval == 0x10000 && prev_keyval > 0x10000) // for Ctrl+V overwrite
 		undo_set_sequency(TRUE);
 	if (keyval == GDK_BackSpace)
 		command = BS;
@@ -200,6 +210,8 @@ DV(g_print("insert-text: keyval = 0x%x\n", keyevent_getval()));
 	
 	if (!keyval && prev_keyval)
 		undo_set_sequency(TRUE);
+//	if (keyval == 0x10000 && prev_keyval > 0x10000) // don't need probably
+//		undo_set_sequency(TRUE);
 	undo_create_undo_info(buffer, INS, start, end);
 }
 
@@ -252,8 +264,9 @@ static gint undo_connect_signal(GtkTextBuffer *buffer)
 		G_CALLBACK(cb_modified_changed), NULL);
 }
 
-void undo_init(GtkWidget *textview, GtkTextBuffer *buffer)
+void undo_init(GtkWidget *textview, GtkTextBuffer *buffer, GtkWidget *menubar)
 {
+	GtkItemFactory *ifactory;
 	static guint init_flag = 0; // TODO: divide to undo_clear()
 	
 	if (undo_list)
@@ -262,6 +275,14 @@ void undo_init(GtkWidget *textview, GtkTextBuffer *buffer)
 		undo_clear_redo_info();
 	undo_reset_step_modif();
 DV(g_print("undo_init: list reseted\n"));
+	
+	if (!undo_menu_item) {
+		ifactory = gtk_item_factory_from_widget(menubar);
+		undo_menu_item = gtk_item_factory_get_widget(ifactory, "/Edit/Undo");
+		redo_menu_item = gtk_item_factory_get_widget(ifactory, "/Edit/Redo");
+	}
+	gtk_widget_set_sensitive(undo_menu_item, FALSE);
+	gtk_widget_set_sensitive(redo_menu_item, FALSE);
 	
 	if (!init_flag) {
 		g_signal_connect(G_OBJECT(textview), "toggle-overwrite",
@@ -338,9 +359,12 @@ gboolean undo_undo(GtkTextBuffer *buffer)
 DV(g_print("cb_edit_undo: undo list left %d\n", g_list_length(undo_list)));
 		undo_unblock_signal(buffer);
 		undo_check_step_modif(buffer);
-		if (g_list_length(undo_list))
+		if (g_list_length(undo_list)) {
 			if (((UndoInfo *)g_list_last(undo_list)->data)->seq)
 				return TRUE;
+		} else
+			gtk_widget_set_sensitive(undo_menu_item, FALSE);
+		gtk_widget_set_sensitive(redo_menu_item, TRUE);
 		if (ui->command == DEL)
 			gtk_text_buffer_get_iter_at_offset(buffer, &start_iter, ui->start);
 		gtk_text_buffer_place_cursor(buffer, &start_iter);
@@ -374,6 +398,9 @@ DV(g_print("cb_edit_redo: redo list left %d\n", g_list_length(redo_list)));
 		undo_check_step_modif(buffer);
 		if (ri->seq)
 			return TRUE;
+		if (!g_list_length(redo_list))
+			gtk_widget_set_sensitive(redo_menu_item, FALSE);
+		gtk_widget_set_sensitive(undo_menu_item, TRUE);
 		gtk_text_buffer_place_cursor(buffer, &start_iter);
 		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(view), &start_iter,
 			0.1, FALSE, 0.5, 0.5);

@@ -157,6 +157,25 @@ static gint document_replace_real(GtkWidget *textview)
 	return num;
 }
 
+
+static gint entry_len;
+
+static void toggle_sensitivity(GtkWidget *w, gint pos1, gint pos2, gint *pos3)
+{
+	if (pos3) {
+		if (!entry_len)
+			gtk_dialog_set_response_sensitive(GTK_DIALOG(gtk_widget_get_toplevel(w)),
+				GTK_RESPONSE_OK, TRUE);
+		entry_len += pos2;
+//		entry_len = entry_len + pos2;
+	} else {
+		entry_len = entry_len + pos1 - pos2;
+		if (!entry_len)
+			gtk_dialog_set_response_sensitive(GTK_DIALOG(gtk_widget_get_toplevel(w)),
+				GTK_RESPONSE_OK, FALSE);
+	}
+}
+
 static void toggle_check_case(GtkWidget *widget)
 {
 	match_case = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
@@ -167,7 +186,7 @@ static void toggle_check_all(GtkWidget *widget)
 	replace_all = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
 }
 
-void run_dialog_search(GtkWidget *textview, gint mode)
+gint run_dialog_search(GtkWidget *textview, gint mode)
 {
 	GtkWidget *dialog;
 	GtkWidget *table;
@@ -202,6 +221,13 @@ void run_dialog_search(GtkWidget *textview, gint mode)
 	entry_find = gtk_entry_new();
 	 gtk_table_attach_defaults(GTK_TABLE(table), entry_find, 1, 2, 0, 1);
 	 gtk_label_set_mnemonic_widget(GTK_LABEL(label_find), entry_find);
+	 gtk_dialog_set_response_sensitive(GTK_DIALOG(dialog),
+		GTK_RESPONSE_OK, FALSE);
+	 entry_len = 0;
+	 g_signal_connect(G_OBJECT(entry_find), "insert-text",
+		G_CALLBACK(toggle_sensitivity), NULL);
+	 g_signal_connect(G_OBJECT(entry_find), "delete-text",
+		G_CALLBACK(toggle_sensitivity), NULL);
 	 if (string_find) 
 		 gtk_entry_set_text(GTK_ENTRY(entry_find), string_find);
 	if (mode) {
@@ -247,11 +273,13 @@ void run_dialog_search(GtkWidget *textview, gint mode)
 	if (res == GTK_RESPONSE_OK) {
 		if (strlen(string_find)) {
 			if (mode)
-				res = document_replace_real(textview);
+				document_replace_real(textview);
 			else
-				res = document_search_real(textview, 0);
+				document_search_real(textview, 0);
 		}
 	}
+	
+	return res;
 }
 
 void run_dialog_jump_to(GtkWidget *textview)

@@ -22,6 +22,30 @@
 #include <gdk/gdkkeysyms.h>
 #include "leafpad.h"
 
+static GtkWidget *cut_menu_item;
+static GtkWidget *copy_menu_item;
+static GtkWidget *paste_menu_item;
+static GtkWidget *delete_menu_item;
+
+gboolean menu_toggle_paste_item(void)
+{
+	gtk_widget_set_sensitive(
+		paste_menu_item,
+		gtk_clipboard_wait_is_text_available(
+			gtk_clipboard_get(GDK_SELECTION_CLIPBOARD)));
+//g_print("CLIPBOARD_CHECKED!\n");
+	
+	return FALSE;
+}
+
+void menu_toggle_clipboard_item(gboolean selected)
+{
+	gtk_widget_set_sensitive(cut_menu_item, selected);
+	gtk_widget_set_sensitive(copy_menu_item, selected);
+	gtk_widget_set_sensitive(delete_menu_item, selected);
+//	menu_toggle_paste_item();
+}
+
 static gchar *menu_translate(const gchar *path, gpointer data)
 {
 	gchar *retval;
@@ -108,7 +132,7 @@ static GtkItemFactoryEntry menu_items[] =
 
 static gint nmenu_items = sizeof(menu_items) / sizeof(GtkItemFactoryEntry);
 
-GtkWidget *create_menu_bar(GtkWidget *window, gpointer data)
+GtkWidget *create_menu_bar(GtkWidget *window, StructData *sd)
 {
 	GtkAccelGroup *accel_group;
 	GtkItemFactory *ifactory;
@@ -116,13 +140,13 @@ GtkWidget *create_menu_bar(GtkWidget *window, gpointer data)
 	accel_group = gtk_accel_group_new();
 	ifactory = gtk_item_factory_new(GTK_TYPE_MENU_BAR, "<main>", accel_group);
 	gtk_item_factory_set_translate_func(ifactory, menu_translate, NULL, NULL);
-	gtk_item_factory_create_items(ifactory, nmenu_items, menu_items, data);
+	gtk_item_factory_create_items(ifactory, nmenu_items, menu_items, sd);
 	gtk_window_add_accel_group(GTK_WINDOW(window), accel_group);
 	
 	/* hidden keybinds */
 	gtk_accel_group_connect(
 		accel_group, GDK_W, GDK_CONTROL_MASK, 0,
-		g_cclosure_new_swap(G_CALLBACK(cb_file_new), data, NULL));
+		g_cclosure_new_swap(G_CALLBACK(cb_file_new), sd, NULL));
 /*	gtk_widget_add_accelerator(
 		gtk_item_factory_get_widget(ifactory, "/File/New"),
 		"activate", accel_group, GDK_W, GDK_CONTROL_MASK, 0); */
@@ -145,12 +169,24 @@ GtkWidget *create_menu_bar(GtkWidget *window, gpointer data)
 		gtk_item_factory_get_widget(ifactory, "/Search/Replace..."),
 		"activate", accel_group, GDK_R, GDK_CONTROL_MASK, 0);
 	
+	gtk_widget_set_sensitive(
+		gtk_item_factory_get_widget(ifactory, "/Search/Find Next"),
+		FALSE);
+	gtk_widget_set_sensitive(
+		gtk_item_factory_get_widget(ifactory, "/Search/Find Previous"),
+		FALSE);
+	
+	cut_menu_item = gtk_item_factory_get_widget(ifactory, "/Edit/Cut");
+	copy_menu_item = gtk_item_factory_get_widget(ifactory, "/Edit/Copy");
+	paste_menu_item = gtk_item_factory_get_widget(ifactory, "/Edit/Paste");
+	delete_menu_item = gtk_item_factory_get_widget(ifactory, "/Edit/Delete");
+	menu_toggle_clipboard_item(FALSE);
+	
 	/* planned functions */
 /*	gtk_widget_set_sensitive(
 		gtk_item_factory_get_widget(ifactory, "<main>/Options/Auto Indent"),
 		FALSE);
-	gtk_item_factory_delete_item(ifactory, "/Options/Auto Indent"); */
-//	gtk_item_factory_delete_item(ifactory, "/File/New Window");
+	gtk_item_factory_delete_item(ifactory, "/File/New Window"); */
 	
 	return gtk_item_factory_get_widget(ifactory, "<main>");
 }

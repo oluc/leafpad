@@ -22,6 +22,8 @@
 #ifndef _MENU_H
 #define _MENU_H
 
-GtkWidget *create_menu_bar(GtkWidget *window, gpointer data);
+gboolean menu_toggle_paste_item(void);
+void menu_toggle_clipboard_item(gboolean selected);
+GtkWidget *create_menu_bar(GtkWidget *window, StructData *sd);
 
 #endif /* _MENU_H */

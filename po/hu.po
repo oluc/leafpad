@@ -1,37 +1,37 @@
-# Czech translation of leafpad.
+# Hungarian translation of Leafpad
 # Copyright (C) 2004 Free Software Foundation, Inc.
-# This file is distributed under the same license as the leafpad package.
-# Petr Vysloužil <evyslouz@volny.cz>, 2004.
+# This file is distributed under the same license as the Leafpad package.
+# Reviczky Ádám János <reviczky@freemail.hu>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.7.6\n"
+"Project-Id-Version: Leafpad 0.7.7\n"
 "POT-Creation-Date: 2004-12-03 22:44+0900\n"
-"PO-Revision-Date: 2004-11-18 23:58+0100\n"
-"Last-Translator: Petr Vysloužil <evyslouz@volny.cz>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"PO-Revision-Date: 2004-11-20 12:00+0100\n"
+"Last-Translator: Reviczky Ádám János <reviczky@freemail.hu>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bitReport-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
-"Report-Msgid-Bugs-To: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
 
 #: src/callback.c:33
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Uložit změny v '%s'?"
+msgstr "'%s' változások mentése?"
 
 #: src/callback.c:285
 msgid "GTK+ based simple text editor"
-msgstr "Jednoduchý GTK+ textový editor"
+msgstr "GTK+-ra épülő egyszerű szöveg szerkesztő"
 
 #: src/dialog.c:113
 #, c-format
 msgid "About %s"
-msgstr "O %s"
+msgstr "%s névjegye"
 
 #: src/encoding.c:65
 msgid "Current Locale"
-msgstr "Aktuální locale"
+msgstr "Jelenlegi Locale"
 
 #: src/encoding.c:67
 msgid "Unicode"
@@ -39,245 +39,245 @@ msgstr "Unicode"
 
 #: src/encoding.c:68
 msgid "Western"
-msgstr "Západní"
+msgstr "Nyugat Európai"
 
 #: src/encoding.c:72 src/encoding.c:82
 msgid "Cyrillic"
-msgstr "Azbuka"
+msgstr "Cirill"
 
 #: src/encoding.c:83
 msgid "Chinese Simplified"
-msgstr "Čínské zjednodušené"
+msgstr "Kínai egyszerűsített"
 
 #: src/encoding.c:84
 msgid "Chinese Traditional"
-msgstr "Čínské tradiční"
+msgstr "Kínai hagyományos"
 
 #: src/encoding.c:85 src/encoding.c:87 src/encoding.c:88
 msgid "Japanese"
-msgstr "Japonské"
+msgstr "Japán"
 
 #: src/encoding.c:89 src/encoding.c:90
 msgid "Korean"
-msgstr "Korejské"
+msgstr "Kóreai"
 
 #: src/file.c:161
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Nemohu převést znakovou sadu na '%s'"
+msgstr "A kódtáblát nem lehet erre '%s' konvertálni"
 
 #: src/file.c:174
 msgid "Can't open file to write"
-msgstr "Nemohu otevřít soubor k zápisu"
+msgstr "Nem lehet írásra megnyitni a fájlt"
 
 #: src/file.c:179
 msgid "Can't write file"
-msgstr "Nemohu zapsat soubor"
+msgstr "Nem lehet írni a fájlt"
 
 #: src/file.c:230
 msgid "Other Codeset..."
-msgstr "Jiná znaková sada..."
+msgstr "Más Kódtábla..."
 
 #: src/file.c:234
 #, c-format
 msgid "Other Codeset (%s)"
-msgstr "Jiná znaková sada (%s)"
+msgstr "Más Kódtábla (%s)"
 
 #: src/file.c:250
 msgid "Enter Codeset"
-msgstr "Zadat znakovou sadu"
+msgstr "Kódtábla megadása"
 
 #: src/file.c:258
 msgid "Code_set: "
-msgstr "Znaková _sada:"
+msgstr "Kód_tábla: "
 
 #: src/file.c:276
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' není podporována"
+msgstr "'%s' nem támogatott"
 
 #: src/file.c:350
 msgid "Open"
-msgstr "Otevřít"
+msgstr "Megnyit"
 
 #: src/file.c:352
 msgid "Save As"
-msgstr "Uložit jako"
+msgstr "Mentés másként"
 
 #: src/file.c:360
 msgid "Ch_aracter Coding: "
-msgstr "_Kódování znaků:"
+msgstr "K_arakter Kódolás: "
 
 #: src/file.c:387
 msgid "Auto-Detect"
-msgstr "Autodetekce"
+msgstr "Automatikus Felismerés"
 
 #: src/file.c:485
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' již existuje. Přepsat?"
+msgstr "%s' már létezik. Felülír?"
 
 #: src/font.c:49
 msgid "Font"
-msgstr "Písmo"
+msgstr "Betütípus"
 
 #: src/menu.c:59
 msgid "/_File"
-msgstr "/_Soubor"
+msgstr "/_Fájl"
 
 #: src/menu.c:61
 msgid "/File/_New"
-msgstr "/Soubor/_Nový"
+msgstr "/Fájl/_Új"
 
 #: src/menu.c:65
 msgid "/File/_Open..."
-msgstr "/Soubor/_Otevřít"
+msgstr "/Fájl/Meg_nyit"
 
 #: src/menu.c:67
 msgid "/File/_Save"
-msgstr "/Soubor/_Uložit"
+msgstr "/Fájl/_Ment"
 
 #: src/menu.c:69
 msgid "/File/Save _As..."
-msgstr "/Soubor/Uložit _jako..."
+msgstr "/Fájl/Ment má_skent..."
 
 #: src/menu.c:79
 msgid "/File/_Quit"
-msgstr "/Soubor/_Konec"
+msgstr "/Fájl/_Kilép"
 
 #: src/menu.c:81
 msgid "/_Edit"
-msgstr "/Ú_pravy"
+msgstr "Sz_erkesztés"
 
 #: src/menu.c:83
 msgid "/Edit/_Undo"
-msgstr "/Ú_pravy/_Zpět"
+msgstr "/Szerkesztés/_Visszavon"
 
 #: src/menu.c:85
 msgid "/Edit/_Redo"
-msgstr "/Ú_pravy/Zn_ovu"
+msgstr "/Szerkesztés/Ú_jra"
 
 #: src/menu.c:89
 msgid "/Edit/Cu_t"
-msgstr "/Ú_pravy/_Vyjmout"
+msgstr "/Szerkesztés/K_ivág"
 
 #: src/menu.c:91
 msgid "/Edit/_Copy"
-msgstr "/Ú_pravy/_Kopírovat"
+msgstr "/Szerkesztés/M_ásol"
 
 #: src/menu.c:93
 msgid "/Edit/_Paste"
-msgstr "/Ú_pravy/V_ložit"
+msgstr "/Szerkesztés/_Beilleszt"
 
 #: src/menu.c:95
 msgid "/Edit/_Delete"
-msgstr "/Ú_pravy/_Odstranit"
+msgstr "/Szerkesztés/Tö_röl"
 
 #: src/menu.c:99
 msgid "/Edit/Select _All"
-msgstr "/Ú_pravy/_Vybrat vše"
+msgstr "/Szerkesztés/Mindent Kije_löl"
 
 #: src/menu.c:101
 msgid "/_Search"
-msgstr "/_Hledat"
+msgstr "/Keres_és"
 
 #: src/menu.c:103
 msgid "/Search/_Find..."
-msgstr "/Hledat/_Hledat"
+msgstr "/Keresés/_Keres..."
 
 #: src/menu.c:105
 msgid "/Search/Find _Next"
-msgstr "/Hledat/Hledat _následující"
+msgstr "/Keresés/K_övetkező Keresése"
 
 #: src/menu.c:107
 msgid "/Search/Find _Previous"
-msgstr "/Hledat/Hledat _předchozí"
+msgstr "/Keresés/Elő_ző Keresése"
 
 #: src/menu.c:109
 msgid "/Search/_Replace..."
-msgstr "/Hledat/Nah_radit"
+msgstr "/Keresés/Ki_cserél..."
 
 #: src/menu.c:113
 msgid "/Search/_Jump To..."
-msgstr "/Hledat/_Přejít na"
+msgstr "/Keresés/_Ugrás..."
 
 #: src/menu.c:115
 msgid "/_Options"
-msgstr "/_Nástroje"
+msgstr "_Beállítások"
 
 #: src/menu.c:117
 msgid "/Options/_Font..."
-msgstr "/_Nástroje/_Písmo"
+msgstr "/Beállítások/Betütí_pus..."
 
 #: src/menu.c:119
 msgid "/Options/_Word Wrap"
-msgstr "/Nástroje/_Zalamovat řádky"
+msgstr "/Beállítások/_Sortörés"
 
 #: src/menu.c:121
 msgid "/Options/_Line Numbers"
-msgstr "/_Nástroje/Čí_slovat řádky"
+msgstr "/Beállítások/Sorszá_mok"
 
 #: src/menu.c:125
 msgid "/Options/_Auto Indent"
-msgstr "/Nastavení/_Automatické odsazování"
+msgstr "/Beállítások/Automatikus Be_húzás"
 
 #: src/menu.c:127
 msgid "/_Help"
-msgstr "/_Nápověda"
+msgstr "_Súgó"
 
 #: src/menu.c:129
 msgid "/Help/_About"
-msgstr "/Nápověda/O _aplikaci"
+msgstr "/Súgó/_Névjegy"
 
 #: src/search.c:83
 msgid "Search string not found"
-msgstr "Hledaný řetězec nenalezen"
+msgstr "Szövegrészlet nem fodul elő"
 
 #: src/search.c:125
 msgid "Replace?"
-msgstr "Nahradit?"
+msgstr "Kicserél?"
 
 #: src/search.c:153
 #, c-format
 msgid "%d strings replaced"
-msgstr "nahrazeno '%d' řetězců"
+msgstr "%d szövegrészlet kicserélve"
 
 #: src/search.c:199
 msgid "Replace"
-msgstr "Nahradit"
+msgstr "Kicserél"
 
 #: src/search.c:206
 msgid "Find"
-msgstr "Hledat"
+msgstr "Keres"
 
 #: src/search.c:218
 msgid "Fi_nd what: "
-msgstr "_Hledat:"
+msgstr "_Amit keres: "
 
 #: src/search.c:234
 msgid "Re_place with: "
-msgstr "Nahra_dit čím:"
+msgstr "Ki_cserél erre: "
 
 #: src/search.c:248
 msgid "_Match case"
-msgstr "_Rozlišovat velikost písmen"
+msgstr "_Kis/nagybetű számít"
 
 #: src/search.c:253
 msgid "Replace _all at once"
-msgstr "Nahradit vš_e"
+msgstr "Mindent _egyszerre kicserél"
 
 #: src/search.c:304
 msgid "Jump To"
-msgstr "Jit na _řádek"
+msgstr "Ugrás Ide"
 
 #: src/search.c:309
 msgid "_Jump"
-msgstr "_Přejít"
+msgstr "_Ugrás"
 
 #: src/search.c:315
 msgid "_Line number: "
-msgstr "_Číslo řádku:"
+msgstr "S_orszám: "
 
 #: src/window.c:141
 msgid "Untitled"
-msgstr "Nepojmenovaný"
+msgstr "Névtelen"

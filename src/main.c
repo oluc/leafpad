@@ -36,7 +36,7 @@ static gint load_config_file(StructData *sd)
 	sd->conf.autoindent = FALSE;
 	sd->conf.charset = NULL;
 	
-	path = g_build_filename(g_get_home_dir(), "/.leafpad", NULL);
+	path = g_build_filename(g_get_home_dir(), "." PACKAGE, NULL);
 	fp = fopen(path, "r");
 	if (!fp)
 		return -1;
@@ -87,7 +87,7 @@ static gint save_config_file(StructData *sd)
 	autoindent = gtk_check_menu_item_get_active(
 		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory, "/Options/Auto Indent")));
 	
-	path = g_build_filename(g_get_home_dir(), "/.leafpad", NULL);
+	path = g_build_filename(g_get_home_dir(), "." PACKAGE, NULL);
 	fp = fopen(path, "w");
 	
 	if (!fp) {
@@ -150,7 +150,7 @@ static void create_new_process(gchar *argv)
 			cb_file_new(sd);
 		else {
 			set_main_window_title(sd);
-			undo_init(sd->mainwin->textview, sd->mainwin->textbuffer);
+			undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 		}
 	} else
 		cb_file_new(sd);

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
-"POT-Creation-Date: 2004-11-09 19:58+0900\n"
+"POT-Creation-Date: 2004-12-03 22:44+0900\n"
 "PO-Revision-Date: 2004-09-09 21:32+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -20,13 +20,14 @@ msgstr ""
 msgid "Save changes to '%s'?"
 msgstr "'%s' の変更を保存しますか?"
 
-#: src/callback.c:268
+#: src/callback.c:285
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ ベースのシンプルなテキストエディタ"
 
 #: src/dialog.c:113
-msgid "About"
-msgstr "情報"
+#, c-format
+msgid "About %s"
+msgstr "%s について"
 
 #: src/encoding.c:65
 msgid "Current Locale"
@@ -111,7 +112,7 @@ msgstr "文字コード(_A): "
 msgid "Auto-Detect"
 msgstr "自動検出"
 
-#: src/file.c:472
+#: src/file.c:485
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' は既に存在します. 上書きしますか?"
@@ -120,111 +121,111 @@ msgstr "'%s' は既に存在します. 上書きしますか?"
 msgid "Font"
 msgstr "フォント"
 
-#: src/menu.c:35
+#: src/menu.c:59
 msgid "/_File"
 msgstr "/ファイル(_F)"
 
-#: src/menu.c:37
+#: src/menu.c:61
 msgid "/File/_New"
 msgstr "/ファイル/新規(_N)"
 
-#: src/menu.c:41
+#: src/menu.c:65
 msgid "/File/_Open..."
 msgstr "/ファイル/開く(_O)..."
 
-#: src/menu.c:43
+#: src/menu.c:67
 msgid "/File/_Save"
 msgstr "/ファイル/保存(_S)"
 
-#: src/menu.c:45
+#: src/menu.c:69
 msgid "/File/Save _As..."
 msgstr "/ファイル/別名で保存(_A)..."
 
-#: src/menu.c:55
+#: src/menu.c:79
 msgid "/File/_Quit"
 msgstr "/ファイル/終了(_Q)"
 
-#: src/menu.c:57
+#: src/menu.c:81
 msgid "/_Edit"
 msgstr "/編集(_E)"
 
-#: src/menu.c:59
+#: src/menu.c:83
 msgid "/Edit/_Undo"
 msgstr "/編集/元に戻す(_U)"
 
-#: src/menu.c:61
+#: src/menu.c:85
 msgid "/Edit/_Redo"
 msgstr "/編集/やり直す(_R)"
 
-#: src/menu.c:65
+#: src/menu.c:89
 msgid "/Edit/Cu_t"
 msgstr "/編集/切り取り(_T)"
 
-#: src/menu.c:67
+#: src/menu.c:91
 msgid "/Edit/_Copy"
 msgstr "/編集/コピー(_C)"
 
-#: src/menu.c:69
+#: src/menu.c:93
 msgid "/Edit/_Paste"
 msgstr "/編集/貼り付け(_P)"
 
-#: src/menu.c:71
+#: src/menu.c:95
 msgid "/Edit/_Delete"
 msgstr "/編集/削除(_D)"
 
-#: src/menu.c:75
+#: src/menu.c:99
 msgid "/Edit/Select _All"
 msgstr "/編集/全て選択(_A)"
 
-#: src/menu.c:77
+#: src/menu.c:101
 msgid "/_Search"
 msgstr "/検索(_S)"
 
-#: src/menu.c:79
+#: src/menu.c:103
 msgid "/Search/_Find..."
 msgstr "/検索/検索(_F)..."
 
-#: src/menu.c:81
+#: src/menu.c:105
 msgid "/Search/Find _Next"
 msgstr "/検索/次を検索(_N)"
 
-#: src/menu.c:83
+#: src/menu.c:107
 msgid "/Search/Find _Previous"
 msgstr "/検索/前を検索(_P)"
 
-#: src/menu.c:85
+#: src/menu.c:109
 msgid "/Search/_Replace..."
 msgstr "/検索/置換(_R)..."
 
-#: src/menu.c:89
+#: src/menu.c:113
 msgid "/Search/_Jump To..."
 msgstr "/検索/行へジャンプ(_J)..."
 
-#: src/menu.c:91
+#: src/menu.c:115
 msgid "/_Options"
 msgstr "/オプション(_O)"
 
-#: src/menu.c:93
+#: src/menu.c:117
 msgid "/Options/_Font..."
 msgstr "/オプション/フォント(_F)..."
 
-#: src/menu.c:95
+#: src/menu.c:119
 msgid "/Options/_Word Wrap"
 msgstr "/オプション/右端で折り返す(_W)"
 
-#: src/menu.c:97
+#: src/menu.c:121
 msgid "/Options/_Line Numbers"
 msgstr "行番号を表示(_L)"
 
-#: src/menu.c:101
+#: src/menu.c:125
 msgid "/Options/_Auto Indent"
 msgstr "/オプション/自動インデント(_A)"
 
-#: src/menu.c:103
+#: src/menu.c:127
 msgid "/_Help"
 msgstr "/ヘルプ(_H)"
 
-#: src/menu.c:105
+#: src/menu.c:129
 msgid "/Help/_About"
 msgstr "/ヘルプ/情報(_A)"
 
@@ -241,42 +242,42 @@ msgstr "置換しますか?"
 msgid "%d strings replaced"
 msgstr "%d 個の文字列を置換しました"
 
-#: src/search.c:180
+#: src/search.c:199
 msgid "Replace"
 msgstr "置換"
 
-#: src/search.c:187
+#: src/search.c:206
 msgid "Find"
 msgstr "検索"
 
-#: src/search.c:199
+#: src/search.c:218
 msgid "Fi_nd what: "
 msgstr "検索する文字列(_N): "
 
-#: src/search.c:208
+#: src/search.c:234
 msgid "Re_place with: "
 msgstr "置換後の文字列(_P): "
 
-#: src/search.c:222
+#: src/search.c:248
 msgid "_Match case"
 msgstr "大文字と小文字を区別する(_M)"
 
-#: src/search.c:227
+#: src/search.c:253
 msgid "Replace _all at once"
 msgstr "全て置換(_A)"
 
-#: src/search.c:276
+#: src/search.c:304
 msgid "Jump To"
 msgstr "行へジャンプ"
 
-#: src/search.c:281
+#: src/search.c:309
 msgid "_Jump"
 msgstr "ジャンプ(_J)"
 
-#: src/search.c:287
+#: src/search.c:315
 msgid "_Line number: "
 msgstr "行番号(_L): "
 
-#: src/window.c:95
+#: src/window.c:141
 msgid "Untitled"
 msgstr "無題"

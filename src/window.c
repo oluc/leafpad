@@ -21,6 +21,13 @@
 
 #include "leafpad.h"
 
+static void remove_scrollbar_spacing(GtkScrolledWindow *sw)
+{
+	GtkScrolledWindowClass *sw_class = GTK_SCROLLED_WINDOW_GET_CLASS(sw);
+	
+	sw_class->scrollbar_spacing = 0;
+}
+
 static gboolean cb_delete_event(GtkWidget *widget, GdkEvent *event, gpointer data)
 {
 	cb_file_quit(data);
@@ -31,6 +38,28 @@ static gboolean cb_delete_event(GtkWidget *widget, GdkEvent *event, gpointer dat
 static void cb_scroll_event(GtkAdjustment *adj, GtkWidget *view)
 {
 	gtk_text_view_place_cursor_onscreen(GTK_TEXT_VIEW(view));
+}
+*/
+
+//static void cb_mark_set(GtkTextBuffer *buffer, GtkTextIter *arg1, GtkTextMark *arg2, GtkWidget *menubar)
+static void cb_mark_set(GtkTextBuffer *buffer)
+{
+/*	static gboolean selected_flag = FALSE;
+	gboolean selected;
+	
+	selected = gtk_text_buffer_get_selection_bounds(buffer, NULL, NULL);
+	if (selected != selected_flag) {
+		menu_toggle_clipboard_item(selected);
+		selected_flag = selected;
+	}
+*/	menu_toggle_clipboard_item(gtk_text_buffer_get_selection_bounds(buffer, NULL, NULL));
+//g_print("MARK_SET!");
+}
+/*
+static void cb_text_receive(GtkClipboard *clipboard, const gchar *text, gpointer data)
+{
+	menu_toggle_paste_item();
+g_print("MARK_SET!");
 }
 */
 MainWindow *create_main_window(StructData *sd)
@@ -62,6 +91,9 @@ MainWindow *create_main_window(StructData *sd)
 	sw = gtk_scrolled_window_new(NULL, NULL);
 	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(sw),
 		GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
+//	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(sw),
+//		GTK_SHADOW_IN);
+	remove_scrollbar_spacing(GTK_SCROLLED_WINDOW(sw));
 	gtk_box_pack_start(GTK_BOX(vbox), sw, TRUE, TRUE, 0);
 	
 	textview = gtk_text_view_new();
@@ -76,6 +108,20 @@ MainWindow *create_main_window(StructData *sd)
 		G_CALLBACK(cb_scroll_event), textview);
 	g_signal_connect_after(G_OBJECT(vadj), "value-changed",
 		G_CALLBACK(cb_scroll_event), textview);
+*/	
+	g_signal_connect(G_OBJECT(textbuffer), "mark-set",
+		G_CALLBACK(cb_mark_set), menubar);
+	g_signal_connect(G_OBJECT(textbuffer), "mark-deleted",
+		G_CALLBACK(cb_mark_set), menubar);
+	g_signal_connect(G_OBJECT(window), "focus-in-event",
+		G_CALLBACK(menu_toggle_paste_item), NULL);
+	g_signal_connect_after(G_OBJECT(textview), "copy-clipboard",
+		G_CALLBACK(menu_toggle_paste_item), NULL);
+	g_signal_connect_after(G_OBJECT(textview), "cut-clipboard",
+		G_CALLBACK(menu_toggle_paste_item), NULL);
+/*	gtk_clipboard_request_text(
+		gtk_clipboard_get(GDK_SELECTION_CLIPBOARD),
+		cb_text_receive, NULL);
 */	
 	mainwin->window = window;
 	mainwin->menubar = menubar;

@@ -21,6 +21,7 @@
 
 #include <string.h>
 #include <gtk/gtk.h>
+#include "config.h"
 #include "intl.h"
 #include "dialog.h"
 
@@ -109,12 +110,14 @@ void run_dialog_about(GtkWidget *window, const gchar *name, const gchar *version
 	gchar *translator = NULL;
 	gchar *translation;
 	
+	str = g_strdup_printf(_("About %s"), PACKAGE_NAME);
 	dialog = gtk_dialog_new_with_buttons(
-		_("About"),
+		str,
 		GTK_WINDOW(window),
 		GTK_DIALOG_DESTROY_WITH_PARENT,
 		GTK_STOCK_OK, GTK_RESPONSE_CANCEL,
 		NULL);
+	g_free(str);
 	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
 	
 	vbox = gtk_vbox_new(FALSE, 0);
@@ -133,6 +136,8 @@ void run_dialog_about(GtkWidget *window, const gchar *name, const gchar *version
 	if (!env)
 		env = g_getenv("LANG");
 	if (env) {
+		if (strncmp(env, "ca", 2) == 0)
+			translator = "2004 David Rosal";
 		if (strncmp(env, "cs", 2) == 0)
 			translator = "2004 Petr Vyslou&#382;il";
 		if (strncmp(env, "de", 2) == 0)
@@ -141,10 +146,16 @@ void run_dialog_about(GtkWidget *window, const gchar *name, const gchar *version
 			translator = "2004 Lucas Vieites";
 		if (strncmp(env, "fr", 2) == 0)
 			translator = "2004 Luc Pionchon";
+		if (strncmp(env, "hu", 2) == 0)
+			translator = "2004 Reviczky &#193;d&#225;m J&#225;nos";
+		if (strncmp(env, "it", 2) == 0)
+			translator = "2004 Alessio D'Ascanio";
 		if (strncmp(env, "ru", 2) == 0)
 			translator = "2004 Artem Vakhitov";
-		if (strncmp(env, "sv", 5) == 0)
+		if (strncmp(env, "sv", 2) == 0)
 			translator = "2004 Isak Savo";
+		if (strncmp(env, "ta", 2) == 0)
+			translator = "2004 Vijay Durairaj";
 		if (strncmp(env, "zh_CN", 5) == 0)
 			translator = "2004 Carlos Z.F. Liu";
 		if (strncmp(env, "zh_TW", 5) == 0)
