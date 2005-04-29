@@ -1,5 +1,4 @@
 [Desktop Entry]
-Type=Application
 Encoding=UTF-8
 Name=Leafpad
 Comment=Simple text editor
@@ -13,6 +12,7 @@ Comment[it]=Semplice editor testuale
 Comment[ja]=シンプルなテキストエディタ
 Comment[lt]=Paprastas teksto redaktorius
 Comment[pl]=Prosty edytor tekstu
+Comment[pt]=Simples editor de texto
 Comment[ru]=Простой текстовый редактор
 Comment[sv]=Enkel texteditor
 Comment[ta]=எளிமையான உரை பதிப்பான்
@@ -21,5 +21,6 @@ Comment[zh_TW]=簡易文字編輯器
 Exec=leafpad %f
 Icon=leafpad.png
 Terminal=false
+Type=Application
 MimeType=text/plain
 Categories=Application;Utility;TextEditor;

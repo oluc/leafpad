@@ -8,25 +8,20 @@ Leafpad is a GTK+ based simple text editor. The user interface is similar to
 Notepad. It aims to be lighter than GEdit and KWrite, and to be as useful
 as them.
 
-Although some features are under development, currently Leafpad has folowing
-features:
+This program is released under the GNU General Public License (GPL) version 2,
+see the file 'COPYING' for more information.
 
-    * Complete support for UTF-8 text
-    * Cut/Copy/Paste and Select All text
-    * Search and Replace
-    * Font selecton
-    * Word Wrap
-    * Character coding selection
-    * Auto character coding detection (UTF-8 and some codesets)
-    * Manual codeset setting
-    * Infinite Undo/Redo by word
-    * Auto Indent
-    * Multi-line Indent
-    * Display line numbers
-    * Drag and Drop
 
-Leafpad is released under the GNU General Public License (GPL) version 2, see
-the file 'COPYING' for more information.
+Features
+========
+
+  * Character coding option
+  * Auto codeset detection (UTF-8 and some codesets)
+  * Unlimitted Undo/Redo
+  * Auto/Multi-line Indent
+  * Display line numbers
+  * Drag and Drop
+  * Printing
 
 
 Installation
@@ -48,25 +43,24 @@ See the file 'INSTALL' for more detailed information.
 
 Keybindings
 ===========
-Ctrl+N                          New
-Ctrl+O                          Open
-Ctrl+S                          Save
-Shift+Ctrl+S                    Save As
-Ctrl+W                          Close
-Ctrl+Q                          Quit
-Ctrl+Z                          Undo
-Ctrl+Y (Shift+Ctrl+Z)           Redo
-Ctrl+X                          Cut
-Ctrl+C                          Copy
-Ctrl+V                          Paste
-Ctrl+A                          Select All
-Ctrl+F                          Find
-F3 (Ctrl+G)                     Find Next
-Shift+F3 (Shift+Ctrl+G)         Find Previous
-Ctrl+H (Ctrl+R)                 Replace
-Ctrl+J                          Jump To
-F1                              About
-Ctrl+Tab                        toggle tab width
+Ctrl-N                          New
+Ctrl-O                          Open
+Ctrl-S                          Save
+Shift-Ctrl-S                    Save As
+Ctrl-P                          Print
+Ctrl-Q                          Quit
+Ctrl-Z                          Undo
+Shift-Ctrl-Z (Ctrl-Y)           Redo
+Ctrl-X                          Cut
+Ctrl-C                          Copy
+Ctrl-V                          Paste
+Ctrl-A                          Select All
+Ctrl-F                          Find
+Ctrl-G (F3)                     Find Next
+Shift-Ctrl-G (Shift-F3)         Find Previous
+Ctrl-H (Ctrl-R)                 Replace
+Ctrl-J                          Jump To
+Ctrl-Tab                        toggle tab width
 Tab with selection bound        multi-line indent
-Shift+Tab with selection bound  multi-line unindent
-Shift+Return                    new-line with/without indent
+Shift-Tab with selection bound  multi-line unindent
+Shift-Return                    new-line with/without indent

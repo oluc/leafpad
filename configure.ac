@@ -1,31 +1,35 @@
-# Process this file with autoconf to produce a configure script.
-AC_INIT(Leafpad, 0.7.9, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.8.0, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
-AC_CONFIG_SRCDIR([src/leafpad.h])
-AM_CONFIG_HEADER([config.h])
+AM_CONFIG_HEADER(config.h)
 
-# Checks for programs.
+AC_PROG_INTLTOOL
 AC_PROG_CC
-AC_PROG_INSTALL
-CFLAGS="$CFLAGS -Wall"
+if test "$GCC" = "yes"; then
+	CFLAGS="$CFLAGS -Wall"
+fi
 
-# Checks for libraries.
 AM_PATH_GTK_2_0
+AC_ARG_ENABLE(chooser,
+	AC_HELP_STRING([--enable-chooser], [use GtkFileChooser instead of GtkFileSelector]),
+	AC_DEFINE(ENABLE_CHOOSER, 1, [Define if GtkFileChooser is enabled.])
+)
+AC_ARG_ENABLE(print, AC_HELP_STRING([--disable-print], [do not include print feature]))
+if test "$enable_print" != "no"; then
+	AC_CHECK_PROGS(LPR, lpr)
+	if test "$LPR"; then
+		AC_DEFINE(HAVE_LPR, 1, [Define if `lpr' program is available.])
+	fi
+fi
+#AC_ARG_ENABLE(csdi,
+#	AC_HELP_STRING([--enable-csdi], [use CSDI emulation])
+#	AC_DEFINE(ENABLE_CSDI, 1, [Define if CSDI is enabled.])
+#)
 
-# Checks for header files.
-#AC_HEADER_STDC
-#AC_CHECK_HEADERS([libintl.h stdlib.h string.h])
+ALL_LINGUAS="ca cs de es fr hu it ja lt pl pt ru sv ta zh_CN zh_TW"
+GETTEXT_PACKAGE="$PACKAGE"
+AC_SUBST(GETTEXT_PACKAGE)
+AM_GLIB_GNU_GETTEXT
+AM_GLIB_DEFINE_LOCALEDIR(LOCALEDIR)
 
-# Checks for typedefs, structures, and compiler characteristics.
-#AC_C_CONST
-
-# Checks for library functions.
-#AC_CHECK_FUNCS([setenv strcasecmp strncasecmp strstr])
-
-# gettext
-AM_GNU_GETTEXT([external])
-
-AC_CONFIG_FILES([Makefile
-                 po/Makefile.in
-                 src/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile po/Makefile.in])
 AC_OUTPUT

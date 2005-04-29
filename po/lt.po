@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.8\n"
-"POT-Creation-Date: 2004-12-24 22:16+0900\n"
+"POT-Creation-Date: 2005-04-26 22:05+0900\n"
 "PO-Revision-Date: 2004-12-06 17:38+0200\n"
 "Last-Translator: Lech Jankovski <godgard@gmail.com>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -15,236 +15,307 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
 
-#: src/callback.c:33
+#: src/menu.c:31
+msgid "/_File"
+msgstr "/_Byla"
+
+#: src/menu.c:33
+msgid "/File/_New"
+msgstr "/Byla/_Nauja"
+
+#: src/menu.c:35
+msgid "/File/_Open..."
+msgstr "/Byla/_Atidaryti..."
+
+#: src/menu.c:37
+msgid "/File/_Save"
+msgstr "/Byla/_Išsaugoti"
+
+#: src/menu.c:39
+msgid "/File/Save _As..."
+msgstr "/Byla/Išsaugoti _kaip..."
+
+#: src/menu.c:44
+#, fuzzy
+msgid "/File/_Print..."
+msgstr "/Byla/Iš_eiti"
+
+#: src/menu.c:47
+msgid "/File/_Quit"
+msgstr "/Byla/Iš_eiti"
+
+#: src/menu.c:49
+msgid "/_Edit"
+msgstr "/_Keisti"
+
+#: src/menu.c:51
+msgid "/Edit/_Undo"
+msgstr "/Keisti/_Atšaukti"
+
+#: src/menu.c:53
+msgid "/Edit/_Redo"
+msgstr "/Keisti/_Grąžinti"
+
+#: src/menu.c:57
+msgid "/Edit/Cu_t"
+msgstr "/Keisti/_Iškirpti"
+
+#: src/menu.c:59
+msgid "/Edit/_Copy"
+msgstr "/Keisti/_Kopijuoti"
+
+#: src/menu.c:61
+msgid "/Edit/_Paste"
+msgstr "/Keisti/Įdė_ti"
+
+#: src/menu.c:63
+msgid "/Edit/_Delete"
+msgstr "/Keisti/_Pašalinti"
+
+#: src/menu.c:67
+msgid "/Edit/Select _All"
+msgstr "/Keisti/Pažymėti _viską"
+
+#: src/menu.c:69
+msgid "/_Search"
+msgstr "/_Paieška"
+
+#: src/menu.c:71
+msgid "/Search/_Find..."
+msgstr "/Paieška/_Ieškoti..."
+
+#: src/menu.c:73
+msgid "/Search/Find _Next"
+msgstr "/Paieška/Surask _sekantį"
+
+#: src/menu.c:75
+msgid "/Search/Find _Previous"
+msgstr "/Paieška/Surask p_raeitą"
+
+#: src/menu.c:77
+msgid "/Search/_Replace..."
+msgstr "/Paieška/P_akeisti..."
+
+#: src/menu.c:81
+msgid "/Search/_Jump To..."
+msgstr "/Paieška/_Peršokti į..."
+
+#: src/menu.c:83
+msgid "/_Options"
+msgstr "/_Nustatymai"
+
+#: src/menu.c:85
+msgid "/Options/_Font..."
+msgstr "/Nustatymai/Š_riftas..."
+
+#: src/menu.c:87
+msgid "/Options/_Word Wrap"
+msgstr "/Nustatymai/Teksto _laužymas"
+
+#: src/menu.c:89
+msgid "/Options/_Line Numbers"
+msgstr "/Nustatymai/_Eilučių numeracija"
+
+#: src/menu.c:93
+msgid "/Options/_Auto Indent"
+msgstr "/Nustatymai/_Automatinis atitraukimas"
+
+#: src/menu.c:95
+msgid "/_Help"
+msgstr "/P_agalba"
+
+#: src/menu.c:97
+msgid "/Help/_About"
+msgstr "/Pagalba/A_pie"
+
+#: src/callback.c:286
+msgid "GTK+ based simple text editor"
+msgstr "Paprastas teksto redaktorius paremtas GTK+"
+
+#: src/callback.c:294
+msgid "translator-credits"
+msgstr "Lech Jankovski <godgard@gmail.com>"
+
+#: src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Išsaugoti pokyčius į '%s'?"
 
-#: src/callback.c:291
-msgid "GTK+ based simple text editor"
-msgstr "Paprastas teksto redaktorius paremtas GTK+"
-
-#: src/dialog.c:135
-#, c-format
-msgid "About %s"
-msgstr "Apie %s"
-
-#: src/file.c:150
-#, c-format
-msgid "Can't convert codeset to '%s'"
-msgstr ""
-
-#: src/file.c:163
-msgid "Can't open file to write"
-msgstr "Neįmanoma atidaryti bylos rašymui"
-
-#: src/file.c:168
-msgid "Can't write file"
-msgstr "Neįmanoma įrašyti bylos"
-
-#: src/font.c:49
+#: src/font.c:44
 msgid "Font"
 msgstr "Šriftas"
 
-#: src/menu.c:59
-msgid "/_File"
-msgstr "/_Byla"
-
-#: src/menu.c:61
-msgid "/File/_New"
-msgstr "/Byla/_Nauja"
-
-#: src/menu.c:65
-msgid "/File/_Open..."
-msgstr "/Byla/_Atidaryti..."
-
-#: src/menu.c:67
-msgid "/File/_Save"
-msgstr "/Byla/_Išsaugoti"
-
-#: src/menu.c:69
-msgid "/File/Save _As..."
-msgstr "/Byla/Išsaugoti _kaip..."
-
-#: src/menu.c:79
-msgid "/File/_Quit"
-msgstr "/Byla/Iš_eiti"
-
-#: src/menu.c:81
-msgid "/_Edit"
-msgstr "/_Keisti"
-
-#: src/menu.c:83
-msgid "/Edit/_Undo"
-msgstr "/Keisti/_Atšaukti"
-
-#: src/menu.c:85
-msgid "/Edit/_Redo"
-msgstr "/Keisti/_Grąžinti"
-
-#: src/menu.c:89
-msgid "/Edit/Cu_t"
-msgstr "/Keisti/_Iškirpti"
-
-#: src/menu.c:91
-msgid "/Edit/_Copy"
-msgstr "/Keisti/_Kopijuoti"
-
-#: src/menu.c:93
-msgid "/Edit/_Paste"
-msgstr "/Keisti/Įdė_ti"
-
-#: src/menu.c:95
-msgid "/Edit/_Delete"
-msgstr "/Keisti/_Pašalinti"
-
-#: src/menu.c:99
-msgid "/Edit/Select _All"
-msgstr "/Keisti/Pažymėti _viską"
-
-#: src/menu.c:101
-msgid "/_Search"
-msgstr "/_Paieška"
-
-#: src/menu.c:103
-msgid "/Search/_Find..."
-msgstr "/Paieška/_Ieškoti..."
-
-#: src/menu.c:105
-msgid "/Search/Find _Next"
-msgstr "/Paieška/Surask _sekantį"
-
-#: src/menu.c:107
-msgid "/Search/Find _Previous"
-msgstr "/Paieška/Surask p_raeitą"
-
-#: src/menu.c:109
-msgid "/Search/_Replace..."
-msgstr "/Paieška/P_akeisti..."
-
-#: src/menu.c:113
-msgid "/Search/_Jump To..."
-msgstr "/Paieška/_Peršokti į..."
-
-#: src/menu.c:115
-msgid "/_Options"
-msgstr "/_Nustatymai"
-
-#: src/menu.c:117
-msgid "/Options/_Font..."
-msgstr "/Nustatymai/Š_riftas..."
-
-#: src/menu.c:119
-msgid "/Options/_Word Wrap"
-msgstr "/Nustatymai/Teksto _laužymas"
-
-#: src/menu.c:121
-msgid "/Options/_Line Numbers"
-msgstr "/Nustatymai/_Eilučių numeracija"
-
-#: src/menu.c:125
-msgid "/Options/_Auto Indent"
-msgstr "/Nustatymai/_Automatinis atitraukimas"
-
-#: src/menu.c:127
-msgid "/_Help"
-msgstr "/P_agalba"
-
-#: src/menu.c:129
-msgid "/Help/_About"
-msgstr "/Pagalba/A_pie"
-
-#: src/search.c:83
-msgid "Search string not found"
-msgstr "Ieškomas tekstas nerastas"
-
-#: src/search.c:125
-msgid "Replace?"
-msgstr "Pakeisti?"
-
-#: src/search.c:153
-#, c-format
-msgid "%d strings replaced"
-msgstr "%d tekstų pakeista"
-
-#: src/search.c:199
-msgid "Replace"
-msgstr "Pakeisti"
-
-#: src/search.c:206
-msgid "Find"
-msgstr "Ieškoti"
-
-#: src/search.c:218
-msgid "Fi_nd what: "
-msgstr "_Ieškoti ko: "
-
-#: src/search.c:234
-msgid "Re_place with: "
-msgstr "P_akeisti kuo: "
-
-#: src/search.c:248
-msgid "_Match case"
-msgstr "_Skirti raidžių dydį"
-
-#: src/search.c:253
-msgid "Replace _all at once"
-msgstr "Pakeisti _visus vienu metu"
-
-#: src/search.c:304
-msgid "Jump To"
-msgstr "Peršokti į"
-
-#: src/search.c:309
-msgid "_Jump"
-msgstr "_Nušok"
-
-#: src/search.c:315
-msgid "_Line number: "
-msgstr "_Eilutės numeris: "
-
-#: src/selector.c:103
+#: src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
 msgstr "Esama lokalė (%s)"
 
-#: src/selector.c:147
+#: src/selector.c:130
 msgid "Other Codeset"
 msgstr ""
 
-#: src/selector.c:186
+#: src/selector.c:170
 msgid "Code_set:"
 msgstr ""
 
-#: src/selector.c:207
+#: src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' nepalaikomas"
 
-#: src/selector.c:271
-msgid "Auto Detect"
+#: src/selector.c:253
+#, fuzzy
+msgid "Auto-Detect"
 msgstr "Automatiškai aptikti"
 
-#: src/selector.c:323
+#: src/selector.c:305
 msgid "Open"
 msgstr "Atidaryti"
 
-#: src/selector.c:323
+#: src/selector.c:305
 msgid "Save As"
 msgstr "Išsaugoti kaip"
 
-#: src/selector.c:336
-msgid "Ch_aracter Coding: "
+#: src/selector.c:329
+#, fuzzy
+msgid "Ch_aracter Coding:"
 msgstr "Si_mbolių kodavimas: "
 
-#: src/selector.c:392
+#: src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' jau egzistuoja. Perrašyti?"
 
-#: src/window.c:141
+#: src/file.c:42
 msgid "Untitled"
 msgstr "Bevardis"
+
+#: src/file.c:186
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr ""
+
+#: src/file.c:199
+msgid "Can't open file to write"
+msgstr "Neįmanoma atidaryti bylos rašymui"
+
+#: src/file.c:204
+msgid "Can't write file"
+msgstr "Neįmanoma įrašyti bylos"
+
+#: src/search.c:92
+msgid "Search string not found"
+msgstr "Ieškomas tekstas nerastas"
+
+#: src/search.c:134
+msgid "Replace?"
+msgstr "Pakeisti?"
+
+#: src/search.c:167
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d tekstų pakeista"
+
+#: src/search.c:213
+msgid "Replace"
+msgstr "Pakeisti"
+
+#: src/search.c:220
+msgid "Find"
+msgstr "Ieškoti"
+
+#: src/search.c:233
+#, fuzzy
+msgid "Fi_nd what:"
+msgstr "_Ieškoti ko: "
+
+#: src/search.c:249
+#, fuzzy
+msgid "Re_place with:"
+msgstr "P_akeisti kuo: "
+
+#: src/search.c:263
+msgid "_Match case"
+msgstr "_Skirti raidžių dydį"
+
+#: src/search.c:268
+msgid "Replace _all at once"
+msgstr "Pakeisti _visus vienu metu"
+
+#: src/search.c:319
+msgid "Jump To"
+msgstr "Peršokti į"
+
+#: src/search.c:325
+msgid "_Jump"
+msgstr "_Nušok"
+
+#: src/search.c:332
+#, fuzzy
+msgid "_Line number:"
+msgstr "_Eilutės numeris: "
+
+#: src/print.c:57
+msgid "Can't convert codeset to current locale"
+msgstr ""
+
+#: src/print.c:70
+#, fuzzy
+msgid "Can't write temporary file"
+msgstr "Neįmanoma įrašyti bylos"
+
+#: src/print.c:101
+msgid "Print"
+msgstr ""
+
+#: src/print.c:124
+msgid "Printer _name:"
+msgstr ""
+
+#: src/print.c:136
+msgid "N_umber of copies:"
+msgstr ""
+
+#: src/print.c:142
+msgid "_Format page"
+msgstr ""
+
+#: src/about.c:102
+msgid "Credits"
+msgstr ""
+
+#: src/about.c:137
+msgid "Written by"
+msgstr ""
+
+#: src/about.c:140
+msgid "Documented by"
+msgstr ""
+
+#: src/about.c:146
+msgid "Translated by"
+msgstr ""
+
+#: src/about.c:197
+msgid "C_redits"
+msgstr ""
+
+#: src/about.c:199
+msgid "_Credits"
+msgstr ""
+
+#: src/about.c:209
+#, c-format
+msgid "About %s"
+msgstr "Apie %s"
+
+#: leafpad.desktop.in.h:1
+msgid "Leafpad"
+msgstr ""
+
+#: leafpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Paprastas teksto redaktorius"
 
 #, fuzzy
 #~ msgid "Unicode (UTF-8)"

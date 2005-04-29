@@ -17,33 +17,20 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _ENCODING_H
-#define _ENCODING_H
+#ifndef _ABOUT_H
+#define _ABOUT_H
 
-#include <glib.h> // TODO: ?????  It must to -> .c
+#if !GTK_CHECK_VERSION(2, 6, 0)
+void add_about_stock(void);
+#endif
+GtkWidget *create_about_dialog(
+	const gchar *name,
+	const gchar *version,
+	const gchar *copyright,
+	const gchar *comments,
+	const gchar **authors,
+	const gchar **documenters,
+	const gchar *translator_credits,
+	GdkPixbuf *logo);
 
-enum {
-	IANA = 0,
-	OPENI18N,
-	CODEPAGE,
-	ENCODING_MAX_ITEM_NUM
-};
-
-typedef struct {
-	const gchar *item[ENCODING_MAX_ITEM_NUM];
-} EncArray;
-
-enum {
-	LF = 0x0A,
-	CR = 0x0D,
-};
-
-guint get_encoding_code(void);
-EncArray *get_encoding_items(guint code);
-const gchar *get_default_charset(void);
-gint detect_line_ending(const gchar *text);
-void convert_line_ending_to_lf(gchar *text);
-void convert_line_ending(gchar **text, gint retcode);
-const gchar *detect_charset(const gchar *text);
-
-#endif  /* _ENCODING_H */
+#endif /* _ABOUT_H */

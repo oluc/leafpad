@@ -5,8 +5,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.7.9\n"
-"POT-Creation-Date: 2004-12-24 22:16+0900\n"
+"Project-Id-Version: Leafpad 0.8.0\n"
+"POT-Creation-Date: 2005-04-26 22:05+0900\n"
 "PO-Revision-Date: 2004-09-09 21:32+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -15,233 +15,297 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
 
-#: src/callback.c:33
+#: src/menu.c:31
+msgid "/_File"
+msgstr "/ファイル(_F)"
+
+#: src/menu.c:33
+msgid "/File/_New"
+msgstr "/ファイル/新規(_N)"
+
+#: src/menu.c:35
+msgid "/File/_Open..."
+msgstr "/ファイル/開く(_O)..."
+
+#: src/menu.c:37
+msgid "/File/_Save"
+msgstr "/ファイル/保存(_S)"
+
+#: src/menu.c:39
+msgid "/File/Save _As..."
+msgstr "/ファイル/別名で保存(_A)..."
+
+#: src/menu.c:44
+msgid "/File/_Print..."
+msgstr "/ファイル/印刷(_P)..."
+
+#: src/menu.c:47
+msgid "/File/_Quit"
+msgstr "/ファイル/終了(_Q)"
+
+#: src/menu.c:49
+msgid "/_Edit"
+msgstr "/編集(_E)"
+
+#: src/menu.c:51
+msgid "/Edit/_Undo"
+msgstr "/編集/元に戻す(_U)"
+
+#: src/menu.c:53
+msgid "/Edit/_Redo"
+msgstr "/編集/やり直す(_R)"
+
+#: src/menu.c:57
+msgid "/Edit/Cu_t"
+msgstr "/編集/切り取り(_T)"
+
+#: src/menu.c:59
+msgid "/Edit/_Copy"
+msgstr "/編集/コピー(_C)"
+
+#: src/menu.c:61
+msgid "/Edit/_Paste"
+msgstr "/編集/貼り付け(_P)"
+
+#: src/menu.c:63
+msgid "/Edit/_Delete"
+msgstr "/編集/削除(_D)"
+
+#: src/menu.c:67
+msgid "/Edit/Select _All"
+msgstr "/編集/全て選択(_A)"
+
+#: src/menu.c:69
+msgid "/_Search"
+msgstr "/検索(_S)"
+
+#: src/menu.c:71
+msgid "/Search/_Find..."
+msgstr "/検索/検索(_F)..."
+
+#: src/menu.c:73
+msgid "/Search/Find _Next"
+msgstr "/検索/次を検索(_N)"
+
+#: src/menu.c:75
+msgid "/Search/Find _Previous"
+msgstr "/検索/前を検索(_P)"
+
+#: src/menu.c:77
+msgid "/Search/_Replace..."
+msgstr "/検索/置換(_R)..."
+
+#: src/menu.c:81
+msgid "/Search/_Jump To..."
+msgstr "/検索/行へジャンプ(_J)..."
+
+#: src/menu.c:83
+msgid "/_Options"
+msgstr "/オプション(_O)"
+
+#: src/menu.c:85
+msgid "/Options/_Font..."
+msgstr "/オプション/フォント(_F)..."
+
+#: src/menu.c:87
+msgid "/Options/_Word Wrap"
+msgstr "/オプション/右端で折り返す(_W)"
+
+#: src/menu.c:89
+msgid "/Options/_Line Numbers"
+msgstr "行番号を表示(_L)"
+
+#: src/menu.c:93
+msgid "/Options/_Auto Indent"
+msgstr "/オプション/自動インデント(_A)"
+
+#: src/menu.c:95
+msgid "/_Help"
+msgstr "/ヘルプ(_H)"
+
+#: src/menu.c:97
+msgid "/Help/_About"
+msgstr "/ヘルプ/情報(_A)"
+
+#: src/callback.c:286
+msgid "GTK+ based simple text editor"
+msgstr "GTK+ ベースのシンプルなテキストエディタ"
+
+#: src/callback.c:294
+msgid "translator-credits"
+msgstr "Tarot Osuji <tarot@sdf.lonestar.org>"
+
+#: src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "'%s' の変更を保存しますか?"
 
-#: src/callback.c:291
-msgid "GTK+ based simple text editor"
-msgstr "GTK+ ベースのシンプルなテキストエディタ"
-
-#: src/dialog.c:135
-#, c-format
-msgid "About %s"
-msgstr "%s について"
-
-#: src/file.c:150
-#, c-format
-msgid "Can't convert codeset to '%s'"
-msgstr "文字コードを '%s' に変換できませんでした"
-
-#: src/file.c:163
-msgid "Can't open file to write"
-msgstr "ファイルを作成できませんでした"
-
-#: src/file.c:168
-msgid "Can't write file"
-msgstr "ファイルに書きこめませんでした"
-
-#: src/font.c:49
+#: src/font.c:44
 msgid "Font"
 msgstr "フォント"
 
-#: src/menu.c:59
-msgid "/_File"
-msgstr "/ファイル(_F)"
-
-#: src/menu.c:61
-msgid "/File/_New"
-msgstr "/ファイル/新規(_N)"
-
-#: src/menu.c:65
-msgid "/File/_Open..."
-msgstr "/ファイル/開く(_O)..."
-
-#: src/menu.c:67
-msgid "/File/_Save"
-msgstr "/ファイル/保存(_S)"
-
-#: src/menu.c:69
-msgid "/File/Save _As..."
-msgstr "/ファイル/別名で保存(_A)..."
-
-#: src/menu.c:79
-msgid "/File/_Quit"
-msgstr "/ファイル/終了(_Q)"
-
-#: src/menu.c:81
-msgid "/_Edit"
-msgstr "/編集(_E)"
-
-#: src/menu.c:83
-msgid "/Edit/_Undo"
-msgstr "/編集/元に戻す(_U)"
-
-#: src/menu.c:85
-msgid "/Edit/_Redo"
-msgstr "/編集/やり直す(_R)"
-
-#: src/menu.c:89
-msgid "/Edit/Cu_t"
-msgstr "/編集/切り取り(_T)"
-
-#: src/menu.c:91
-msgid "/Edit/_Copy"
-msgstr "/編集/コピー(_C)"
-
-#: src/menu.c:93
-msgid "/Edit/_Paste"
-msgstr "/編集/貼り付け(_P)"
-
-#: src/menu.c:95
-msgid "/Edit/_Delete"
-msgstr "/編集/削除(_D)"
-
-#: src/menu.c:99
-msgid "/Edit/Select _All"
-msgstr "/編集/全て選択(_A)"
-
-#: src/menu.c:101
-msgid "/_Search"
-msgstr "/検索(_S)"
-
-#: src/menu.c:103
-msgid "/Search/_Find..."
-msgstr "/検索/検索(_F)..."
-
-#: src/menu.c:105
-msgid "/Search/Find _Next"
-msgstr "/検索/次を検索(_N)"
-
-#: src/menu.c:107
-msgid "/Search/Find _Previous"
-msgstr "/検索/前を検索(_P)"
-
-#: src/menu.c:109
-msgid "/Search/_Replace..."
-msgstr "/検索/置換(_R)..."
-
-#: src/menu.c:113
-msgid "/Search/_Jump To..."
-msgstr "/検索/行へジャンプ(_J)..."
-
-#: src/menu.c:115
-msgid "/_Options"
-msgstr "/オプション(_O)"
-
-#: src/menu.c:117
-msgid "/Options/_Font..."
-msgstr "/オプション/フォント(_F)..."
-
-#: src/menu.c:119
-msgid "/Options/_Word Wrap"
-msgstr "/オプション/右端で折り返す(_W)"
-
-#: src/menu.c:121
-msgid "/Options/_Line Numbers"
-msgstr "行番号を表示(_L)"
-
-#: src/menu.c:125
-msgid "/Options/_Auto Indent"
-msgstr "/オプション/自動インデント(_A)"
-
-#: src/menu.c:127
-msgid "/_Help"
-msgstr "/ヘルプ(_H)"
-
-#: src/menu.c:129
-msgid "/Help/_About"
-msgstr "/ヘルプ/情報(_A)"
-
-#: src/search.c:83
-msgid "Search string not found"
-msgstr "検索文字列が見つかりません"
-
-#: src/search.c:125
-msgid "Replace?"
-msgstr "置換しますか?"
-
-#: src/search.c:153
-#, c-format
-msgid "%d strings replaced"
-msgstr "%d 個の文字列を置換しました"
-
-#: src/search.c:199
-msgid "Replace"
-msgstr "置換"
-
-#: src/search.c:206
-msgid "Find"
-msgstr "検索"
-
-#: src/search.c:218
-msgid "Fi_nd what: "
-msgstr "検索する文字列(_N): "
-
-#: src/search.c:234
-msgid "Re_place with: "
-msgstr "置換後の文字列(_P): "
-
-#: src/search.c:248
-msgid "_Match case"
-msgstr "大文字と小文字を区別する(_M)"
-
-#: src/search.c:253
-msgid "Replace _all at once"
-msgstr "全て置換(_A)"
-
-#: src/search.c:304
-msgid "Jump To"
-msgstr "行へジャンプ"
-
-#: src/search.c:309
-msgid "_Jump"
-msgstr "ジャンプ(_J)"
-
-#: src/search.c:315
-msgid "_Line number: "
-msgstr "行番号(_L): "
-
-#: src/selector.c:103
+#: src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
 msgstr "現在のロケール (%s)"
 
-#: src/selector.c:147
+#: src/selector.c:130
 msgid "Other Codeset"
 msgstr "その他の文字コード"
 
-#: src/selector.c:186
+#: src/selector.c:170
 msgid "Code_set:"
 msgstr "文字コード(_S):"
 
-#: src/selector.c:207
+#: src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' はサポートされていません"
 
-#: src/selector.c:271
-msgid "Auto Detect"
+#: src/selector.c:253
+msgid "Auto-Detect"
 msgstr "自動検出"
 
-#: src/selector.c:323
+#: src/selector.c:305
 msgid "Open"
 msgstr "開く"
 
-#: src/selector.c:323
+#: src/selector.c:305
 msgid "Save As"
 msgstr "別名で保存"
 
-#: src/selector.c:336
-msgid "Ch_aracter Coding: "
-msgstr "文字コード(_A): "
+#: src/selector.c:329
+msgid "Ch_aracter Coding:"
+msgstr "文字コード(_A):"
 
-#: src/selector.c:392
+#: src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' は既に存在します. 上書きしますか?"
 
-#: src/window.c:141
+#: src/file.c:42
 msgid "Untitled"
 msgstr "無題"
+
+#: src/file.c:186
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "文字コードを '%s' に変換できませんでした"
+
+#: src/file.c:199
+msgid "Can't open file to write"
+msgstr "ファイルを作成できませんでした"
+
+#: src/file.c:204
+msgid "Can't write file"
+msgstr "ファイルに書きこめませんでした"
+
+#: src/search.c:92
+msgid "Search string not found"
+msgstr "検索文字列が見つかりません"
+
+#: src/search.c:134
+msgid "Replace?"
+msgstr "置換しますか?"
+
+#: src/search.c:167
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d 個の文字列を置換しました"
+
+#: src/search.c:213
+msgid "Replace"
+msgstr "置換"
+
+#: src/search.c:220
+msgid "Find"
+msgstr "検索"
+
+#: src/search.c:233
+msgid "Fi_nd what:"
+msgstr "検索する文字列(_N):"
+
+#: src/search.c:249
+msgid "Re_place with:"
+msgstr "置換後の文字列(_P):"
+
+#: src/search.c:263
+msgid "_Match case"
+msgstr "大文字と小文字を区別する(_M)"
+
+#: src/search.c:268
+msgid "Replace _all at once"
+msgstr "全て置換(_A)"
+
+#: src/search.c:319
+msgid "Jump To"
+msgstr "行へジャンプ"
+
+#: src/search.c:325
+msgid "_Jump"
+msgstr "ジャンプ(_J)"
+
+#: src/search.c:332
+msgid "_Line number:"
+msgstr "行番号(_L):"
+
+#: src/print.c:57
+msgid "Can't convert codeset to current locale"
+msgstr "文字コードを現在のロケールに変換できませんでした"
+
+#: src/print.c:70
+msgid "Can't write temporary file"
+msgstr "テンポラリファイルに書きこめませんでした"
+
+#: src/print.c:101
+msgid "Print"
+msgstr "印刷"
+
+#: src/print.c:124
+msgid "Printer _name:"
+msgstr "プリンタ名:"
+
+#: src/print.c:136
+msgid "N_umber of copies:"
+msgstr "コピーの数:"
+
+#: src/print.c:142
+msgid "_Format page"
+msgstr "ページを整形する"
+
+#: src/about.c:102
+msgid "Credits"
+msgstr "クレジット"
+
+#: src/about.c:137
+msgid "Written by"
+msgstr "作者"
+
+#: src/about.c:140
+msgid "Documented by"
+msgstr "文書著作者"
+
+#: src/about.c:146
+msgid "Translated by"
+msgstr "翻訳者"
+
+#: src/about.c:197
+msgid "C_redits"
+msgstr "クレジット(_R)"
+
+#: src/about.c:199
+msgid "_Credits"
+msgstr "クレジット(_C)"
+
+#: src/about.c:209
+#, c-format
+msgid "About %s"
+msgstr "%s について"
+
+#: leafpad.desktop.in.h:1
+msgid "Leafpad"
+msgstr ""
+
+#: leafpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "シンプルなテキストエディタ"

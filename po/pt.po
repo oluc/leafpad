@@ -1,270 +1,268 @@
-# Swedish translation of Leafpad text editor.
-# Copyright (C) 2004 Free Software Foundation, Inc.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# Isak Savo <iso01001@student.mdh.se>, 2004.
-# 
+# Alan Kelon Oliveira de Moraes <alankelon@yahoo.com.br>, 2004.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.7.8\n"
+"Project-Id-Version: Leafpad 0.7.9\n"
 "POT-Creation-Date: 2005-04-26 22:05+0900\n"
-"PO-Revision-Date: 2004-12-14 13:06+0200\n"
-"Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"PO-Revision-Date: 2004-12-28 19:56:59-0300\n"
+"Last-Translator: Alan Kelon Oliveira de Moraes <alankelon@yahoo.com.br>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #: src/menu.c:31
 msgid "/_File"
-msgstr "/_Arkiv"
+msgstr "/_Arquivo"
 
 #: src/menu.c:33
 msgid "/File/_New"
-msgstr "/Arkiv/_Ny"
+msgstr "/_Arquivo/_Novo"
 
 #: src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/Arkiv/_Öppna..."
+msgstr "/_Arquivo/_Abrir"
 
 #: src/menu.c:37
 msgid "/File/_Save"
-msgstr "/Arkiv/_Spara"
+msgstr "/_Arquivo/_Salvar"
 
 #: src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/Arkiv/S_para som..."
+msgstr "/_Arquivo/Salvar _Como"
 
 #: src/menu.c:44
 #, fuzzy
 msgid "/File/_Print..."
-msgstr "Arkiv/_Avsluta"
+msgstr "/_Arquivo/Sa_ir"
 
 #: src/menu.c:47
 msgid "/File/_Quit"
-msgstr "Arkiv/_Avsluta"
+msgstr "/_Arquivo/Sa_ir"
 
 #: src/menu.c:49
 msgid "/_Edit"
-msgstr "/_Redigera"
+msgstr "/_Editar"
 
 #: src/menu.c:51
 msgid "/Edit/_Undo"
-msgstr "/Redigera/_Ångra"
+msgstr "/_Editar/_Desfazer"
 
 #: src/menu.c:53
 msgid "/Edit/_Redo"
-msgstr "/Redigera/_Upprepa"
+msgstr "/_Editar/_Refazer"
 
 #: src/menu.c:57
 msgid "/Edit/Cu_t"
-msgstr "/Redigera/Klipp _ut"
+msgstr "/_Editar/R_ecortar"
 
 #: src/menu.c:59
 msgid "/Edit/_Copy"
-msgstr "/Redigera/K_opiera"
+msgstr "/_Editar/_Copiar"
 
 #: src/menu.c:61
 msgid "/Edit/_Paste"
-msgstr "/Redigera/Klistra _in"
+msgstr "/_Editar/C_olar"
 
 #: src/menu.c:63
 msgid "/Edit/_Delete"
-msgstr "/Redigera/_Radera"
+msgstr "/_Editar/_Apagar"
 
 #: src/menu.c:67
 msgid "/Edit/Select _All"
-msgstr "/Redigera/Markera _allt"
+msgstr "/_Editar/Selecionar _Tudo"
 
 #: src/menu.c:69
 msgid "/_Search"
-msgstr "/_Sök"
+msgstr "/_Procurar"
 
 #: src/menu.c:71
 msgid "/Search/_Find..."
-msgstr "/Sök/_Sök..."
+msgstr "/_Procurar/_Procurar..."
 
 #: src/menu.c:73
 msgid "/Search/Find _Next"
-msgstr "/Sök/Sök _nästa"
+msgstr "/_Procurar/P_rocurar Próximo"
 
 #: src/menu.c:75
 msgid "/Search/Find _Previous"
-msgstr "/Sök/Sök _föregående"
+msgstr "/_Procurar/Procurar _Anterior"
 
 #: src/menu.c:77
 msgid "/Search/_Replace..."
-msgstr "/Sök/_Ersätt..."
+msgstr "/_Procurar/_Substituir..."
 
 #: src/menu.c:81
 msgid "/Search/_Jump To..."
-msgstr "/Sök/_Hoppa till..."
+msgstr "/_Procurar/_Ir para..."
 
 #: src/menu.c:83
 msgid "/_Options"
-msgstr "/_Inställningar"
+msgstr "/_Opções"
 
 #: src/menu.c:85
 msgid "/Options/_Font..."
-msgstr "/Inställningar/_Typsnitt..."
+msgstr "/_Opções/_Fonte"
 
 #: src/menu.c:87
 msgid "/Options/_Word Wrap"
-msgstr "/Inställningar/_Radbrytning"
+msgstr "/_Opções/_Quebrar linha"
 
 #: src/menu.c:89
 msgid "/Options/_Line Numbers"
-msgstr "/Inställningar/Rad_nummer"
+msgstr "/_Opções/_Número de linhas"
 
 #: src/menu.c:93
 msgid "/Options/_Auto Indent"
-msgstr "/Inställningar/Automatisk _indentering"
+msgstr "/_Opções/_Auto Indentar"
 
 #: src/menu.c:95
 msgid "/_Help"
-msgstr "/_Hjälp"
+msgstr "_Ajuda"
 
 #: src/menu.c:97
 msgid "/Help/_About"
-msgstr "/Hjälp/_Om"
+msgstr "_Ajuda/_Sobre"
 
 #: src/callback.c:286
 msgid "GTK+ based simple text editor"
-msgstr "Enkel GTK+-baserad texteditor"
+msgstr "Simples editor de texto feito em GTK+"
 
 #: src/callback.c:294
 msgid "translator-credits"
-msgstr "Isak Savo <iso01001@student.mdh.se>"
+msgstr "Alan Kelon <alankelon@yahoo.com.br>"
 
 #: src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Spara ändringar för '%s'?"
+msgstr "Salvar modificações em '%s'"
 
 #: src/font.c:44
 msgid "Font"
-msgstr "Typsnitt"
+msgstr "Fonte"
 
-# Här syftar 'Locale' på teckenkodning när man sparar/öppnar dokument
 #: src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Nuvarande kodning (%s)"
+msgstr "Localização atual (%s)"
 
 #: src/selector.c:130
 msgid "Other Codeset"
-msgstr "Annan kodning"
+msgstr "Outro conjunto de caracteres"
 
 #: src/selector.c:170
 msgid "Code_set:"
-msgstr "_Kodning:"
+msgstr "_Conjunto de caracteres"
 
 #: src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' stöds inte"
+msgstr "'%s' não é suportado"
 
 #: src/selector.c:253
 #, fuzzy
 msgid "Auto-Detect"
-msgstr "Automatisk"
+msgstr "Auto-detectar"
 
 #: src/selector.c:305
 msgid "Open"
-msgstr "Öppna"
+msgstr "Abrir"
 
 #: src/selector.c:305
 msgid "Save As"
-msgstr "Spara som"
+msgstr "Salvar Como"
 
 #: src/selector.c:329
 #, fuzzy
 msgid "Ch_aracter Coding:"
-msgstr "Tecken_kodning: "
+msgstr "_Codificação de caracteres: "
 
 #: src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' finns redan. Vill du skriva över?"
+msgstr "'%s' já existe. Sobrescrever?"
 
 #: src/file.c:42
 msgid "Untitled"
-msgstr "Namnlös"
+msgstr "Sem título"
 
 #: src/file.c:186
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Kan inte konvertera kodning till '%s'"
+msgstr "Não foi possível converter o conjuntos de caracteres para '%s'"
 
 #: src/file.c:199
 msgid "Can't open file to write"
-msgstr "Kan inte öppna fil att skriva till"
+msgstr "Não foi possível abrir o arquivo para escrita"
 
 #: src/file.c:204
 msgid "Can't write file"
-msgstr "Kan inte skriva till fil"
+msgstr "Não foi possível escrever o arquivo"
 
 #: src/search.c:92
 msgid "Search string not found"
-msgstr "Söksträngen hittades inte"
+msgstr "Palavra(s) não encontrada"
 
 #: src/search.c:134
 msgid "Replace?"
-msgstr "Ersätt?"
+msgstr "Substituir?"
 
 #: src/search.c:167
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d strängar har ersatts"
+msgstr "%d palavra(s) substituídas"
 
 #: src/search.c:213
 msgid "Replace"
-msgstr "Ersätt"
+msgstr "Substituir"
 
 #: src/search.c:220
 msgid "Find"
-msgstr "Sök"
+msgstr "Procurar"
 
 #: src/search.c:233
 #, fuzzy
 msgid "Fi_nd what:"
-msgstr "S_öksträng: "
+msgstr "_Procurar o que: "
 
 #: src/search.c:249
 #, fuzzy
 msgid "Re_place with:"
-msgstr "Ersätt _med: "
+msgstr "_Substituir com: "
 
 #: src/search.c:263
 msgid "_Match case"
-msgstr "Matcha _gemener/VERSALER"
+msgstr "_Diferenciar maiúsculas e minúsculas"
 
 #: src/search.c:268
 msgid "Replace _all at once"
-msgstr "_Ändra alla på en gång"
+msgstr "Substituir _todas de uma vez"
 
 #: src/search.c:319
 msgid "Jump To"
-msgstr "Hoppa till"
+msgstr "Ir para"
 
 #: src/search.c:325
 msgid "_Jump"
-msgstr "_Hoppa"
+msgstr "_Ir"
 
 #: src/search.c:332
 #, fuzzy
 msgid "_Line number:"
-msgstr "_Radnummer: "
+msgstr "_Número da linha: "
 
 #: src/print.c:57
 #, fuzzy
 msgid "Can't convert codeset to current locale"
-msgstr "Kan inte konvertera kodning till '%s'"
+msgstr "Não foi possível converter o conjuntos de caracteres para '%s'"
 
 #: src/print.c:70
 #, fuzzy
 msgid "Can't write temporary file"
-msgstr "Kan inte skriva till fil"
+msgstr "Não foi possível escrever o arquivo"
 
 #: src/print.c:101
 msgid "Print"
@@ -309,7 +307,7 @@ msgstr ""
 #: src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "Om %s"
+msgstr "Sobre %s"
 
 #: leafpad.desktop.in.h:1
 msgid "Leafpad"
@@ -317,31 +315,4 @@ msgstr ""
 
 #: leafpad.desktop.in.h:2
 msgid "Simple text editor"
-msgstr "Enkel texteditor"
-
-#~ msgid "Unicode"
-#~ msgstr "Unicode"
-
-#~ msgid "Western"
-#~ msgstr "Västlig"
-
-#~ msgid "Cyrillic"
-#~ msgstr "Kyryllisk"
-
-#~ msgid "Chinese Simplified"
-#~ msgstr "Kinesisk (Enkel)"
-
-#~ msgid "Chinese Traditional"
-#~ msgstr "Kinesisk (Traditionell)"
-
-#~ msgid "Japanese"
-#~ msgstr "Japansk"
-
-#~ msgid "Korean"
-#~ msgstr "Koreansk"
-
-#~ msgid "Other Codeset (%s)"
-#~ msgstr "Annan kodning (%s)"
-
-#~ msgid "Enter Codeset"
-#~ msgstr "Ange kodning"
+msgstr "Simples editor de texto"

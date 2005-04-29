@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-12-24 22:16+0900\n"
+"POT-Creation-Date: 2005-04-26 22:05+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,233 +15,297 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/callback.c:33
+#: src/menu.c:31
+msgid "/_File"
+msgstr ""
+
+#: src/menu.c:33
+msgid "/File/_New"
+msgstr ""
+
+#: src/menu.c:35
+msgid "/File/_Open..."
+msgstr ""
+
+#: src/menu.c:37
+msgid "/File/_Save"
+msgstr ""
+
+#: src/menu.c:39
+msgid "/File/Save _As..."
+msgstr ""
+
+#: src/menu.c:44
+msgid "/File/_Print..."
+msgstr ""
+
+#: src/menu.c:47
+msgid "/File/_Quit"
+msgstr ""
+
+#: src/menu.c:49
+msgid "/_Edit"
+msgstr ""
+
+#: src/menu.c:51
+msgid "/Edit/_Undo"
+msgstr ""
+
+#: src/menu.c:53
+msgid "/Edit/_Redo"
+msgstr ""
+
+#: src/menu.c:57
+msgid "/Edit/Cu_t"
+msgstr ""
+
+#: src/menu.c:59
+msgid "/Edit/_Copy"
+msgstr ""
+
+#: src/menu.c:61
+msgid "/Edit/_Paste"
+msgstr ""
+
+#: src/menu.c:63
+msgid "/Edit/_Delete"
+msgstr ""
+
+#: src/menu.c:67
+msgid "/Edit/Select _All"
+msgstr ""
+
+#: src/menu.c:69
+msgid "/_Search"
+msgstr ""
+
+#: src/menu.c:71
+msgid "/Search/_Find..."
+msgstr ""
+
+#: src/menu.c:73
+msgid "/Search/Find _Next"
+msgstr ""
+
+#: src/menu.c:75
+msgid "/Search/Find _Previous"
+msgstr ""
+
+#: src/menu.c:77
+msgid "/Search/_Replace..."
+msgstr ""
+
+#: src/menu.c:81
+msgid "/Search/_Jump To..."
+msgstr ""
+
+#: src/menu.c:83
+msgid "/_Options"
+msgstr ""
+
+#: src/menu.c:85
+msgid "/Options/_Font..."
+msgstr ""
+
+#: src/menu.c:87
+msgid "/Options/_Word Wrap"
+msgstr ""
+
+#: src/menu.c:89
+msgid "/Options/_Line Numbers"
+msgstr ""
+
+#: src/menu.c:93
+msgid "/Options/_Auto Indent"
+msgstr ""
+
+#: src/menu.c:95
+msgid "/_Help"
+msgstr ""
+
+#: src/menu.c:97
+msgid "/Help/_About"
+msgstr ""
+
+#: src/callback.c:286
+msgid "GTK+ based simple text editor"
+msgstr ""
+
+#: src/callback.c:294
+msgid "translator-credits"
+msgstr ""
+
+#: src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr ""
 
-#: src/callback.c:291
-msgid "GTK+ based simple text editor"
-msgstr ""
-
-#: src/dialog.c:135
-#, c-format
-msgid "About %s"
-msgstr ""
-
-#: src/file.c:150
-#, c-format
-msgid "Can't convert codeset to '%s'"
-msgstr ""
-
-#: src/file.c:163
-msgid "Can't open file to write"
-msgstr ""
-
-#: src/file.c:168
-msgid "Can't write file"
-msgstr ""
-
-#: src/font.c:49
+#: src/font.c:44
 msgid "Font"
 msgstr ""
 
-#: src/menu.c:59
-msgid "/_File"
-msgstr ""
-
-#: src/menu.c:61
-msgid "/File/_New"
-msgstr ""
-
-#: src/menu.c:65
-msgid "/File/_Open..."
-msgstr ""
-
-#: src/menu.c:67
-msgid "/File/_Save"
-msgstr ""
-
-#: src/menu.c:69
-msgid "/File/Save _As..."
-msgstr ""
-
-#: src/menu.c:79
-msgid "/File/_Quit"
-msgstr ""
-
-#: src/menu.c:81
-msgid "/_Edit"
-msgstr ""
-
-#: src/menu.c:83
-msgid "/Edit/_Undo"
-msgstr ""
-
-#: src/menu.c:85
-msgid "/Edit/_Redo"
-msgstr ""
-
-#: src/menu.c:89
-msgid "/Edit/Cu_t"
-msgstr ""
-
-#: src/menu.c:91
-msgid "/Edit/_Copy"
-msgstr ""
-
-#: src/menu.c:93
-msgid "/Edit/_Paste"
-msgstr ""
-
-#: src/menu.c:95
-msgid "/Edit/_Delete"
-msgstr ""
-
-#: src/menu.c:99
-msgid "/Edit/Select _All"
-msgstr ""
-
-#: src/menu.c:101
-msgid "/_Search"
-msgstr ""
-
-#: src/menu.c:103
-msgid "/Search/_Find..."
-msgstr ""
-
-#: src/menu.c:105
-msgid "/Search/Find _Next"
-msgstr ""
-
-#: src/menu.c:107
-msgid "/Search/Find _Previous"
-msgstr ""
-
-#: src/menu.c:109
-msgid "/Search/_Replace..."
-msgstr ""
-
-#: src/menu.c:113
-msgid "/Search/_Jump To..."
-msgstr ""
-
-#: src/menu.c:115
-msgid "/_Options"
-msgstr ""
-
-#: src/menu.c:117
-msgid "/Options/_Font..."
-msgstr ""
-
-#: src/menu.c:119
-msgid "/Options/_Word Wrap"
-msgstr ""
-
-#: src/menu.c:121
-msgid "/Options/_Line Numbers"
-msgstr ""
-
-#: src/menu.c:125
-msgid "/Options/_Auto Indent"
-msgstr ""
-
-#: src/menu.c:127
-msgid "/_Help"
-msgstr ""
-
-#: src/menu.c:129
-msgid "/Help/_About"
-msgstr ""
-
-#: src/search.c:83
-msgid "Search string not found"
-msgstr ""
-
-#: src/search.c:125
-msgid "Replace?"
-msgstr ""
-
-#: src/search.c:153
-#, c-format
-msgid "%d strings replaced"
-msgstr ""
-
-#: src/search.c:199
-msgid "Replace"
-msgstr ""
-
-#: src/search.c:206
-msgid "Find"
-msgstr ""
-
-#: src/search.c:218
-msgid "Fi_nd what: "
-msgstr ""
-
-#: src/search.c:234
-msgid "Re_place with: "
-msgstr ""
-
-#: src/search.c:248
-msgid "_Match case"
-msgstr ""
-
-#: src/search.c:253
-msgid "Replace _all at once"
-msgstr ""
-
-#: src/search.c:304
-msgid "Jump To"
-msgstr ""
-
-#: src/search.c:309
-msgid "_Jump"
-msgstr ""
-
-#: src/search.c:315
-msgid "_Line number: "
-msgstr ""
-
-#: src/selector.c:103
+#: src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
 msgstr ""
 
-#: src/selector.c:147
+#: src/selector.c:130
 msgid "Other Codeset"
 msgstr ""
 
-#: src/selector.c:186
+#: src/selector.c:170
 msgid "Code_set:"
 msgstr ""
 
-#: src/selector.c:207
+#: src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
 msgstr ""
 
-#: src/selector.c:271
-msgid "Auto Detect"
+#: src/selector.c:253
+msgid "Auto-Detect"
 msgstr ""
 
-#: src/selector.c:323
+#: src/selector.c:305
 msgid "Open"
 msgstr ""
 
-#: src/selector.c:323
+#: src/selector.c:305
 msgid "Save As"
 msgstr ""
 
-#: src/selector.c:336
-msgid "Ch_aracter Coding: "
+#: src/selector.c:329
+msgid "Ch_aracter Coding:"
 msgstr ""
 
-#: src/selector.c:392
+#: src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr ""
 
-#: src/window.c:141
+#: src/file.c:42
 msgid "Untitled"
+msgstr ""
+
+#: src/file.c:186
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr ""
+
+#: src/file.c:199
+msgid "Can't open file to write"
+msgstr ""
+
+#: src/file.c:204
+msgid "Can't write file"
+msgstr ""
+
+#: src/search.c:92
+msgid "Search string not found"
+msgstr ""
+
+#: src/search.c:134
+msgid "Replace?"
+msgstr ""
+
+#: src/search.c:167
+#, c-format
+msgid "%d strings replaced"
+msgstr ""
+
+#: src/search.c:213
+msgid "Replace"
+msgstr ""
+
+#: src/search.c:220
+msgid "Find"
+msgstr ""
+
+#: src/search.c:233
+msgid "Fi_nd what:"
+msgstr ""
+
+#: src/search.c:249
+msgid "Re_place with:"
+msgstr ""
+
+#: src/search.c:263
+msgid "_Match case"
+msgstr ""
+
+#: src/search.c:268
+msgid "Replace _all at once"
+msgstr ""
+
+#: src/search.c:319
+msgid "Jump To"
+msgstr ""
+
+#: src/search.c:325
+msgid "_Jump"
+msgstr ""
+
+#: src/search.c:332
+msgid "_Line number:"
+msgstr ""
+
+#: src/print.c:57
+msgid "Can't convert codeset to current locale"
+msgstr ""
+
+#: src/print.c:70
+msgid "Can't write temporary file"
+msgstr ""
+
+#: src/print.c:101
+msgid "Print"
+msgstr ""
+
+#: src/print.c:124
+msgid "Printer _name:"
+msgstr ""
+
+#: src/print.c:136
+msgid "N_umber of copies:"
+msgstr ""
+
+#: src/print.c:142
+msgid "_Format page"
+msgstr ""
+
+#: src/about.c:102
+msgid "Credits"
+msgstr ""
+
+#: src/about.c:137
+msgid "Written by"
+msgstr ""
+
+#: src/about.c:140
+msgid "Documented by"
+msgstr ""
+
+#: src/about.c:146
+msgid "Translated by"
+msgstr ""
+
+#: src/about.c:197
+msgid "C_redits"
+msgstr ""
+
+#: src/about.c:199
+msgid "_Credits"
+msgstr ""
+
+#: src/about.c:209
+#, c-format
+msgid "About %s"
+msgstr ""
+
+#: leafpad.desktop.in.h:1
+msgid "Leafpad"
+msgstr ""
+
+#: leafpad.desktop.in.h:2
+msgid "Simple text editor"
 msgstr ""

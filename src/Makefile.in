@@ -59,80 +59,87 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-host_alias = @host_alias@
-host_triplet = @host@
 
 EXEEXT = @EXEEXT@
 OBJEXT = @OBJEXT@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 AMTAR = @AMTAR@
 AWK = @AWK@
-BUILD_INCLUDED_LIBINTL = @BUILD_INCLUDED_LIBINTL@
+CATALOGS = @CATALOGS@
 CATOBJEXT = @CATOBJEXT@
 CC = @CC@
 DATADIRNAME = @DATADIRNAME@
 DEPDIR = @DEPDIR@
-GENCAT = @GENCAT@
-GLIBC21 = @GLIBC21@
+GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
+GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
-HAVE_LIB = @HAVE_LIB@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 INSTOBJEXT = @INSTOBJEXT@
-INTLBISON = @INTLBISON@
 INTLLIBS = @INTLLIBS@
-INTLOBJS = @INTLOBJS@
-INTL_LIBTOOL_SUFFIX_PREFIX = @INTL_LIBTOOL_SUFFIX_PREFIX@
-LIB = @LIB@
-LIBICONV = @LIBICONV@
-LIBINTL = @LIBINTL@
-LTLIB = @LTLIB@
-LTLIBICONV = @LTLIBICONV@
-LTLIBINTL = @LTLIBINTL@
+INTLTOOL_CAVES_RULE = @INTLTOOL_CAVES_RULE@
+INTLTOOL_DESKTOP_RULE = @INTLTOOL_DESKTOP_RULE@
+INTLTOOL_DIRECTORY_RULE = @INTLTOOL_DIRECTORY_RULE@
+INTLTOOL_EXTRACT = @INTLTOOL_EXTRACT@
+INTLTOOL_KEYS_RULE = @INTLTOOL_KEYS_RULE@
+INTLTOOL_MERGE = @INTLTOOL_MERGE@
+INTLTOOL_OAF_RULE = @INTLTOOL_OAF_RULE@
+INTLTOOL_PERL = @INTLTOOL_PERL@
+INTLTOOL_PONG_RULE = @INTLTOOL_PONG_RULE@
+INTLTOOL_PROP_RULE = @INTLTOOL_PROP_RULE@
+INTLTOOL_SCHEMAS_RULE = @INTLTOOL_SCHEMAS_RULE@
+INTLTOOL_SERVER_RULE = @INTLTOOL_SERVER_RULE@
+INTLTOOL_SHEET_RULE = @INTLTOOL_SHEET_RULE@
+INTLTOOL_SOUNDLIST_RULE = @INTLTOOL_SOUNDLIST_RULE@
+INTLTOOL_THEME_RULE = @INTLTOOL_THEME_RULE@
+INTLTOOL_UI_RULE = @INTLTOOL_UI_RULE@
+INTLTOOL_UPDATE = @INTLTOOL_UPDATE@
+INTLTOOL_XAM_RULE = @INTLTOOL_XAM_RULE@
+INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
+LPR = @LPR@
 MKINSTALLDIRS = @MKINSTALLDIRS@
 PACKAGE = @PACKAGE@
 PKG_CONFIG = @PKG_CONFIG@
+POFILES = @POFILES@
 POSUB = @POSUB@
-RANLIB = @RANLIB@
+PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
 STRIP = @STRIP@
-USE_INCLUDED_LIBINTL = @USE_INCLUDED_LIBINTL@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
 am__include = @am__include@
 am__quote = @am__quote@
 install_sh = @install_sh@
-bin_PROGRAMS = \
-	leafpad
+bin_PROGRAMS = leafpad
+
+INCLUDES = -DICONDIR=\"$(datadir)/pixmaps\"
 
 leafpad_SOURCES = \
 	leafpad.h main.c \
 	window.h window.c \
 	menu.h menu.c \
 	callback.h callback.c \
-	keyevent.h keyevent.c \
-	dnd.h dnd.c \
-	dialog.h dialog.c \
+	view.h view.c \
+	undo.h undo.c \
+	font.h font.c \
+	linenum.h linenum.c \
+	indent.h indent.c \
 	selector.h selector.c \
 	file.h file.c \
 	encoding.h encoding.c \
 	search.h search.c \
-	font.h font.c \
+	dialog.h dialog.c \
+	print.h print.c \
+	about.h about.c \
+	dnd.h dnd.c \
 	utils.h utils.c \
-	undo.h undo.c \
-	indent.h indent.c \
-	linenum.h linenum.c \
 	gtksourceiter.h gtksourceiter.c \
-	intl.h
+	i18n.h
 
-leafpad_CFLAGS = \
-	-DLOCALEDIR=\""$(datadir)/locale"\" \
-	-DICONDIR=\""$(datadir)/pixmaps"\" \
-	$(GTK_CFLAGS)
 
-leafpad_LDADD = \
-	$(GTK_LIBS)
-
+leafpad_CFLAGS = $(GTK_CFLAGS)
+leafpad_LDADD = $(GTK_LIBS) $(INTLLIBS)
 subdir = src
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
@@ -142,12 +149,13 @@ PROGRAMS = $(bin_PROGRAMS)
 
 am_leafpad_OBJECTS = leafpad-main.$(OBJEXT) leafpad-window.$(OBJEXT) \
 	leafpad-menu.$(OBJEXT) leafpad-callback.$(OBJEXT) \
-	leafpad-keyevent.$(OBJEXT) leafpad-dnd.$(OBJEXT) \
-	leafpad-dialog.$(OBJEXT) leafpad-selector.$(OBJEXT) \
+	leafpad-view.$(OBJEXT) leafpad-undo.$(OBJEXT) \
+	leafpad-font.$(OBJEXT) leafpad-linenum.$(OBJEXT) \
+	leafpad-indent.$(OBJEXT) leafpad-selector.$(OBJEXT) \
 	leafpad-file.$(OBJEXT) leafpad-encoding.$(OBJEXT) \
-	leafpad-search.$(OBJEXT) leafpad-font.$(OBJEXT) \
-	leafpad-utils.$(OBJEXT) leafpad-undo.$(OBJEXT) \
-	leafpad-indent.$(OBJEXT) leafpad-linenum.$(OBJEXT) \
+	leafpad-search.$(OBJEXT) leafpad-dialog.$(OBJEXT) \
+	leafpad-print.$(OBJEXT) leafpad-about.$(OBJEXT) \
+	leafpad-dnd.$(OBJEXT) leafpad-utils.$(OBJEXT) \
 	leafpad-gtksourceiter.$(OBJEXT)
 leafpad_OBJECTS = $(am_leafpad_OBJECTS)
 leafpad_DEPENDENCIES =
@@ -160,7 +168,8 @@ LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/leafpad-callback.Po \
+@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/leafpad-about.Po \
+@AMDEP_TRUE@	./$(DEPDIR)/leafpad-callback.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-dialog.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-dnd.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-encoding.Po \
@@ -168,14 +177,15 @@ am__depfiles_maybe = depfiles
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-font.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-gtksourceiter.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-indent.Po \
-@AMDEP_TRUE@	./$(DEPDIR)/leafpad-keyevent.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-linenum.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-main.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-menu.Po \
+@AMDEP_TRUE@	./$(DEPDIR)/leafpad-print.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-search.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-selector.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-undo.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-utils.Po \
+@AMDEP_TRUE@	./$(DEPDIR)/leafpad-view.Po \
 @AMDEP_TRUE@	./$(DEPDIR)/leafpad-window.Po
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -223,18 +233,20 @@ leafpad-main.$(OBJEXT): main.c
 leafpad-window.$(OBJEXT): window.c
 leafpad-menu.$(OBJEXT): menu.c
 leafpad-callback.$(OBJEXT): callback.c
-leafpad-keyevent.$(OBJEXT): keyevent.c
-leafpad-dnd.$(OBJEXT): dnd.c
-leafpad-dialog.$(OBJEXT): dialog.c
+leafpad-view.$(OBJEXT): view.c
+leafpad-undo.$(OBJEXT): undo.c
+leafpad-font.$(OBJEXT): font.c
+leafpad-linenum.$(OBJEXT): linenum.c
+leafpad-indent.$(OBJEXT): indent.c
 leafpad-selector.$(OBJEXT): selector.c
 leafpad-file.$(OBJEXT): file.c
 leafpad-encoding.$(OBJEXT): encoding.c
 leafpad-search.$(OBJEXT): search.c
-leafpad-font.$(OBJEXT): font.c
+leafpad-dialog.$(OBJEXT): dialog.c
+leafpad-print.$(OBJEXT): print.c
+leafpad-about.$(OBJEXT): about.c
+leafpad-dnd.$(OBJEXT): dnd.c
 leafpad-utils.$(OBJEXT): utils.c
-leafpad-undo.$(OBJEXT): undo.c
-leafpad-indent.$(OBJEXT): indent.c
-leafpad-linenum.$(OBJEXT): linenum.c
 leafpad-gtksourceiter.$(OBJEXT): gtksourceiter.c
 leafpad$(EXEEXT): $(leafpad_OBJECTS) $(leafpad_DEPENDENCIES) 
 	@rm -f leafpad$(EXEEXT)
@@ -246,6 +258,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-about.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-callback.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-dnd.Po@am__quote@
@@ -254,14 +267,15 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-font.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-gtksourceiter.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-indent.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-keyevent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-linenum.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-menu.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-print.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-search.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-selector.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-undo.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-utils.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-view.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-window.Po@am__quote@
 
 distclean-depend:
@@ -327,41 +341,65 @@ leafpad-callback.obj: callback.c
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-callback.obj `cygpath -w callback.c`
 
-leafpad-keyevent.o: keyevent.c
-@AMDEP_TRUE@	source='keyevent.c' object='leafpad-keyevent.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-keyevent.Po' tmpdepfile='$(DEPDIR)/leafpad-keyevent.TPo' @AMDEPBACKSLASH@
+leafpad-view.o: view.c
+@AMDEP_TRUE@	source='view.c' object='leafpad-view.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-view.Po' tmpdepfile='$(DEPDIR)/leafpad-view.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-keyevent.o `test -f 'keyevent.c' || echo '$(srcdir)/'`keyevent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-view.o `test -f 'view.c' || echo '$(srcdir)/'`view.c
 
-leafpad-keyevent.obj: keyevent.c
-@AMDEP_TRUE@	source='keyevent.c' object='leafpad-keyevent.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-keyevent.Po' tmpdepfile='$(DEPDIR)/leafpad-keyevent.TPo' @AMDEPBACKSLASH@
+leafpad-view.obj: view.c
+@AMDEP_TRUE@	source='view.c' object='leafpad-view.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-view.Po' tmpdepfile='$(DEPDIR)/leafpad-view.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-keyevent.obj `cygpath -w keyevent.c`
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-view.obj `cygpath -w view.c`
 
-leafpad-dnd.o: dnd.c
-@AMDEP_TRUE@	source='dnd.c' object='leafpad-dnd.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-dnd.Po' tmpdepfile='$(DEPDIR)/leafpad-dnd.TPo' @AMDEPBACKSLASH@
+leafpad-undo.o: undo.c
+@AMDEP_TRUE@	source='undo.c' object='leafpad-undo.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-undo.Po' tmpdepfile='$(DEPDIR)/leafpad-undo.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dnd.o `test -f 'dnd.c' || echo '$(srcdir)/'`dnd.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-undo.o `test -f 'undo.c' || echo '$(srcdir)/'`undo.c
 
-leafpad-dnd.obj: dnd.c
-@AMDEP_TRUE@	source='dnd.c' object='leafpad-dnd.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-dnd.Po' tmpdepfile='$(DEPDIR)/leafpad-dnd.TPo' @AMDEPBACKSLASH@
+leafpad-undo.obj: undo.c
+@AMDEP_TRUE@	source='undo.c' object='leafpad-undo.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-undo.Po' tmpdepfile='$(DEPDIR)/leafpad-undo.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dnd.obj `cygpath -w dnd.c`
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-undo.obj `cygpath -w undo.c`
 
-leafpad-dialog.o: dialog.c
-@AMDEP_TRUE@	source='dialog.c' object='leafpad-dialog.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-dialog.Po' tmpdepfile='$(DEPDIR)/leafpad-dialog.TPo' @AMDEPBACKSLASH@
+leafpad-font.o: font.c
+@AMDEP_TRUE@	source='font.c' object='leafpad-font.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-font.Po' tmpdepfile='$(DEPDIR)/leafpad-font.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dialog.o `test -f 'dialog.c' || echo '$(srcdir)/'`dialog.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-font.o `test -f 'font.c' || echo '$(srcdir)/'`font.c
 
-leafpad-dialog.obj: dialog.c
-@AMDEP_TRUE@	source='dialog.c' object='leafpad-dialog.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-dialog.Po' tmpdepfile='$(DEPDIR)/leafpad-dialog.TPo' @AMDEPBACKSLASH@
+leafpad-font.obj: font.c
+@AMDEP_TRUE@	source='font.c' object='leafpad-font.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-font.Po' tmpdepfile='$(DEPDIR)/leafpad-font.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dialog.obj `cygpath -w dialog.c`
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-font.obj `cygpath -w font.c`
+
+leafpad-linenum.o: linenum.c
+@AMDEP_TRUE@	source='linenum.c' object='leafpad-linenum.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-linenum.Po' tmpdepfile='$(DEPDIR)/leafpad-linenum.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-linenum.o `test -f 'linenum.c' || echo '$(srcdir)/'`linenum.c
+
+leafpad-linenum.obj: linenum.c
+@AMDEP_TRUE@	source='linenum.c' object='leafpad-linenum.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-linenum.Po' tmpdepfile='$(DEPDIR)/leafpad-linenum.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-linenum.obj `cygpath -w linenum.c`
+
+leafpad-indent.o: indent.c
+@AMDEP_TRUE@	source='indent.c' object='leafpad-indent.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-indent.Po' tmpdepfile='$(DEPDIR)/leafpad-indent.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-indent.o `test -f 'indent.c' || echo '$(srcdir)/'`indent.c
+
+leafpad-indent.obj: indent.c
+@AMDEP_TRUE@	source='indent.c' object='leafpad-indent.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-indent.Po' tmpdepfile='$(DEPDIR)/leafpad-indent.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-indent.obj `cygpath -w indent.c`
 
 leafpad-selector.o: selector.c
 @AMDEP_TRUE@	source='selector.c' object='leafpad-selector.o' libtool=no @AMDEPBACKSLASH@
@@ -411,17 +449,53 @@ leafpad-search.obj: search.c
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-search.obj `cygpath -w search.c`
 
-leafpad-font.o: font.c
-@AMDEP_TRUE@	source='font.c' object='leafpad-font.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-font.Po' tmpdepfile='$(DEPDIR)/leafpad-font.TPo' @AMDEPBACKSLASH@
+leafpad-dialog.o: dialog.c
+@AMDEP_TRUE@	source='dialog.c' object='leafpad-dialog.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-dialog.Po' tmpdepfile='$(DEPDIR)/leafpad-dialog.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-font.o `test -f 'font.c' || echo '$(srcdir)/'`font.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dialog.o `test -f 'dialog.c' || echo '$(srcdir)/'`dialog.c
 
-leafpad-font.obj: font.c
-@AMDEP_TRUE@	source='font.c' object='leafpad-font.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-font.Po' tmpdepfile='$(DEPDIR)/leafpad-font.TPo' @AMDEPBACKSLASH@
+leafpad-dialog.obj: dialog.c
+@AMDEP_TRUE@	source='dialog.c' object='leafpad-dialog.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-dialog.Po' tmpdepfile='$(DEPDIR)/leafpad-dialog.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-font.obj `cygpath -w font.c`
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dialog.obj `cygpath -w dialog.c`
+
+leafpad-print.o: print.c
+@AMDEP_TRUE@	source='print.c' object='leafpad-print.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-print.Po' tmpdepfile='$(DEPDIR)/leafpad-print.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-print.o `test -f 'print.c' || echo '$(srcdir)/'`print.c
+
+leafpad-print.obj: print.c
+@AMDEP_TRUE@	source='print.c' object='leafpad-print.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-print.Po' tmpdepfile='$(DEPDIR)/leafpad-print.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-print.obj `cygpath -w print.c`
+
+leafpad-about.o: about.c
+@AMDEP_TRUE@	source='about.c' object='leafpad-about.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-about.Po' tmpdepfile='$(DEPDIR)/leafpad-about.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-about.o `test -f 'about.c' || echo '$(srcdir)/'`about.c
+
+leafpad-about.obj: about.c
+@AMDEP_TRUE@	source='about.c' object='leafpad-about.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-about.Po' tmpdepfile='$(DEPDIR)/leafpad-about.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-about.obj `cygpath -w about.c`
+
+leafpad-dnd.o: dnd.c
+@AMDEP_TRUE@	source='dnd.c' object='leafpad-dnd.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-dnd.Po' tmpdepfile='$(DEPDIR)/leafpad-dnd.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dnd.o `test -f 'dnd.c' || echo '$(srcdir)/'`dnd.c
+
+leafpad-dnd.obj: dnd.c
+@AMDEP_TRUE@	source='dnd.c' object='leafpad-dnd.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-dnd.Po' tmpdepfile='$(DEPDIR)/leafpad-dnd.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dnd.obj `cygpath -w dnd.c`
 
 leafpad-utils.o: utils.c
 @AMDEP_TRUE@	source='utils.c' object='leafpad-utils.o' libtool=no @AMDEPBACKSLASH@
@@ -434,42 +508,6 @@ leafpad-utils.obj: utils.c
 @AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-utils.Po' tmpdepfile='$(DEPDIR)/leafpad-utils.TPo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-utils.obj `cygpath -w utils.c`
-
-leafpad-undo.o: undo.c
-@AMDEP_TRUE@	source='undo.c' object='leafpad-undo.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-undo.Po' tmpdepfile='$(DEPDIR)/leafpad-undo.TPo' @AMDEPBACKSLASH@
-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-undo.o `test -f 'undo.c' || echo '$(srcdir)/'`undo.c
-
-leafpad-undo.obj: undo.c
-@AMDEP_TRUE@	source='undo.c' object='leafpad-undo.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-undo.Po' tmpdepfile='$(DEPDIR)/leafpad-undo.TPo' @AMDEPBACKSLASH@
-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-undo.obj `cygpath -w undo.c`
-
-leafpad-indent.o: indent.c
-@AMDEP_TRUE@	source='indent.c' object='leafpad-indent.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-indent.Po' tmpdepfile='$(DEPDIR)/leafpad-indent.TPo' @AMDEPBACKSLASH@
-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-indent.o `test -f 'indent.c' || echo '$(srcdir)/'`indent.c
-
-leafpad-indent.obj: indent.c
-@AMDEP_TRUE@	source='indent.c' object='leafpad-indent.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-indent.Po' tmpdepfile='$(DEPDIR)/leafpad-indent.TPo' @AMDEPBACKSLASH@
-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-indent.obj `cygpath -w indent.c`
-
-leafpad-linenum.o: linenum.c
-@AMDEP_TRUE@	source='linenum.c' object='leafpad-linenum.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-linenum.Po' tmpdepfile='$(DEPDIR)/leafpad-linenum.TPo' @AMDEPBACKSLASH@
-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-linenum.o `test -f 'linenum.c' || echo '$(srcdir)/'`linenum.c
-
-leafpad-linenum.obj: linenum.c
-@AMDEP_TRUE@	source='linenum.c' object='leafpad-linenum.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@	depfile='$(DEPDIR)/leafpad-linenum.Po' tmpdepfile='$(DEPDIR)/leafpad-linenum.TPo' @AMDEPBACKSLASH@
-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-linenum.obj `cygpath -w linenum.c`
 
 leafpad-gtksourceiter.o: gtksourceiter.c
 @AMDEP_TRUE@	source='gtksourceiter.c' object='leafpad-gtksourceiter.o' libtool=no @AMDEPBACKSLASH@

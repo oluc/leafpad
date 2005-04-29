@@ -1,32 +1,40 @@
 /*
- *  search.c
- *  This file is part of Leafpad
- *
- *  Copyright (C) 2004 Tarot Osuji
- *
+ *  Leafpad - GTK+ based simple text editor
+ *  Copyright (C) 2004-2005 Tarot Osuji
+ *  
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
  *  (at your option) any later version.
- *
+ *  
  *  This program is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
- *
+ *  
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
 #include <string.h>
+
+#ifdef HAVE_CONFIG_H
+#	include "config.h"
+#endif
+
 #include <gtk/gtk.h>
-#include "intl.h"
+#include "i18n.h"
 #include "dialog.h"
 #include "utils.h"
+#include "view.h"
 #include "undo.h"
 #include "gtksourceiter.h"
 #include "search.h"
+
+#if !GTK_CHECK_VERSION(2, 4, 0)
+#	define gtk_dialog_set_has_separator(Dialog, Setting)
+#endif
 
 static gchar *string_find;
 static gchar *string_replace;
@@ -76,7 +84,8 @@ gboolean document_search_real(GtkWidget *textview, gint direction)
 	if (res) {
 		gtk_text_buffer_place_cursor(textbuffer, &match_start);
 		gtk_text_buffer_move_mark_by_name(textbuffer, "insert", &match_end);
-		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(textview), &match_start, 0.1, FALSE, 0.5, 0.5);
+//		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(textview), &match_start, 0.1, FALSE, 0.5, 0.5);
+		scroll_to_cursor(textbuffer, 0.05);
 	} 
 	else if (direction == 0)
 		run_dialog_message(gtk_widget_get_toplevel(textview), GTK_MESSAGE_WARNING,
@@ -124,18 +133,23 @@ static gint document_replace_real(GtkWidget *textview)
 					q_dialog = create_dialog_message_question(
 						gtk_widget_get_toplevel(textview), _("Replace?"));
 				switch (gtk_dialog_run(GTK_DIALOG(q_dialog))) {
-				case GTK_RESPONSE_CANCEL:
+				case GTK_RESPONSE_YES:
+					break;
+				case GTK_RESPONSE_NO:
+					continue;
+//				case GTK_RESPONSE_CANCEL:
+				default:
 					res = 0;
 					if (num == 0)
 						num = -1;
-					continue;
-				case GTK_RESPONSE_NO:
 					continue;
 				}
 			}
 			gtk_text_buffer_delete_selection(textbuffer, TRUE, TRUE);
 			undo_set_sequency(TRUE);
+			g_signal_emit_by_name(G_OBJECT(textbuffer), "begin-user-action");
 			gtk_text_buffer_insert_at_cursor(textbuffer, string_replace, strlen(string_replace));
+			g_signal_emit_by_name(G_OBJECT(textbuffer), "end-user-action");
 			num++;
 			gtk_text_buffer_get_iter_at_mark(
 				textbuffer, &iter, gtk_text_buffer_get_insert(textbuffer));
@@ -209,13 +223,14 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 			GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 			GTK_STOCK_FIND, GTK_RESPONSE_OK,
 			NULL);
+	gtk_dialog_set_has_separator(GTK_DIALOG(dialog), FALSE);
 	
 	table = gtk_table_new(mode + 2, 2, FALSE);
 	 gtk_table_set_row_spacings(GTK_TABLE(table), 8);
 	 gtk_table_set_col_spacings(GTK_TABLE(table), 8);
 	 gtk_container_set_border_width(GTK_CONTAINER(table), 8);
 	 gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), table, FALSE, FALSE, 0);
-	label_find = gtk_label_new_with_mnemonic(_("Fi_nd what: "));
+	label_find = gtk_label_new_with_mnemonic(_("Fi_nd what:"));
 	 gtk_misc_set_alignment(GTK_MISC(label_find), 0, 0.5);
 	 gtk_table_attach_defaults(GTK_TABLE(table), label_find, 0, 1, 0, 1);
 	entry_find = gtk_entry_new();
@@ -231,7 +246,7 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 	 if (string_find) 
 		 gtk_entry_set_text(GTK_ENTRY(entry_find), string_find);
 	if (mode) {
-		label_replace = gtk_label_new_with_mnemonic(_("Re_place with: "));
+		label_replace = gtk_label_new_with_mnemonic(_("Re_place with:"));
 		 gtk_misc_set_alignment(GTK_MISC(label_replace), 0, 0.5);
 		 gtk_table_attach_defaults(GTK_TABLE(table), label_replace, 0, 1, 1, 2);
 		entry_replace = gtk_entry_new();
@@ -286,7 +301,7 @@ void run_dialog_jump_to(GtkWidget *textview)
 {
 	GtkWidget *dialog;
 	GtkWidget *button;
-	GtkWidget *hbox;
+	GtkWidget *table;
 	GtkWidget *label;
 	GtkWidget *spinner;
 	GtkAdjustment *spinner_adj;
@@ -306,20 +321,23 @@ void run_dialog_jump_to(GtkWidget *textview)
 		GTK_DIALOG_DESTROY_WITH_PARENT,
 		GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 		NULL);
-	button = gedit_button_new_with_stock_image(_("_Jump"), GTK_STOCK_JUMP_TO);
+	gtk_dialog_set_has_separator(GTK_DIALOG(dialog), FALSE);
+	button = create_button_with_stock_image(_("_Jump"), GTK_STOCK_JUMP_TO);
 	GTK_WIDGET_SET_FLAGS(button, GTK_CAN_DEFAULT);
 	gtk_dialog_add_action_widget(GTK_DIALOG(dialog), button, GTK_RESPONSE_OK);
-	hbox = gtk_hbox_new(TRUE, 0);
-	 gtk_container_set_border_width (GTK_CONTAINER(hbox), 8);
-	 gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), hbox, FALSE, FALSE, 0);
-	label = gtk_label_new_with_mnemonic(_("_Line number: "));
-	 gtk_box_pack_start(GTK_BOX(hbox), label, FALSE, FALSE, 0);
+	table = gtk_table_new(1, 2, FALSE);
+	 gtk_table_set_col_spacings(GTK_TABLE(table), 8);
+	 gtk_container_set_border_width (GTK_CONTAINER(table), 8);
+	 gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), table, FALSE, FALSE, 0);
+	label = gtk_label_new_with_mnemonic(_("_Line number:"));
 	spinner_adj = (GtkAdjustment *) gtk_adjustment_new(num, 1, max_num, 1, 1, 0);
 	spinner = gtk_spin_button_new(spinner_adj, 1, 0);
 	 gtk_entry_set_width_chars(GTK_ENTRY(spinner), 8);
-	 gtk_box_pack_start(GTK_BOX(hbox), spinner, FALSE, FALSE, 0);
 	 gtk_label_set_mnemonic_widget(GTK_LABEL(label), spinner);
 	 gtk_entry_set_activates_default(GTK_ENTRY(spinner), TRUE);
+	gtk_table_attach_defaults(GTK_TABLE(table), label, 0, 1, 0, 1);
+	gtk_table_attach_defaults(GTK_TABLE(table), spinner, 1, 2, 0, 1);
+	
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
 	gtk_widget_show_all(dialog);
@@ -328,7 +346,8 @@ void run_dialog_jump_to(GtkWidget *textview)
 		gtk_text_buffer_get_iter_at_line(textbuffer, &iter,
 			gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(spinner)) - 1);
 		gtk_text_buffer_place_cursor(textbuffer, &iter);
-		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(textview), &iter, 0.25, FALSE, 0.5, 0.5);
+//		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(textview), &iter, 0.1, FALSE, 0.5, 0.5);
+		scroll_to_cursor(textbuffer, 0.25);
 	}
 	
 	gtk_widget_destroy (dialog);

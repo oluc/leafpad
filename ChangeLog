@@ -1,3 +1,16 @@
+2005-04-29
+
+  version 0.8.0:
+	* Implemented glib-gettext & intltool.
+	* Added Print feature (only invoke lpr).
+	* Added load stdin feature.
+	* Added command line options.
+	* Added '--enable-chooser' configure option for GtkFileChooser.
+	* Modified some small points (DnD, caret, shadow, sensitivity...).
+	* Changed shortcut keys displayed on menu.
+	* Fixed replace question dialog behavior (thanks Keith).
+	* Added Portuguese translation (thanks Alan Kelon).
+
 2004-12-26
 
   version 0.7.9:
