@@ -1,4 +1,4 @@
-AC_INIT(Leafpad, 0.8.0, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.8.1, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
@@ -9,6 +9,7 @@ if test "$GCC" = "yes"; then
 fi
 
 AM_PATH_GTK_2_0
+
 AC_ARG_ENABLE(chooser,
 	AC_HELP_STRING([--enable-chooser], [use GtkFileChooser instead of GtkFileSelector]),
 	AC_DEFINE(ENABLE_CHOOSER, 1, [Define if GtkFileChooser is enabled.])
@@ -20,12 +21,8 @@ if test "$enable_print" != "no"; then
 		AC_DEFINE(HAVE_LPR, 1, [Define if `lpr' program is available.])
 	fi
 fi
-#AC_ARG_ENABLE(csdi,
-#	AC_HELP_STRING([--enable-csdi], [use CSDI emulation])
-#	AC_DEFINE(ENABLE_CSDI, 1, [Define if CSDI is enabled.])
-#)
 
-ALL_LINGUAS="ca cs de es fr hu it ja lt pl pt ru sv ta zh_CN zh_TW"
+ALL_LINGUAS="bg ca cs de es fr hu it ja lt pl pt ru sv ta vi zh_CN zh_TW"
 GETTEXT_PACKAGE="$PACKAGE"
 AC_SUBST(GETTEXT_PACKAGE)
 AM_GLIB_GNU_GETTEXT

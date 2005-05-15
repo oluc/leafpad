@@ -1,0 +1,313 @@
+# Bulgarian translation of leafpad.
+# Copyright (C) 2005 THE leafpad'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the leafpad package.
+# Yavor Doganov <yavor@doganov.org>, 2005.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: leafpad 0.8\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
+"PO-Revision-Date: 2005-05-03 08:57+0300\n"
+"Last-Translator: Yavor Doganov <yavor@doganov.org>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: src/menu.c:31
+msgid "/_File"
+msgstr "/_Файл"
+
+#: src/menu.c:33
+msgid "/File/_New"
+msgstr "/Файл/_Нов"
+
+#: src/menu.c:35
+msgid "/File/_Open..."
+msgstr "/Файл/_Отваряне..."
+
+#: src/menu.c:37
+msgid "/File/_Save"
+msgstr "/Файл/_Запазване"
+
+#: src/menu.c:39
+msgid "/File/Save _As..."
+msgstr "/Файл/Запазване _като..."
+
+#: src/menu.c:44
+msgid "/File/_Print..."
+msgstr "/Файл/_Печат..."
+
+#: src/menu.c:47
+msgid "/File/_Quit"
+msgstr "/Файл/_Изход"
+
+#: src/menu.c:49
+msgid "/_Edit"
+msgstr "/_Редактиране"
+
+#: src/menu.c:51
+msgid "/Edit/_Undo"
+msgstr "/Редактиране/_Отмяна"
+
+#: src/menu.c:53
+msgid "/Edit/_Redo"
+msgstr "/Редактиране/_Повтаряне"
+
+#: src/menu.c:57
+msgid "/Edit/Cu_t"
+msgstr "/Редактиране/_Изрязване"
+
+#: src/menu.c:59
+msgid "/Edit/_Copy"
+msgstr "/Редактиране/_Копиране"
+
+#: src/menu.c:61
+msgid "/Edit/_Paste"
+msgstr "/Редактиране/По_ставяне"
+
+#: src/menu.c:63
+msgid "/Edit/_Delete"
+msgstr "/Редактиране/Из_триване"
+
+#: src/menu.c:67
+msgid "/Edit/Select _All"
+msgstr "/Редактиране/Избор на вси_чко"
+
+#: src/menu.c:69
+msgid "/_Search"
+msgstr "/_Търсене"
+
+#: src/menu.c:71
+msgid "/Search/_Find..."
+msgstr "/Търсене/_Търсене..."
+
+#: src/menu.c:73
+msgid "/Search/Find _Next"
+msgstr "/Търсене/Намиране на _следващ"
+
+#: src/menu.c:75
+msgid "/Search/Find _Previous"
+msgstr "/Търсене/Намиране на п_редишен"
+
+#: src/menu.c:77
+msgid "/Search/_Replace..."
+msgstr "/Търсене/_Замяна..."
+
+#: src/menu.c:81
+msgid "/Search/_Jump To..."
+msgstr "/Търсене/_Отиване на..."
+
+#: src/menu.c:83
+msgid "/_Options"
+msgstr "/_Настройки"
+
+#: src/menu.c:85
+msgid "/Options/_Font..."
+msgstr "/Настройки/_Шрифт..."
+
+#: src/menu.c:87
+msgid "/Options/_Word Wrap"
+msgstr "/Настройки/Режим с _пренасяне"
+
+#: src/menu.c:89
+msgid "/Options/_Line Numbers"
+msgstr "/Настройки/_Номера на редове"
+
+#: src/menu.c:93
+msgid "/Options/_Auto Indent"
+msgstr "/Настройки/_Автоматичен отстъп"
+
+#: src/menu.c:95
+msgid "/_Help"
+msgstr "/_Помощ"
+
+#: src/menu.c:97
+msgid "/Help/_About"
+msgstr "/Помощ/_Относно"
+
+#: src/callback.c:286
+msgid "GTK+ based simple text editor"
+msgstr "Опростен текстов редактор, базиран на GTK+"
+
+#: src/callback.c:294
+msgid "translator-credits"
+msgstr "Явор Доганов <yavor@doganov.org>"
+
+#: src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Запазване на промените в '%s'?"
+
+#: src/font.c:44
+msgid "Font"
+msgstr "Шрифт"
+
+#: src/selector.c:99
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Текущ локал (%s)"
+
+#: src/selector.c:130
+msgid "Other Codeset"
+msgstr "Друго кодиране на символите"
+
+#: src/selector.c:170
+msgid "Code_set:"
+msgstr "Кодиране на _символите:"
+
+#: src/selector.c:192
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' не се поддържа"
+
+#: src/selector.c:253
+msgid "Auto-Detect"
+msgstr "Автоматично"
+
+#: src/selector.c:305
+msgid "Open"
+msgstr "Отваряне"
+
+#: src/selector.c:305
+msgid "Save As"
+msgstr "Запазване като"
+
+#: src/selector.c:329
+msgid "Ch_aracter Coding:"
+msgstr "Ко_диране на символите:"
+
+#: src/selector.c:400
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' вече съществува, да се презапише ли?"
+
+#: src/file.c:42
+msgid "Untitled"
+msgstr "Неозаглавено"
+
+#: src/file.c:186
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Превръщането в кодиране '%s' е невъзможно"
+
+#: src/file.c:199
+msgid "Can't open file to write"
+msgstr "Файлът не може да бъде отворен за запис"
+
+#: src/file.c:204
+msgid "Can't write file"
+msgstr "Файлът не може да бъде запазен"
+
+#: src/search.c:132
+msgid "Search string not found"
+msgstr "Търсеният низ не е намерен"
+
+#: src/search.c:175
+msgid "Replace?"
+msgstr "Заменяне?"
+
+#: src/search.c:210
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d низа са заменени"
+
+#: src/search.c:256
+msgid "Replace"
+msgstr "Замяна"
+
+#: src/search.c:263
+msgid "Find"
+msgstr "Търсене"
+
+#: src/search.c:276
+msgid "Fi_nd what:"
+msgstr "_Търсене на:"
+
+#: src/search.c:292
+msgid "Re_place with:"
+msgstr "_Замяна с:"
+
+#: src/search.c:306
+msgid "_Match case"
+msgstr "За_читане на малки/големи"
+
+#: src/search.c:311
+msgid "Replace _all at once"
+msgstr "Замяна на _всички"
+
+#: src/search.c:362
+msgid "Jump To"
+msgstr "Отиване на"
+
+#: src/search.c:368
+msgid "_Jump"
+msgstr "_Отиване на ред"
+
+#: src/search.c:375
+msgid "_Line number:"
+msgstr "_Ред номер:"
+
+#: src/print.c:57
+msgid "Can't convert codeset to current locale"
+msgstr "Превръщането в кодиране според текущия локал е невъзможно"
+
+#: src/print.c:70
+msgid "Can't write temporary file"
+msgstr "Не може да бъде запазен временен файл"
+
+#: src/print.c:101
+msgid "Print"
+msgstr "Печат"
+
+#: src/print.c:124
+msgid "Printer _name:"
+msgstr "_Принтер:"
+
+#: src/print.c:136
+msgid "N_umber of copies:"
+msgstr "_Брой копия:"
+
+#: src/print.c:142
+msgid "_Format page"
+msgstr "_Настройки на страницата"
+
+#: src/about.c:102
+msgid "Credits"
+msgstr "Заслуги"
+
+#: src/about.c:137
+msgid "Written by"
+msgstr "Автори"
+
+#: src/about.c:140
+msgid "Documented by"
+msgstr "Документирано от"
+
+#: src/about.c:146
+msgid "Translated by"
+msgstr "Преведено от"
+
+#: src/about.c:197
+msgid "C_redits"
+msgstr "З_аслуги"
+
+#: src/about.c:199
+msgid "_Credits"
+msgstr "_Заслуги"
+
+#: src/about.c:209
+#, c-format
+msgid "About %s"
+msgstr "Относно %s"
+
+#: leafpad.desktop.in.h:1
+msgid "Leafpad"
+msgstr ""
+
+#: leafpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Опростен текстов редактор"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.8\n"
-"POT-Creation-Date: 2005-04-26 22:05+0900\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
 "PO-Revision-Date: 2004-12-14 13:06+0200\n"
 "Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -204,54 +204,54 @@ msgstr "Kan inte öppna fil att skriva till"
 msgid "Can't write file"
 msgstr "Kan inte skriva till fil"
 
-#: src/search.c:92
+#: src/search.c:132
 msgid "Search string not found"
 msgstr "Söksträngen hittades inte"
 
-#: src/search.c:134
+#: src/search.c:175
 msgid "Replace?"
 msgstr "Ersätt?"
 
-#: src/search.c:167
+#: src/search.c:210
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d strängar har ersatts"
 
-#: src/search.c:213
+#: src/search.c:256
 msgid "Replace"
 msgstr "Ersätt"
 
-#: src/search.c:220
+#: src/search.c:263
 msgid "Find"
 msgstr "Sök"
 
-#: src/search.c:233
+#: src/search.c:276
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "S_öksträng: "
 
-#: src/search.c:249
+#: src/search.c:292
 #, fuzzy
 msgid "Re_place with:"
 msgstr "Ersätt _med: "
 
-#: src/search.c:263
+#: src/search.c:306
 msgid "_Match case"
 msgstr "Matcha _gemener/VERSALER"
 
-#: src/search.c:268
+#: src/search.c:311
 msgid "Replace _all at once"
 msgstr "_Ändra alla på en gång"
 
-#: src/search.c:319
+#: src/search.c:362
 msgid "Jump To"
 msgstr "Hoppa till"
 
-#: src/search.c:325
+#: src/search.c:368
 msgid "_Jump"
 msgstr "_Hoppa"
 
-#: src/search.c:332
+#: src/search.c:375
 #, fuzzy
 msgid "_Line number:"
 msgstr "_Radnummer: "

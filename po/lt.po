@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.8\n"
-"POT-Creation-Date: 2005-04-26 22:05+0900\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
 "PO-Revision-Date: 2004-12-06 17:38+0200\n"
 "Last-Translator: Lech Jankovski <godgard@gmail.com>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -203,54 +203,54 @@ msgstr "Neįmanoma atidaryti bylos rašymui"
 msgid "Can't write file"
 msgstr "Neįmanoma įrašyti bylos"
 
-#: src/search.c:92
+#: src/search.c:132
 msgid "Search string not found"
 msgstr "Ieškomas tekstas nerastas"
 
-#: src/search.c:134
+#: src/search.c:175
 msgid "Replace?"
 msgstr "Pakeisti?"
 
-#: src/search.c:167
+#: src/search.c:210
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d tekstų pakeista"
 
-#: src/search.c:213
+#: src/search.c:256
 msgid "Replace"
 msgstr "Pakeisti"
 
-#: src/search.c:220
+#: src/search.c:263
 msgid "Find"
 msgstr "Ieškoti"
 
-#: src/search.c:233
+#: src/search.c:276
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Ieškoti ko: "
 
-#: src/search.c:249
+#: src/search.c:292
 #, fuzzy
 msgid "Re_place with:"
 msgstr "P_akeisti kuo: "
 
-#: src/search.c:263
+#: src/search.c:306
 msgid "_Match case"
 msgstr "_Skirti raidžių dydį"
 
-#: src/search.c:268
+#: src/search.c:311
 msgid "Replace _all at once"
 msgstr "Pakeisti _visus vienu metu"
 
-#: src/search.c:319
+#: src/search.c:362
 msgid "Jump To"
 msgstr "Peršokti į"
 
-#: src/search.c:325
+#: src/search.c:368
 msgid "_Jump"
 msgstr "_Nušok"
 
-#: src/search.c:332
+#: src/search.c:375
 #, fuzzy
 msgid "_Line number:"
 msgstr "_Eilutės numeris: "

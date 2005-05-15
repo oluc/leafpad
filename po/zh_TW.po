@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
-"POT-Creation-Date: 2005-04-26 22:05+0900\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
 "PO-Revision-Date: 2004-10-04 08:21+0800\n"
 "Last-Translator: OLS3 <ols3@lxer.idv.tw>\n"
 "Language-Team: OLS3 <ols3@lxer.idv.tw>\n"
@@ -203,54 +203,54 @@ msgstr "無法打開要寫入的檔案"
 msgid "Can't write file"
 msgstr "無法寫入檔案"
 
-#: src/search.c:92
+#: src/search.c:132
 msgid "Search string not found"
 msgstr "找不到搜尋字串"
 
-#: src/search.c:134
+#: src/search.c:175
 msgid "Replace?"
 msgstr "要置換嗎?"
 
-#: src/search.c:167
+#: src/search.c:210
 #, c-format
 msgid "%d strings replaced"
 msgstr "置換了 %d 個字串"
 
-#: src/search.c:213
+#: src/search.c:256
 msgid "Replace"
 msgstr "置換"
 
-#: src/search.c:220
+#: src/search.c:263
 msgid "Find"
 msgstr "查找"
 
-#: src/search.c:233
+#: src/search.c:276
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "查找(_N): "
 
-#: src/search.c:249
+#: src/search.c:292
 #, fuzzy
 msgid "Re_place with:"
 msgstr "置換成(_A): "
 
-#: src/search.c:263
+#: src/search.c:306
 msgid "_Match case"
 msgstr "區分大小寫(_M)"
 
-#: src/search.c:268
+#: src/search.c:311
 msgid "Replace _all at once"
 msgstr "全部置換(_A)"
 
-#: src/search.c:319
+#: src/search.c:362
 msgid "Jump To"
 msgstr "跳到"
 
-#: src/search.c:325
+#: src/search.c:368
 msgid "_Jump"
 msgstr "跳(_J)"
 
-#: src/search.c:332
+#: src/search.c:375
 #, fuzzy
 msgid "_Line number:"
 msgstr "列號(_L): "

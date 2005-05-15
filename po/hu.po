@@ -1,13 +1,13 @@
 # Hungarian translation of Leafpad
-# Copyright (C) 2004 Free Software Foundation, Inc.
+# Copyright (C) 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Leafpad package.
-# Reviczky Ádám János <reviczky@freemail.hu>, 2004.
+# Reviczky Ádám János <reviczky@freemail.hu>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.7.7\n"
-"POT-Creation-Date: 2005-04-26 22:05+0900\n"
-"PO-Revision-Date: 2004-11-20 12:00+0100\n"
+"Project-Id-Version: Leafpad 0.8.0\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
+"PO-Revision-Date: 2005-04-29 20:00+0100\n"
 "Last-Translator: Reviczky Ádám János <reviczky@freemail.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "/Fájl/_Új"
 
 #: src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/Fájl/Meg_nyit"
+msgstr "/Fájl/Meg_nyit..."
 
 #: src/menu.c:37
 msgid "/File/_Save"
@@ -33,12 +33,11 @@ msgstr "/Fájl/_Ment"
 
 #: src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/Fájl/Ment má_skent..."
+msgstr "/Fájl/Ment Má_skent..."
 
 #: src/menu.c:44
-#, fuzzy
 msgid "/File/_Print..."
-msgstr "/Fájl/_Kilép"
+msgstr "/Fájl/_Nyomtat..."
 
 #: src/menu.c:47
 msgid "/File/_Quit"
@@ -46,7 +45,7 @@ msgstr "/Fájl/_Kilép"
 
 #: src/menu.c:49
 msgid "/_Edit"
-msgstr "Sz_erkesztés"
+msgstr "/Sz_erkesztés"
 
 #: src/menu.c:51
 msgid "/Edit/_Undo"
@@ -102,7 +101,7 @@ msgstr "/Keresés/_Ugrás..."
 
 #: src/menu.c:83
 msgid "/_Options"
-msgstr "_Beállítások"
+msgstr "/_Beállítások"
 
 #: src/menu.c:85
 msgid "/Options/_Font..."
@@ -122,7 +121,7 @@ msgstr "/Beállítások/Automatikus Be_húzás"
 
 #: src/menu.c:95
 msgid "/_Help"
-msgstr "_Súgó"
+msgstr "/_Súgó"
 
 #: src/menu.c:97
 msgid "/Help/_About"
@@ -134,7 +133,7 @@ msgstr "GTK+-ra épülő egyszerű szöveg szerkesztő"
 
 #: src/callback.c:294
 msgid "translator-credits"
-msgstr "Reviczky Adam Janos <reviczky@freemail.hu>"
+msgstr "Reviczky Ádám János <reviczky@freemail.hu>"
 
 #: src/view.c:62
 #, c-format
@@ -164,7 +163,6 @@ msgid "'%s' is not supported"
 msgstr "'%s' nem támogatott"
 
 #: src/selector.c:253
-#, fuzzy
 msgid "Auto-Detect"
 msgstr "Automatikus Felismerés"
 
@@ -177,14 +175,13 @@ msgid "Save As"
 msgstr "Mentés másként"
 
 #: src/selector.c:329
-#, fuzzy
 msgid "Ch_aracter Coding:"
-msgstr "K_arakter Kódolás: "
+msgstr "K_arakter Kódolás:"
 
 #: src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "%s' már létezik. Felülír?"
+msgstr "'%s' már létezik. Felülír?"
 
 #: src/file.c:42
 msgid "Untitled"
@@ -203,107 +200,102 @@ msgstr "Nem lehet írásra megnyitni a fájlt"
 msgid "Can't write file"
 msgstr "Nem lehet írni a fájlt"
 
-#: src/search.c:92
+#: src/search.c:132
 msgid "Search string not found"
 msgstr "Szövegrészlet nem fodul elő"
 
-#: src/search.c:134
+#: src/search.c:175
 msgid "Replace?"
 msgstr "Kicserél?"
 
-#: src/search.c:167
+#: src/search.c:210
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d szövegrészlet kicserélve"
 
-#: src/search.c:213
+#: src/search.c:256
 msgid "Replace"
 msgstr "Kicserél"
 
-#: src/search.c:220
+#: src/search.c:263
 msgid "Find"
 msgstr "Keres"
 
-#: src/search.c:233
-#, fuzzy
+#: src/search.c:276
 msgid "Fi_nd what:"
-msgstr "_Amit keres: "
+msgstr "_Amit keres:"
 
-#: src/search.c:249
-#, fuzzy
+#: src/search.c:292
 msgid "Re_place with:"
-msgstr "Ki_cserél erre: "
+msgstr "Ki_cserél erre:"
 
-#: src/search.c:263
+#: src/search.c:306
 msgid "_Match case"
 msgstr "_Kis/nagybetű számít"
 
-#: src/search.c:268
+#: src/search.c:311
 msgid "Replace _all at once"
 msgstr "Mindent _egyszerre kicserél"
 
-#: src/search.c:319
+#: src/search.c:362
 msgid "Jump To"
 msgstr "Ugrás Ide"
 
-#: src/search.c:325
+#: src/search.c:368
 msgid "_Jump"
 msgstr "_Ugrás"
 
-#: src/search.c:332
-#, fuzzy
+#: src/search.c:375
 msgid "_Line number:"
-msgstr "S_orszám: "
+msgstr "S_orszám:"
 
 #: src/print.c:57
-#, fuzzy
 msgid "Can't convert codeset to current locale"
-msgstr "A kódtáblát nem lehet erre '%s' konvertálni"
+msgstr "A kódtáblát nem lehet a jelenlegi locale-ra konvertálni"
 
 #: src/print.c:70
-#, fuzzy
 msgid "Can't write temporary file"
-msgstr "Nem lehet írni a fájlt"
+msgstr "Nem lehet ideiglenes fájlt írni"
 
 #: src/print.c:101
 msgid "Print"
-msgstr ""
+msgstr "Nyomtatás"
 
 #: src/print.c:124
 msgid "Printer _name:"
-msgstr ""
+msgstr "Nyomtató _neve:"
 
 #: src/print.c:136
 msgid "N_umber of copies:"
-msgstr ""
+msgstr "_Másolatok száma:"
 
 #: src/print.c:142
 msgid "_Format page"
-msgstr ""
+msgstr "_Oldal szerkesztése"
 
 #: src/about.c:102
 msgid "Credits"
-msgstr ""
+msgstr "Köszönet"
 
 #: src/about.c:137
 msgid "Written by"
-msgstr ""
+msgstr "Írta"
 
 #: src/about.c:140
 msgid "Documented by"
-msgstr ""
+msgstr "Dokumentáció"
 
 #: src/about.c:146
 msgid "Translated by"
-msgstr ""
+msgstr "Fordította"
 
 #: src/about.c:197
 msgid "C_redits"
-msgstr ""
+msgstr "Köszöne_t"
 
 #: src/about.c:199
 msgid "_Credits"
-msgstr ""
+msgstr "_Köszönet"
 
 #: src/about.c:209
 #, c-format

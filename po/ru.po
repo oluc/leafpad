@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.4\n"
-"POT-Creation-Date: 2005-04-26 22:05+0900\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
 "PO-Revision-Date:2004-10-24 00:40+0400\n"
 "Last-Translator: Artem Vakhitov <temcat@mail.ru>\n"
 "Language-Team: RUSSIAN <ru@li.org>\n"
@@ -203,54 +203,54 @@ msgstr "Не удалось открыть файл для записи"
 msgid "Can't write file"
 msgstr "Не удалось записать файл"
 
-#: src/search.c:92
+#: src/search.c:132
 msgid "Search string not found"
 msgstr "Искомая строка не найдена"
 
-#: src/search.c:134
+#: src/search.c:175
 msgid "Replace?"
 msgstr "Заменить?"
 
-#: src/search.c:167
+#: src/search.c:210
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d строк заменено"
 
-#: src/search.c:213
+#: src/search.c:256
 msgid "Replace"
 msgstr "Замена"
 
-#: src/search.c:220
+#: src/search.c:263
 msgid "Find"
 msgstr "Поиск"
 
-#: src/search.c:233
+#: src/search.c:276
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "На_йти: "
 
-#: src/search.c:249
+#: src/search.c:292
 #, fuzzy
 msgid "Re_place with:"
 msgstr "З_аменить на: "
 
-#: src/search.c:263
+#: src/search.c:306
 msgid "_Match case"
 msgstr "Учитывать _регистр"
 
-#: src/search.c:268
+#: src/search.c:311
 msgid "Replace _all at once"
 msgstr "Заменить _все"
 
-#: src/search.c:319
+#: src/search.c:362
 msgid "Jump To"
 msgstr "Переход"
 
-#: src/search.c:325
+#: src/search.c:368
 msgid "_Jump"
 msgstr "_Перейти"
 
-#: src/search.c:332
+#: src/search.c:375
 #, fuzzy
 msgid "_Line number:"
 msgstr "_Номер строки: "

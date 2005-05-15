@@ -137,7 +137,7 @@ static void undo_create_undo_info(GtkTextBuffer *buffer, gchar command, gint sta
 	
 	if (!keyval && prev_keyval)
 		undo_set_sequency(TRUE);
-
+	
 	if (end - start == 1 &&
 		((keyval && keyval < 0xF000) ||
 		  keyval == GDK_BackSpace || keyval == GDK_Delete || keyval == GDK_Tab)) {

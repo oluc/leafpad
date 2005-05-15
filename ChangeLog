@@ -1,3 +1,14 @@
+2005-05-14
+
+  version 0.8.1:
+	* Implemented searched word highlighting.
+	* Modified Up/Down/PageUp/PageDown behaviour when scroll-outed.
+	* Fixed space-separated filename bug (thanks Chris Everts).
+	* Added Bulgarian translation (Yavor Doganov).
+	* Added Vietnamese translation (Quy NGUYEN DAI).
+	* Updated Hungarian translation (Reviczky Adam Janos).
+	* Updated Polish translation (Michal Wrobel).
+
 2005-04-29
 
   version 0.8.0:

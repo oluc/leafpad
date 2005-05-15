@@ -235,9 +235,11 @@ gint main(gint argc, gchar **argv)
 	g_free(conf->fontname);
 	g_free(conf);
 	
+	hlight_init(pub->mw->buffer);
 	undo_init(pub->mw->view,
 		gtk_item_factory_get_widget(ifactory, "/Edit/Undo"),
 		gtk_item_factory_get_widget(ifactory, "/Edit/Redo"));
+//	hlight_init(pub->mw->buffer);
 	dnd_init(pub->mw->view);
 	
 	if (pub->fi->filename)
@@ -263,6 +265,7 @@ gint main(gint argc, gchar **argv)
 	}
 	
 	set_main_window_title();
+//	hlight_apply_all(pub->mw->buffer);
 	
 	gtk_main();
 	

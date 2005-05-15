@@ -12,6 +12,7 @@ leafpad_SOURCES = \
 	font.h font.c \
 	linenum.h linenum.c \
 	indent.h indent.c \
+	hlight.h hlight.c \
 	selector.h selector.c \
 	file.h file.c \
 	encoding.h encoding.c \

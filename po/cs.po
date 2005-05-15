@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.6\n"
-"POT-Creation-Date: 2005-04-26 22:05+0900\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
 "PO-Revision-Date: 2004-11-18 23:58+0100\n"
 "Last-Translator: Petr Vysloužil <evyslouz@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -203,54 +203,54 @@ msgstr "Nemohu otevřít soubor k zápisu"
 msgid "Can't write file"
 msgstr "Nemohu zapsat soubor"
 
-#: src/search.c:92
+#: src/search.c:132
 msgid "Search string not found"
 msgstr "Hledaný řetězec nenalezen"
 
-#: src/search.c:134
+#: src/search.c:175
 msgid "Replace?"
 msgstr "Nahradit?"
 
-#: src/search.c:167
+#: src/search.c:210
 #, c-format
 msgid "%d strings replaced"
 msgstr "nahrazeno '%d' řetězců"
 
-#: src/search.c:213
+#: src/search.c:256
 msgid "Replace"
 msgstr "Nahradit"
 
-#: src/search.c:220
+#: src/search.c:263
 msgid "Find"
 msgstr "Hledat"
 
-#: src/search.c:233
+#: src/search.c:276
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Hledat:"
 
-#: src/search.c:249
+#: src/search.c:292
 #, fuzzy
 msgid "Re_place with:"
 msgstr "Nahra_dit čím:"
 
-#: src/search.c:263
+#: src/search.c:306
 msgid "_Match case"
 msgstr "_Rozlišovat velikost písmen"
 
-#: src/search.c:268
+#: src/search.c:311
 msgid "Replace _all at once"
 msgstr "Nahradit vš_e"
 
-#: src/search.c:319
+#: src/search.c:362
 msgid "Jump To"
 msgstr "Jit na _řádek"
 
-#: src/search.c:325
+#: src/search.c:368
 msgid "_Jump"
 msgstr "_Přejít"
 
-#: src/search.c:332
+#: src/search.c:375
 #, fuzzy
 msgid "_Line number:"
 msgstr "_Číslo řádku:"

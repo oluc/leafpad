@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
-"POT-Creation-Date: 2005-04-26 22:05+0900\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
 "PO-Revision-Date: 2004-09-09 21:32+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -200,52 +200,52 @@ msgstr "ファイルを作成できませんでした"
 msgid "Can't write file"
 msgstr "ファイルに書きこめませんでした"
 
-#: src/search.c:92
+#: src/search.c:132
 msgid "Search string not found"
 msgstr "検索文字列が見つかりません"
 
-#: src/search.c:134
+#: src/search.c:175
 msgid "Replace?"
 msgstr "置換しますか?"
 
-#: src/search.c:167
+#: src/search.c:210
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d 個の文字列を置換しました"
 
-#: src/search.c:213
+#: src/search.c:256
 msgid "Replace"
 msgstr "置換"
 
-#: src/search.c:220
+#: src/search.c:263
 msgid "Find"
 msgstr "検索"
 
-#: src/search.c:233
+#: src/search.c:276
 msgid "Fi_nd what:"
 msgstr "検索する文字列(_N):"
 
-#: src/search.c:249
+#: src/search.c:292
 msgid "Re_place with:"
 msgstr "置換後の文字列(_P):"
 
-#: src/search.c:263
+#: src/search.c:306
 msgid "_Match case"
 msgstr "大文字と小文字を区別する(_M)"
 
-#: src/search.c:268
+#: src/search.c:311
 msgid "Replace _all at once"
 msgstr "全て置換(_A)"
 
-#: src/search.c:319
+#: src/search.c:362
 msgid "Jump To"
 msgstr "行へジャンプ"
 
-#: src/search.c:325
+#: src/search.c:368
 msgid "_Jump"
 msgstr "ジャンプ(_J)"
 
-#: src/search.c:332
+#: src/search.c:375
 msgid "_Line number:"
 msgstr "行番号(_L):"
 

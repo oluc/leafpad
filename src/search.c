@@ -31,20 +31,53 @@
 #include "undo.h"
 #include "gtksourceiter.h"
 #include "search.h"
+#include "hlight.h"
 
 #if !GTK_CHECK_VERSION(2, 4, 0)
 #	define gtk_dialog_set_has_separator(Dialog, Setting)
 #endif
 
-static gchar *string_find;
-static gchar *string_replace;
+static gchar *string_find    = NULL;
+static gchar *string_replace = NULL;
 static gboolean match_case, replace_all;
+
+static gboolean hlight_searched_strings(GtkTextBuffer *buffer, gchar *str)
+{
+	GtkTextIter iter, start, end;
+	gboolean res, retval = FALSE;
+	GtkSourceSearchFlags search_flags =
+		GTK_SOURCE_SEARCH_VISIBLE_ONLY | GTK_SOURCE_SEARCH_TEXT_ONLY;
+	
+	if (!string_find)
+		return FALSE;
+	
+	if (!match_case)
+		search_flags = search_flags | GTK_SOURCE_SEARCH_CASE_INSENSITIVE;
+	
+	gtk_text_buffer_get_bounds(buffer, &start, &end);
+	gtk_text_buffer_remove_tag_by_name(buffer,
+		"searched", &start, &end);
+	iter = start;
+	do {
+		res = gtk_source_iter_forward_search(
+			&iter, str, search_flags, &start, &end, NULL);
+		if (res) {
+			retval = TRUE;
+			gtk_text_buffer_apply_tag_by_name(buffer,
+				"searched", &start, &end);
+			iter = end;
+		}
+	} while (res);
+	hlight_toggle_searched(buffer);
+	
+	return retval;
+}
 
 gboolean document_search_real(GtkWidget *textview, gint direction)
 {
 	GtkTextIter iter, match_start, match_end;
 	gboolean res;
-	GtkSourceSearchFlags search_flags = GTK_SOURCE_SEARCH_VISIBLE_ONLY | GTK_SOURCE_SEARCH_TEXT_ONLY;	
+	GtkSourceSearchFlags search_flags = GTK_SOURCE_SEARCH_VISIBLE_ONLY | GTK_SOURCE_SEARCH_TEXT_ONLY;
 	GtkTextBuffer *textbuffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview));
 	
 	if (!string_find)
@@ -52,6 +85,13 @@ gboolean document_search_real(GtkWidget *textview, gint direction)
 	
 	if (!match_case)
 		search_flags = search_flags | GTK_SOURCE_SEARCH_CASE_INSENSITIVE;
+	
+	if (direction == 0 || !hlight_check_searched())
+		hlight_searched_strings(GTK_TEXT_VIEW(textview)->buffer, string_find);
+	
+	gtk_text_mark_set_visible(
+		gtk_text_buffer_get_selection_bound(
+			GTK_TEXT_VIEW(textview)->buffer), FALSE);
 	
 	gtk_text_buffer_get_iter_at_mark(textbuffer, &iter, gtk_text_buffer_get_insert(textbuffer));
 	if (direction < 0) {
@@ -111,7 +151,8 @@ static gint document_replace_real(GtkWidget *textview)
 		gtk_text_buffer_get_iter_at_mark(textbuffer, &iter, gtk_text_buffer_get_insert(textbuffer));
 		mark_init = gtk_text_buffer_create_mark(textbuffer, NULL, &iter, FALSE);
 		gtk_text_buffer_get_start_iter(textbuffer, &iter);
-	}
+	} else
+		hlight_searched_strings(textbuffer, string_find);
 	
 	do {
 		if (replace_all) {
@@ -160,6 +201,8 @@ static gint document_replace_real(GtkWidget *textview)
 	
 	if (q_dialog)
 		gtk_widget_destroy(q_dialog);
+	if (strlen(string_replace))
+		hlight_searched_strings(textbuffer, string_replace);
 	if (replace_all) {
 		gtk_text_buffer_get_iter_at_mark(textbuffer, &iter, mark_init);
 		gtk_text_buffer_place_cursor(textbuffer, &iter);

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.9\n"
-"POT-Creation-Date: 2005-04-26 22:05+0900\n"
+"POT-Creation-Date: 2005-05-08 22:19+0900\n"
 "PO-Revision-Date: 2004-12-28 19:56:59-0300\n"
 "Last-Translator: Alan Kelon Oliveira de Moraes <alankelon@yahoo.com.br>\n"
 "Language-Team: \n"
@@ -202,54 +202,54 @@ msgstr "Não foi possível abrir o arquivo para escrita"
 msgid "Can't write file"
 msgstr "Não foi possível escrever o arquivo"
 
-#: src/search.c:92
+#: src/search.c:132
 msgid "Search string not found"
 msgstr "Palavra(s) não encontrada"
 
-#: src/search.c:134
+#: src/search.c:175
 msgid "Replace?"
 msgstr "Substituir?"
 
-#: src/search.c:167
+#: src/search.c:210
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d palavra(s) substituídas"
 
-#: src/search.c:213
+#: src/search.c:256
 msgid "Replace"
 msgstr "Substituir"
 
-#: src/search.c:220
+#: src/search.c:263
 msgid "Find"
 msgstr "Procurar"
 
-#: src/search.c:233
+#: src/search.c:276
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Procurar o que: "
 
-#: src/search.c:249
+#: src/search.c:292
 #, fuzzy
 msgid "Re_place with:"
 msgstr "_Substituir com: "
 
-#: src/search.c:263
+#: src/search.c:306
 msgid "_Match case"
 msgstr "_Diferenciar maiúsculas e minúsculas"
 
-#: src/search.c:268
+#: src/search.c:311
 msgid "Replace _all at once"
 msgstr "Substituir _todas de uma vez"
 
-#: src/search.c:319
+#: src/search.c:362
 msgid "Jump To"
 msgstr "Ir para"
 
-#: src/search.c:325
+#: src/search.c:368
 msgid "_Jump"
 msgstr "_Ir"
 
-#: src/search.c:332
+#: src/search.c:375
 #, fuzzy
 msgid "_Line number:"
 msgstr "_Número da linha: "

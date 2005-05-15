@@ -17,47 +17,11 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _LEAFPAD_H
-#define _LEAFPAD_H
+#ifndef _HLIGHT_H
+#define _HLIGHT_H
 
-#ifdef HAVE_CONFIG_H
-#	include "config.h"
-#endif
+gboolean hlight_check_searched(void);
+gboolean hlight_toggle_searched(GtkTextBuffer *buffer);
+void hlight_init(GtkTextBuffer *buffer);
 
-#include <gtk/gtk.h>
-#include "i18n.h"
-
-#include "window.h"
-#include "menu.h"
-#include "callback.h"
-#include "view.h"
-#include "undo.h"
-#include "font.h"
-#include "linenum.h"
-#include "indent.h"
-#include "hlight.h"
-#include "selector.h"
-#include "file.h"
-#include "encoding.h"
-#include "search.h"
-#include "dialog.h"
-#include "print.h"
-#include "about.h"
-#include "dnd.h"
-#include "utils.h"
-
-typedef struct {
-	FileInfo *fi;
-	MainWin *mw;
-} PublicData;
-
-#ifdef GLOBAL_VARIABLE_DEFINE
-#	define GLOBAL
-#else
-#	define GLOBAL extern
-#endif
-GLOBAL PublicData *pub;
-
-void save_config_file(void);
-
-#endif /* _LEAFPAD_H */
+#endif /* _HLIGHT_H */

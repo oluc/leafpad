@@ -59,7 +59,7 @@ gchar *get_file_basename(gchar *filename, gboolean bracket)
 gchar *parse_file_uri(gchar *uri)
 {
 	gchar *filename;
-	gchar **strs;
+//	gchar **strs;
 	
 	if (strstr(uri, ":")) {
 		if (g_strstr_len(uri, 5, "file:"))
@@ -72,13 +72,13 @@ gchar *parse_file_uri(gchar *uri)
 		else
 			filename = g_build_filename(g_get_current_dir(), uri, NULL);
 	
-	if (strstr(filename, " ")) {
+/*	if (strstr(filename, " ")) {
 		strs = g_strsplit(filename, " ", -1);
 		g_free(filename);
 		filename = g_strjoinv("\\ ", strs);
 		g_strfreev(strs);
 	}
-	
+*/	
 	return filename;
 }
 

@@ -49,7 +49,7 @@ void scroll_to_cursor(GtkTextBuffer *buffer, gdouble within_margin)
 {
 	gtk_text_view_scroll_to_mark(GTK_TEXT_VIEW(pub->mw->view),
 		gtk_text_buffer_get_insert(buffer),
-		within_margin, FALSE, 0.0, 0.0);
+		within_margin, FALSE, 0, 0);
 }
 
 gint check_text_modification(void)
@@ -104,33 +104,80 @@ static gboolean check_selection_bound(GtkTextBuffer *buffer)
 
 static gboolean cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 {
+	GtkTextBuffer *buffer;
+	GtkTextMark *mark;
+	GtkTextIter iter;
+	GdkRectangle prev_rect;
+	
 	if (check_preedit(view))
 		return FALSE;
+	
+	buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
+	mark = gtk_text_buffer_get_insert(buffer);
+	gtk_text_buffer_get_iter_at_mark(buffer, &iter, mark);
+	gtk_text_view_get_iter_location(GTK_TEXT_VIEW(view), &iter, &prev_rect);
 	
 	keyval = 0;
 //g_print("key-press-event: 0x%X\n", event->keyval);
 	switch (event->keyval) {
-/*	case GDK_Up:		// Try [Shift]+[Down]. it works bad.
+	case GDK_Up:		// Try [Shift]+[Down]. it works bad.
 	case GDK_Down:
-		gtk_text_view_move_mark_onscreen(
-			GTK_TEXT_VIEW(view),
-			gtk_text_buffer_get_insert(GTK_TEXT_VIEW(view)->buffer));
-		gtk_text_view_place_cursor_onscreen(GTK_TEXT_VIEW(view));
-		break;*/
+		if (gtk_text_view_move_mark_onscreen(GTK_TEXT_VIEW(view), mark)) {
+			GdkRectangle iter_rect;
+			gtk_text_buffer_get_iter_at_mark(buffer, &iter, mark);
+			gtk_text_view_get_iter_location(GTK_TEXT_VIEW(view), &iter, &iter_rect);
+			if (iter_rect.y < prev_rect.y) {
+				gtk_text_view_get_line_at_y(GTK_TEXT_VIEW(view), &iter,				
+					iter_rect.y - iter_rect.height, NULL);
+				gtk_text_buffer_move_mark(buffer, mark, &iter);
+			}
+			if (!(event->state & GDK_SHIFT_MASK)) {
+				gtk_text_buffer_get_iter_at_mark(buffer, &iter, mark);
+				gtk_text_buffer_place_cursor(buffer, &iter);
+			}
+			return TRUE;
+		}
+		break;
+	case GDK_Page_Up:
+	case GDK_Page_Down:
+		if (gtk_text_view_move_mark_onscreen(GTK_TEXT_VIEW(view), mark)) {
+			GdkRectangle visible_rect, iter_rect;
+			gint pos = 0;
+			gtk_text_view_get_visible_rect(GTK_TEXT_VIEW(view), &visible_rect);
+			gtk_text_buffer_get_iter_at_mark(buffer, &iter, mark);
+			gtk_text_view_get_iter_location(GTK_TEXT_VIEW(view), &iter, &iter_rect);
+			if (iter_rect.y < prev_rect.y)
+				pos = 1;
+			if (event->keyval == GDK_Page_Up)
+				gtk_text_view_get_line_at_y(GTK_TEXT_VIEW(view), &iter,
+					iter_rect.y - visible_rect.height + iter_rect.height, NULL);
+			else
+				gtk_text_view_get_line_at_y(GTK_TEXT_VIEW(view), &iter,
+					iter_rect.y + visible_rect.height - iter_rect.height, NULL);
+			gtk_text_buffer_move_mark(buffer, mark, &iter);
+			gtk_text_view_scroll_to_mark(GTK_TEXT_VIEW(view),
+				mark, 0, TRUE, 0, pos);
+			if (!(event->state & GDK_SHIFT_MASK)) {
+				gtk_text_buffer_get_iter_at_mark(buffer, &iter, mark);
+				gtk_text_buffer_place_cursor(GTK_TEXT_VIEW(view)->buffer, &iter);
+			}
+			return TRUE;
+		}
+		break;
 	case GDK_Return:
-		if ((indent_get_state() && !(event->state &= GDK_SHIFT_MASK)) ||
-			(!indent_get_state() && (event->state &= GDK_SHIFT_MASK))) {
+		if ((indent_get_state() && !(event->state & GDK_SHIFT_MASK)) ||
+			(!indent_get_state() && (event->state & GDK_SHIFT_MASK))) {
 			indent_real(view);
 			return TRUE;
 		}
 		break;
 	case GDK_Tab:
-		if (event->state &= GDK_CONTROL_MASK) {
+		if (event->state & GDK_CONTROL_MASK) {
 			indent_toggle_tab_width(view);
 			return TRUE;
 		}
 	case GDK_ISO_Left_Tab:
-		if (event->state &= GDK_SHIFT_MASK)
+		if (event->state & GDK_SHIFT_MASK)
 			indent_multi_line_unindent(GTK_TEXT_VIEW(view)->buffer);
 		else if (!check_selection_bound(GTK_TEXT_VIEW(view)->buffer))
 			break;
@@ -139,6 +186,12 @@ static gboolean cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 		return TRUE;
 	}
 	keyval = event->keyval;
+	if ((event->state & GDK_CONTROL_MASK)
+		|| (event->keyval == GDK_Control_L)
+		|| (event->keyval == GDK_Control_R)) {
+		keyval = keyval + 0x10000;
+//g_print("=================================================\n");
+	}
 	
 	return FALSE;
 }

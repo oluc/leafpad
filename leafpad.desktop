@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Leafpad
 Comment=Simple text editor
+Comment[bg]=Опростен текстов редактор
 Comment[ca]=Editor de text simple
 Comment[cs]=Jednoduchý textový editor
 Comment[de]=Einfacher Texteditor
@@ -16,6 +17,7 @@ Comment[pt]=Simples editor de texto
 Comment[ru]=Простой текстовый редактор
 Comment[sv]=Enkel texteditor
 Comment[ta]=எளிமையான உரை பதிப்பான்
+Comment[vi]=Một trình soạn thảo đơn giản
 Comment[zh_CN]=简易文字编辑器
 Comment[zh_TW]=簡易文字編輯器
 Exec=leafpad %f
