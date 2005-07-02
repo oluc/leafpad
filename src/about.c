@@ -1,3 +1,4 @@
+
 /*
  *  Leafpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
@@ -267,7 +268,7 @@ GtkWidget *create_about_dialog(
 	GtkWidget *about;
 	
 #if GTK_CHECK_VERSION(2, 6, 0)
-	about = g_object_new(GTK_TYPE_ABOUT_DIALOG,
+/*	about = g_object_new(GTK_TYPE_ABOUT_DIALOG,
 		"name",               name,
 		"version",            version,
 		"copyright",          copyright,
@@ -276,7 +277,17 @@ GtkWidget *create_about_dialog(
 		"documenters",        documenters,
 		"translator_credits", translator_credits,
 		"logo",               logo,
-		NULL);
+		NULL);	*/
+	about = gtk_about_dialog_new();
+	gtk_about_dialog_set_name(GTK_ABOUT_DIALOG(about), name);
+	gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(about), version);
+	gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(about), copyright);
+	gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(about), comments);
+	gtk_about_dialog_set_authors(GTK_ABOUT_DIALOG(about), authors);
+	gtk_about_dialog_set_translator_credits(GTK_ABOUT_DIALOG(about), translator_credits);
+	gtk_about_dialog_set_logo(GTK_ABOUT_DIALOG(about), logo);
+	g_signal_connect(G_OBJECT(about), "response",
+		G_CALLBACK(gtk_widget_destroy), about);
 #else
 	about = my_gtk_about_new(
 		name,

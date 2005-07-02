@@ -6,14 +6,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.6\n"
-"POT-Creation-Date: 2005-05-08 22:19+0900\n"
+"POT-Creation-Date: 2005-07-03 01:04+0900\n"
 "PO-Revision-Date: 2004-11-14 18:33+0100\n"
 "Last-Translator: Ruediger Arp <ruediger@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
+"Report-Msgid-Bugs-To: \n"
 
 #: src/menu.c:31
 msgid "/_File"
@@ -128,11 +128,11 @@ msgstr "/_Hilfe"
 msgid "/Help/_About"
 msgstr "/Hilfe/_Info"
 
-#: src/callback.c:286
+#: src/callback.c:292
 msgid "GTK+ based simple text editor"
 msgstr "Einfacher Texteditor"
 
-#: src/callback.c:294
+#: src/callback.c:300
 msgid "translator-credits"
 msgstr ""
 "Sebastian Stach <sebsta@t-online.de>\n"
@@ -188,71 +188,71 @@ msgstr "Zeichenkodierung: "
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' existiert bereits. Überschreiben?"
 
-#: src/file.c:42
+#: src/file.c:43
 msgid "Untitled"
 msgstr "Unbenannt"
 
-#: src/file.c:186
+#: src/file.c:189
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Der Zeichensatz kann nicht nach '%s' konvertiert werden"
 
-#: src/file.c:199
+#: src/file.c:202
 msgid "Can't open file to write"
 msgstr "Die Datei kann nicht zum Schreiben geöffnet werden"
 
-#: src/file.c:204
+#: src/file.c:207
 msgid "Can't write file"
 msgstr "Die Datei kann nicht geschrieben werden"
 
-#: src/search.c:132
+#: src/search.c:138
 msgid "Search string not found"
 msgstr "Gesuchter Text wurde nicht gefunden"
 
-#: src/search.c:175
+#: src/search.c:181
 msgid "Replace?"
 msgstr "Ersetzen?"
 
-#: src/search.c:210
+#: src/search.c:218
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d Mal gefunden und ersetzt"
 
-#: src/search.c:256
+#: src/search.c:264
 msgid "Replace"
 msgstr "Ersetzen"
 
-#: src/search.c:263
+#: src/search.c:271
 msgid "Find"
 msgstr "Suchen"
 
-#: src/search.c:276
+#: src/search.c:284
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Suchen nach: "
 
-#: src/search.c:292
+#: src/search.c:300
 #, fuzzy
 msgid "Re_place with:"
 msgstr "_Ersetzen durch: "
 
-#: src/search.c:306
+#: src/search.c:314
 msgid "_Match case"
 msgstr "_Groß-/Kleinschreibung berücksichtigen"
 
-#: src/search.c:311
+#: src/search.c:319
 msgid "Replace _all at once"
 msgstr "_Alles ersetzen"
 
-#: src/search.c:362
+#: src/search.c:370
 msgid "Jump To"
 msgstr "Gehe zu"
 
-#: src/search.c:368
+#: src/search.c:376
 msgid "_Jump"
 msgstr "_Gehe zu"
 
-#: src/search.c:375
+#: src/search.c:383
 #, fuzzy
 msgid "_Line number:"
 msgstr "Zeilen_nummer: "
@@ -283,31 +283,31 @@ msgstr ""
 msgid "_Format page"
 msgstr ""
 
-#: src/about.c:102
+#: src/about.c:103
 msgid "Credits"
 msgstr ""
 
-#: src/about.c:137
+#: src/about.c:138
 msgid "Written by"
 msgstr ""
 
-#: src/about.c:140
+#: src/about.c:141
 msgid "Documented by"
 msgstr ""
 
-#: src/about.c:146
+#: src/about.c:147
 msgid "Translated by"
 msgstr ""
 
-#: src/about.c:197
+#: src/about.c:198
 msgid "C_redits"
 msgstr ""
 
-#: src/about.c:199
+#: src/about.c:200
 msgid "_Credits"
 msgstr ""
 
-#: src/about.c:209
+#: src/about.c:210
 #, c-format
 msgid "About %s"
 msgstr "Info zu %s"

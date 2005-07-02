@@ -239,9 +239,21 @@ static void cb_modified_changed(GtkTextBuffer *buffer, GtkWidget *view)
 	menu_sensitivity_from_modified_flag(modified_flag || !exist_flag);
 }
 
-void force_call_cb_modifed_changed(GtkWidget *view)
+void force_call_cb_modified_changed(GtkWidget *view)
 {
 	cb_modified_changed(GTK_TEXT_VIEW(view)->buffer, view);
+}
+
+void force_block_cb_modified_changed(GtkWidget *view)
+{
+	g_signal_handlers_block_by_func(G_OBJECT(GTK_TEXT_VIEW(view)->buffer), 
+		G_CALLBACK(cb_modified_changed), view);
+}
+
+void force_unblock_cb_modified_changed(GtkWidget *view)
+{
+	g_signal_handlers_unblock_by_func(G_OBJECT(GTK_TEXT_VIEW(view)->buffer), 
+		G_CALLBACK(cb_modified_changed), view);
 }
 /*
 static void cb_mark_set(GtkTextBuffer *buffer, GtkTextIter *iter, GtkTextMark *mark)
@@ -314,6 +326,9 @@ GtkWidget *create_text_view(void)
 	view = gtk_text_view_new();
 	buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
 	
+//	gtk_text_view_set_left_margin(GTK_TEXT_VIEW(view), 1);
+//	gtk_text_view_set_right_margin(GTK_TEXT_VIEW(view), 1);
+	
 	g_signal_connect(G_OBJECT(view), "key-press-event",
 		G_CALLBACK(cb_key_press_event), NULL);
 	g_signal_connect(G_OBJECT(view), "button-press-event",
@@ -347,5 +362,7 @@ GtkWidget *create_text_view(void)
 		G_CALLBACK(cb_end_user_action), view);
 	cb_end_user_action(buffer, view);
 */	
+	linenum_init(view);
+	
 	return view;
 }

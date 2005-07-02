@@ -21,6 +21,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "file.h"
+#include "view.h"
 #include "encoding.h"
 #include "dialog.h"
 #include "i18n.h"
@@ -139,6 +140,7 @@ gint file_open_real(GtkWidget *view, FileInfo *fi)
 	
 //	undo_disconnect_signal(textbuffer);
 //	undo_block_signal(buffer);
+	force_block_cb_modified_changed(view);
 	
 	gtk_text_buffer_set_text(buffer, "", 0);
 	gtk_text_buffer_get_start_iter(buffer, &iter);
@@ -149,6 +151,7 @@ gint file_open_real(GtkWidget *view, FileInfo *fi)
 	gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(view), &iter, 0, FALSE, 0, 0);
 	g_free(str);
 	
+	force_unblock_cb_modified_changed(view);
 //	undo_unblock_signal(buffer);
 	
 	return 0;

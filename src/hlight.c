@@ -53,8 +53,12 @@ gboolean hlight_toggle_searched(GtkTextBuffer *buffer)
 void hlight_init(GtkTextBuffer *buffer)
 {
 	gtk_text_buffer_create_tag(buffer, "searched",
-		"background", "#FFFF00",
-		"foreground", "#000000",
+		"background", "yellow",
+		"foreground", "black",
+		NULL);
+	gtk_text_buffer_create_tag(buffer, "replaced",
+		"background", "cyan",
+		"foreground", "black",
 		NULL);
 	g_signal_connect(G_OBJECT(buffer), "changed",
 		G_CALLBACK(cb_changed), NULL);

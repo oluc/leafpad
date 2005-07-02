@@ -1,3 +1,13 @@
+2005-07-02
+
+  version 0.8.2:
+	* Improved dependency caused by intltool (thanks Machismo Ulverstein).
+	* Modified left margin.
+	* Fixed Macintosh return code bug (thanks young dave).
+	* Fixed "response" signal of about diaglog (thanks Muthiah Annamalai).
+	* Updated Bulgarian translation (Yavor Doganov).
+	* Updated Simplified Chinese translation (Carlos Z.F. Liu).
+
 2005-05-14
 
   version 0.8.1:

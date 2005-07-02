@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.8\n"
-"POT-Creation-Date: 2005-05-08 22:19+0900\n"
+"POT-Creation-Date: 2005-07-03 01:04+0900\n"
 "PO-Revision-Date: 2004-12-14 13:06+0200\n"
 "Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -128,11 +128,11 @@ msgstr "/_Hjälp"
 msgid "/Help/_About"
 msgstr "/Hjälp/_Om"
 
-#: src/callback.c:286
+#: src/callback.c:292
 msgid "GTK+ based simple text editor"
 msgstr "Enkel GTK+-baserad texteditor"
 
-#: src/callback.c:294
+#: src/callback.c:300
 msgid "translator-credits"
 msgstr "Isak Savo <iso01001@student.mdh.se>"
 
@@ -187,71 +187,71 @@ msgstr "Tecken_kodning: "
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' finns redan. Vill du skriva över?"
 
-#: src/file.c:42
+#: src/file.c:43
 msgid "Untitled"
 msgstr "Namnlös"
 
-#: src/file.c:186
+#: src/file.c:189
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Kan inte konvertera kodning till '%s'"
 
-#: src/file.c:199
+#: src/file.c:202
 msgid "Can't open file to write"
 msgstr "Kan inte öppna fil att skriva till"
 
-#: src/file.c:204
+#: src/file.c:207
 msgid "Can't write file"
 msgstr "Kan inte skriva till fil"
 
-#: src/search.c:132
+#: src/search.c:138
 msgid "Search string not found"
 msgstr "Söksträngen hittades inte"
 
-#: src/search.c:175
+#: src/search.c:181
 msgid "Replace?"
 msgstr "Ersätt?"
 
-#: src/search.c:210
+#: src/search.c:218
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d strängar har ersatts"
 
-#: src/search.c:256
+#: src/search.c:264
 msgid "Replace"
 msgstr "Ersätt"
 
-#: src/search.c:263
+#: src/search.c:271
 msgid "Find"
 msgstr "Sök"
 
-#: src/search.c:276
+#: src/search.c:284
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "S_öksträng: "
 
-#: src/search.c:292
+#: src/search.c:300
 #, fuzzy
 msgid "Re_place with:"
 msgstr "Ersätt _med: "
 
-#: src/search.c:306
+#: src/search.c:314
 msgid "_Match case"
 msgstr "Matcha _gemener/VERSALER"
 
-#: src/search.c:311
+#: src/search.c:319
 msgid "Replace _all at once"
 msgstr "_Ändra alla på en gång"
 
-#: src/search.c:362
+#: src/search.c:370
 msgid "Jump To"
 msgstr "Hoppa till"
 
-#: src/search.c:368
+#: src/search.c:376
 msgid "_Jump"
 msgstr "_Hoppa"
 
-#: src/search.c:375
+#: src/search.c:383
 #, fuzzy
 msgid "_Line number:"
 msgstr "_Radnummer: "
@@ -282,31 +282,31 @@ msgstr ""
 msgid "_Format page"
 msgstr ""
 
-#: src/about.c:102
+#: src/about.c:103
 msgid "Credits"
 msgstr ""
 
-#: src/about.c:137
+#: src/about.c:138
 msgid "Written by"
 msgstr ""
 
-#: src/about.c:140
+#: src/about.c:141
 msgid "Documented by"
 msgstr ""
 
-#: src/about.c:146
+#: src/about.c:147
 msgid "Translated by"
 msgstr ""
 
-#: src/about.c:197
+#: src/about.c:198
 msgid "C_redits"
 msgstr ""
 
-#: src/about.c:199
+#: src/about.c:200
 msgid "_Credits"
 msgstr ""
 
-#: src/about.c:209
+#: src/about.c:210
 #, c-format
 msgid "About %s"
 msgstr "Om %s"

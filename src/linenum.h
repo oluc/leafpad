@@ -21,5 +21,6 @@
 #define _LINE_H
 
 void show_line_numbers(GtkWidget *text_view, gboolean visible);
+void linenum_init(GtkWidget *text_view);
 
 #endif /* _LINE_H */

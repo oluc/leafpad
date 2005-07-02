@@ -1,8 +1,8 @@
-AC_INIT(Leafpad, 0.8.1, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.8.2, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
-AC_PROG_INTLTOOL
+AC_PROG_INTLTOOL(, no-xml)	# require >= 0.31 for autoreconf
 AC_PROG_CC
 if test "$GCC" = "yes"; then
 	CFLAGS="$CFLAGS -Wall"

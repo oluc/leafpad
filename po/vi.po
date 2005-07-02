@@ -4,14 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.0\n"
-"POT-Creation-Date: 2005-05-08 22:19+0900\n"
+"POT-Creation-Date: 2005-07-03 01:04+0900\n"
 "PO-Revision-Date: 2004-05-07 01:10+0100\n"
 "Last-Translator: Quy NGUYEN DAI <nguyendaiquy@gmail.com>\n"
 "Language-Team: Vietnamese <vi@vnoss.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: vi@vnoss.org\n"
+"Report-Msgid-Bugs-To: \n"
 
 #: src/menu.c:31
 msgid "/_File"
@@ -125,11 +125,11 @@ msgstr "/_Trợ giúp"
 msgid "/Help/_About"
 msgstr "/Trợ giúp/_Thông tin"
 
-#: src/callback.c:286
+#: src/callback.c:292
 msgid "GTK+ based simple text editor"
 msgstr "Một trình soạn thảo đơn giản dựa trên GTK+"
 
-#: src/callback.c:294
+#: src/callback.c:300
 msgid "translator-credits"
 msgstr "Nguyễn Đại Quý <nguyendaiquy@gmail.com>"
 
@@ -181,69 +181,69 @@ msgstr "_Bảng mã:"
 msgid "'%s' already exists. Overwrite?"
 msgstr "File '%s' đã có. Bạn có muốn thay thế nó bởi file đang soạn thảo ?"
 
-#: src/file.c:42
+#: src/file.c:43
 msgid "Untitled"
 msgstr "Không tiêu đề"
 
-#: src/file.c:186
+#: src/file.c:189
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Không thể chuyển bảng mã sang '%s'"
 
-#: src/file.c:199
+#: src/file.c:202
 msgid "Can't open file to write"
 msgstr "Không thể mở file để ghi"
 
-#: src/file.c:204
+#: src/file.c:207
 msgid "Can't write file"
 msgstr "Không thể ghi file"
 
-#: src/search.c:132
+#: src/search.c:138
 msgid "Search string not found"
 msgstr "Không tìm thấy"
 
-#: src/search.c:175
+#: src/search.c:181
 msgid "Replace?"
 msgstr "Thay thế?"
 
-#: src/search.c:210
+#: src/search.c:218
 #, c-format
 msgid "%d strings replaced"
 msgstr "Đã tìm thấy và thay thế %d lần."
 
-#: src/search.c:256
+#: src/search.c:264
 msgid "Replace"
 msgstr "Thay thế"
 
-#: src/search.c:263
+#: src/search.c:271
 msgid "Find"
 msgstr "Tìm"
 
-#: src/search.c:276
+#: src/search.c:284
 msgid "Fi_nd what:"
 msgstr "_Tìm kiếm:"
 
-#: src/search.c:292
+#: src/search.c:300
 msgid "Re_place with:"
 msgstr "Thay thế _bởi:"
 
-#: src/search.c:306
+#: src/search.c:314
 msgid "_Match case"
 msgstr "Phân biệt _chữ hoa/thường"
 
-#: src/search.c:311
+#: src/search.c:319
 msgid "Replace _all at once"
 msgstr "_Thay thế tất cả"
 
-#: src/search.c:362
+#: src/search.c:370
 msgid "Jump To"
 msgstr "Chuyển đến dòng"
 
-#: src/search.c:368
+#: src/search.c:376
 msgid "_Jump"
 msgstr "Chuyển đến dòng"
 
-#: src/search.c:375
+#: src/search.c:383
 msgid "_Line number:"
 msgstr "Dòng _số :"
 
@@ -271,31 +271,31 @@ msgstr "_Số bản in:"
 msgid "_Format page"
 msgstr "Định _dạng trang"
 
-#: src/about.c:102
+#: src/about.c:103
 msgid "Credits"
 msgstr ""
 
-#: src/about.c:137
+#: src/about.c:138
 msgid "Written by"
 msgstr "Tác giả"
 
-#: src/about.c:140
+#: src/about.c:141
 msgid "Documented by"
 msgstr "Tài liệu của"
 
-#: src/about.c:146
+#: src/about.c:147
 msgid "Translated by"
 msgstr "Dịch bởi"
 
-#: src/about.c:197
+#: src/about.c:198
 msgid "C_redits"
 msgstr "Đóng _góp"
 
-#: src/about.c:199
+#: src/about.c:200
 msgid "_Credits"
 msgstr "Đóng _góp"
 
-#: src/about.c:209
+#: src/about.c:210
 #, c-format
 msgid "About %s"
 msgstr "Thông tin về %s"

@@ -22,7 +22,9 @@
 #define	DV(x)
 
 static gint min_number_window_width;
-static const gint margin = 5;
+static gboolean line_number_visible = FALSE;
+#define	margin 4
+#define	submargin 2
 
 static gint calculate_min_number_window_width(GtkWidget *widget)
 {
@@ -124,6 +126,10 @@ line_numbers_expose (GtkWidget      *widget,
 	gint i;
 //	gchar *str;
 	gchar str [8];  /* we don't expect more than ten million lines */
+	GdkGC *gc;
+	gint height;
+	
+	if (line_number_visible){{{{{	// omit calculation
 	
 	text_view = GTK_TEXT_VIEW (widget);
 	
@@ -210,13 +216,11 @@ DV({g_print("Painting line numbers %d - %d\n",
 	min_number_window_width = calculate_min_number_window_width(widget);
 	if (layout_width > min_number_window_width)
 		gtk_text_view_set_border_window_size (text_view,
-											  GTK_TEXT_WINDOW_LEFT,
-											  layout_width + margin);
+			GTK_TEXT_WINDOW_LEFT, layout_width + margin + submargin);
 	else {
 //		if ((gtk_text_view_get_border_window_size (text_view, GTK_TEXT_WINDOW_LEFT) - 5) > layout_width) {
 			gtk_text_view_set_border_window_size (text_view,
-												  GTK_TEXT_WINDOW_LEFT,
-												  min_number_window_width + margin);
+				GTK_TEXT_WINDOW_LEFT, min_number_window_width + margin + submargin);
 //		}
 		justify_width = min_number_window_width - layout_width;
 	}
@@ -261,7 +265,7 @@ DV({g_print("Painting line numbers %d - %d\n",
 		                  NULL,
 		                  widget,
 		                  NULL,
-		                  layout_width + justify_width + 1, pos,
+		                  layout_width + justify_width + margin / 2 - 1, pos,
 		                  layout);
 //		g_free (str);
 		
@@ -275,30 +279,78 @@ DV({g_print("Painting line numbers %d - %d\n",
 //	g_object_ref (G_OBJECT (style));
 	
 	/* don't stop emission, need to draw children */
+	
+	}}}}}
+	
+	gc = gdk_gc_new(event->window);
+	gdk_gc_set_foreground(gc, widget->style->base);
+	gdk_window_get_geometry(event->window, NULL, NULL, NULL, &height, NULL);
+	gdk_draw_rectangle(event->window, gc, TRUE,
+		line_number_visible ?
+		layout_width + justify_width + margin : 0,
+		0, submargin,
+		height);
+	
+	g_object_unref(gc);
+	
 	return FALSE;
 }
 
 void show_line_numbers(GtkWidget *text_view, gboolean visible)
 {
+	line_number_visible = visible;
 	if (visible) {
-		min_number_window_width = calculate_min_number_window_width(text_view);
 		gtk_text_view_set_border_window_size(
 			GTK_TEXT_VIEW(text_view),
 			GTK_TEXT_WINDOW_LEFT,
-			min_number_window_width + margin);
+			min_number_window_width + margin + submargin);
+	} else {
+		gtk_text_view_set_border_window_size(
+			GTK_TEXT_VIEW(text_view),
+			GTK_TEXT_WINDOW_LEFT,
+			submargin);
+	}
+}
+
+void linenum_init(GtkWidget *text_view)
+{
+	min_number_window_width = calculate_min_number_window_width(text_view);
+	g_signal_connect(
+		G_OBJECT(text_view),
+		"expose_event",
+		G_CALLBACK(line_numbers_expose),
+		NULL);
+	show_line_numbers(text_view, FALSE);
+}
+/*
+static void show_line_numbers(GtkWidget *text_view, gboolean visible)
+{
+	gtk_text_view_set_border_window_size(
+		GTK_TEXT_VIEW(text_view),
+		GTK_TEXT_WINDOW_LEFT,
+		submargin);
+	if (visible) {
+		min_number_window_width = calculate_min_number_window_width(text_view);
+//		gtk_text_view_set_border_window_size(
+//			GTK_TEXT_VIEW(text_view),
+//			GTK_TEXT_WINDOW_LEFT,
+//			min_number_window_width + margin + submargin);
+//			submargin);
 		g_signal_connect(
 			G_OBJECT(text_view),
 			"expose_event",
 			G_CALLBACK(line_numbers_expose),
 			NULL);
 	} else {
-		gtk_text_view_set_border_window_size(
-			GTK_TEXT_VIEW(text_view),
-			GTK_TEXT_WINDOW_LEFT,
-			0);
+//		gtk_text_view_set_border_window_size(
+//			GTK_TEXT_VIEW(text_view),
+//			GTK_TEXT_WINDOW_LEFT,
+//			0);
+//			submargin);
 		g_signal_handlers_disconnect_by_func(
 			G_OBJECT(text_view),
 			G_CALLBACK(line_numbers_expose),
 			NULL);
 	}
 }
+*/

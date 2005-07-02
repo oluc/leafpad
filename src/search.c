@@ -39,7 +39,7 @@
 
 static gchar *string_find    = NULL;
 static gchar *string_replace = NULL;
-static gboolean match_case, replace_all;
+static gboolean match_case, replace_all;//, replace_mode = FALSE;
 
 static gboolean hlight_searched_strings(GtkTextBuffer *buffer, gchar *str)
 {
@@ -57,6 +57,8 @@ static gboolean hlight_searched_strings(GtkTextBuffer *buffer, gchar *str)
 	gtk_text_buffer_get_bounds(buffer, &start, &end);
 	gtk_text_buffer_remove_tag_by_name(buffer,
 		"searched", &start, &end);
+/*	gtk_text_buffer_remove_tag_by_name(buffer,
+		"replaced", &start, &end);	*/
 	iter = start;
 	do {
 		res = gtk_source_iter_forward_search(
@@ -65,9 +67,13 @@ static gboolean hlight_searched_strings(GtkTextBuffer *buffer, gchar *str)
 			retval = TRUE;
 			gtk_text_buffer_apply_tag_by_name(buffer,
 				"searched", &start, &end);
+//				replace_mode ? "replaced" : "searched", &start, &end);
 			iter = end;
 		}
 	} while (res);
+/*	if (replace_mode)
+		replace_mode = FALSE;
+	else	*/
 	hlight_toggle_searched(buffer);
 	
 	return retval;
@@ -201,8 +207,10 @@ static gint document_replace_real(GtkWidget *textview)
 	
 	if (q_dialog)
 		gtk_widget_destroy(q_dialog);
-	if (strlen(string_replace))
+/*	if (strlen(string_replace)) {
+		replace_mode = TRUE;
 		hlight_searched_strings(textbuffer, string_replace);
+	}	*/
 	if (replace_all) {
 		gtk_text_buffer_get_iter_at_mark(textbuffer, &iter, mark_init);
 		gtk_text_buffer_place_cursor(textbuffer, &iter);

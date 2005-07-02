@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.6\n"
-"POT-Creation-Date: 2005-05-08 22:19+0900\n"
+"POT-Creation-Date: 2005-07-03 01:04+0900\n"
 "PO-Revision-Date: 2004-11-18 23:58+0100\n"
 "Last-Translator: Petr Vysloužil <evyslouz@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -128,11 +128,11 @@ msgstr "/_Nápověda"
 msgid "/Help/_About"
 msgstr "/Nápověda/O _aplikaci"
 
-#: src/callback.c:286
+#: src/callback.c:292
 msgid "GTK+ based simple text editor"
 msgstr "Jednoduchý GTK+ textový editor"
 
-#: src/callback.c:294
+#: src/callback.c:300
 msgid "translator-credits"
 msgstr "Petr Vyslouzil <evyslouz@volny.cz>"
 
@@ -186,71 +186,71 @@ msgstr "_Kódování znaků:"
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' již existuje. Přepsat?"
 
-#: src/file.c:42
+#: src/file.c:43
 msgid "Untitled"
 msgstr "Nepojmenovaný"
 
-#: src/file.c:186
+#: src/file.c:189
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Nemohu převést znakovou sadu na '%s'"
 
-#: src/file.c:199
+#: src/file.c:202
 msgid "Can't open file to write"
 msgstr "Nemohu otevřít soubor k zápisu"
 
-#: src/file.c:204
+#: src/file.c:207
 msgid "Can't write file"
 msgstr "Nemohu zapsat soubor"
 
-#: src/search.c:132
+#: src/search.c:138
 msgid "Search string not found"
 msgstr "Hledaný řetězec nenalezen"
 
-#: src/search.c:175
+#: src/search.c:181
 msgid "Replace?"
 msgstr "Nahradit?"
 
-#: src/search.c:210
+#: src/search.c:218
 #, c-format
 msgid "%d strings replaced"
 msgstr "nahrazeno '%d' řetězců"
 
-#: src/search.c:256
+#: src/search.c:264
 msgid "Replace"
 msgstr "Nahradit"
 
-#: src/search.c:263
+#: src/search.c:271
 msgid "Find"
 msgstr "Hledat"
 
-#: src/search.c:276
+#: src/search.c:284
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Hledat:"
 
-#: src/search.c:292
+#: src/search.c:300
 #, fuzzy
 msgid "Re_place with:"
 msgstr "Nahra_dit čím:"
 
-#: src/search.c:306
+#: src/search.c:314
 msgid "_Match case"
 msgstr "_Rozlišovat velikost písmen"
 
-#: src/search.c:311
+#: src/search.c:319
 msgid "Replace _all at once"
 msgstr "Nahradit vš_e"
 
-#: src/search.c:362
+#: src/search.c:370
 msgid "Jump To"
 msgstr "Jit na _řádek"
 
-#: src/search.c:368
+#: src/search.c:376
 msgid "_Jump"
 msgstr "_Přejít"
 
-#: src/search.c:375
+#: src/search.c:383
 #, fuzzy
 msgid "_Line number:"
 msgstr "_Číslo řádku:"
@@ -281,31 +281,31 @@ msgstr ""
 msgid "_Format page"
 msgstr ""
 
-#: src/about.c:102
+#: src/about.c:103
 msgid "Credits"
 msgstr ""
 
-#: src/about.c:137
+#: src/about.c:138
 msgid "Written by"
 msgstr ""
 
-#: src/about.c:140
+#: src/about.c:141
 msgid "Documented by"
 msgstr ""
 
-#: src/about.c:146
+#: src/about.c:147
 msgid "Translated by"
 msgstr ""
 
-#: src/about.c:197
+#: src/about.c:198
 msgid "C_redits"
 msgstr ""
 
-#: src/about.c:199
+#: src/about.c:200
 msgid "_Credits"
 msgstr ""
 
-#: src/about.c:209
+#: src/about.c:210
 #, c-format
 msgid "About %s"
 msgstr "O %s"

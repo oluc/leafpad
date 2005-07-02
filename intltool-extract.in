@@ -32,7 +32,7 @@
 ## Release information
 my $PROGRAM      = "intltool-extract";
 my $PACKAGE      = "intltool";
-my $VERSION      = "0.27.2";
+my $VERSION      = "0.31.2";
 
 ## Loaded modules
 use strict; 
@@ -46,6 +46,7 @@ my $HELP_ARG 	= "0";
 my $VERSION_ARG = "0";
 my $UPDATE_ARG  = "0";
 my $QUIET_ARG   = "0";
+my $SRCDIR_ARG	= ".";
 
 my $FILE;
 my $OUTFILE;
@@ -53,6 +54,10 @@ my $OUTFILE;
 my $gettext_type = "";
 my $input;
 my %messages = ();
+my %loc = ();
+my %count = ();
+my %comments = ();
+my $strcount = 0;
 
 ## Use this instead of \w for XML files to handle more possible characters.
 my $w = "[-A-Za-z0-9._:]";
@@ -68,6 +73,7 @@ GetOptions (
             "version|v"  => \$VERSION_ARG,
             "update"     => \$UPDATE_ARG,
 	    "quiet|q"    => \$QUIET_ARG,
+	    "srcdir=s"	 => \$SRCDIR_ARG,
             ) or &error;
 
 &split_on_argument;
@@ -152,6 +158,7 @@ XML files. Read manpage (man ${PROGRAM}) for more info.
                     (conflicts with --update)
       --update      Writes output into the same directory the source file 
                     reside (conflicts with --local)
+      --srcdir      Root of the source tree
   -v, --version     Output version information and exit
   -h, --help        Display this help and exit
   -q, --quiet       Quiet mode
@@ -175,7 +182,7 @@ sub message {
 sub extract {
     &determine_type;
 
-    &convert ($FILE);
+    &convert;
 
     open OUT, ">$OUTFILE";
     &msg_write;
@@ -184,13 +191,13 @@ sub extract {
     print "Wrote $OUTFILE\n" unless $QUIET_ARG;
 }
 
-sub convert($) {
+sub convert {
 
     ## Reading the file
     {
 	local (*IN);
 	local $/; #slurp mode
-	open (IN, "<$FILE") || die "can't open $FILE: $!";
+	open (IN, "<$SRCDIR_ARG/$FILE") || die "can't open $SRCDIR_ARG/$FILE: $!";
 	$input = <IN>;
     }
 
@@ -259,18 +266,20 @@ sub type_keys {
 sub type_xml {
     ### For generic translatable XML files ###
         
-    while ($input =~ /\s_$w+\s*=\s*\"([^"]+)\"/sg) { # "
-        $messages{entity_decode_minimal($1)} = [];
+    while ($input =~ /(?:<!--([^>]*?)-->[^\n]*\n?[^\n]*)?\s_$w+\s*=\s*\"([^"]+)\"/sg) { # "
+        $messages{entity_decode_minimal($2)} = [];
+        $comments{entity_decode_minimal($2)} = $1 if (defined($1));
     }
 
-    while ($input =~ /<_($w+)(?: xml:space="($w+)")?>(.+?)<\/_\1>/sg) {
-        $_ = $3;
-        if (!defined($2) || $2 ne "preserve") {
+    while ($input =~ /(?:<!--([^>]*?)-->\s*)?<_($w+)(?: xml:space="($w+)")?[^>]*>(.+?)<\/_\2>/sg) {
+        $_ = $4;
+        if (!defined($3) || $3 ne "preserve") {
             s/\s+/ /g;
             s/^ //;
             s/ $//;
         }
-        $messages{entity_decode_minimal($_)} = [];
+        $messages{$_} = [];
+        $comments{$_} = $1 if (defined($1));
     }
 }
 
@@ -280,16 +289,19 @@ sub type_schemas {
     # FIXME: We should handle escaped < (less than)
     while ($input =~ /
                       <locale\ name="C">\s*
-                          (<default>\s*(.*?)\s*<\/default>\s*)?
-                          (<short>\s*(.*?)\s*<\/short>\s*)?
-                          (<long>\s*(.*?)\s*<\/long>\s*)?
+                          (<default>\s*(?:<!--([^>]*?)-->\s*)?(.*?)\s*<\/default>\s*)?
+                          (<short>\s*(?:<!--([^>]*?)-->\s*)?(.*?)\s*<\/short>\s*)?
+                          (<long>\s*(?:<!--([^>]*?)-->\s*)?(.*?)\s*<\/long>\s*)?
                       <\/locale>
                      /sgx) {
-        my @totranslate = ($2,$4,$6);
+        my @totranslate = ($3,$6,$9);
+        my @eachcomment = ($2,$5,$8);
         foreach (@totranslate) {
+            my $currentcomment = shift @eachcomment;
             next if !$_;
-        s/\s+/ /g;
-        $messages{entity_decode_minimal($_)} = [];
+            s/\s+/ /g;
+            $messages{entity_decode_minimal($_)} = [];
+            $comments{entity_decode_minimal($_)} = $currentcomment if (defined($currentcomment));
         }
     }
 }
@@ -297,16 +309,31 @@ sub type_schemas {
 sub type_rfc822deb {
     ### For rfc822-style Debian configuration files ###
 
-    while ($input =~ /(?:^|\n)_[^:]+:\s*(.*?)(?=\n\S|$)/sg) {
-        my @str_list = rfc822deb_split($1);
-        for my $str (@str_list) {
-            #   As rfc822deb is for configuration files, duplicates
-            #   should never happen.  Developers must use the
-            #   [] construct to make msgid unique, see also intltool-merge
-            print STDERR "Warning: msgid multiply defined:\n  $str\n"
-                if defined($messages{$str});
-            $messages{$str} = [];
+    my $lineno = 1;
+    my $type = '';
+    while ($input =~ /\G(.*?)(^|\n)(_+)([^:]+):[ \t]*(.*?)(?=\n\S|$)/sg)
+    {
+        my ($pre, $newline, $underscore, $tag, $text) = ($1, $2, $3, $4, $5);
+        while ($pre =~ m/\n/g)
+        {
+            $lineno ++;
         }
+        $lineno += length($newline);
+        my @str_list = rfc822deb_split(length($underscore), $text);
+        for my $str (@str_list)
+        {
+            $strcount++;
+            $messages{$str} = [];
+            $loc{$str} = $lineno;
+            $count{$str} = $strcount;
+            my $usercomment = '';
+            while($pre =~ s/(^|\n)#([^\n]*)$//s)
+            {
+                $usercomment = "\n" . $2 . $usercomment;
+            }
+            $comments{$str} = $tag . $usercomment;
+        }
+        $lineno += ($text =~ s/\n//g);
     }
 }
 
@@ -318,28 +345,38 @@ sub rfc822deb_split {
     #       and paragraphs are separated by a single dot on a line
     # This routine returns an array of all paragraphs, and reformat
     # them.
+    # When first argument is 2, the string is a comma separated list of
+    # values.
+    my $type = shift;
     my $text = shift;
-    $text =~ s/^ //mg;
+    $text =~ s/^[ \t]//mg;
+    return (split(/, */, $text, 0)) if $type ne 1;
     return ($text) if $text !~ /\n/;
 
     $text =~ s/([^\n]*)\n//;
     my @list = ($1);
     my $str = '';
-    for my $line (split (/\n/, $text)) {
+    for my $line (split (/\n/, $text))
+    {
         chomp $line;
-        $line =~ /\s+$/;
-        if ($line =~ /^\.$/) {
+        if ($line =~ /^\.\s*$/)
+        {
             #  New paragraph
             $str =~ s/\s*$//;
             push(@list, $str);
             $str = '';
-        } elsif ($line =~ /^\s/) {
+        }
+        elsif ($line =~ /^\s/)
+        {
             #  Line which must not be reformatted
             $str .= "\n" if length ($str) && $str !~ /\n$/;
+            $line =~ s/\s+$//;
             $str .= $line."\n";
-        } else {
+        }
+        else
+        {
             #  Continuation line, remove newline
-            $str .= " " if length ($str) && $str !~ /[\n ]$/;
+            $str .= " " if length ($str) && $str !~ /\n$/;
             $str .= $line;
         }
     }
@@ -382,23 +419,53 @@ sub type_scheme {
 }
 
 sub msg_write {
-    for my $message (sort keys %messages) { 
+    my @msgids;
+    if (%count)
+    {
+        @msgids = sort { $count{$a} <=> $count{$b} } keys %count;
+    }
+    else
+    {
+        @msgids = sort keys %messages;
+    }
+    for my $message (@msgids)
+    {
+	my $offsetlines = 1;
+	$offsetlines++ if $message =~ /%/;
+	if (defined ($comments{$message}))
+	{
+		while ($comments{$message} =~ m/\n/g)
+		{
+		    $offsetlines++;
+		}
+	}
+	print OUT "# ".($loc{$message} - $offsetlines).  " \"$FILE\"\n"
+	        if defined $loc{$message};
+   	print OUT "/* ".$comments{$message}." */\n"
+                if defined $comments{$message};
    	print OUT "/* xgettext:no-c-format */\n" if $message =~ /%/;
         
     	my @lines = split (/\n/, $message, -1);
-    	for (my $n = 0; $n < @lines; $n++) {
-            if ($n == 0) { 
+    	for (my $n = 0; $n < @lines; $n++)
+	{
+            if ($n == 0)
+            {
  		print OUT "char *s = N_(\""; 
-            } else {  
- 		print OUT "             \""; 
-	    }
+            }
+            else
+            {  
+                print OUT "             \""; 
+            }
 
             print OUT escape($lines[$n]);
 
-            if ($n < @lines - 1) { 
-		print OUT "\\n\"\n"; 
- 	    } else { 
-		print OUT "\");\n";  
+            if ($n < @lines - 1)
+            {
+                print OUT "\\n\"\n"; 
+            }
+            else
+            {
+                print OUT "\");\n";  
 	    }
         }
     }

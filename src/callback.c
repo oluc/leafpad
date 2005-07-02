@@ -37,8 +37,17 @@ static void set_selection_bound(GtkTextBuffer *buffer, gint start, gint end)
 
 void on_file_new(void)
 {
+	gchar *comline;
+	gchar *option;
+
 	save_config_file();
-	g_spawn_command_line_async(PACKAGE, NULL);
+	option = pub->fi->charset_flag ?
+		g_strdup_printf("%s%s", " --codeset=", pub->fi->charset) : "";
+	comline = g_strdup_printf("%s%s", PACKAGE, option);
+	if (pub->fi->charset_flag)
+		g_free(option);
+	g_spawn_command_line_async(comline, NULL);
+	g_free(comline);
 }
 
 void on_file_open(void)
@@ -76,7 +85,7 @@ void on_file_open(void)
 			pub->fi = fi;
 			undo_clear_all(pub->mw->buffer);
 //			set_main_window_title();
-			force_call_cb_modifed_changed(pub->mw->view);
+			force_call_cb_modified_changed(pub->mw->view);
 //			undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 		}
 	}
@@ -90,7 +99,7 @@ gint on_file_save(void)
 	if (file_save_real(pub->mw->view, pub->fi))
 		return -1;
 //	set_main_window_title();
-	force_call_cb_modifed_changed(pub->mw->view);
+	force_call_cb_modified_changed(pub->mw->view);
 //	undo_reset_step_modif();
 	return 0;
 }
@@ -110,7 +119,7 @@ gint on_file_save_as(void)
 	pub->fi = fi;
 	undo_clear_all(pub->mw->buffer);
 //	set_main_window_title();
-	force_call_cb_modifed_changed(pub->mw->view);
+	force_call_cb_modified_changed(pub->mw->view);
 //	undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 	return 0;
 }
@@ -123,6 +132,7 @@ void on_file_print(void)
 void on_file_close(void)
 {
 	if (!check_text_modification()) {
+		force_block_cb_modified_changed(pub->mw->view);
 //		undo_block_signal(textbuffer);
 		gtk_text_buffer_set_text(pub->mw->buffer, "", 0);
 		gtk_text_buffer_set_modified(pub->mw->buffer, FALSE);
@@ -136,7 +146,8 @@ void on_file_close(void)
 		pub->fi->lineend = LF;
 		undo_clear_all(pub->mw->buffer);
 //		set_main_window_title();
-		force_call_cb_modifed_changed(pub->mw->view);
+		force_call_cb_modified_changed(pub->mw->view);
+		force_unblock_cb_modified_changed(pub->mw->view);
 //		undo_unblock_signal(textbuffer);
 //		undo_init(sd->mainwin->textview, textbuffer, sd->mainwin->menubar);
 	}
@@ -277,11 +288,6 @@ void on_help_about(void)
 {
 	static GtkWidget *about = NULL;
 	
-	if (about != NULL) {
-		gtk_window_present(GTK_WINDOW(about));
-		return;
-	}
-	
 	const gchar *copyright = "Copyright \xc2\xa9 2004-2005 Tarot Osuji";
 	const gchar *comments = _("GTK+ based simple text editor");
 	const gchar *authors[] = {
@@ -292,10 +298,15 @@ void on_help_about(void)
 		NULL
 	};
 	const gchar *translator_credits = _("translator-credits");
-	translator_credits = strcmp(translator_credits, "translator-credits")
-		? translator_credits : NULL;
 	GdkPixbuf *logo = gdk_pixbuf_new_from_file(
 		ICONDIR G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
+
+	if (about != NULL) {
+		gtk_window_present(GTK_WINDOW(about));
+		return;
+	}
+	translator_credits = strcmp(translator_credits, "translator-credits")
+		? translator_credits : NULL;
 	
 	about = create_about_dialog(
 		PACKAGE_NAME,

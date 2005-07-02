@@ -176,7 +176,7 @@ void convert_line_ending(gchar **text, gint retcode)
 	
 	switch (retcode) {
 	case CR:
-		while (*str != '0') {
+		while (*str != '\0') {
 			if (*str == LF)
 				*str = CR;
 			str++;

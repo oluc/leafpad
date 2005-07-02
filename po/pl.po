@@ -6,13 +6,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
-"POT-Creation-Date: 2005-05-08 22:19+0900\n"
+"POT-Creation-Date: 2005-07-03 01:04+0900\n"
 "PO-Revision-Date: 2005-05-04 11:55+0100\n"
 "Last-Translator: Michał Wróbel <wrobel@task.gda.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 # src/menu.c:31
 #: src/menu.c:31
@@ -155,12 +156,12 @@ msgid "/Help/_About"
 msgstr "/Pomoc/_O programie"
 
 # src/callback.c:286
-#: src/callback.c:286
+#: src/callback.c:292
 msgid "GTK+ based simple text editor"
 msgstr "Prosty edytor tekstowy oparty na GTK+"
 
 # src/callback.c:294
-#: src/callback.c:294
+#: src/callback.c:300
 msgid "translator-credits"
 msgstr "Michal Wrobel <wrobel@task.gda.pl>"
 
@@ -224,84 +225,84 @@ msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' już istnieje. Czy go zastąpić?"
 
 # src/file.c:42
-#: src/file.c:42
+#: src/file.c:43
 msgid "Untitled"
 msgstr "Bez nazwy"
 
 # src/file.c:186
-#: src/file.c:186
+#: src/file.c:189
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Nie można przekonwertować strony kodowej do '%s'"
 
 # src/file.c:199
-#: src/file.c:199
+#: src/file.c:202
 msgid "Can't open file to write"
 msgstr "Nie można otworzyć pliku do zapisu"
 
 # src/file.c:204
-#: src/file.c:204
+#: src/file.c:207
 msgid "Can't write file"
 msgstr "Nie można zapisać pliku"
 
 # src/search.c:132
-#: src/search.c:132
+#: src/search.c:138
 msgid "Search string not found"
 msgstr "Szukany łańcuch nie został znaleziony"
 
 # src/search.c:175
-#: src/search.c:175
+#: src/search.c:181
 msgid "Replace?"
 msgstr "Zastąpić?"
 
 # src/search.c:210
-#: src/search.c:210
+#: src/search.c:218
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d łańcuchów zastąpiono"
 
 # src/search.c:256
-#: src/search.c:256
+#: src/search.c:264
 msgid "Replace"
 msgstr "Zastąp"
 
 # src/search.c:263
-#: src/search.c:263
+#: src/search.c:271
 msgid "Find"
 msgstr "Znajdź"
 
 # src/search.c:276
-#: src/search.c:276
+#: src/search.c:284
 msgid "Fi_nd what:"
 msgstr "_Znajdź:"
 
 # src/search.c:292
-#: src/search.c:292
+#: src/search.c:300
 msgid "Re_place with:"
 msgstr "Z_amień na:"
 
 # src/search.c:306
-#: src/search.c:306
+#: src/search.c:314
 msgid "_Match case"
 msgstr "_Uwzględniaj wielkość liter"
 
 # src/search.c:311
-#: src/search.c:311
+#: src/search.c:319
 msgid "Replace _all at once"
 msgstr "Zamień _wszystko"
 
 # src/search.c:362
-#: src/search.c:362
+#: src/search.c:370
 msgid "Jump To"
 msgstr "Idź do"
 
 # src/search.c:368
-#: src/search.c:368
+#: src/search.c:376
 msgid "_Jump"
 msgstr "_Idź"
 
 # src/search.c:375
-#: src/search.c:375
+#: src/search.c:383
 msgid "_Line number:"
 msgstr "Numer _linii:"
 
@@ -336,37 +337,37 @@ msgid "_Format page"
 msgstr "_Format strony"
 
 # src/about.c:102
-#: src/about.c:102
+#: src/about.c:103
 msgid "Credits"
 msgstr "Zasługi"
 
 # src/about.c:137
-#: src/about.c:137
+#: src/about.c:138
 msgid "Written by"
 msgstr "Stworzony przez"
 
 # src/about.c:140
-#: src/about.c:140
+#: src/about.c:141
 msgid "Documented by"
 msgstr "Dokumentacja wykonana przez"
 
 # src/about.c:146
-#: src/about.c:146
+#: src/about.c:147
 msgid "Translated by"
 msgstr "Przetłumaczony przez"
 
 # src/about.c:197
-#: src/about.c:197
+#: src/about.c:198
 msgid "C_redits"
 msgstr "Zasługi"
 
 # src/about.c:199
-#: src/about.c:199
+#: src/about.c:200
 msgid "_Credits"
 msgstr "Zasługo"
 
 # src/about.c:209
-#: src/about.c:209
+#: src/about.c:210
 #, c-format
 msgid "About %s"
 msgstr "O %s"

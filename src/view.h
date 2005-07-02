@@ -23,7 +23,9 @@
 gint get_current_keyval(void);
 void clear_current_keyval(void);
 void scroll_to_cursor(GtkTextBuffer *buffer, gdouble within_margin);
-void force_call_cb_modifed_changed(GtkWidget *view);
+void force_call_cb_modified_changed(GtkWidget *view);
+void force_block_cb_modified_changed(GtkWidget *view);
+void force_unblock_cb_modified_changed(GtkWidget *view);
 void set_view_scroll(void);
 gint check_text_modification(void);
 GtkWidget *create_text_view(void);

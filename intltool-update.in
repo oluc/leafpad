@@ -1,4 +1,5 @@
 #!@INTLTOOL_PERL@ -w
+# -*- Mode: perl; indent-tabs-mode: nil; c-basic-offset: 4  -*-
 
 #
 #  The Intltool Message Updater
@@ -29,7 +30,7 @@
 
 ## Release information
 my $PROGRAM = "intltool-update";
-my $VERSION = "0.27.2";
+my $VERSION = "0.31.2";
 my $PACKAGE = "intltool";
 
 ## Loaded modules
@@ -58,29 +59,40 @@ my %po_files_by_lang = ();
 # Regular expressions to categorize file types.
 # FIXME: Please check if the following is correct
 
-my $xml_extension =
-"xml(\.in)*|".		# .in is not required
-"ui|".
-"lang|".
-"glade2?(\.in)*|".	# .in is not required
-"scm(\.in)*|".		# .in is not required
-"oaf(\.in)+|".
-"etspec|".
-"server(\.in)+|".
-"sheet(\.in)+|".
-"schemas(\.in)+|".
-"pong(\.in)+";
+my $xml_support =
+"xml(?:\\.in)*|".	# http://www.w3.org/XML/ (Note: .in is not required)
+"ui|".			# Bonobo specific - User Interface desc. files
+"lang|".		# ?
+"glade2?(?:\\.in)*|".	# Glade specific - User Interface desc. files (Note: .in is not required)
+"scm(?:\\.in)*|".	# ? (Note: .in is not required)
+"oaf(?:\\.in)+|".	# DEPRECATED: Replaces by Bonobo .server files 
+"etspec|".		# ?
+"server(?:\\.in)+|".	# Bonobo specific
+"sheet(?:\\.in)+|".	# ?
+"schemas(?:\\.in)+|".	# GConf specific
+"pong(?:\\.in)+|".	# DEPRECATED: PONG is not used [by GNOME] any longer.
+"kbd(?:\\.in)+";	# GOK specific. 
 
-my $ini_extension =
-"desktop(\.in)+|".
-"caves(\.in)+|". 
-"directory(\.in)+|".
-"soundlist(\.in)+|".
-"keys(\.in)+|".
-"theme(\.in)+";
+my $ini_support =
+"desktop(?:\\.in)+|".	# http://www.freedesktop.org/Standards/menu-spec
+"caves(?:\\.in)+|".	# GNOME Games specific
+"directory(?:\\.in)+|".	# http://www.freedesktop.org/Standards/menu-spec
+"soundlist(?:\\.in)+|".	# GNOME specific
+"keys(?:\\.in)+|".	# GNOME Mime database specific
+"theme(?:\\.in)+";	# http://www.freedesktop.org/Standards/icon-theme-spec
+
+my $buildin_gettext_support = 
+"c|y|cs|cc|cpp|c\\+\\+|h|hh|gob|py";
 
 ## Always flush buffer when printing
 $| = 1;
+
+## Sometimes the source tree will be rooted somewhere else.
+my $SRCDIR = ".";
+my $POTFILES_in;
+
+$SRCDIR = $ENV{"srcdir"} if $ENV{"srcdir"};
+$POTFILES_in = "<$SRCDIR/POTFILES.in";
 
 ## Handle options
 GetOptions 
@@ -95,10 +107,10 @@ GetOptions
  "verbose|x"	       => \$VERBOSE,
  "gettext-package|g=s" => \$GETTEXT_PACKAGE,
  "output-file|o=s"     => \$OUTPUT_FILE,
- ) or &print_error_invalid_option;
+ ) or &Console_WriteError_InvalidOption;
 
-&print_help if $HELP_ARG;
-&print_version if $VERSION_ARG;
+&Console_Write_IntltoolHelp if $HELP_ARG;
+&Console_Write_IntltoolVersion if $VERSION_ARG;
 
 my $arg_count = ($DIST_ARG > 0)
     + ($POT_ARG > 0)
@@ -106,29 +118,29 @@ my $arg_count = ($DIST_ARG > 0)
     + ($MAINTAIN_ARG > 0)
     + ($REPORT_ARG > 0);
 
-&print_help if $arg_count > 1;
+&Console_Write_IntltoolHelp if $arg_count > 1;
 
 # --version and --help don't require a module name
-my $MODULE = $GETTEXT_PACKAGE || &find_package_name;
+my $MODULE = $GETTEXT_PACKAGE || &FindPackageName;
 
 if ($POT_ARG)
 {
-    &generate_headers;
-    &generate_po_template;
+    &GenerateHeaders;
+    &GeneratePOTemplate;
 }
 elsif ($HEADERS_ARG)
 {
-    &generate_headers;
+    &GenerateHeaders;
 }
 elsif ($MAINTAIN_ARG)
 {
-    &find_leftout_files;
+    &FindLeftoutFiles;
 }
 elsif ($REPORT_ARG)
 {
-    &generate_headers;
-    &generate_po_template;
-    &print_report;
+    &GenerateHeaders;
+    &GeneratePOTemplate;
+    &Console_Write_CoverageReport;
 }
 elsif ((defined $ARGV[0]) && $ARGV[0] =~ /^[a-z]/)
 {
@@ -136,27 +148,27 @@ elsif ((defined $ARGV[0]) && $ARGV[0] =~ /^[a-z]/)
 
     ## Report error if the language file supplied
     ## to the command line is non-existent
-    &print_error_not_existing("$lang.po") if ! -s "$lang.po";
+    &Console_WriteError_NotExisting("$lang.po") if ! -s "$lang.po";
 
     if (!$DIST_ARG)
     {
 	print "Working, please wait..." if $VERBOSE;
-	&generate_headers;
-	&generate_po_template;
+	&GenerateHeaders;
+	&GeneratePOTemplate;
     }
-    &update_po_file ($lang, $OUTPUT_FILE);
-    &print_status ($lang, $OUTPUT_FILE);
+    &POFile_Update ($lang, $OUTPUT_FILE);
+    &Console_Write_TranslationStatus ($lang, $OUTPUT_FILE);
 } 
 else 
 {
-    &print_help;
+    &Console_Write_IntltoolHelp;
 }
 
 exit;
 
 #########
 
-sub print_version
+sub Console_Write_IntltoolVersion
 {
     print <<_EOF_;
 ${PROGRAM} (${PACKAGE}) $VERSION
@@ -169,7 +181,7 @@ _EOF_
     exit;
 }
 
-sub print_help
+sub Console_Write_IntltoolHelp
 {
     print <<_EOF_;
 Usage: ${PROGRAM} [OPTION]... LANGCODE
@@ -199,18 +211,14 @@ _EOF_
     exit;
 }
 
-sub determine_type ($) 
+sub POFile_DetermineType ($) 
 {
    my $type = $_;
    my $gettext_type;
 
-   # FIXME: Use $xml_extension, and maybe do all this even nicer
-   my $xml_regex = 
-       "(?:xml(\.in)*|ui|lang|oaf(?:\.in)+|server(?:\.in)+|sheet(?:\.in)+|".
-       "pong(?:\.in)+|etspec|schemas(?:\.in)+)";
-   my $ini_regex =
-       "(?:desktop(?:\.in)+|theme(?:\.in)+|caves(?:\.in)+|directory(?:\.in)+|".
-       "soundlist(?:\.in)+)";
+   my $xml_regex     = "(?:" . $xml_support . ")";
+   my $ini_regex     = "(?:" . $ini_support . ")";
+   my $buildin_regex = "(?:" . $buildin_gettext_support . ")";
 
    if ($type =~ /\[type: gettext\/([^\]].*)]/) 
    {
@@ -220,17 +228,9 @@ sub determine_type ($)
    {
 	$gettext_type="schemas";
    }
-   elsif ($type =~ /$xml_regex$/) 
-   {
-       $gettext_type="xml";
-   }
    elsif ($type =~ /glade2?(\.in)*$/) 
    {
        $gettext_type="glade";
-   }
-   elsif ($type =~ /$ini_regex$/) 
-   { 
-       $gettext_type="ini";
    }
    elsif ($type =~ /scm(\.in)*$/) 
    {
@@ -240,15 +240,30 @@ sub determine_type ($)
    {
        $gettext_type="keys";
    }
-   else 
+
+   # bucket types
+
+   elsif ($type =~ /$xml_regex$/) 
+   {
+       $gettext_type="xml";
+   }
+   elsif ($type =~ /$ini_regex$/) 
    { 
-       $gettext_type=""; 
+       $gettext_type="ini";
+   }
+   elsif ($type =~ /$buildin_regex$/) 
+   {
+       $gettext_type="buildin";
+   }
+   else
+   { 
+       $gettext_type="unknown"; 
    }
 
    return "gettext\/$gettext_type";
 }
 
-sub determine_code ($) 
+sub TextFile_DetermineEncoding ($) 
 {
     my $gettext_code="ASCII"; # All files are ASCII by default
     my $filetype=`file $_ | cut -d ' ' -f 2`;
@@ -269,7 +284,7 @@ sub determine_code ($)
 }
 
 
-sub find_leftout_files
+sub FindLeftoutFiles
 {
     my (@buf_i18n_plain,
 	@buf_i18n_xml,
@@ -284,14 +299,14 @@ sub find_leftout_files
 
     ## Search and find all translatable files
     find sub { 
-	push @buf_i18n_plain,        "$File::Find::name" if /\.(c|y|cc|cpp|c\+\+|h|gob)$/;
-	push @buf_i18n_xml,          "$File::Find::name" if /\.($xml_extension)$/;
-	push @buf_i18n_ini,          "$File::Find::name" if /\.($ini_extension)$/;
+	push @buf_i18n_plain,        "$File::Find::name" if /\.($buildin_gettext_support)$/;
+	push @buf_i18n_xml,          "$File::Find::name" if /\.($xml_support)$/;
+	push @buf_i18n_ini,          "$File::Find::name" if /\.($ini_support)$/;
 	push @buf_i18n_xml_unmarked, "$File::Find::name" if /\.(schemas(\.in)+)$/;
 	}, "..";
 
 
-    open POTFILES, "<POTFILES.in" or die "$PROGRAM:  there's no POTFILES.in!\n";
+    open POTFILES, $POTFILES_in or die "$PROGRAM:  there's no POTFILES.in!\n";
     @buf_potfiles = grep !/^(#|\s*$)/, <POTFILES>;
     close POTFILES;
 
@@ -379,6 +394,13 @@ sub find_leftout_files
 		    }
 		}
 	    }	    
+
+	    if (/\.GetString ?\(QUOTEDTEXT/)
+	    {
+		## Remove the first 3 chars and add newline
+		push @buf_allfiles, unpack("x3 A*", $file) . "\n";
+		last;
+	    }
 
 	    if (/_\(QUOTEDTEXT/)
 	    {
@@ -494,14 +516,14 @@ sub find_leftout_files
     }
 }
 
-sub print_error_invalid_option
+sub Console_WriteError_InvalidOption
 {
     ## Handle invalid arguments
     print STDERR "Try `${PROGRAM} --help' for more information.\n";
     exit 1;
 }
 
-sub generate_headers
+sub GenerateHeaders
 {
     my $EXTRACT = `which intltool-extract 2>/dev/null`;
     chomp $EXTRACT;
@@ -518,7 +540,7 @@ sub generate_headers
     }
     else
     {
-	open (FILE, "<POTFILES.in") or die "$PROGRAM: POTFILES.in not found.\n";
+	open (FILE, $POTFILES_in) or die "$PROGRAM: POTFILES.in not found.\n";
 	
 	while (<FILE>) 
 	{
@@ -528,9 +550,9 @@ sub generate_headers
 	   ## Find xml files in POTFILES.in and generate the
 	   ## files with help from the extract script
 
-	   my $gettext_type= &determine_type ($1);
+	   my $gettext_type= &POFile_DetermineType ($1);
 
-	   if (/\.($xml_extension|$ini_extension)$/ || /^\[/)
+	   if (/\.($xml_support|$ini_support)$/ || /^\[/)
 	   {
 	       s/^\[[^\[].*]\s*//;
 
@@ -538,13 +560,13 @@ sub generate_headers
 
 	       if ($VERBOSE)
 	       {
-		   system ($EXTRACT, "--update", 
+		   system ($EXTRACT, "--update", "--srcdir=$SRCDIR",
 			   "--type=$gettext_type", $filename);
 	       } 
 	       else 
 	       {
 	 	   system ($EXTRACT, "--update", "--type=$gettext_type", 
-			   "--quiet", $filename);
+			   "--srcdir=$SRCDIR", "--quiet", $filename);
 	       }
 	   }
        }
@@ -555,12 +577,14 @@ sub generate_headers
 #
 # Generate .pot file from POTFILES.in
 #
-sub generate_po_template
+sub GeneratePOTemplate
 {
     my $XGETTEXT = `which xgettext 2>/dev/null`;
+    my $XGETTEXT_ARGS = '';
     chomp $XGETTEXT;
 
     $XGETTEXT = $ENV{"XGETTEXT"} if $ENV{"XGETTEXT"};
+    $XGETTEXT_ARGS = $ENV{"XGETTEXT_ARGS"} if $ENV{"XGETTEXT_ARGS"};
 
     if (! -x $XGETTEXT)
     {
@@ -571,15 +595,15 @@ sub generate_po_template
 
     print "Building $MODULE.pot...\n" if $VERBOSE;
 
-    open INFILE, "<POTFILES.in";
+    open INFILE, $POTFILES_in;
     unlink "POTFILES.in.temp";
     open OUTFILE, ">POTFILES.in.temp";
 
     my $gettext_support_nonascii = 0;
 
     # checks for GNU gettext >= 0.12
-    # don't use argument list, since shell interpretation is desired here
-    if (system("$XGETTEXT --version --from-code=UTF-8 >&/dev/null") == 0)
+    my $dummy = `$XGETTEXT --version --from-code=UTF-8 >/dev/null 2>/dev/null`;
+    if ($? == 0)
     {
 	$gettext_support_nonascii = 1;
     }
@@ -589,7 +613,7 @@ sub generate_po_template
 	print STDERR "WARNING: This version of gettext does not support extracting non-ASCII\n".
 		     "         strings. That means you should install a version of gettext\n".
 		     "         that supports non-ASCII strings (such as GNU gettext >= 0.12),\n".
-		     "         or have to let non-ASCII strings untranslated.\n";
+		     "         or have to let non-ASCII strings untranslated. (If there is any)\n";
     }
 
     my $encoding = "ASCII";
@@ -609,17 +633,21 @@ sub generate_po_template
 	{
 	    $forced_gettext_code=$1;
 	}
-	elsif (/\.($xml_extension|$ini_extension)$/ || /^\[/)
+	elsif (/\.($xml_support|$ini_support)$/ || /^\[/)
 	{
 	    s/^\[.*]\s*//;
 	    print OUTFILE "$_.h\n";
 	    push @temp_headers, "../$_.h";
-	    $gettext_code = &determine_code ("../$_.h") if ($gettext_support_nonascii and not defined $forced_gettext_code);
+	    $gettext_code = &TextFile_DetermineEncoding ("../$_.h") if ($gettext_support_nonascii and not defined $forced_gettext_code);
 	} 
 	else 
 	{
-	    print OUTFILE "$_\n";
-	    $gettext_code = &determine_code ("../$_") if ($gettext_support_nonascii and not defined $forced_gettext_code);
+	    if ($SRCDIR eq ".") {
+	        print OUTFILE "$_\n";
+	    } else {
+	        print OUTFILE "$SRCDIR/../$_\n";
+	    }
+	    $gettext_code = &TextFile_DetermineEncoding ("../$_") if ($gettext_support_nonascii and not defined $forced_gettext_code);
 	}
 
 	next if (! $gettext_support_nonascii);
@@ -661,15 +689,16 @@ sub generate_po_template
     my @xgettext_argument=("$XGETTEXT",
 			   "--add-comments",
 			   "--directory\=\.\.",
-			   "--keyword\=\_",
-			   "--keyword\=N\_",
-			   "--keyword\=U\_",
 			   "--output\=$MODULE\.pot",
 			   "--files-from\=\.\/POTFILES\.in\.temp");
+    my $XGETTEXT_KEYWORDS = &FindPOTKeywords;
+    push @xgettext_argument, $XGETTEXT_KEYWORDS;
     push @xgettext_argument, "--from-code\=$encoding" if ($gettext_support_nonascii);
+    push @xgettext_argument, $XGETTEXT_ARGS if $XGETTEXT_ARGS;
     my $xgettext_command = join ' ', @xgettext_argument;
 
     # intercept xgettext error message
+    print "Running $xgettext_command\n" if $VERBOSE;
     my $xgettext_error_msg = `$xgettext_command 2>\&1`;
     my $command_failed = $?;
 
@@ -720,7 +749,7 @@ sub generate_po_template
     }
 }
 
-sub update_po_file
+sub POFile_Update
 {
     -f "$MODULE.pot" or die "$PROGRAM: $MODULE.pot does not exist.\n";
 
@@ -735,7 +764,7 @@ sub update_po_file
     system ("msgmerge", "-o", $outfile, $infile, "$MODULE.pot");
 }
 
-sub print_error_not_existing
+sub Console_WriteError_NotExisting
 {
     my ($file) = @_;
 
@@ -745,11 +774,11 @@ sub print_error_not_existing
     exit;
 }
 
-sub gather_po_files
+sub GatherPOFiles
 {
     my @po_files = glob ("./*.po");
 
-    @languages = map (&po_file2lang, @po_files);
+    @languages = map (&POFile_GetLanguage, @po_files);
 
     foreach my $lang (@languages) 
     {
@@ -757,13 +786,13 @@ sub gather_po_files
     }
 }
 
-sub po_file2lang ($)
+sub POFile_GetLanguage ($)
 {
     s/^(.*\/)?(.+)\.po$/$2/;
     return $_;
 }
 
-sub print_status
+sub Console_Write_TranslationStatus
 {
     my ($lang, $output_file) = @_;
 
@@ -772,14 +801,14 @@ sub print_status
     system ("msgfmt", "-o", "/dev/null", "--statistics", $output_file);
 }
 
-sub print_report
+sub Console_Write_CoverageReport
 {
-    &gather_po_files;
+    &GatherPOFiles;
 
     foreach my $lang (@languages) 
     {
 	print "$lang: ";
-	&update_po_file ($lang, "");
+	&POFile_Update ($lang, "");
     }
 
     print "\n\n * Current translation support in $MODULE \n\n";
@@ -791,7 +820,7 @@ sub print_report
     }
 }
 
-sub substitute_var
+sub SubstituteVariable
 {
     my ($str) = @_;
     
@@ -802,9 +831,9 @@ sub substitute_var
     # variables elsewhere.
     while (<CONF>)
     {
-	if (/^(\w+)=(\S+)/)
+	if (/^(\w+)=(.*)$/)
 	{
-	    $varhash{$1} = $2;
+	    ($varhash{$1} = $2) =~  s/^["'](.*)["']$/$1)/;
 	}
     }
     
@@ -814,12 +843,12 @@ sub substitute_var
 	my $untouched = $1;
 	my $sub = $varhash{$2};
 	
-	return substitute_var ("$untouched$sub$rest");
+	return SubstituteVariable ("$untouched$sub$rest");
     }
     return $str;
 }
 
-sub open_CONF_handle
+sub CONF_Handle_Open
 {
     my $base_dirname = getcwd();
     $base_dirname =~ s@.*/@@;
@@ -828,7 +857,34 @@ sub open_CONF_handle
 
     if ($base_dirname =~ /^po(-.+)?$/) 
     {
-	if (-f "../configure.ac") 
+	if (-f "Makevars") 
+	{
+	    my $makefile_source;
+
+	    local (*IN);
+	    open (IN, "<Makevars") || die "can't open Makevars: $!";
+
+	    while (<IN>) 
+	    {
+		if (/^top_builddir[ \t]*=/) 
+		{
+		    $src_dir = $_;
+		    $src_dir =~ s/^top_builddir[ \t]*=[ \t]*([^ \t\n\r]*)/$1/;
+
+		    chomp $src_dir;
+                    if (-f "$src_dir" . "/configure.ac") {
+                        $conf_in = "$src_dir" . "/configure.ac" . "\n";
+                    } else {
+                        $conf_in = "$src_dir" . "/configure.in" . "\n";
+                    }
+		    last;
+		}
+	    }
+	    close IN;
+
+	    $conf_in || die "Cannot find top_builddir in Makevars.";
+	}
+	elsif (-f "../configure.ac") 
 	{
 	    $conf_in = "../configure.ac";
 	} 
@@ -841,7 +897,7 @@ sub open_CONF_handle
 	    my $makefile_source;
 
 	    local (*IN);
-	    open IN, "<Makefile" || die "can't open Makefile: $!";
+	    open (IN, "<Makefile") || return;
 
 	    while (<IN>) 
 	    {
@@ -861,7 +917,7 @@ sub open_CONF_handle
 	    $conf_in || die "Cannot find top_srcdir in Makefile.";
 	}
 
-	open (CONF, "<$conf_in") || die "can't open $conf_in: $!";
+	open (CONF, "<$conf_in");
     }
     else
     {
@@ -871,21 +927,22 @@ sub open_CONF_handle
     }
 }
 
-sub find_package_name
+sub FindPackageName
 {
-    &open_CONF_handle;
+    my $version;
+    my $domain = &FindMakevarsDomain;
+    my $name = $domain || "untitled";
+
+    &CONF_Handle_Open;
 
     my $conf_source; {
 	local (*IN);
-	open (IN, "<&CONF") || die "can't open configure.in/configure.ac: $!";
+	open (IN, "<&CONF") || return $name;
 	seek (IN, 0, 0);
 	local $/; # slurp mode
 	$conf_source = <IN>;
 	close IN;
     }
-
-    my $name = "untitled";
-    my $version;
 
     # priority for getting package name:
     # 1. GETTEXT_PACKAGE
@@ -897,16 +954,23 @@ sub find_package_name
     if ($conf_source =~ /^AM_INIT_AUTOMAKE\(([^,\)]+),([^,\)]+)/m)
     {
 	($name, $version) = ($1, $2);
-	$name =~ s/[\[\]\s]//g;
-	($varhash{"AC_PACKAGE_VERSION"} = $version) =~ s/[\[\]\s]//g;
+	$name    =~ s/[\[\]\s]//g;
+	$version =~ s/[\[\]\s]//g;
+	$varhash{"AC_PACKAGE_NAME"} = $name;
+	$varhash{"PACKAGE"} = $name;
+	$varhash{"AC_PACKAGE_VERSION"} = $version;
+	$varhash{"VERSION"} = $version;
     }
     
     if ($conf_source =~ /^AC_INIT\(([^,\)]+),([^,\)]+)/m) 
     {
 	($name, $version) = ($1, $2);
-	$name=~ s/[\[\]\s]//g;
+	$name    =~ s/[\[\]\s]//g;
+	$version =~ s/[\[\]\s]//g;
 	$varhash{"AC_PACKAGE_NAME"} = $name;
-	($varhash{"AC_PACKAGE_VERSION"} = $version) =~ s/[\[\]\s]//g;
+	$varhash{"PACKAGE"} = $name;
+	$varhash{"AC_PACKAGE_VERSION"} = $version;
+	$varhash{"VERSION"} = $version;
     }
 
     # \s makes this not work, why?
@@ -916,8 +980,51 @@ sub find_package_name
     # used in configure.in/ac without the '$'
     $name =~ s/AC_/\$AC_/g;
     $name =~ s/\$\$/\$/g;
-    
-    $name = substitute_var ($name);
+
+    $name = $domain if $domain;
+
+    $name = SubstituteVariable ($name);
+    $name =~ s/^["'](.*)["']$/$1/;
 
     return $name if $name;
+}
+
+
+sub FindPOTKeywords
+{
+
+    my $keywords = "--keyword\=\_ --keyword\=N\_ --keyword\=U\_";
+    my $varname = "XGETTEXT_OPTIONS";
+    my $make_source; {
+	local (*IN);
+	open (IN, "<Makevars") || (open(IN, "<Makefile.in.in") && ($varname = "XGETTEXT_KEYWORDS")) || return $keywords;
+	seek (IN, 0, 0);
+	local $/; # slurp mode
+	$make_source = <IN>;
+	close IN;
+    }
+
+    $keywords = $1 if $make_source =~ /^$varname[ ]*=\[?([^\n\]]+)/m;
+    
+    return $keywords;
+}
+
+sub FindMakevarsDomain
+{
+
+    my $domain = "";
+    my $makevars_source; { 
+	local (*IN);
+	open (IN, "<Makevars") || return $domain;
+	seek (IN, 0, 0);
+	local $/; # slurp mode
+	$makevars_source = <IN>;
+	close IN;
+    }
+
+    $domain = $1 if $makevars_source =~ /^DOMAIN[ ]*=\[?([^\n\]\$]+)/m;
+    $domain =~ s/^\s+//;
+    $domain =~ s/\s+$//;
+    
+    return $domain;
 }
