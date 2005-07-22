@@ -1,3 +1,12 @@
+2005-07-22
+
+  version 0.8.3:
+	* Implemented replaced word highlighting.
+	* Modified line-number margin.
+	* Fixed space-separeted filename bugs (thanks Andrea Antolini).
+	* Added Slovak translation (Peter Chabada).
+	* Updated Polish translation (Michal Wrobel).
+
 2005-07-02
 
   version 0.8.2:

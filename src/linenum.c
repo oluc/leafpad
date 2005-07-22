@@ -23,7 +23,7 @@
 
 static gint min_number_window_width;
 static gboolean line_number_visible = FALSE;
-#define	margin 4
+#define	margin 5
 #define	submargin 2
 
 static gint calculate_min_number_window_width(GtkWidget *widget)
@@ -265,7 +265,12 @@ DV({g_print("Painting line numbers %d - %d\n",
 		                  NULL,
 		                  widget,
 		                  NULL,
-		                  layout_width + justify_width + margin / 2 - 1, pos,
+#if GTK_CHECK_VERSION(2, 6, 0)  // Is this solution???
+		                  layout_width + justify_width + margin / 2 + 1,
+#else
+		                  layout_width + justify_width + margin / 2,
+#endif
+		                  pos,
 		                  layout);
 //		g_free (str);
 		

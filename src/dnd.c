@@ -53,6 +53,8 @@ static void dnd_drag_data_recieved_handler(GtkWidget *widget,
 	gchar *filename;
 	gchar *comline;
 	gint i = 0, j = 0;
+	gchar *filename_sh;
+	gchar **strs;
 #ifdef ENABLE_CSDI
 	j = 1;
 #endif
@@ -84,8 +86,15 @@ DV({
 			else {
 				if (i + j == 1)
 					save_config_file();
-				comline = g_strdup_printf("%s %s", PACKAGE, filename);
+				if (strstr(filename, " ")) {
+					strs = g_strsplit(filename, " ", -1);
+					filename_sh = g_strjoinv("\\ ", strs);
+					g_strfreev(strs);
+				} else
+					filename_sh = g_strdup(filename);
+				comline = g_strdup_printf("%s %s", PACKAGE, filename_sh);
 DV(g_print(">%s\n", comline));
+				g_free(filename_sh);
 				g_spawn_command_line_async(comline, NULL);
 				g_free(comline);
 			}

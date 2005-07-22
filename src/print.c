@@ -174,6 +174,8 @@ void create_print_session(void)
 	gchar *std_err;
 	gint status;
 	GError *error = NULL;
+	gchar *basename_sh;
+	gchar **strs;
 	
 	if (printer_name == NULL)
 		init_vars();
@@ -189,12 +191,19 @@ void create_print_session(void)
 		return;
 	}
 	if (!write_tmp(fd)) {
-		basename = get_file_basename(pub->fi->filename, FALSE),
+		basename = get_file_basename(pub->fi->filename, FALSE);
+		if (strstr(basename, " ")) {
+			strs = g_strsplit(basename, " ", -1);
+			basename_sh = g_strjoinv("\\ ", strs);
+			g_strfreev(strs);
+		} else
+			basename_sh = g_strdup(basename);
+		g_free(basename);
 		comline = g_strdup_printf("lpr -P%s -\'#\'%d -T%s %s%s",
-			printer_name, print_num, basename,
+			printer_name, print_num, basename_sh,
 			print_format ? "-p " : "",
 			tmp_filename);
-		g_free(basename);
+		g_free(basename_sh);
 		
 //		g_print(">%s\n", comline);
 		g_spawn_command_line_sync(comline, &std_out, &std_err, &status, &error);

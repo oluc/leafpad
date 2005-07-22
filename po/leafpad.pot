@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-03 01:04+0900\n"
+"POT-Creation-Date: 2005-07-20 23:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,52 +201,52 @@ msgstr ""
 msgid "Can't write file"
 msgstr ""
 
-#: src/search.c:138
+#: src/search.c:140
 msgid "Search string not found"
 msgstr ""
 
-#: src/search.c:181
+#: src/search.c:193
 msgid "Replace?"
 msgstr ""
 
-#: src/search.c:218
+#: src/search.c:249
 #, c-format
 msgid "%d strings replaced"
 msgstr ""
 
-#: src/search.c:264
+#: src/search.c:295
 msgid "Replace"
 msgstr ""
 
-#: src/search.c:271
+#: src/search.c:302
 msgid "Find"
 msgstr ""
 
-#: src/search.c:284
+#: src/search.c:315
 msgid "Fi_nd what:"
 msgstr ""
 
-#: src/search.c:300
+#: src/search.c:331
 msgid "Re_place with:"
 msgstr ""
 
-#: src/search.c:314
+#: src/search.c:345
 msgid "_Match case"
 msgstr ""
 
-#: src/search.c:319
+#: src/search.c:350
 msgid "Replace _all at once"
 msgstr ""
 
-#: src/search.c:370
+#: src/search.c:401
 msgid "Jump To"
 msgstr ""
 
-#: src/search.c:376
+#: src/search.c:407
 msgid "_Jump"
 msgstr ""
 
-#: src/search.c:383
+#: src/search.c:414
 msgid "_Line number:"
 msgstr ""
 
@@ -274,31 +274,31 @@ msgstr ""
 msgid "_Format page"
 msgstr ""
 
-#: src/about.c:103
+#: src/about.c:102
 msgid "Credits"
 msgstr ""
 
-#: src/about.c:138
+#: src/about.c:137
 msgid "Written by"
 msgstr ""
 
-#: src/about.c:141
+#: src/about.c:140
 msgid "Documented by"
 msgstr ""
 
-#: src/about.c:147
+#: src/about.c:146
 msgid "Translated by"
 msgstr ""
 
-#: src/about.c:198
+#: src/about.c:197
 msgid "C_redits"
 msgstr ""
 
-#: src/about.c:200
+#: src/about.c:199
 msgid "_Credits"
 msgstr ""
 
-#: src/about.c:210
+#: src/about.c:209
 #, c-format
 msgid "About %s"
 msgstr ""

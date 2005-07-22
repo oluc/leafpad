@@ -1,4 +1,3 @@
-
 /*
  *  Leafpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji

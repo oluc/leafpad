@@ -55,10 +55,11 @@ static gboolean hlight_searched_strings(GtkTextBuffer *buffer, gchar *str)
 		search_flags = search_flags | GTK_SOURCE_SEARCH_CASE_INSENSITIVE;
 	
 	gtk_text_buffer_get_bounds(buffer, &start, &end);
-	gtk_text_buffer_remove_tag_by_name(buffer,
-		"searched", &start, &end);
 /*	gtk_text_buffer_remove_tag_by_name(buffer,
+		"searched", &start, &end);
+	gtk_text_buffer_remove_tag_by_name(buffer,
 		"replaced", &start, &end);	*/
+	gtk_text_buffer_remove_all_tags(buffer, &start, &end);
 	iter = start;
 	do {
 		res = gtk_source_iter_forward_search(
@@ -92,7 +93,8 @@ gboolean document_search_real(GtkWidget *textview, gint direction)
 	if (!match_case)
 		search_flags = search_flags | GTK_SOURCE_SEARCH_CASE_INSENSITIVE;
 	
-	if (direction == 0 || !hlight_check_searched())
+//	if (direction == 0 || !hlight_check_searched())
+	if (direction == 0 || (direction != 2 && !hlight_check_searched()))
 		hlight_searched_strings(GTK_TEXT_VIEW(textview)->buffer, string_find);
 	
 	gtk_text_mark_set_visible(
@@ -142,10 +144,10 @@ gboolean document_search_real(GtkWidget *textview, gint direction)
 
 static gint document_replace_real(GtkWidget *textview)
 {
-	GtkTextIter iter, match_start, match_end;
+	GtkTextIter iter, match_start, match_end, rep_start;
 	GtkTextMark *mark_init = NULL;
 	gboolean res;
-	gint num = 0;
+	gint num = 0, offset;
 	GtkWidget *q_dialog = NULL;
 	GtkSourceSearchFlags search_flags = GTK_SOURCE_SEARCH_VISIBLE_ONLY | GTK_SOURCE_SEARCH_TEXT_ONLY;	
 	GtkTextBuffer *textbuffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview));
@@ -154,11 +156,20 @@ static gint document_replace_real(GtkWidget *textview)
 		search_flags = search_flags | GTK_SOURCE_SEARCH_CASE_INSENSITIVE;
 	
 	if (replace_all) {
-		gtk_text_buffer_get_iter_at_mark(textbuffer, &iter, gtk_text_buffer_get_insert(textbuffer));
+		gtk_text_buffer_get_iter_at_mark(textbuffer,
+			&iter, gtk_text_buffer_get_insert(textbuffer));
 		mark_init = gtk_text_buffer_create_mark(textbuffer, NULL, &iter, FALSE);
 		gtk_text_buffer_get_start_iter(textbuffer, &iter);
-	} else
+		
+		gtk_text_buffer_get_end_iter(textbuffer, &match_end);
+//		gtk_text_buffer_remove_tag_by_name(textbuffer,
+//			"replaced", &iter, &match_end);
+		gtk_text_buffer_remove_all_tags(textbuffer,
+			&iter, &match_end);
+	} else {
 		hlight_searched_strings(textbuffer, string_find);
+		hlight_toggle_searched(textbuffer);
+	}
 	
 	do {
 		if (replace_all) {
@@ -172,7 +183,8 @@ static gint document_replace_real(GtkWidget *textview)
 			}
 		}
 		else
-			res = document_search_real(textview, 0);
+//			res = document_search_real(textview, 0);
+			res = document_search_real(textview, 2);
 		
 		if (res) {
 			if (!replace_all) {
@@ -193,17 +205,36 @@ static gint document_replace_real(GtkWidget *textview)
 				}
 			}
 			gtk_text_buffer_delete_selection(textbuffer, TRUE, TRUE);
-			undo_set_sequency(TRUE);
-			g_signal_emit_by_name(G_OBJECT(textbuffer), "begin-user-action");
-			gtk_text_buffer_insert_at_cursor(textbuffer, string_replace, strlen(string_replace));
-			g_signal_emit_by_name(G_OBJECT(textbuffer), "end-user-action");
-			num++;
-			gtk_text_buffer_get_iter_at_mark(
-				textbuffer, &iter, gtk_text_buffer_get_insert(textbuffer));
-			if (replace_all)
+			if (strlen(string_replace)) {
+				gtk_text_buffer_get_iter_at_mark(
+					textbuffer, &rep_start,
+					gtk_text_buffer_get_insert(textbuffer));
+				offset = gtk_text_iter_get_offset(&rep_start);
 				undo_set_sequency(TRUE);
+				g_signal_emit_by_name(G_OBJECT(textbuffer),
+					"begin-user-action");
+				gtk_text_buffer_insert_at_cursor(textbuffer,
+					string_replace, strlen(string_replace));
+				g_signal_emit_by_name(G_OBJECT(textbuffer),
+					"end-user-action");
+				gtk_text_buffer_get_iter_at_mark(
+					textbuffer, &iter,
+					gtk_text_buffer_get_insert(textbuffer));
+				gtk_text_buffer_get_iter_at_offset(textbuffer,
+					&rep_start, offset);
+				gtk_text_buffer_apply_tag_by_name(textbuffer,
+					"replaced", &rep_start, &iter);
+			}
+			num++;
+/*			if (replace_all)
+				undo_set_sequency(TRUE);
+			else
+				undo_set_sequency(FALSE);*/
+			undo_set_sequency(replace_all);
 		}
 	} while (res);
+	if (!hlight_check_searched())
+		hlight_toggle_searched(textbuffer);
 	
 	if (q_dialog)
 		gtk_widget_destroy(q_dialog);

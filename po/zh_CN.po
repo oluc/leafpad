@@ -6,14 +6,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
-"POT-Creation-Date: 2005-07-03 01:04+0900\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-07-20 23:21+0900\n"
 "PO-Revision-Date: 2005-05-21 02:26+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #: src/menu.c:31
 msgid "/_File"
@@ -200,52 +200,52 @@ msgstr "无法打开要写入的文件"
 msgid "Can't write file"
 msgstr "无法写入文件"
 
-#: src/search.c:138
+#: src/search.c:140
 msgid "Search string not found"
 msgstr "找不到搜索字串"
 
-#: src/search.c:181
+#: src/search.c:193
 msgid "Replace?"
 msgstr "替换吗？"
 
-#: src/search.c:218
+#: src/search.c:249
 #, c-format
 msgid "%d strings replaced"
 msgstr "替换了 %d 个字符串"
 
-#: src/search.c:264
+#: src/search.c:295
 msgid "Replace"
 msgstr "替换"
 
-#: src/search.c:271
+#: src/search.c:302
 msgid "Find"
 msgstr "查找"
 
-#: src/search.c:284
+#: src/search.c:315
 msgid "Fi_nd what:"
 msgstr "查找(_N)："
 
-#: src/search.c:300
+#: src/search.c:331
 msgid "Re_place with:"
 msgstr "替换为(_P)："
 
-#: src/search.c:314
+#: src/search.c:345
 msgid "_Match case"
 msgstr "区分大小写(_M)"
 
-#: src/search.c:319
+#: src/search.c:350
 msgid "Replace _all at once"
 msgstr "全部替换(_A)"
 
-#: src/search.c:370
+#: src/search.c:401
 msgid "Jump To"
 msgstr "跳转至"
 
-#: src/search.c:376
+#: src/search.c:407
 msgid "_Jump"
 msgstr "跳转(_J)"
 
-#: src/search.c:383
+#: src/search.c:414
 msgid "_Line number:"
 msgstr "行号(_L)："
 
@@ -273,31 +273,31 @@ msgstr "打印份数(_U)："
 msgid "_Format page"
 msgstr "格式化页面(_F)"
 
-#: src/about.c:103
+#: src/about.c:102
 msgid "Credits"
 msgstr "感谢"
 
-#: src/about.c:138
+#: src/about.c:137
 msgid "Written by"
 msgstr "作者："
 
-#: src/about.c:141
+#: src/about.c:140
 msgid "Documented by"
 msgstr "文档撰写人："
 
-#: src/about.c:147
+#: src/about.c:146
 msgid "Translated by"
 msgstr "译者："
 
-#: src/about.c:198
+#: src/about.c:197
 msgid "C_redits"
 msgstr "感谢(_R)"
 
-#: src/about.c:200
+#: src/about.c:199
 msgid "_Credits"
 msgstr "感谢(_C)"
 
-#: src/about.c:210
+#: src/about.c:209
 #, c-format
 msgid "About %s"
 msgstr "关于 %s"

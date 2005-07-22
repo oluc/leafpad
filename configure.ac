@@ -1,4 +1,4 @@
-AC_INIT(Leafpad, 0.8.2, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.8.3, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
@@ -22,7 +22,7 @@ if test "$enable_print" != "no"; then
 	fi
 fi
 
-ALL_LINGUAS="bg ca cs de es fr hu it ja lt pl pt ru sv ta vi zh_CN zh_TW"
+ALL_LINGUAS="bg ca cs de es fr hu it ja lt pl pt ru sk sv ta vi zh_CN zh_TW"
 GETTEXT_PACKAGE="$PACKAGE"
 AC_SUBST(GETTEXT_PACKAGE)
 AM_GLIB_GNU_GETTEXT

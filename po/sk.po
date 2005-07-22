@@ -1,306 +1,307 @@
-# Japanese translation of Leafpad
+# Slovak translation of leafpad.
 # Copyright (C) 2004 Free Software Foundation, Inc.
-# This file is distributed under the same license as the Leafpad package.
-# Tarot Osuji <tarot@sdf.lonestar.org>, 2004.
-#
+# This file is distributed under the same license as the leafpad package.
+# Petr Chabada <leafpad_chabada_sk>, 2005.
+# 
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.8.0\n"
+"Project-Id-Version: leafpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-20 23:21+0900\n"
-"PO-Revision-Date: 2004-09-09 21:32+0900\n"
-"Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"PO-Revision-Date: 2005-07-10 21:20+0100\n"
+"Last-Translator: Peter Chabada <sk-i18n_chabada_sk>\n"
+"Language-Team: Slovak <sk-i18n@linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/menu.c:31
 msgid "/_File"
-msgstr "/ファイル(_F)"
+msgstr "/_Súbor"
 
 #: src/menu.c:33
 msgid "/File/_New"
-msgstr "/ファイル/新規(_N)"
+msgstr "/Súbor/_Nový"
 
 #: src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/ファイル/開く(_O)..."
+msgstr "/Súbor/_Otvoriť"
 
 #: src/menu.c:37
 msgid "/File/_Save"
-msgstr "/ファイル/保存(_S)"
+msgstr "/Súbor/_Uložiť"
 
 #: src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/ファイル/別名で保存(_A)..."
+msgstr "/Súbor/Uložiť _ako..."
 
 #: src/menu.c:44
 msgid "/File/_Print..."
-msgstr "/ファイル/印刷(_P)..."
+msgstr "/Súbor/_Tlačiť..."
 
 #: src/menu.c:47
 msgid "/File/_Quit"
-msgstr "/ファイル/終了(_Q)"
+msgstr "/Súbor/_Koniec"
 
 #: src/menu.c:49
 msgid "/_Edit"
-msgstr "/編集(_E)"
+msgstr "/_Upraviť"
 
 #: src/menu.c:51
 msgid "/Edit/_Undo"
-msgstr "/編集/元に戻す(_U)"
+msgstr "/Upraviť/Vrátiť _späť"
 
 #: src/menu.c:53
 msgid "/Edit/_Redo"
-msgstr "/編集/やり直す(_R)"
+msgstr "/Upraviť/O_pakovať vrátené"
 
 #: src/menu.c:57
 msgid "/Edit/Cu_t"
-msgstr "/編集/切り取り(_T)"
+msgstr "/Upraviť/_Vystrihnúť"
 
 #: src/menu.c:59
 msgid "/Edit/_Copy"
-msgstr "/編集/コピー(_C)"
+msgstr "/Upraviť/_Kopírovať"
 
 #: src/menu.c:61
 msgid "/Edit/_Paste"
-msgstr "/編集/貼り付け(_P)"
+msgstr "/Upraviť/V_ložiť"
 
 #: src/menu.c:63
 msgid "/Edit/_Delete"
-msgstr "/編集/削除(_D)"
+msgstr "/Upraviť/_Odstrániť"
 
 #: src/menu.c:67
 msgid "/Edit/Select _All"
-msgstr "/編集/全て選択(_A)"
+msgstr "/Upraviť/Vybr_ať všetko"
 
 #: src/menu.c:69
 msgid "/_Search"
-msgstr "/検索(_S)"
+msgstr "/_Nájsť"
 
 #: src/menu.c:71
 msgid "/Search/_Find..."
-msgstr "/検索/検索(_F)..."
+msgstr "/Nájsť/_Nájsť"
 
 #: src/menu.c:73
 msgid "/Search/Find _Next"
-msgstr "/検索/次を検索(_N)"
+msgstr "/Nájsť/_Hľadať ďalšie"
 
 #: src/menu.c:75
 msgid "/Search/Find _Previous"
-msgstr "/検索/前を検索(_P)"
+msgstr "/Nájsť/Nájsť pre_dchádzajúce"
 
 #: src/menu.c:77
 msgid "/Search/_Replace..."
-msgstr "/検索/置換(_R)..."
+msgstr "/Nájsť/N_ahradiť..."
 
 #: src/menu.c:81
 msgid "/Search/_Jump To..."
-msgstr "/検索/行へジャンプ(_J)..."
+msgstr "/Nájsť/Prejsť na _riadok"
 
 #: src/menu.c:83
 msgid "/_Options"
-msgstr "/オプション(_O)"
+msgstr "/_Nástroje"
 
 #: src/menu.c:85
 msgid "/Options/_Font..."
-msgstr "/オプション/フォント(_F)..."
+msgstr "/Nástroje/_Písmo"
 
 #: src/menu.c:87
 msgid "/Options/_Word Wrap"
-msgstr "/オプション/右端で折り返す(_W)"
+msgstr "/Nástroje/_Zalamovanie textu"
 
 #: src/menu.c:89
 msgid "/Options/_Line Numbers"
-msgstr "行番号を表示(_L)"
+msgstr "/Nástroje/Zobraziť čísla _riadkov"
 
 #: src/menu.c:93
 msgid "/Options/_Auto Indent"
-msgstr "/オプション/自動インデント(_A)"
+msgstr "/Nástroje/Povoliť automatické _odsadzovanie"
 
 #: src/menu.c:95
 msgid "/_Help"
-msgstr "/ヘルプ(_H)"
+msgstr "/_Pomocník"
 
 #: src/menu.c:97
 msgid "/Help/_About"
-msgstr "/ヘルプ/情報(_A)"
+msgstr "/Pomocník/_O programe"
 
 #: src/callback.c:292
 msgid "GTK+ based simple text editor"
-msgstr "GTK+ ベースのシンプルなテキストエディタ"
+msgstr "Jednoduchý textový editor"
 
 #: src/callback.c:300
 msgid "translator-credits"
-msgstr "Tarot Osuji <tarot@sdf.lonestar.org>"
+msgstr "Peter Chabada"
 
 #: src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "'%s' の変更を保存しますか?"
+msgstr "Uložiť zmeny v dokumente '%s'?"
 
 #: src/font.c:44
 msgid "Font"
-msgstr "フォント"
+msgstr "Písmo"
 
 #: src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "現在のロケール (%s)"
+msgstr "Aktuálne lokálne nastavenie (%s)"
 
 #: src/selector.c:130
 msgid "Other Codeset"
-msgstr "その他の文字コード"
+msgstr "Iné kódovanie znakov"
 
 #: src/selector.c:170
 msgid "Code_set:"
-msgstr "文字コード(_S):"
+msgstr "Znaková _ada:"
 
 #: src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' はサポートされていません"
+msgstr "'%s' nie je podporovaná"
 
 #: src/selector.c:253
 msgid "Auto-Detect"
-msgstr "自動検出"
+msgstr "Automaticky"
 
 #: src/selector.c:305
 msgid "Open"
-msgstr "開く"
+msgstr "Otvoriť"
 
 #: src/selector.c:305
 msgid "Save As"
-msgstr "別名で保存"
+msgstr "Uložiť ako"
 
 #: src/selector.c:329
 msgid "Ch_aracter Coding:"
-msgstr "文字コード(_A):"
+msgstr "_Kódovanie znakov: "
 
 #: src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' は既に存在します. 上書きしますか?"
+msgstr "Súbor '%s' už existuje. Chcete ho nahradiť?"
 
 #: src/file.c:43
 msgid "Untitled"
-msgstr "無題"
+msgstr "Nepomenovaný dokument"
 
 #: src/file.c:189
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "文字コードを '%s' に変換できませんでした"
+msgstr "Nemôžem skonvertovať znakovú sadu na '%s'"
 
 #: src/file.c:202
 msgid "Can't open file to write"
-msgstr "ファイルを作成できませんでした"
+msgstr "Nemôžem otvoriť súbor na zápis"
 
 #: src/file.c:207
 msgid "Can't write file"
-msgstr "ファイルに書きこめませんでした"
+msgstr "Nemôžem uložiť súbor na disk"
 
 #: src/search.c:140
 msgid "Search string not found"
-msgstr "検索文字列が見つかりません"
+msgstr "Hľadaný reťazec nenájdený."
 
 #: src/search.c:193
 msgid "Replace?"
-msgstr "置換しますか?"
+msgstr "Nahradiť?"
 
 #: src/search.c:249
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d 個の文字列を置換しました"
+msgstr "Bolo nahradených '%d' reťazcov."
 
 #: src/search.c:295
 msgid "Replace"
-msgstr "置換"
+msgstr "Nahradiť"
 
 #: src/search.c:302
 msgid "Find"
-msgstr "検索"
+msgstr "Hľadať"
 
 #: src/search.c:315
 msgid "Fi_nd what:"
-msgstr "検索する文字列(_N):"
+msgstr "Náj_sť:"
 
 #: src/search.c:331
 msgid "Re_place with:"
-msgstr "置換後の文字列(_P):"
+msgstr "Nahradiť _s:"
 
 #: src/search.c:345
 msgid "_Match case"
-msgstr "大文字と小文字を区別する(_M)"
+msgstr "_Rozlišovať veľkosť písmen"
 
 #: src/search.c:350
 msgid "Replace _all at once"
-msgstr "全て置換(_A)"
+msgstr "Nahradiť _všetko"
 
 #: src/search.c:401
 msgid "Jump To"
-msgstr "行へジャンプ"
+msgstr "Prejsť na riadok"
 
 #: src/search.c:407
 msgid "_Jump"
-msgstr "ジャンプ(_J)"
+msgstr "_Prejsť na riadok"
 
 #: src/search.c:414
 msgid "_Line number:"
-msgstr "行番号(_L):"
+msgstr "Číslo _riadku:"
 
 #: src/print.c:57
 msgid "Can't convert codeset to current locale"
-msgstr "文字コードを現在のロケールに変換できませんでした"
+msgstr "Nemôžem skonvertovať znakovú sadu do lokálneho nastavenia"
 
 #: src/print.c:70
 msgid "Can't write temporary file"
-msgstr "テンポラリファイルに書きこめませんでした"
+msgstr "Nemôžem vytvoriť dočasný súbor"
 
 #: src/print.c:101
 msgid "Print"
-msgstr "印刷"
+msgstr "Tlač"
 
 #: src/print.c:124
 msgid "Printer _name:"
-msgstr "プリンタ名:"
+msgstr "T_lačiareň"
 
 #: src/print.c:136
 msgid "N_umber of copies:"
-msgstr "コピーの数:"
+msgstr "_Počet kópií:"
 
 #: src/print.c:142
 msgid "_Format page"
-msgstr "ページを整形する"
+msgstr "_Formátovať stranu"
 
 #: src/about.c:102
 msgid "Credits"
-msgstr "クレジット"
+msgstr "Poďakovanie"
 
 #: src/about.c:137
 msgid "Written by"
-msgstr "作者"
+msgstr "Napísal"
 
 #: src/about.c:140
 msgid "Documented by"
-msgstr "文書著作者"
+msgstr "Zdokumentoval"
 
 #: src/about.c:146
 msgid "Translated by"
-msgstr "翻訳者"
+msgstr "Preložil"
 
 #: src/about.c:197
 msgid "C_redits"
-msgstr "クレジット(_R)"
+msgstr "_Poďakovanie"
 
 #: src/about.c:199
 msgid "_Credits"
-msgstr "クレジット(_C)"
+msgstr "_Poďakovanie"
 
 #: src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "%s について"
+msgstr "O %s"
 
 #: leafpad.desktop.in.h:1
 msgid "Leafpad"
@@ -308,4 +309,4 @@ msgstr ""
 
 #: leafpad.desktop.in.h:2
 msgid "Simple text editor"
-msgstr "シンプルなテキストエディタ"
+msgstr "Jednoduchý textový editor"

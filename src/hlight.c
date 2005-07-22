@@ -27,8 +27,9 @@ static void cb_changed(GtkTextBuffer *buffer)
 	GtkTextIter start, end;
 	
 	gtk_text_buffer_get_bounds(buffer, &start, &end);
-	gtk_text_buffer_remove_tag_by_name(buffer,
-		"searched", &start, &end);
+//	gtk_text_buffer_remove_tag_by_name(buffer,
+//		"searched", &start, &end);
+	gtk_text_buffer_remove_all_tags(buffer, &start, &end);
 	g_signal_handlers_block_by_func(G_OBJECT(buffer),
 		G_CALLBACK(cb_changed), NULL);
 	searched_flag = FALSE;
@@ -45,9 +46,12 @@ gboolean hlight_toggle_searched(GtkTextBuffer *buffer)
 		g_signal_handlers_unblock_by_func(G_OBJECT(buffer),
 			G_CALLBACK(cb_changed), NULL);
 		searched_flag = TRUE;
-		return TRUE;
+	} else {
+		g_signal_handlers_block_by_func(G_OBJECT(buffer),
+			G_CALLBACK(cb_changed), NULL);
+		searched_flag = FALSE;
 	}
-	return FALSE;
+	return searched_flag;
 }
 
 void hlight_init(GtkTextBuffer *buffer)
