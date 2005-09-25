@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2005-07-10 21:20+0100\n"
 "Last-Translator: Peter Chabada <sk-i18n_chabada_sk>\n"
 "Language-Team: Slovak <sk-i18n@linux.sk>\n"
@@ -128,11 +128,11 @@ msgstr "/_Pomocník"
 msgid "/Help/_About"
 msgstr "/Pomocník/_O programe"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "Jednoduchý textový editor"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Peter Chabada"
 
@@ -184,20 +184,20 @@ msgstr "_Kódovanie znakov: "
 msgid "'%s' already exists. Overwrite?"
 msgstr "Súbor '%s' už existuje. Chcete ho nahradiť?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Nepomenovaný dokument"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Nemôžem skonvertovať znakovú sadu na '%s'"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "Nemôžem otvoriť súbor na zápis"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "Nemôžem uložiť súbor na disk"
 
@@ -250,27 +250,27 @@ msgstr "_Prejsť na riadok"
 msgid "_Line number:"
 msgstr "Číslo _riadku:"
 
-#: src/print.c:57
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
 msgstr "Nemôžem skonvertovať znakovú sadu do lokálneho nastavenia"
 
-#: src/print.c:70
+#: src/print.c:71
 msgid "Can't write temporary file"
 msgstr "Nemôžem vytvoriť dočasný súbor"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr "Tlač"
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr "T_lačiareň"
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr "_Počet kópií:"
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr "_Formátovať stranu"
 
@@ -304,9 +304,5 @@ msgid "About %s"
 msgstr "O %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Jednoduchý textový editor"

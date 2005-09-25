@@ -22,7 +22,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <getopt.h>
+#if !GLIB_CHECK_VERSION(2, 6, 0)
+#	include <getopt.h>
+#endif
 
 typedef struct {
 	gint width;
@@ -109,11 +111,13 @@ void save_config_file(void)
 	g_free(fontname);
 }
 
+#if !GLIB_CHECK_VERSION(2, 6, 0)
 static struct option longopts[] = {
 	{ "help", no_argument, 0, '?' },
 	{ "codeset", required_argument, 0, 0 },
 //	{ "charset", required_argument, 0, 0 },
 //	{ "encoding", required_argument, 0, 0 },
+	{ "tab-width", required_argument, 0, 't' },
 	{ "version", no_argument, 0, 'v' },
 	{ 0, 0, 0, 0 }
 };
@@ -124,21 +128,67 @@ static void print_usage(void)
 	g_print("  %s \[OPTION...] \[filename]\n", PACKAGE);
 	g_print("\n");
 	g_print("Options:\n");
-	g_print("  --codeset=CODESET             Set codeset to open file\n");
-	g_print("  --display=DISPLAY             X display to use\n");
-	g_print("  --screen=SCREEN               X screen to use\n");
-	g_print("  --sync                        Make X calls synchronous\n");
-	g_print("  --version                     Show version number\n");
-	g_print("  --help                        Show this help\n");
+	g_print("  --codeset=CODESET        Set codeset to open file\n");
+	g_print("  --tab-width=WIDTH        Set tab width\n");
+	g_print("  --display=DISPLAY        X display to use\n");
+	g_print("  --screen=SCREEN          X screen to use\n");
+	g_print("  --sync                   Make X calls synchronous\n");
+	g_print("  --version                Show version number\n");
+	g_print("  --help                   Show this help\n");
 }
+#endif
 
 static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 {
 	EncArray *encarray;
-	gint c, i;
+	gint i;
 	GError *error = NULL;
 	
-//	opterr = 0;
+#if GLIB_CHECK_VERSION(2, 6, 0)
+	GOptionContext *context;
+	gchar *opt_codeset = NULL;
+	gint opt_tab_width = 0;
+	gboolean opt_version = FALSE;
+	GOptionEntry entries[] = 
+	{
+		{ "codeset", 0, 0, G_OPTION_ARG_STRING, &opt_codeset, "Set codeset to open file", "CODESET" },
+		{ "tab-width", 0, 0, G_OPTION_ARG_INT, &opt_tab_width, "Set tab width", "WIDTH" },
+		{ "version", 0, 0, G_OPTION_ARG_NONE, &opt_version, "Show version number", NULL },
+		{ NULL }
+	};
+	
+	context = g_option_context_new("[filename]");
+	g_option_context_add_main_entries(context, entries, PACKAGE);
+	g_option_context_add_group(context, gtk_get_option_group(TRUE));
+	g_option_context_set_ignore_unknown_options(context, FALSE);
+	g_option_context_parse(context, &argc, &argv, &error);
+	g_option_context_free(context);
+	
+	if (error) {
+		g_print("%s: %s\n", PACKAGE, error->message);
+		g_error_free(error);
+		exit(-1);
+	}
+	if (opt_version) {
+		g_print("%s\n", PACKAGE_STRING);
+		exit(0);
+	}
+	if (opt_codeset) {
+		g_convert("TEST", -1, "UTF-8", opt_codeset, NULL, NULL, &error);
+		if (error) {
+			g_error_free(error);
+			error = NULL;
+		} else {
+			g_free(fi->charset);
+			fi->charset = g_strdup(opt_codeset);
+		}
+	}
+	if (opt_tab_width)
+		indent_set_default_tab_width(opt_tab_width);
+	
+#else
+	gint c;
+	
 	do {
 		c = getopt_long(argc, argv, "", longopts, NULL);
 		switch (c) {
@@ -154,14 +204,19 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 				}
 			}
 			break;
+		case 't':
+			if (optarg)
+				indent_set_default_tab_width(atoi(optarg));
+			break;
 		case 'v':
 			g_print("%s\n", PACKAGE_STRING);
-			exit(1);
+			exit(0);
 		case '?':
 			print_usage();
-			exit(1);
+			exit(0);
 		}
 	} while (c != -1);
+#endif
 	
 	if (fi->charset 
 		&& (g_strcasecmp(fi->charset, get_default_charset()) != 0)
@@ -175,8 +230,13 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 			fi->charset_flag = TRUE;
 	}
 	
+#if GLIB_CHECK_VERSION(2, 6, 0)
+	if (argc >= 2)
+		fi->filename = parse_file_uri(argv[1]);
+#else
 	if (optind < argc)
 		fi->filename = parse_file_uri(argv[optind]);
+#endif
 }
 
 gint main(gint argc, gchar **argv)
@@ -189,11 +249,6 @@ gint main(gint argc, gchar **argv)
 	bind_textdomain_codeset(PACKAGE, "UTF-8");
 	textdomain(PACKAGE);
 	
-	gtk_init(&argc, &argv);
-	
-#if !GTK_CHECK_VERSION(2, 6, 0)
-	add_about_stock();
-#endif
 	pub = g_malloc(sizeof(PublicData));
 	pub->fi = g_malloc(sizeof(FileInfo));
 	pub->fi->filename     = NULL;
@@ -202,6 +257,12 @@ gint main(gint argc, gchar **argv)
 	pub->fi->lineend      = LF;
 	
 	parse_args(argc, argv, pub->fi);
+	
+	gtk_init(&argc, &argv);
+	
+#if !GTK_CHECK_VERSION(2, 6, 0)
+	add_about_stock();
+#endif
 	
 	pub->mw = create_main_window();
 	

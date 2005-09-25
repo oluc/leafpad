@@ -17,20 +17,9 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _FILE_H
-#define _FILE_H
+#ifndef _GNOMEPRINT_H
+#define _GNOMEPRINT_H
 
-typedef struct {
-	gchar *filename;
-	gchar *charset;
-	gboolean charset_flag; /* T:unique F:listed */
-	gchar lineend;
-} FileInfo;
+gint create_gnomeprint_session(void);
 
-gboolean check_file_writable(gchar *filename);
-gchar *get_file_basename(gchar *filename, gboolean bracket);
-gchar *parse_file_uri(gchar *uri);
-gint file_open_real(GtkWidget *view, FileInfo *fi);
-gint file_save_real(GtkWidget *view, FileInfo *fi);
-
-#endif /* _FILE_H */
+#endif /* _GNOMEPRINT_H */

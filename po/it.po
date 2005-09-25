@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
-"PO-Revision-Date: 2004-11-26 16:55+0100\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
+"PO-Revision-Date: 2005-08-23 05:55+0100\n"
 "Last-Translator: Alessio D'Ascanio <g3ntaro@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -34,9 +34,8 @@ msgid "/File/Save _As..."
 msgstr "/File/Sa_lva come..."
 
 #: src/menu.c:44
-#, fuzzy
 msgid "/File/_Print..."
-msgstr "/File/_Esci"
+msgstr "/File/_Stampa..."
 
 #: src/menu.c:47
 msgid "/File/_Quit"
@@ -126,11 +125,11 @@ msgstr "/_Aiuto"
 msgid "/Help/_About"
 msgstr "/Aiuto/I_nformazioni"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "Semplice editor testuale basato su GTK+"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Alessio D'Ascanio <g3ntaro@gmail.com>"
 
@@ -162,9 +161,8 @@ msgid "'%s' is not supported"
 msgstr "'%s' non è supportato"
 
 #: src/selector.c:253
-#, fuzzy
 msgid "Auto-Detect"
-msgstr "Automatica"
+msgstr "Auto-Detect"
 
 #: src/selector.c:305
 msgid "Open"
@@ -175,29 +173,28 @@ msgid "Save As"
 msgstr "Salva con nome"
 
 #: src/selector.c:329
-#, fuzzy
 msgid "Ch_aracter Coding:"
-msgstr "_Codifica: "
+msgstr "Codifica dei Caratteri:"
 
 #: src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' esiste già. Sovrascrivere?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Senza titolo"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Impossibile convertire nel set di caratteri '%s'"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "impossibile scrivere sul file"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "Impossibile scrivere il file"
 
@@ -223,14 +220,12 @@ msgid "Find"
 msgstr "Trova"
 
 #: src/search.c:315
-#, fuzzy
 msgid "Fi_nd what:"
-msgstr "Cercare: "
+msgstr "_Cerca:"
 
 #: src/search.c:331
-#, fuzzy
 msgid "Re_place with:"
-msgstr "Sostituisci con: "
+msgstr "_Sostituisci con:"
 
 #: src/search.c:345
 msgid "_Match case"
@@ -249,59 +244,58 @@ msgid "_Jump"
 msgstr "_Vai"
 
 #: src/search.c:414
-#, fuzzy
 msgid "_Line number:"
-msgstr "_Numero di riga: "
+msgstr "Numero di _riga:"
 
-#: src/print.c:57
-#, fuzzy
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
-msgstr "Impossibile convertire nel set di caratteri '%s'"
+msgstr ""
+"Impossibile convertire la codifica dei caratteri in quella attualmente "
+"impostata"
 
-#: src/print.c:70
-#, fuzzy
+#: src/print.c:71
 msgid "Can't write temporary file"
-msgstr "Impossibile scrivere il file"
+msgstr "Impossibile aprire il file temporaneo"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
-msgstr ""
+msgstr "Stampa"
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
-msgstr ""
+msgstr "_Nome stampante:"
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
-msgstr ""
+msgstr "_Numero di copie:"
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
-msgstr ""
+msgstr "_Formatta pagina"
 
 #: src/about.c:102
 msgid "Credits"
-msgstr ""
+msgstr "Ringraziamenti"
 
 #: src/about.c:137
 msgid "Written by"
-msgstr ""
+msgstr "Scritto da"
 
 #: src/about.c:140
 msgid "Documented by"
-msgstr ""
+msgstr "Documentato da"
 
 #: src/about.c:146
 msgid "Translated by"
-msgstr ""
+msgstr "Tradotto da"
 
 #: src/about.c:197
 msgid "C_redits"
-msgstr ""
+msgstr "_Ringraziamenti"
 
 #: src/about.c:199
 msgid "_Credits"
-msgstr ""
+msgstr "_Ringraziamenti"
 
 #: src/about.c:209
 #, c-format
@@ -309,12 +303,11 @@ msgid "About %s"
 msgstr "Informazioni su %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Semplice editor testuale"
+
+#~ msgid "Leafpad"
+#~ msgstr "Leafpad"
 
 #~ msgid "Other Codeset (%s)"
 #~ msgstr "Altra Codifica (%s)"

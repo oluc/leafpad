@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2004-05-07 01:10+0100\n"
 "Last-Translator: Quy NGUYEN DAI <nguyendaiquy@gmail.com>\n"
 "Language-Team: Vietnamese <vi@vnoss.org>\n"
@@ -125,11 +125,11 @@ msgstr "/_Trợ giúp"
 msgid "/Help/_About"
 msgstr "/Trợ giúp/_Thông tin"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "Một trình soạn thảo đơn giản dựa trên GTK+"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Nguyễn Đại Quý <nguyendaiquy@gmail.com>"
 
@@ -181,20 +181,20 @@ msgstr "_Bảng mã:"
 msgid "'%s' already exists. Overwrite?"
 msgstr "File '%s' đã có. Bạn có muốn thay thế nó bởi file đang soạn thảo ?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Không tiêu đề"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Không thể chuyển bảng mã sang '%s'"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "Không thể mở file để ghi"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "Không thể ghi file"
 
@@ -247,27 +247,27 @@ msgstr "Chuyển đến dòng"
 msgid "_Line number:"
 msgstr "Dòng _số :"
 
-#: src/print.c:57
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
 msgstr "Không thể chuyển bảng mã sang locale hiện dùng '%s'"
 
-#: src/print.c:70
+#: src/print.c:71
 msgid "Can't write temporary file"
 msgstr "Không thể ghi file tạm"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr "In ấn"
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr "_Tên máy in:"
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr "_Số bản in:"
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr "Định _dạng trang"
 
@@ -301,10 +301,6 @@ msgid "About %s"
 msgstr "Thông tin về %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Một trình soạn thảo đơn giản"
 

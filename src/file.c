@@ -24,12 +24,24 @@
 #include "view.h"
 #include "encoding.h"
 #include "dialog.h"
+#include "menu.h"
 #include "i18n.h"
 //#include "undo.h"
 
+gboolean check_file_writable(gchar *filename)
+{
+	FILE *fp;
+	
+	if ((fp = fopen(filename, "a")) != NULL) {
+		fclose(fp);
+		return TRUE;
+	}
+	return FALSE;
+}
+
 gchar *get_file_basename(gchar *filename, gboolean bracket)
 {
-	gchar *basename;
+	gchar *basename = NULL;
 	gchar *tmp;
 	gboolean exist_flag;
 	
@@ -43,14 +55,24 @@ gchar *get_file_basename(gchar *filename, gboolean bracket)
 		tmp = g_strdup(_("Untitled"));
 		exist_flag = FALSE;
 	}
-	if (bracket && !exist_flag) {
-		GString *string = g_string_new(tmp);
-		g_string_prepend(string, "(");
-		g_string_append(string, ")");
-		basename = g_strdup(string->str);
-		g_string_free(string, TRUE);
+	
+	if (bracket) {
+		if (!exist_flag) {
+			GString *string = g_string_new(tmp);
+			g_string_prepend(string, "(");
+			g_string_append(string, ")");
+			basename = g_strdup(string->str);
+			g_string_free(string, TRUE);
+		} else if (!check_file_writable(filename)) {
+			GString *string = g_string_new(tmp);
+			g_string_prepend(string, "<");
+			g_string_append(string, ">");
+			basename = g_strdup(string->str);
+			g_string_free(string, TRUE);
+		}
 	}
-	else
+	
+	if (!basename)
 		basename = g_strdup(tmp);
 	g_free(tmp);
 	
@@ -152,6 +174,7 @@ gint file_open_real(GtkWidget *view, FileInfo *fi)
 	g_free(str);
 	
 	force_unblock_cb_modified_changed(view);
+	menu_sensitivity_from_modified_flag(FALSE);
 //	undo_unblock_signal(buffer);
 	
 	return 0;
@@ -169,7 +192,7 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 	
 	gtk_text_buffer_get_start_iter(buffer, &start);
 	gtk_text_buffer_get_end_iter(buffer, &end);	
-	str = gtk_text_buffer_get_text(buffer, &start, &end, TRUE);
+	str = gtk_text_buffer_get_text(buffer, &start, &end, FALSE);
 	
 	switch (fi->lineend) {
 	case CR:

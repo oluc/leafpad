@@ -19,7 +19,8 @@
 
 #include "leafpad.h"
 
-#ifdef HAVE_LPR
+#ifndef DISABLE_PRINT
+#ifndef ENABLE_GNOMEPRINT
 
 #include <stdio.h>
 #include <string.h>
@@ -47,7 +48,7 @@ static gint write_tmp(gint fd)
 	
 	gtk_text_buffer_get_start_iter(buffer, &start);
 	gtk_text_buffer_get_end_iter(buffer, &end);	
-	str = gtk_text_buffer_get_text(buffer, &start, &end, TRUE);
+	str = gtk_text_buffer_get_text(buffer, &start, &end, FALSE);
 	
 	str = g_convert(str, -1, get_default_charset(), "UTF-8", &rbytes, &wbytes, &error);
 	if (error) {
@@ -235,4 +236,5 @@ void create_print_session(void)
 	g_free(tmp_filename);
 }
 
+#endif
 #endif

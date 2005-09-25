@@ -23,7 +23,8 @@
 #include <undo.h>
 
 static gboolean auto_indent = FALSE;
-static gint current_tab_width = 8;
+static gint default_tab_width = 8;;
+static gint current_tab_width = 8;;
 
 void indent_set_state(gboolean state)
 {
@@ -111,18 +112,20 @@ void indent_refresh_tab_width(GtkWidget *text_view)
 
 void indent_toggle_tab_width(GtkWidget *text_view)
 {
-//	PangoTabArray *tab_array;
-	gint width = 8;
-	
-	if (current_tab_width == 8)
-		width = 4;
-	current_tab_width = width;
+	if (current_tab_width == default_tab_width)
+		if (default_tab_width == 8)
+			current_tab_width = 4;
+		else
+			current_tab_width = 8;
+	else
+		current_tab_width = default_tab_width;
 	indent_refresh_tab_width(text_view);
-/*	tab_array = pango_tab_array_new(1, TRUE);
-	pango_tab_array_set_tab(tab_array, 0, PANGO_TAB_LEFT,
-		calculate_real_tab_width(text_view, width));
-	gtk_text_view_set_tabs(GTK_TEXT_VIEW(text_view), tab_array);
-	pango_tab_array_free(tab_array); */
+}
+
+void indent_set_default_tab_width(gint width)
+{
+	default_tab_width = width;
+	current_tab_width = default_tab_width;
 }
 
 void indent_multi_line_indent(GtkTextBuffer *buffer)

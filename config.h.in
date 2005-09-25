@@ -1,5 +1,8 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Define if printing feature is disabled. */
+#undef DISABLE_PRINT
+
 /* Define if GtkFileChooser is enabled. */
 #undef ENABLE_CHOOSER
 
@@ -23,9 +26,6 @@
 
 /* Define to 1 if you have the <locale.h> header file. */
 #undef HAVE_LOCALE_H
-
-/* Define if `lpr' program is available. */
-#undef HAVE_LPR
 
 /* Define to 1 if you have the <memory.h> header file. */
 #undef HAVE_MEMORY_H

@@ -1,3 +1,15 @@
+2005-09-24
+
+  version 0.8.4:
+	* Implemented GOption (thanks Magnus Bergman).
+	* Added '--tab-width' command line option.
+	* Inform read-only file by less/greater than sign bracket.
+	* Improved Korean auto-detection.
+	* Added Hebrew translation (Yo'av Moshe).
+	* Added Turkish translation (Kaya Oguz).
+	* Added Greek translation (Stavros Giannouris).
+	* Updated Italian translation (Alessio D'Ascanio).
+
 2005-07-22
 
   version 0.8.3:

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2004-10-04 08:21+0800\n"
 "Last-Translator: OLS3 <ols3@lxer.idv.tw>\n"
 "Language-Team: OLS3 <ols3@lxer.idv.tw>\n"
@@ -128,11 +128,11 @@ msgstr "/說明(_H)"
 msgid "/Help/_About"
 msgstr "/說明(H)/關於(_A)"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "基於 GTK+ 的簡易文字編輯器"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "OLS3 <ols3@lxer.idv.tw>"
 
@@ -186,20 +186,20 @@ msgstr "字元編碼(_A): "
 msgid "'%s' already exists. Overwrite?"
 msgstr "檔案“%s”已經存在. 要覆蓋它嗎?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "無標題"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "無法將編碼轉換為 “%s”"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "無法打開要寫入的檔案"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "無法寫入檔案"
 
@@ -255,29 +255,29 @@ msgstr "跳(_J)"
 msgid "_Line number:"
 msgstr "列號(_L): "
 
-#: src/print.c:57
+#: src/print.c:58
 #, fuzzy
 msgid "Can't convert codeset to current locale"
 msgstr "無法將編碼轉換為 “%s”"
 
-#: src/print.c:70
+#: src/print.c:71
 #, fuzzy
 msgid "Can't write temporary file"
 msgstr "無法寫入檔案"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr ""
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr ""
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr ""
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr ""
 
@@ -311,10 +311,6 @@ msgid "About %s"
 msgstr "關於 %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "簡易文字編輯器"
 

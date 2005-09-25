@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2004-12-06 17:38+0200\n"
 "Last-Translator: Lech Jankovski <godgard@gmail.com>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -128,11 +128,11 @@ msgstr "/P_agalba"
 msgid "/Help/_About"
 msgstr "/Pagalba/A_pie"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "Paprastas teksto redaktorius paremtas GTK+"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Lech Jankovski <godgard@gmail.com>"
 
@@ -186,20 +186,20 @@ msgstr "Si_mbolių kodavimas: "
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' jau egzistuoja. Perrašyti?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Bevardis"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr ""
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "Neįmanoma atidaryti bylos rašymui"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "Neįmanoma įrašyti bylos"
 
@@ -255,28 +255,28 @@ msgstr "_Nušok"
 msgid "_Line number:"
 msgstr "_Eilutės numeris: "
 
-#: src/print.c:57
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
 msgstr ""
 
-#: src/print.c:70
+#: src/print.c:71
 #, fuzzy
 msgid "Can't write temporary file"
 msgstr "Neįmanoma įrašyti bylos"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr ""
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr ""
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr ""
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr ""
 
@@ -310,10 +310,6 @@ msgid "About %s"
 msgstr "Apie %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Paprastas teksto redaktorius"
 

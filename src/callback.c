@@ -96,6 +96,8 @@ gint on_file_save(void)
 {
 	if (pub->fi->filename == NULL)
 		return on_file_save_as();
+	if (check_file_writable(pub->fi->filename) == FALSE)
+		return on_file_save_as();
 	if (file_save_real(pub->mw->view, pub->fi))
 		return -1;
 //	set_main_window_title();
@@ -123,10 +125,14 @@ gint on_file_save_as(void)
 //	undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 	return 0;
 }
-#ifdef HAVE_LPR
+#ifndef DISABLE_PRINT
 void on_file_print(void)
 {
+#	ifdef ENABLE_GNOMEPRINT
+	create_gnomeprint_session();
+#	else
 	create_print_session();
+#	endif
 }
 #endif
 void on_file_close(void)

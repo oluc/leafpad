@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2005-07-07 09:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -185,13 +185,13 @@ msgstr "/Pomoc/_O programie"
 
 # src/callback.c:286
 # src/callback.c:292
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "Prosty edytor tekstowy oparty na GTK+"
 
 # src/callback.c:294
 # src/callback.c:300
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Michal Wrobel <wrobel@task.gda.pl>"
 
@@ -267,26 +267,26 @@ msgstr "'%s' już istnieje. Czy go zastąpić?"
 
 # src/file.c:42
 # src/file.c:43
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Bez nazwy"
 
 # src/file.c:186
 # src/file.c:189
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Nie można przekonwertować znaków do '%s'"
 
 # src/file.c:199
 # src/file.c:202
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "Nie można otworzyć pliku do zapisu"
 
 # src/file.c:204
 # src/file.c:207
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "Nie można zapisać pliku"
 
@@ -365,37 +365,37 @@ msgstr "Numer _linii:"
 
 # src/print.c:57
 # src/print.c:57
-#: src/print.c:57
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
 msgstr "Nie można przekonwertować strony kodowej do '%s'"
 
 # src/print.c:70
 # src/print.c:70
-#: src/print.c:70
+#: src/print.c:71
 msgid "Can't write temporary file"
 msgstr "Nie można zapisać pliku tymczasowego"
 
 # src/print.c:101
 # src/print.c:101
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr "Drukuj"
 
 # src/print.c:124
 # src/print.c:124
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr "_Nazwa drukarki"
 
 # src/print.c:136
 # src/print.c:136
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr "Ilość kopii"
 
 # src/print.c:142
 # src/print.c:142
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr "_Format strony"
 
@@ -442,15 +442,9 @@ msgstr "Zasługo"
 msgid "About %s"
 msgstr "O %s"
 
-# leafpad.desktop.in.h:1
-# leafpad.desktop.in.h:1
+# leafpad.desktop.in.h:2
+# leafpad.desktop.in.h:2
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-# leafpad.desktop.in.h:2
-# leafpad.desktop.in.h:2
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Prosty edytor tekstu"
 

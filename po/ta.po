@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2004-11-25 03:24-0700\n"
 "Last-Translator: Vijay Durairaj <vjd81@yahoo.com>\n"
 "Language-Team: Tamil <tamilinix@yahoogroups.com>\n"
@@ -130,11 +130,11 @@ msgstr "/உதவி(_H)"
 msgid "/Help/_About"
 msgstr "/உதவி(_H)/பற்றி(_A)"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ சார்ந்த ஒரு எளிமையான உரை பதிப்பான்"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr ""
 
@@ -187,20 +187,20 @@ msgstr ""
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' ஏற்கனவே உள்ளது. மேல் எழுதவா?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "தலைப்பில்லாதது"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr ""
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "கோப்பை எழுதுவதற்காக திறக்க முடியவில்லை"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "கோப்பை எழுத முடியவில்லை"
 
@@ -256,28 +256,28 @@ msgstr "தாவு(_J)"
 msgid "_Line number:"
 msgstr "வரி எண்(_L): "
 
-#: src/print.c:57
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
 msgstr ""
 
-#: src/print.c:70
+#: src/print.c:71
 #, fuzzy
 msgid "Can't write temporary file"
 msgstr "கோப்பை எழுத முடியவில்லை"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr ""
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr ""
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr ""
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr ""
 
@@ -311,10 +311,6 @@ msgid "About %s"
 msgstr "பற்றி %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "எளிமையான உரை பதிப்பான்"
 

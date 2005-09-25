@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2005-05-21 02:26+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -127,11 +127,11 @@ msgstr "/帮助(_H)"
 msgid "/Help/_About"
 msgstr "/帮助(H)/关于(_A)"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "基于 GTK+ 的简易文字编辑器"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Carlos Z.F. Liu <carlos_liu@yahoo.com>"
 
@@ -183,20 +183,20 @@ msgstr "字符编码(_A)："
 msgid "'%s' already exists. Overwrite?"
 msgstr "文件“%s”已经存在。覆盖它吗？"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "无标题"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "无法将编码转换到“%s”"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "无法打开要写入的文件"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "无法写入文件"
 
@@ -249,27 +249,27 @@ msgstr "跳转(_J)"
 msgid "_Line number:"
 msgstr "行号(_L)："
 
-#: src/print.c:57
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
 msgstr "无法将代码转换到当前区域设置"
 
-#: src/print.c:70
+#: src/print.c:71
 msgid "Can't write temporary file"
 msgstr "无法写入临时文件"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr "打印"
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr "打印机名称(_N)："
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr "打印份数(_U)："
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr "格式化页面(_F)"
 
@@ -303,10 +303,6 @@ msgid "About %s"
 msgstr "关于 %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "简易文字编辑器"
 

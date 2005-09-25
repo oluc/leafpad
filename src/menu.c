@@ -40,7 +40,7 @@ static GtkItemFactoryEntry menu_items[] =
 		G_CALLBACK(on_file_save_as), 0, "<StockItem>", GTK_STOCK_SAVE_AS },
 	{ "/File/---", NULL,
 		NULL, 0, "<Separator>" },
-#ifdef HAVE_LPR
+#ifndef DISABLE_PRINT
 	{ N_("/File/_Print..."), "<control>P",
 		G_CALLBACK(on_file_print), 0, "<StockItem>", GTK_STOCK_PRINT },
 #endif

@@ -41,10 +41,16 @@
 #include "encoding.h"
 #include "search.h"
 #include "dialog.h"
-#include "print.h"
 #include "about.h"
 #include "dnd.h"
 #include "utils.h"
+#ifndef DISABLE_PRINT
+#	ifdef ENABLE_GNOMEPRINT
+#		include "gnomeprint.h"
+#	else
+#		include "print.h"
+#	endif
+#endif
 
 typedef struct {
 	FileInfo *fi;

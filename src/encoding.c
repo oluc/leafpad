@@ -329,6 +329,68 @@ static const gchar *detect_charset_japanese(const gchar *text)
 	return charset;
 }
 
+static const gchar *detect_charset_korean(const gchar *text)
+{
+	guint8 c = *text;
+	gboolean noneuc = FALSE;
+	gboolean nonjohab = FALSE;
+	gchar *charset = NULL;
+	
+	while (charset == NULL && (c = *text++) != '\0') {
+		if (c >= 0x81 && c < 0x84) {
+			charset = "CP949";
+		}
+		else if (c >= 0x84 && c < 0xA1) {
+			noneuc = TRUE;
+			c = *text++;
+			if ((c > 0x5A && c < 0x61) || (c > 0x7A && c < 0x81))
+				charset = "CP1361";
+			else if (c == 0x52 || c == 0x72 || c == 0x92 || (c > 0x9D && c < 0xA1)
+				|| c == 0xB2 || (c > 0xBD && c < 0xC1) || c == 0xD2
+				|| (c > 0xDD && c < 0xE1) || c == 0xF2 || c == 0xFE)
+				charset = "CP949";
+		}
+		else if (c >= 0xA1 && c <= 0xC6) {
+			c = *text++;
+			if (c < 0xA1) {
+				noneuc = TRUE;
+				if ((c > 0x5A && c < 0x61) || (c > 0x7A && c < 0x81))
+					charset = "CP1361";
+				else if (c == 0x52 || c == 0x72 || c == 0x92 || (c > 0x9D && c < 0xA1))
+					charset = "CP949";
+				else if (c == 0xB2 || (c > 0xBD && c < 0xC1) || c == 0xD2
+					|| (c > 0xDD && c < 0xE1) || c == 0xF2 || c == 0xFE)
+					nonjohab = TRUE;
+			}
+		}
+		else if (c > 0xC6 && c <= 0xD3) {
+			c = *text++;
+			if (c < 0xA1)
+				charset = "CP1361";
+		}
+		else if (c > 0xD3 && c < 0xD8) {
+			nonjohab = TRUE;
+			c = *text++;
+		}
+		else if (c >= 0xD8) {
+			c = *text++;
+			if (c < 0xA1)
+				charset = "CP1361";
+		}
+		if (noneuc && nonjohab)
+			charset = "CP949";
+	}
+	
+	if (charset == NULL) {
+		if (noneuc)
+			charset = "CP949";
+		else
+			charset = "EUC-KR";
+	}
+	
+	return charset;
+}
+
 static gboolean detect_noniso(const gchar *text)
 {
 	guint8 c = *text;
@@ -400,6 +462,8 @@ const gchar *detect_charset(const gchar *text)
 			charset = detect_charset_japanese(text);
 			break;
 		case KOREAN:
+			charset = detect_charset_korean(text);
+			break;
 		case VIETNAMESE:
 		case THAI:
 		case GEORGIAN:

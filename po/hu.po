@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2005-04-29 20:00+0100\n"
 "Last-Translator: Reviczky Ádám János <reviczky@freemail.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -127,11 +127,11 @@ msgstr "/_Súgó"
 msgid "/Help/_About"
 msgstr "/Súgó/_Névjegy"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "GTK+-ra épülő egyszerű szöveg szerkesztő"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Reviczky Ádám János <reviczky@freemail.hu>"
 
@@ -183,20 +183,20 @@ msgstr "K_arakter Kódolás:"
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' már létezik. Felülír?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Névtelen"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "A kódtáblát nem lehet erre '%s' konvertálni"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "Nem lehet írásra megnyitni a fájlt"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "Nem lehet írni a fájlt"
 
@@ -249,27 +249,27 @@ msgstr "_Ugrás"
 msgid "_Line number:"
 msgstr "S_orszám:"
 
-#: src/print.c:57
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
 msgstr "A kódtáblát nem lehet a jelenlegi locale-ra konvertálni"
 
-#: src/print.c:70
+#: src/print.c:71
 msgid "Can't write temporary file"
 msgstr "Nem lehet ideiglenes fájlt írni"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr "Nyomtatás"
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr "Nyomtató _neve:"
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr "_Másolatok száma:"
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr "_Oldal szerkesztése"
 
@@ -303,10 +303,6 @@ msgid "About %s"
 msgstr "%s névjegye"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Egyszerű szöveg szerkesztő"
 

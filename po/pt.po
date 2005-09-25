@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2004-12-28 19:56:59-0300\n"
 "Last-Translator: Alan Kelon Oliveira de Moraes <alankelon@yahoo.com.br>\n"
 "Language-Team: \n"
@@ -128,11 +128,11 @@ msgstr "_Ajuda"
 msgid "/Help/_About"
 msgstr "_Ajuda/_Sobre"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "Simples editor de texto feito em GTK+"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Alan Kelon <alankelon@yahoo.com.br>"
 
@@ -186,20 +186,20 @@ msgstr "_Codificação de caracteres: "
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' já existe. Sobrescrever?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Sem título"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Não foi possível converter o conjuntos de caracteres para '%s'"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "Não foi possível abrir o arquivo para escrita"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "Não foi possível escrever o arquivo"
 
@@ -255,29 +255,29 @@ msgstr "_Ir"
 msgid "_Line number:"
 msgstr "_Número da linha: "
 
-#: src/print.c:57
+#: src/print.c:58
 #, fuzzy
 msgid "Can't convert codeset to current locale"
 msgstr "Não foi possível converter o conjuntos de caracteres para '%s'"
 
-#: src/print.c:70
+#: src/print.c:71
 #, fuzzy
 msgid "Can't write temporary file"
 msgstr "Não foi possível escrever o arquivo"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr ""
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr ""
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr ""
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr ""
 
@@ -311,9 +311,5 @@ msgid "About %s"
 msgstr "Sobre %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Simples editor de texto"

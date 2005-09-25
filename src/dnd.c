@@ -76,7 +76,7 @@ DV({
 });	
 	
 	if (selection_data->data && g_strstr_len(selection_data->data, 5, "file:")) {
-		files = g_strsplit(selection_data->data, "\n" , 0);
+		files = g_strsplit(selection_data->data, "\n" , -1);
 		while (files[i]) {
 			if (strlen(files[i]) == 0)
 				break;

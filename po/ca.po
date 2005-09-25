@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2004-11-04 10:10+0100\n"
 "Last-Translator: David Rosal <davidrr@users.sourceforge.net>\n"
 "Language-Team: Catalan\n"
@@ -128,11 +128,11 @@ msgstr "/A_jut"
 msgid "/Help/_About"
 msgstr "/Ajut/_Respecte a"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "Editor de text simple, basat en GTK+"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "David Rosal <davidrr@users.sourceforge.net>"
 
@@ -186,20 +186,20 @@ msgstr "Codificació de c_aràcters: "
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' ja existeix. Vols sobreescriure'l?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Sense nom"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "No es pot convertir la codificació a '%s'"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "No es pot obrir el fitxer per a escriure"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "No es pot escriure al fitxer"
 
@@ -255,29 +255,29 @@ msgstr "_Saltar"
 msgid "_Line number:"
 msgstr "Número de _línia: "
 
-#: src/print.c:57
+#: src/print.c:58
 #, fuzzy
 msgid "Can't convert codeset to current locale"
 msgstr "No es pot convertir la codificació a '%s'"
 
-#: src/print.c:70
+#: src/print.c:71
 #, fuzzy
 msgid "Can't write temporary file"
 msgstr "No es pot escriure al fitxer"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr ""
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr ""
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr ""
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr ""
 
@@ -311,10 +311,6 @@ msgid "About %s"
 msgstr "Respecte a %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Editor de text simple"
 

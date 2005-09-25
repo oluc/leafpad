@@ -25,6 +25,7 @@ gboolean indent_get_state(void);
 void indent_real(GtkWidget *text_view);
 void indent_refresh_tab_width(GtkWidget *text_view);
 void indent_toggle_tab_width(GtkWidget *text_view);
+void indent_set_default_tab_width(gint width);
 void indent_multi_line_indent(GtkTextBuffer *buffer);
 void indent_multi_line_unindent(GtkTextBuffer *buffer);
 //void indent_init(GtkWidget *text_view);

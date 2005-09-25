@@ -19,12 +19,12 @@ leafpad_SOURCES = \
 	search.h search.c \
 	dialog.h dialog.c \
 	print.h print.c \
+	gnomeprint.h gnomeprint.c \
 	about.h about.c \
 	dnd.h dnd.c \
 	utils.h utils.c \
 	gtksourceiter.h gtksourceiter.c \
 	i18n.h
 
-leafpad_CFLAGS  = $(GTK_CFLAGS)
-leafpad_LDADD   = $(GTK_LIBS) $(INTLLIBS)
-
+leafpad_CFLAGS  = $(GTK_CFLAGS) $(GNOMEPRINT_CFLAGS)
+leafpad_LDADD   = $(GTK_LIBS) $(INTLLIBS) $(GNOMEPRINT_LIBS)

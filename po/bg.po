@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-20 23:21+0900\n"
+"POT-Creation-Date: 2005-09-24 16:40+0000\n"
 "PO-Revision-Date: 2005-05-15 15:12+0300\n"
 "Last-Translator: Yavor Doganov <yavor@doganov.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -129,11 +129,11 @@ msgstr "/_Помощ"
 msgid "/Help/_About"
 msgstr "/Помощ/_Относно"
 
-#: src/callback.c:292
+#: src/callback.c:298
 msgid "GTK+ based simple text editor"
 msgstr "Опростен текстов редактор, базиран на GTK+"
 
-#: src/callback.c:300
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Явор Доганов <yavor@doganov.org>"
 
@@ -185,20 +185,20 @@ msgstr "Ко_диране на символите:"
 msgid "'%s' already exists. Overwrite?"
 msgstr "\"%s\" вече съществува, да се презапише ли?"
 
-#: src/file.c:43
+#: src/file.c:55
 msgid "Untitled"
 msgstr "Неозаглавено"
 
-#: src/file.c:189
+#: src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Превръщането в кодиране \"%s\" е невъзможно"
 
-#: src/file.c:202
+#: src/file.c:225
 msgid "Can't open file to write"
 msgstr "Файлът не може да бъде отворен за запис"
 
-#: src/file.c:207
+#: src/file.c:230
 msgid "Can't write file"
 msgstr "Файлът не може да бъде запазен"
 
@@ -251,27 +251,27 @@ msgstr "_Отиване на ред"
 msgid "_Line number:"
 msgstr "_Ред номер:"
 
-#: src/print.c:57
+#: src/print.c:58
 msgid "Can't convert codeset to current locale"
 msgstr "Превръщането в кодиране според текущия локал е невъзможно"
 
-#: src/print.c:70
+#: src/print.c:71
 msgid "Can't write temporary file"
 msgstr "Не може да бъде запазен временен файл"
 
-#: src/print.c:101
+#: src/print.c:102
 msgid "Print"
 msgstr "Печат"
 
-#: src/print.c:124
+#: src/print.c:125
 msgid "Printer _name:"
 msgstr "_Принтер:"
 
-#: src/print.c:136
+#: src/print.c:137
 msgid "N_umber of copies:"
 msgstr "_Брой копия:"
 
-#: src/print.c:142
+#: src/print.c:143
 msgid "_Format page"
 msgstr "_Настройки на страницата"
 
@@ -305,9 +305,5 @@ msgid "About %s"
 msgstr "Относно %s"
 
 #: leafpad.desktop.in.h:1
-msgid "Leafpad"
-msgstr ""
-
-#: leafpad.desktop.in.h:2
 msgid "Simple text editor"
 msgstr "Опростен текстов редактор"
