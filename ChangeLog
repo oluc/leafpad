@@ -1,3 +1,10 @@
+2005-11-12
+
+  version 0.8.5:
+	* Fixed curious highlighting behaviour.
+	* Attached 32*32 icon for some package maintainer.
+	* Updated Traditional Chinese translation (OLS3).
+
 2005-09-24
 
   version 0.8.4:

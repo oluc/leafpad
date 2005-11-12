@@ -20,6 +20,7 @@
 #ifndef _INDENT_H
 #define _INDENT_H
 
+gint get_current_tab_width(void);
 void indent_set_state(gboolean state);
 gboolean indent_get_state(void);
 void indent_real(GtkWidget *text_view);

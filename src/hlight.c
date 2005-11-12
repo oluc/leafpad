@@ -18,7 +18,8 @@
  */
 
 #include <string.h>
-#include <gtk/gtk.h>
+#include "leafpad.h"
+//#include <gtk/gtk.h>
 
 static gboolean searched_flag = FALSE;
 
@@ -33,6 +34,19 @@ static void cb_changed(GtkTextBuffer *buffer)
 	g_signal_handlers_block_by_func(G_OBJECT(buffer),
 		G_CALLBACK(cb_changed), NULL);
 	searched_flag = FALSE;
+}
+
+static void cb_paste_clipboard(void)
+{
+	gchar *text;
+	
+	text = gtk_clipboard_wait_for_text(
+		gtk_clipboard_get(GDK_SELECTION_CLIPBOARD));
+	if (text) {
+		gtk_clipboard_set_text(gtk_clipboard_get(GDK_SELECTION_CLIPBOARD),
+			text, -1);
+		g_free(text);
+	}
 }
 
 gboolean hlight_check_searched(void)
@@ -68,4 +82,7 @@ void hlight_init(GtkTextBuffer *buffer)
 		G_CALLBACK(cb_changed), NULL);
 	g_signal_handlers_block_by_func(G_OBJECT(buffer),
 		G_CALLBACK(cb_changed), NULL);
+	
+	g_signal_connect(G_OBJECT(pub->mw->view), "paste-clipboard",
+		G_CALLBACK(cb_paste_clipboard), NULL);
 }

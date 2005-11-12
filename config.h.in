@@ -6,6 +6,9 @@
 /* Define if GtkFileChooser is enabled. */
 #undef ENABLE_CHOOSER
 
+/* Define if GnomePrint is enabled. */
+#undef ENABLE_GNOMEPRINT
+
 /* always defined to indicate that i18n is enabled */
 #undef ENABLE_NLS
 

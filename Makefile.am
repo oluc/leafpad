@@ -6,9 +6,10 @@ desktop_DATA     = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 pixmapsdir       = $(datadir)/pixmaps
-pixmaps_DATA     = leafpad.png
+pixmaps_DATA     = leafpad.png leafpad.xpm
 
 EXTRA_DIST = \
 	intltool-extract.in intltool-merge.in intltool-update.in \
 	$(desktop_DATA) $(desktop_in_files) \
-	$(pixmaps_DATA)
+	$(pixmaps_DATA) \
+	ABOUT-NLS

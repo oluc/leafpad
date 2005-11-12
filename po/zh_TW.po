@@ -1,13 +1,13 @@
-# Simplified Chinese translation for LeafPad
+# Traditional Chinese translation for LeafPad
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the leafpad package.
-# Carlos Z.F. Liu <carlos_liu@yahoo.com>, 2004.
+# OLS3 <ols3@lxer.idv.tw>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-24 16:40+0000\n"
+"POT-Creation-Date: 2005-11-07 12:54+0000\n"
 "PO-Revision-Date: 2004-10-04 08:21+0800\n"
 "Last-Translator: OLS3 <ols3@lxer.idv.tw>\n"
 "Language-Team: OLS3 <ols3@lxer.idv.tw>\n"
@@ -36,9 +36,8 @@ msgid "/File/Save _As..."
 msgstr "/檔案(F)/另存為(_A)..."
 
 #: src/menu.c:44
-#, fuzzy
 msgid "/File/_Print..."
-msgstr "/檔案(F)/離開(_Q)"
+msgstr "/檔案(F)/列印(_P)..."
 
 #: src/menu.c:47
 msgid "/File/_Quit"
@@ -164,7 +163,6 @@ msgid "'%s' is not supported"
 msgstr "“%s”尚未支援"
 
 #: src/selector.c:253
-#, fuzzy
 msgid "Auto-Detect"
 msgstr "自動偵測"
 
@@ -177,7 +175,6 @@ msgid "Save As"
 msgstr "另存為"
 
 #: src/selector.c:329
-#, fuzzy
 msgid "Ch_aracter Coding:"
 msgstr "字元編碼(_A): "
 
@@ -222,15 +219,13 @@ msgstr "置換"
 
 #: src/search.c:302
 msgid "Find"
-msgstr "查找"
+msgstr "尋找"
 
 #: src/search.c:315
-#, fuzzy
 msgid "Fi_nd what:"
-msgstr "查找(_N): "
+msgstr "尋找(_N): "
 
 #: src/search.c:331
-#, fuzzy
 msgid "Re_place with:"
 msgstr "置換成(_A): "
 
@@ -251,59 +246,56 @@ msgid "_Jump"
 msgstr "跳(_J)"
 
 #: src/search.c:414
-#, fuzzy
 msgid "_Line number:"
 msgstr "列號(_L): "
 
 #: src/print.c:58
-#, fuzzy
 msgid "Can't convert codeset to current locale"
 msgstr "無法將編碼轉換為 “%s”"
 
 #: src/print.c:71
-#, fuzzy
 msgid "Can't write temporary file"
-msgstr "無法寫入檔案"
+msgstr "無法寫入暫存檔案"
 
 #: src/print.c:102
 msgid "Print"
-msgstr ""
+msgstr "列印"
 
 #: src/print.c:125
 msgid "Printer _name:"
-msgstr ""
+msgstr "印表機名稱(_n):"
 
 #: src/print.c:137
 msgid "N_umber of copies:"
-msgstr ""
+msgstr "列印份數(_u):"
 
 #: src/print.c:143
 msgid "_Format page"
-msgstr ""
+msgstr "格式化頁面(_F)"
 
 #: src/about.c:102
 msgid "Credits"
-msgstr ""
+msgstr "誌謝"
 
 #: src/about.c:137
 msgid "Written by"
-msgstr ""
+msgstr "作者"
 
 #: src/about.c:140
 msgid "Documented by"
-msgstr ""
+msgstr "文件作者"
 
 #: src/about.c:146
 msgid "Translated by"
-msgstr ""
+msgstr "中譯者"
 
 #: src/about.c:197
 msgid "C_redits"
-msgstr ""
+msgstr "誌謝(_r)"
 
 #: src/about.c:199
 msgid "_Credits"
-msgstr ""
+msgstr "誌謝(_C)"
 
 #: src/about.c:209
 #, c-format
@@ -320,7 +312,6 @@ msgstr "簡易文字編輯器"
 #~ msgid "Other Codeset..."
 #~ msgstr "其它編碼..."
 
-#, fuzzy
 #~ msgid "Unicode (UTF-8)"
 #~ msgstr "統一碼"
 

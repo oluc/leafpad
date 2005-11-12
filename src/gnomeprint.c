@@ -36,13 +36,22 @@ GnomePrintJob *create_job(void)
 	GnomeFont *font;
 	GnomeFontFace *font_face;
 	PangoFontDescription *font_desc;
-	gdouble paper_height, margin_left, margin_top, margin_bottom;
+	gdouble paper_height, paper_width, margin_left, margin_top, margin_bottom;
+	guchar *orientation;
 	GtkTextIter start, end;
 	gchar *text;
 	gdouble line_height;
 	gchar **lines;
+	gchar **str_array;
+	gchar *str_joined;
 	gint page_top, lines_per_page;
 	gint i, current_line = 0;
+	gchar tab_str[get_current_tab_width()];
+	
+	for (i = 0; i < get_current_tab_width(); i++) {
+		tab_str[i] = ' ';
+	}
+	tab_str[i] = '\0';
 	
 	/* Get values from TextView */
 	
@@ -63,15 +72,23 @@ GnomePrintJob *create_job(void)
 	gpc = gnome_print_job_get_config(job);
 	gnome_print_config_get_length(gpc, GNOME_PRINT_KEY_PAPER_HEIGHT,
 		&paper_height, NULL);
+	gnome_print_config_get_length(gpc, GNOME_PRINT_KEY_PAPER_WIDTH,
+		&paper_width, NULL);
 	gnome_print_config_get_length(gpc, GNOME_PRINT_KEY_PAGE_MARGIN_LEFT,
 		&margin_left, NULL);
 	gnome_print_config_get_length(gpc, GNOME_PRINT_KEY_PAGE_MARGIN_TOP,
 		&margin_top, NULL);
 	gnome_print_config_get_length(gpc, GNOME_PRINT_KEY_PAGE_MARGIN_BOTTOM,
 		&margin_bottom, NULL);
-	page_top = paper_height - margin_top;
+	orientation = gnome_print_config_get(gpc, GNOME_PRINT_KEY_ORIENTATION);
+	if (g_ascii_strcasecmp(orientation, "R90")
+		&& g_ascii_strcasecmp(orientation, "R270"))
+		page_top = paper_height - margin_top;
+	else
+		page_top = paper_width - margin_top;
+	g_free(orientation);
 	line_height = gnome_font_get_size(font);
-	lines_per_page = (paper_height - margin_top - margin_bottom) / line_height;
+	lines_per_page = (page_top - margin_bottom) / line_height;
 	if (lines_per_page) // Error check
 	
 	/* Draw texts to canvas */
@@ -82,7 +99,11 @@ GnomePrintJob *create_job(void)
 		gnome_print_setfont(gpx, font);
 		for (i = 1; lines[current_line] && (i <= lines_per_page); i++) {
 			gnome_print_moveto(gpx, margin_left, page_top - line_height * i);
-			gnome_print_show(gpx, lines[current_line++]);
+//			gnome_print_show(gpx, lines[current_line++]);
+			str_array = g_strsplit(lines[current_line++], "\t", 0);
+			str_joined = g_strjoinv(tab_str, str_array);
+			gnome_print_show(gpx, str_joined);
+			g_strfreev(str_array);
 		}
 		gnome_print_showpage(gpx);
 		g_object_unref(gpx);
@@ -107,13 +128,17 @@ gint create_gnomeprint_session(void)
 		res = gtk_dialog_run(GTK_DIALOG(dialog));
 		switch (res) {
 		case GNOME_PRINT_DIALOG_RESPONSE_PRINT:
-			if (!job)
-				job = create_job();
+			if (job)
+				g_object_unref(job);
+//			if (!job)
+			job = create_job();
 			gnome_print_job_print(job);
 			break;
 		case GNOME_PRINT_DIALOG_RESPONSE_PREVIEW:
-			if (!job)
-				job = create_job();
+			if (job)
+				g_object_unref(job);
+//			if (!job)
+			job = create_job();
 			preview = gnome_print_job_preview_new(job, _("Print Preview"));
 //			gtk_window_set_transient_for(GTK_WINDOW(preview), GTK_WINDOW(dialog));
 			gtk_window_set_modal(GTK_WINDOW(preview), TRUE);

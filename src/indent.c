@@ -23,8 +23,13 @@
 #include <undo.h>
 
 static gboolean auto_indent = FALSE;
-static gint default_tab_width = 8;;
-static gint current_tab_width = 8;;
+static gint default_tab_width = 8;
+static gint current_tab_width = 8;
+
+gint get_current_tab_width(void)
+{
+	return current_tab_width;
+}
 
 void indent_set_state(gboolean state)
 {

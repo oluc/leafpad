@@ -1,4 +1,4 @@
-AC_INIT(Leafpad, 0.8.4, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.8.5, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
@@ -14,10 +14,10 @@ AC_ARG_ENABLE(chooser,
 	AC_HELP_STRING([--enable-chooser], [use GtkFileChooser instead of GtkFileSelector]),
 	AC_DEFINE(ENABLE_CHOOSER, 1, [Define if GtkFileChooser is enabled.])
 )
-#AC_ARG_ENABLE(gnomeprint,
-#	AC_HELP_STRING([--enable-gnomeprint], [use GnomePrint for printing]),
-#	AC_DEFINE(ENABLE_GNOMEPRINT, 1, [Define if GnomePrint is enabled.])
-#)
+AC_ARG_ENABLE(gnomeprint,
+	AC_HELP_STRING([--enable-gnomeprint], [use GnomePrint for printing (experimental)]),
+	AC_DEFINE(ENABLE_GNOMEPRINT, 1, [Define if GnomePrint is enabled.])
+)
 AC_ARG_ENABLE(print,
 	AC_HELP_STRING([--disable-print], [do not include print feature]),
 	AC_DEFINE(DISABLE_PRINT, 1, [Define if printing feature is disabled.])

@@ -4,9 +4,10 @@ Leafpad - GTK+ based simple text editor
 Description
 ===========
 
-Leafpad is a GTK+ based simple text editor. The user interface is similar to 
-Notepad. It aims to be lighter than GEdit and KWrite, and to be as useful
-as them.
+Leafpad is a simple GTK+ text editor that emphasizes simplicity. As development
+focuses on keeping weight down to a minimum, only the most essential features
+are implemented in the editor. Leafpad is simple to use, is easily compiled,
+requires few libraries, and starts up quickly.
 
 This program is released under the GNU General Public License (GPL) version 2,
 see the file 'COPYING' for more information.
@@ -15,7 +16,7 @@ see the file 'COPYING' for more information.
 Features
 ========
 
-  * Character coding option
+  * Codeset option (Some OpenI18N registered)
   * Auto codeset detection (UTF-8 and some codesets)
   * Unlimitted Undo/Redo
   * Auto/Multi-line Indent
