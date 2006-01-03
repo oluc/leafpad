@@ -294,7 +294,7 @@ void on_help_about(void)
 {
 	static GtkWidget *about = NULL;
 	
-	const gchar *copyright = "Copyright \xc2\xa9 2004-2005 Tarot Osuji";
+	const gchar *copyright = "Copyright \xc2\xa9 2004-2006 Tarot Osuji";
 	const gchar *comments = _("GTK+ based simple text editor");
 	const gchar *authors[] = {
 		"Tarot Osuji <tarot@sdf.lonestar.org>",

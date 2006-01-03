@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-07 12:54+0000\n"
+"POT-Creation-Date: 2006-01-03 04:38+0000\n"
 "PO-Revision-Date: 2004-11-02 20:47+0200\n"
 "Last-Translator: Luc Pionchon <luc@handhelds.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -213,46 +213,46 @@ msgstr "Le texte recherché n'a pas été trouvé"
 msgid "Replace?"
 msgstr "Remplacer ?"
 
-#: src/search.c:249
+#: src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d occurences trouvées et remplacées."
 
-#: src/search.c:295
+#: src/search.c:299
 msgid "Replace"
 msgstr "Remplacer"
 
-#: src/search.c:302
+#: src/search.c:306
 msgid "Find"
 msgstr "Trouver"
 
-#: src/search.c:315
+#: src/search.c:319
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Rechercher :"
 
-#: src/search.c:331
+#: src/search.c:335
 #, fuzzy
 msgid "Re_place with:"
 msgstr "Remplacer _avec :"
 
-#: src/search.c:345
+#: src/search.c:349
 msgid "_Match case"
 msgstr "Respecter la _casse"
 
-#: src/search.c:350
+#: src/search.c:354
 msgid "Replace _all at once"
 msgstr "_Tout remplacer"
 
-#: src/search.c:401
+#: src/search.c:405
 msgid "Jump To"
 msgstr "Aller à la ligne"
 
-#: src/search.c:407
+#: src/search.c:411
 msgid "_Jump"
 msgstr "Aller à la ligne"
 
-#: src/search.c:414
+#: src/search.c:418
 #, fuzzy
 msgid "_Line number:"
 msgstr "Numéro de _ligne : "

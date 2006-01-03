@@ -224,7 +224,11 @@ static gint document_replace_real(GtkWidget *textview)
 					&rep_start, offset);
 				gtk_text_buffer_apply_tag_by_name(textbuffer,
 					"replaced", &rep_start, &iter);
-			}
+			} else
+				gtk_text_buffer_get_iter_at_mark(
+					textbuffer, &iter,
+					gtk_text_buffer_get_insert(textbuffer));
+			
 			num++;
 /*			if (replace_all)
 				undo_set_sequency(TRUE);

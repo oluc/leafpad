@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-07 12:54+0000\n"
+"POT-Creation-Date: 2006-01-03 04:38+0000\n"
 "PO-Revision-Date: 2005-04-29 20:00+0100\n"
 "Last-Translator: Reviczky Ádám János <reviczky@freemail.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -208,44 +208,44 @@ msgstr "Szövegrészlet nem fodul elő"
 msgid "Replace?"
 msgstr "Kicserél?"
 
-#: src/search.c:249
+#: src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d szövegrészlet kicserélve"
 
-#: src/search.c:295
+#: src/search.c:299
 msgid "Replace"
 msgstr "Kicserél"
 
-#: src/search.c:302
+#: src/search.c:306
 msgid "Find"
 msgstr "Keres"
 
-#: src/search.c:315
+#: src/search.c:319
 msgid "Fi_nd what:"
 msgstr "_Amit keres:"
 
-#: src/search.c:331
+#: src/search.c:335
 msgid "Re_place with:"
 msgstr "Ki_cserél erre:"
 
-#: src/search.c:345
+#: src/search.c:349
 msgid "_Match case"
 msgstr "_Kis/nagybetű számít"
 
-#: src/search.c:350
+#: src/search.c:354
 msgid "Replace _all at once"
 msgstr "Mindent _egyszerre kicserél"
 
-#: src/search.c:401
+#: src/search.c:405
 msgid "Jump To"
 msgstr "Ugrás Ide"
 
-#: src/search.c:407
+#: src/search.c:411
 msgid "_Jump"
 msgstr "_Ugrás"
 
-#: src/search.c:414
+#: src/search.c:418
 msgid "_Line number:"
 msgstr "S_orszám:"
 

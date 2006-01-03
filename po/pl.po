@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-07 12:54+0000\n"
+"POT-Creation-Date: 2006-01-03 04:38+0000\n"
 "PO-Revision-Date: 2005-07-07 09:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -304,62 +304,62 @@ msgstr "Zastąpić?"
 
 # src/search.c:210
 # src/search.c:218
-#: src/search.c:249
+#: src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d łańcuchów zastąpiono"
 
 # src/search.c:256
 # src/search.c:264
-#: src/search.c:295
+#: src/search.c:299
 msgid "Replace"
 msgstr "Zastąp"
 
 # src/search.c:263
 # src/search.c:271
-#: src/search.c:302
+#: src/search.c:306
 msgid "Find"
 msgstr "Znajdź"
 
 # src/search.c:276
 # src/search.c:284
-#: src/search.c:315
+#: src/search.c:319
 msgid "Fi_nd what:"
 msgstr "_Znajdź:"
 
 # src/search.c:292
 # src/search.c:300
-#: src/search.c:331
+#: src/search.c:335
 msgid "Re_place with:"
 msgstr "Z_amień na:"
 
 # src/search.c:306
 # src/search.c:314
-#: src/search.c:345
+#: src/search.c:349
 msgid "_Match case"
 msgstr "_Uwzględniaj wielkość liter"
 
 # src/search.c:311
 # src/search.c:319
-#: src/search.c:350
+#: src/search.c:354
 msgid "Replace _all at once"
 msgstr "Zamień _wszystko"
 
 # src/search.c:362
 # src/search.c:370
-#: src/search.c:401
+#: src/search.c:405
 msgid "Jump To"
 msgstr "Idź do"
 
 # src/search.c:368
 # src/search.c:376
-#: src/search.c:407
+#: src/search.c:411
 msgid "_Jump"
 msgstr "_Idź"
 
 # src/search.c:375
 # src/search.c:383
-#: src/search.c:414
+#: src/search.c:418
 msgid "_Line number:"
 msgstr "Numer _linii:"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-07 12:54+0000\n"
+"POT-Creation-Date: 2006-01-03 04:38+0000\n"
 "PO-Revision-Date: 2004-11-14 18:33+0100\n"
 "Last-Translator: Ruediger Arp <ruediger@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -213,46 +213,46 @@ msgstr "Gesuchter Text wurde nicht gefunden"
 msgid "Replace?"
 msgstr "Ersetzen?"
 
-#: src/search.c:249
+#: src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d Mal gefunden und ersetzt"
 
-#: src/search.c:295
+#: src/search.c:299
 msgid "Replace"
 msgstr "Ersetzen"
 
-#: src/search.c:302
+#: src/search.c:306
 msgid "Find"
 msgstr "Suchen"
 
-#: src/search.c:315
+#: src/search.c:319
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Suchen nach: "
 
-#: src/search.c:331
+#: src/search.c:335
 #, fuzzy
 msgid "Re_place with:"
 msgstr "_Ersetzen durch: "
 
-#: src/search.c:345
+#: src/search.c:349
 msgid "_Match case"
 msgstr "_Groß-/Kleinschreibung berücksichtigen"
 
-#: src/search.c:350
+#: src/search.c:354
 msgid "Replace _all at once"
 msgstr "_Alles ersetzen"
 
-#: src/search.c:401
+#: src/search.c:405
 msgid "Jump To"
 msgstr "Gehe zu"
 
-#: src/search.c:407
+#: src/search.c:411
 msgid "_Jump"
 msgstr "_Gehe zu"
 
-#: src/search.c:414
+#: src/search.c:418
 #, fuzzy
 msgid "_Line number:"
 msgstr "Zeilen_nummer: "

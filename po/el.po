@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-07 12:54+0000\n"
+"POT-Creation-Date: 2006-01-03 04:38+0000\n"
 "PO-Revision-Date: 2005-09-03 01:09+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <i18ngr@hellug.gr>\n"
@@ -210,44 +210,44 @@ msgstr "Δεν βρέθηκε ταίρι"
 msgid "Replace?"
 msgstr "Αντικατάσταση;"
 
-#: src/search.c:249
+#: src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d επαναλήψεις αντικαταστάθηκαν."
 
-#: src/search.c:295
+#: src/search.c:299
 msgid "Replace"
 msgstr "Αντικατάσταση"
 
-#: src/search.c:302
+#: src/search.c:306
 msgid "Find"
 msgstr "Εύρεση"
 
-#: src/search.c:315
+#: src/search.c:319
 msgid "Fi_nd what:"
 msgstr "Εύ_ρεση Κειμένου:"
 
-#: src/search.c:331
+#: src/search.c:335
 msgid "Re_place with:"
 msgstr "Α_ντικατάσταση με:"
 
-#: src/search.c:345
+#: src/search.c:349
 msgid "_Match case"
 msgstr "_Ταίριασμα πεζών-κεφαλαίων"
 
-#: src/search.c:350
+#: src/search.c:354
 msgid "Replace _all at once"
 msgstr "Αντικατάσταση _όλων"
 
-#: src/search.c:401
+#: src/search.c:405
 msgid "Jump To"
 msgstr "Μετάβαση σε"
 
-#: src/search.c:407
+#: src/search.c:411
 msgid "_Jump"
 msgstr "_Μετάβαση"
 
-#: src/search.c:414
+#: src/search.c:418
 msgid "_Line number:"
 msgstr "_Αριθμός γραμμής:"
 

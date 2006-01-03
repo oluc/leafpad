@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-07 12:54+0000\n"
+"POT-Creation-Date: 2006-01-03 04:38+0000\n"
 "PO-Revision-Date: 2005-07-31 22:54+0300\n"
 "Last-Translator: Yo'av Moshe <black_jesus@myrealbox.com>\n"
 "Language-Team: Hebrew\n"
@@ -208,44 +208,44 @@ msgstr "מחרוזת החיפוש לא נמצאה"
 msgid "Replace?"
 msgstr "להחליף?"
 
-#: src/search.c:249
+#: src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d מחרוזות הוחלפו"
 
-#: src/search.c:295
+#: src/search.c:299
 msgid "Replace"
 msgstr "החלף"
 
-#: src/search.c:302
+#: src/search.c:306
 msgid "Find"
 msgstr "חפש"
 
-#: src/search.c:315
+#: src/search.c:319
 msgid "Fi_nd what:"
 msgstr "מה ל_חפש:"
 
-#: src/search.c:331
+#: src/search.c:335
 msgid "Re_place with:"
 msgstr "להח_ליף ב:"
 
-#: src/search.c:345
+#: src/search.c:349
 msgid "_Match case"
 msgstr "התייחס לאותיות גדולות וקטנות"
 
-#: src/search.c:350
+#: src/search.c:354
 msgid "Replace _all at once"
 msgstr "החלף ה_כל בבת אחת"
 
-#: src/search.c:401
+#: src/search.c:405
 msgid "Jump To"
 msgstr "עבור אל"
 
-#: src/search.c:407
+#: src/search.c:411
 msgid "_Jump"
 msgstr "_עבור"
 
-#: src/search.c:414
+#: src/search.c:418
 msgid "_Line number:"
 msgstr "_שורה מספר:"
 

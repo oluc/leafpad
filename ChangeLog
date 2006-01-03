@@ -1,3 +1,9 @@
+2006-01-03
+
+  version 0.8.6:
+	* Fixed "Replace all at once" with no string (thanks Marek).
+	* Updated Swedish translation (Isak Savo).
+
 2005-11-12
 
   version 0.8.5:
