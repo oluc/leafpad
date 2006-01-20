@@ -24,6 +24,7 @@ void undo_reset_modified_step(GtkTextBuffer *buffer);
 void undo_clear_all(GtkTextBuffer *buffer);
 void undo_init(GtkWidget *view, GtkWidget *undo_button, GtkWidget *redo_button);
 void undo_set_sequency(gboolean seq);
+void undo_set_sequency_reserve(void);
 void undo_undo(GtkTextBuffer *buffer);
 void undo_redo(GtkTextBuffer *buffer);
 

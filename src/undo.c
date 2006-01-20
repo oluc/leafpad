@@ -48,6 +48,7 @@ static GString *undo_gstr;
 static UndoInfo *ui_tmp;
 static gint modified_step;
 static guint prev_keyval;
+static gboolean seq_reserve = FALSE;
 
 static void undo_flush_temporal_buffer(GtkTextBuffer *buffer);
 
@@ -68,8 +69,11 @@ static void undo_append_undo_info(GtkTextBuffer *buffer, gchar command, gint sta
 	ui->command = command;
 	ui->start = start;
 	ui->end = end;
-	ui->seq = FALSE;
+//	ui->seq = FALSE;
+	ui->seq = seq_reserve;
 	ui->str = str;
+	
+	seq_reserve = FALSE;
 	
 	undo_list = g_list_append(undo_list, ui);
 DV(g_print("undo_cb: %d %s (%d-%d)\n", command, str, start, end));
@@ -278,6 +282,11 @@ void undo_set_sequency(gboolean seq)
 	if (g_list_length(undo_list))
 		((UndoInfo *)g_list_last(undo_list)->data)->seq = seq;
 DV(g_print("<undo_set_sequency: %d>\n", seq));	
+}
+
+void undo_set_sequency_reserve(void)
+{
+	seq_reserve = TRUE;
 }
 
 static void undo_flush_temporal_buffer(GtkTextBuffer *buffer)
