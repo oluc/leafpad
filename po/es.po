@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2004-11-04 10:10+0100\n"
 "Last-Translator: Lucas Vieites <lucas@asixinformatica.com>\n"
 "Language-Team: Spanish/Spain <es@li.org>\n"
@@ -129,11 +129,11 @@ msgstr "/A_yuda"
 msgid "/Help/_About"
 msgstr "/Ayuda/_Acerca de"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Editor de texto simple"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Lucas Vieites <lucas@asixinformatica.com>"
 
@@ -256,32 +256,6 @@ msgstr "_Saltar"
 msgid "_Line number:"
 msgstr "Número de _línea: "
 
-#: src/print.c:58
-#, fuzzy
-msgid "Can't convert codeset to current locale"
-msgstr "No se puede convertir el conjunto de códigos a «%s»"
-
-#: src/print.c:71
-#, fuzzy
-msgid "Can't write temporary file"
-msgstr "No se puede escribir en el archivo"
-
-#: src/print.c:102
-msgid "Print"
-msgstr ""
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr ""
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr ""
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr ""
-
 #: src/about.c:102
 msgid "Credits"
 msgstr ""
@@ -314,6 +288,14 @@ msgstr "Acerca de %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Editor de texto simple"
+
+#, fuzzy
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "No se puede convertir el conjunto de códigos a «%s»"
+
+#, fuzzy
+#~ msgid "Can't write temporary file"
+#~ msgstr "No se puede escribir en el archivo"
 
 #~ msgid "Other Codeset (%s)"
 #~ msgstr "Otro conjunto de códigos (%s)"

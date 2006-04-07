@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-07-31 22:54+0300\n"
 "Last-Translator: Yo'av Moshe <black_jesus@myrealbox.com>\n"
 "Language-Team: Hebrew\n"
@@ -127,11 +127,11 @@ msgstr "/_עזרה"
 msgid "/Help/_About"
 msgstr "/עזרה/_אודות"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "עורך טקסט פשוט מבוסס GTK+"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Yo´av Moshe <black_jesus@myrealbox.com>"
 
@@ -249,30 +249,6 @@ msgstr "_עבור"
 msgid "_Line number:"
 msgstr "_שורה מספר:"
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "אי-אפשר להמיר את מערך התוים לשפה שבשימוש"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "אי-אפשר לכתוב קובץ זמני"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "הדפס"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "שם המ_דפסת:"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "מספר _עותקים"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "_סדר עמוד"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr "תודות"
@@ -305,3 +281,21 @@ msgstr "אודות %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "עורך טקסט פשוט"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "אי-אפשר להמיר את מערך התוים לשפה שבשימוש"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "אי-אפשר לכתוב קובץ זמני"
+
+#~ msgid "Print"
+#~ msgstr "הדפס"
+
+#~ msgid "Printer _name:"
+#~ msgstr "שם המ_דפסת:"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "מספר _עותקים"
+
+#~ msgid "_Format page"
+#~ msgstr "_סדר עמוד"

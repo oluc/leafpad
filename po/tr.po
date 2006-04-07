@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-08-05 17:26+0300\n"
 "Last-Translator: kaya oğuz <kaya@kuzeykutbu.org>\n"
 "Language-Team: Türkçe <yerellestirme@kde.org.tr>\n"
@@ -129,11 +129,11 @@ msgstr "/_Yardım"
 msgid "/Help/_About"
 msgstr "/Yardım/_Hakkında"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ tabanlı basit metin düzenleyicisi"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Kaya Oğuz <kaya@kuzeykutbu.org>"
 
@@ -251,30 +251,6 @@ msgstr "_Git"
 msgid "_Line number:"
 msgstr "_Satır Numarası:"
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "Kodlama geçerli yer kodlamasına dönüştürülemiyor"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "Geçici dosyaya yazılamıyor"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "Yazdır"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "Yazıcı _adı:"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "Kopya _sayısı:"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "_Sayfa Biçimlendir"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr "Katkıda Bulunanlar"
@@ -307,6 +283,24 @@ msgstr "%s Hakkında"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Basit metin düzenleyicisi"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "Kodlama geçerli yer kodlamasına dönüştürülemiyor"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "Geçici dosyaya yazılamıyor"
+
+#~ msgid "Print"
+#~ msgstr "Yazdır"
+
+#~ msgid "Printer _name:"
+#~ msgstr "Yazıcı _adı:"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "Kopya _sayısı:"
+
+#~ msgid "_Format page"
+#~ msgstr "_Sayfa Biçimlendir"
 
 #~ msgid "Leafpad"
 #~ msgstr "Leafpad"

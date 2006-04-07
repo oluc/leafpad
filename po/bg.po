@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-05-15 15:12+0300\n"
 "Last-Translator: Yavor Doganov <yavor@doganov.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -129,11 +129,11 @@ msgstr "/_Помощ"
 msgid "/Help/_About"
 msgstr "/Помощ/_Относно"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Опростен текстов редактор, базиран на GTK+"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Явор Доганов <yavor@doganov.org>"
 
@@ -251,30 +251,6 @@ msgstr "_Отиване на ред"
 msgid "_Line number:"
 msgstr "_Ред номер:"
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "Превръщането в кодиране според текущия локал е невъзможно"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "Не може да бъде запазен временен файл"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "Печат"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "_Принтер:"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "_Брой копия:"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "_Настройки на страницата"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr "Заслуги"
@@ -307,3 +283,21 @@ msgstr "Относно %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Опростен текстов редактор"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "Превръщането в кодиране според текущия локал е невъзможно"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "Не може да бъде запазен временен файл"
+
+#~ msgid "Print"
+#~ msgstr "Печат"
+
+#~ msgid "Printer _name:"
+#~ msgstr "_Принтер:"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "_Брой копия:"
+
+#~ msgid "_Format page"
+#~ msgstr "_Настройки на страницата"

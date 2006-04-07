@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-08-23 05:55+0100\n"
 "Last-Translator: Alessio D'Ascanio <g3ntaro@gmail.com>\n"
 "Language-Team: \n"
@@ -125,11 +125,11 @@ msgstr "/_Aiuto"
 msgid "/Help/_About"
 msgstr "/Aiuto/I_nformazioni"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Semplice editor testuale basato su GTK+"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Alessio D'Ascanio <g3ntaro@gmail.com>"
 
@@ -247,32 +247,6 @@ msgstr "_Vai"
 msgid "_Line number:"
 msgstr "Numero di _riga:"
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr ""
-"Impossibile convertire la codifica dei caratteri in quella attualmente "
-"impostata"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "Impossibile aprire il file temporaneo"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "Stampa"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "_Nome stampante:"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "_Numero di copie:"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "_Formatta pagina"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr "Ringraziamenti"
@@ -305,6 +279,26 @@ msgstr "Informazioni su %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Semplice editor testuale"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr ""
+#~ "Impossibile convertire la codifica dei caratteri in quella attualmente "
+#~ "impostata"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "Impossibile aprire il file temporaneo"
+
+#~ msgid "Print"
+#~ msgstr "Stampa"
+
+#~ msgid "Printer _name:"
+#~ msgstr "_Nome stampante:"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "_Numero di copie:"
+
+#~ msgid "_Format page"
+#~ msgstr "_Formatta pagina"
 
 #~ msgid "Leafpad"
 #~ msgstr "Leafpad"

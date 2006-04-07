@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2004-11-04 10:10+0100\n"
 "Last-Translator: David Rosal <davidrr@users.sourceforge.net>\n"
 "Language-Team: Catalan\n"
@@ -128,11 +128,11 @@ msgstr "/A_jut"
 msgid "/Help/_About"
 msgstr "/Ajut/_Respecte a"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Editor de text simple, basat en GTK+"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "David Rosal <davidrr@users.sourceforge.net>"
 
@@ -255,32 +255,6 @@ msgstr "_Saltar"
 msgid "_Line number:"
 msgstr "Número de _línia: "
 
-#: src/print.c:58
-#, fuzzy
-msgid "Can't convert codeset to current locale"
-msgstr "No es pot convertir la codificació a '%s'"
-
-#: src/print.c:71
-#, fuzzy
-msgid "Can't write temporary file"
-msgstr "No es pot escriure al fitxer"
-
-#: src/print.c:102
-msgid "Print"
-msgstr ""
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr ""
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr ""
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr ""
-
 #: src/about.c:102
 msgid "Credits"
 msgstr ""
@@ -313,6 +287,14 @@ msgstr "Respecte a %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Editor de text simple"
+
+#, fuzzy
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "No es pot convertir la codificació a '%s'"
+
+#, fuzzy
+#~ msgid "Can't write temporary file"
+#~ msgstr "No es pot escriure al fitxer"
 
 #~ msgid "Other Codeset (%s)"
 #~ msgstr "Una altra codificació (%s)"

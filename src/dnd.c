@@ -126,7 +126,7 @@ DV({
 });	
 	
 	if (selection_data->data && info == TARGET_URI_LIST) {
-		files = g_strsplit(selection_data->data, "\n" , -1);
+		files = g_strsplit((gchar *)selection_data->data, "\n" , -1);
 		while (files[i]) {
 			if (strlen(files[i]) == 0)
 				break;
@@ -160,7 +160,7 @@ DV(g_print(">%s\n", comline));
 			undo_set_sequency_reserve();
 			context->action = GDK_ACTION_MOVE;
 		} else if (info == TARGET_PLAIN 
-			&& g_utf8_validate(selection_data->data, -1, NULL)) {
+			&& g_utf8_validate((gchar *)selection_data->data, -1, NULL)) {
 			selection_data->type =
 				gdk_atom_intern("UTF8_STRING", FALSE);
 		}

@@ -185,7 +185,7 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 	FILE *fp;
 	GtkTextIter start, end;
 	gchar *str;
-	gint rbytes, wbytes;
+	gsize rbytes, wbytes;
 	GError *err = NULL;
 	
 	GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));

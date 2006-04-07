@@ -7,7 +7,6 @@ src/font.c
 src/selector.c
 src/file.c
 src/search.c
-src/print.c
 src/about.c
 
 # files added by intltool-prepare

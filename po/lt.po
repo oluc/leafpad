@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2004-12-06 17:38+0200\n"
 "Last-Translator: Lech Jankovski <godgard@gmail.com>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -128,11 +128,11 @@ msgstr "/P_agalba"
 msgid "/Help/_About"
 msgstr "/Pagalba/A_pie"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Paprastas teksto redaktorius paremtas GTK+"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Lech Jankovski <godgard@gmail.com>"
 
@@ -255,31 +255,6 @@ msgstr "_Nušok"
 msgid "_Line number:"
 msgstr "_Eilutės numeris: "
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr ""
-
-#: src/print.c:71
-#, fuzzy
-msgid "Can't write temporary file"
-msgstr "Neįmanoma įrašyti bylos"
-
-#: src/print.c:102
-msgid "Print"
-msgstr ""
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr ""
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr ""
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr ""
-
 #: src/about.c:102
 msgid "Credits"
 msgstr ""
@@ -312,6 +287,10 @@ msgstr "Apie %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Paprastas teksto redaktorius"
+
+#, fuzzy
+#~ msgid "Can't write temporary file"
+#~ msgstr "Neįmanoma įrašyti bylos"
 
 #, fuzzy
 #~ msgid "Unicode (UTF-8)"

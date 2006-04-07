@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-09-03 01:09+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <i18ngr@hellug.gr>\n"
@@ -129,11 +129,11 @@ msgstr "/_Βοήθεια"
 msgid "/Help/_About"
 msgstr "/Βοήθεια/_Περί"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Ένας απλός επεξεργαστής κειμένου σε GTK+"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Stavros Giannouris <stavrosg2002@freemail.gr>"
 
@@ -251,30 +251,6 @@ msgstr "_Μετάβαση"
 msgid "_Line number:"
 msgstr "_Αριθμός γραμμής:"
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "Αδυναμία μετατροπής της κωδικοσελίδας στο τρέχον locale"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "Αδύνατη η εγγραφή του προσωρινού αρχείου"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "Εκτύπωση"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "Ό_νομα εκτυπωτή"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "Α_ριθμός αντιγράφων:"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "Μορ_φοποίηση σελίδας"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr "Μνεία"
@@ -307,3 +283,21 @@ msgstr "Περί %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Απλός Επεξεργαστής Κειμένου"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "Αδυναμία μετατροπής της κωδικοσελίδας στο τρέχον locale"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "Αδύνατη η εγγραφή του προσωρινού αρχείου"
+
+#~ msgid "Print"
+#~ msgstr "Εκτύπωση"
+
+#~ msgid "Printer _name:"
+#~ msgstr "Ό_νομα εκτυπωτή"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "Α_ριθμός αντιγράφων:"
+
+#~ msgid "_Format page"
+#~ msgstr "Μορ_φοποίηση σελίδας"

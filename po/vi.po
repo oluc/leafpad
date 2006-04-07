@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2004-05-07 01:10+0100\n"
 "Last-Translator: Quy NGUYEN DAI <nguyendaiquy@gmail.com>\n"
 "Language-Team: Vietnamese <vi@vnoss.org>\n"
@@ -125,11 +125,11 @@ msgstr "/_Trợ giúp"
 msgid "/Help/_About"
 msgstr "/Trợ giúp/_Thông tin"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Một trình soạn thảo đơn giản dựa trên GTK+"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Nguyễn Đại Quý <nguyendaiquy@gmail.com>"
 
@@ -247,30 +247,6 @@ msgstr "Chuyển đến dòng"
 msgid "_Line number:"
 msgstr "Dòng _số :"
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "Không thể chuyển bảng mã sang locale hiện dùng '%s'"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "Không thể ghi file tạm"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "In ấn"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "_Tên máy in:"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "_Số bản in:"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "Định _dạng trang"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr ""
@@ -303,6 +279,24 @@ msgstr "Thông tin về %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Một trình soạn thảo đơn giản"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "Không thể chuyển bảng mã sang locale hiện dùng '%s'"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "Không thể ghi file tạm"
+
+#~ msgid "Print"
+#~ msgstr "In ấn"
+
+#~ msgid "Printer _name:"
+#~ msgstr "_Tên máy in:"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "_Số bản in:"
+
+#~ msgid "_Format page"
+#~ msgstr "Định _dạng trang"
 
 #~ msgid "_Selection:"
 #~ msgstr "_Lựa chọn:"

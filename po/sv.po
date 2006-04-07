@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-12-05 20:30+0100\n"
 "Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -127,11 +127,11 @@ msgstr "/_Hjälp"
 msgid "/Help/_About"
 msgstr "/Hjälp/_Om"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Enkel GTK+-baserad textredigerare"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Isak Savo <isak.savo@gmail.com>"
 
@@ -250,30 +250,6 @@ msgstr "_Hoppa"
 msgid "_Line number:"
 msgstr "_Radnummer: "
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "Kan inte konvertera teckenkodning till aktuell lokal"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "Kan inte skriva till temporär fil"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "Skriv ut"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "Skrivar_namn:"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "_Antal kopior:"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "_Formatera sida"
-
 # Osäker på den här, men så här är den översatt i GNOMEs "about"-dialoger
 #: src/about.c:102
 msgid "Credits"
@@ -309,3 +285,21 @@ msgstr "Om %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Enkel textredigerare"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "Kan inte konvertera teckenkodning till aktuell lokal"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "Kan inte skriva till temporär fil"
+
+#~ msgid "Print"
+#~ msgstr "Skriv ut"
+
+#~ msgid "Printer _name:"
+#~ msgstr "Skrivar_namn:"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "_Antal kopior:"
+
+#~ msgid "_Format page"
+#~ msgstr "_Formatera sida"

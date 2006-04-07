@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-04-29 20:00+0100\n"
 "Last-Translator: Reviczky Ádám János <reviczky@freemail.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -127,11 +127,11 @@ msgstr "/_Súgó"
 msgid "/Help/_About"
 msgstr "/Súgó/_Névjegy"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "GTK+-ra épülő egyszerű szöveg szerkesztő"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Reviczky Ádám János <reviczky@freemail.hu>"
 
@@ -249,30 +249,6 @@ msgstr "_Ugrás"
 msgid "_Line number:"
 msgstr "S_orszám:"
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "A kódtáblát nem lehet a jelenlegi locale-ra konvertálni"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "Nem lehet ideiglenes fájlt írni"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "Nyomtatás"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "Nyomtató _neve:"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "_Másolatok száma:"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "_Oldal szerkesztése"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr "Köszönet"
@@ -305,6 +281,24 @@ msgstr "%s névjegye"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Egyszerű szöveg szerkesztő"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "A kódtáblát nem lehet a jelenlegi locale-ra konvertálni"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "Nem lehet ideiglenes fájlt írni"
+
+#~ msgid "Print"
+#~ msgstr "Nyomtatás"
+
+#~ msgid "Printer _name:"
+#~ msgstr "Nyomtató _neve:"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "_Másolatok száma:"
+
+#~ msgid "_Format page"
+#~ msgstr "_Oldal szerkesztése"
 
 #~ msgid "Other Codeset (%s)"
 #~ msgstr "Más Kódtábla (%s)"

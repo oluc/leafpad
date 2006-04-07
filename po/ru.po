@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date:2004-10-24 00:40+0400\n"
 "Last-Translator: Artem Vakhitov <temcat@mail.ru>\n"
 "Language-Team: RUSSIAN <ru@li.org>\n"
@@ -128,11 +128,11 @@ msgstr "/_Справка"
 msgid "/Help/_About"
 msgstr "/Справка/_О программе"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Простой текстовый редактор на основе GTK+"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Artem Vakhitov <temcat@mail.ru>"
 
@@ -255,32 +255,6 @@ msgstr "_Перейти"
 msgid "_Line number:"
 msgstr "_Номер строки: "
 
-#: src/print.c:58
-#, fuzzy
-msgid "Can't convert codeset to current locale"
-msgstr "Не удалось преобразовать кодировку в '%s'"
-
-#: src/print.c:71
-#, fuzzy
-msgid "Can't write temporary file"
-msgstr "Не удалось записать файл"
-
-#: src/print.c:102
-msgid "Print"
-msgstr ""
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr ""
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr ""
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr ""
-
 #: src/about.c:102
 msgid "Credits"
 msgstr ""
@@ -313,6 +287,14 @@ msgstr "О программе \"%s\""
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Простой текстовый редактор"
+
+#, fuzzy
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "Не удалось преобразовать кодировку в '%s'"
+
+#, fuzzy
+#~ msgid "Can't write temporary file"
+#~ msgstr "Не удалось записать файл"
 
 #~ msgid "Other Codeset (%s)"
 #~ msgstr "Другая кодировка (%s)"

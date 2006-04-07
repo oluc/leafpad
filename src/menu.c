@@ -40,7 +40,7 @@ static GtkItemFactoryEntry menu_items[] =
 		G_CALLBACK(on_file_save_as), 0, "<StockItem>", GTK_STOCK_SAVE_AS },
 	{ "/File/---", NULL,
 		NULL, 0, "<Separator>" },
-#ifndef DISABLE_PRINT
+#ifdef ENABLE_PRINT
 	{ N_("/File/_Print..."), "<control>P",
 		G_CALLBACK(on_file_print), 0, "<StockItem>", GTK_STOCK_PRINT },
 #endif
@@ -138,6 +138,18 @@ GtkWidget *create_menu_bar(GtkWidget *window)
 {
 	GtkAccelGroup *accel_group;
 	GtkItemFactory *ifactory;
+	gboolean flag_emacs = FALSE;
+	
+	gchar *key_theme = NULL;
+	GtkSettings *settings = gtk_settings_get_default();
+	if (settings) {
+		g_object_get(settings, "gtk-key-theme-name", &key_theme, NULL);
+		if (key_theme) {
+			if (!g_ascii_strcasecmp(key_theme, "Emacs"))
+				flag_emacs = TRUE;
+			g_free(key_theme);
+		}
+	}
 	
 	accel_group = gtk_accel_group_new();
 	ifactory = gtk_item_factory_new(GTK_TYPE_MENU_BAR, "<main>", accel_group);

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-05-21 02:26+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -127,11 +127,11 @@ msgstr "/帮助(_H)"
 msgid "/Help/_About"
 msgstr "/帮助(H)/关于(_A)"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "基于 GTK+ 的简易文字编辑器"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Carlos Z.F. Liu <carlos_liu@yahoo.com>"
 
@@ -249,30 +249,6 @@ msgstr "跳转(_J)"
 msgid "_Line number:"
 msgstr "行号(_L)："
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "无法将代码转换到当前区域设置"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "无法写入临时文件"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "打印"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "打印机名称(_N)："
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "打印份数(_U)："
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "格式化页面(_F)"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr "感谢"
@@ -305,6 +281,24 @@ msgstr "关于 %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "简易文字编辑器"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "无法将代码转换到当前区域设置"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "无法写入临时文件"
+
+#~ msgid "Print"
+#~ msgstr "打印"
+
+#~ msgid "Printer _name:"
+#~ msgstr "打印机名称(_N)："
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "打印份数(_U)："
+
+#~ msgid "_Format page"
+#~ msgstr "格式化页面(_F)"
 
 #~ msgid "Other Codeset (%s)"
 #~ msgstr "其它编码(%s)"

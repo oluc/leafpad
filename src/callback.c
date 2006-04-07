@@ -125,14 +125,10 @@ gint on_file_save_as(void)
 //	undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 	return 0;
 }
-#ifndef DISABLE_PRINT
+#ifdef ENABLE_PRINT
 void on_file_print(void)
 {
-#	ifdef ENABLE_GNOMEPRINT
 	create_gnomeprint_session();
-#	else
-	create_print_session();
-#	endif
 }
 #endif
 void on_file_close(void)

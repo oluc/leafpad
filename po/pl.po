@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2005-07-07 09:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -185,13 +185,13 @@ msgstr "/Pomoc/_O programie"
 
 # src/callback.c:286
 # src/callback.c:292
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "Prosty edytor tekstowy oparty na GTK+"
 
 # src/callback.c:294
 # src/callback.c:300
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Michal Wrobel <wrobel@task.gda.pl>"
 
@@ -363,42 +363,6 @@ msgstr "_Idź"
 msgid "_Line number:"
 msgstr "Numer _linii:"
 
-# src/print.c:57
-# src/print.c:57
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "Nie można przekonwertować strony kodowej do '%s'"
-
-# src/print.c:70
-# src/print.c:70
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "Nie można zapisać pliku tymczasowego"
-
-# src/print.c:101
-# src/print.c:101
-#: src/print.c:102
-msgid "Print"
-msgstr "Drukuj"
-
-# src/print.c:124
-# src/print.c:124
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "_Nazwa drukarki"
-
-# src/print.c:136
-# src/print.c:136
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "Ilość kopii"
-
-# src/print.c:142
-# src/print.c:142
-#: src/print.c:143
-msgid "_Format page"
-msgstr "_Format strony"
-
 # src/about.c:102
 # src/about.c:103
 #: src/about.c:102
@@ -447,6 +411,36 @@ msgstr "O %s"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Prosty edytor tekstu"
+
+# src/print.c:57
+# src/print.c:57
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "Nie można przekonwertować strony kodowej do '%s'"
+
+# src/print.c:70
+# src/print.c:70
+#~ msgid "Can't write temporary file"
+#~ msgstr "Nie można zapisać pliku tymczasowego"
+
+# src/print.c:101
+# src/print.c:101
+#~ msgid "Print"
+#~ msgstr "Drukuj"
+
+# src/print.c:124
+# src/print.c:124
+#~ msgid "Printer _name:"
+#~ msgstr "_Nazwa drukarki"
+
+# src/print.c:136
+# src/print.c:136
+#~ msgid "N_umber of copies:"
+#~ msgstr "Ilość kopii"
+
+# src/print.c:142
+# src/print.c:142
+#~ msgid "_Format page"
+#~ msgstr "_Format strony"
 
 #~ msgid "Unicode"
 #~ msgstr "Unicode"

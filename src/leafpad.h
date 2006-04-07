@@ -44,12 +44,9 @@
 #include "about.h"
 #include "dnd.h"
 #include "utils.h"
-#ifndef DISABLE_PRINT
-#	ifdef ENABLE_GNOMEPRINT
-#		include "gnomeprint.h"
-#	else
-#		include "print.h"
-#	endif
+#include "emacs.h"
+#ifdef ENABLE_PRINT
+#	include "gnomeprint.h"
 #endif
 
 typedef struct {

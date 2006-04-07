@@ -29,6 +29,7 @@ Installation
 ============
 
 Leafpad requires GTK+-2.x.x libraries.
+Printing feature requires libgnomeprintui-2.2 optionally.
 
 Simple install procedure:
 

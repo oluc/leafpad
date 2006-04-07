@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-20 15:00+0000\n"
+"POT-Creation-Date: 2006-04-06 22:42+0100\n"
 "PO-Revision-Date: 2004-09-09 21:32+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -127,11 +127,11 @@ msgstr "/ヘルプ(_H)"
 msgid "/Help/_About"
 msgstr "/ヘルプ/情報(_A)"
 
-#: src/callback.c:298
+#: src/callback.c:294
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ ベースのシンプルなテキストエディタ"
 
-#: src/callback.c:306
+#: src/callback.c:302
 msgid "translator-credits"
 msgstr "Tarot Osuji <tarot@sdf.lonestar.org>"
 
@@ -249,30 +249,6 @@ msgstr "ジャンプ(_J)"
 msgid "_Line number:"
 msgstr "行番号(_L):"
 
-#: src/print.c:58
-msgid "Can't convert codeset to current locale"
-msgstr "文字コードを現在のロケールに変換できませんでした"
-
-#: src/print.c:71
-msgid "Can't write temporary file"
-msgstr "テンポラリファイルに書きこめませんでした"
-
-#: src/print.c:102
-msgid "Print"
-msgstr "印刷"
-
-#: src/print.c:125
-msgid "Printer _name:"
-msgstr "プリンタ名:"
-
-#: src/print.c:137
-msgid "N_umber of copies:"
-msgstr "コピーの数:"
-
-#: src/print.c:143
-msgid "_Format page"
-msgstr "ページを整形する"
-
 #: src/about.c:102
 msgid "Credits"
 msgstr "クレジット"
@@ -305,3 +281,21 @@ msgstr "%s について"
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "シンプルなテキストエディタ"
+
+#~ msgid "Can't convert codeset to current locale"
+#~ msgstr "文字コードを現在のロケールに変換できませんでした"
+
+#~ msgid "Can't write temporary file"
+#~ msgstr "テンポラリファイルに書きこめませんでした"
+
+#~ msgid "Print"
+#~ msgstr "印刷"
+
+#~ msgid "Printer _name:"
+#~ msgstr "プリンタ名:"
+
+#~ msgid "N_umber of copies:"
+#~ msgstr "コピーの数:"
+
+#~ msgid "_Format page"
+#~ msgstr "ページを整形する"

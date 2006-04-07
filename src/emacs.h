@@ -1,6 +1,6 @@
 /*
  *  Leafpad - GTK+ based simple text editor
- *  Copyright (C) 2004-2005 Tarot Osuji
+ *  Copyright (C) 2004-2006 Tarot Osuji
  *  
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,9 +17,9 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _PRINT_H
-#define _PRINT_H
+#ifndef _EMACS_H
+#define _EMACS_H
 
-void create_print_session(void);
+gboolean check_emacs_key_theme(GtkWindow *window, GtkItemFactory *ifactory);
 
-#endif /* _PRINT_H */
+#endif /* _EMACS_H */

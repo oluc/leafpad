@@ -18,11 +18,11 @@ leafpad_SOURCES = \
 	encoding.h encoding.c \
 	search.h search.c \
 	dialog.h dialog.c \
-	print.h print.c \
 	gnomeprint.h gnomeprint.c \
 	about.h about.c \
 	dnd.h dnd.c \
 	utils.h utils.c \
+	emacs.h emacs.c \
 	gtksourceiter.h gtksourceiter.c \
 	i18n.h
 
