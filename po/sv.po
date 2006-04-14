@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2005-12-05 20:30+0100\n"
 "Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -282,6 +282,14 @@ msgstr "T_ack"
 msgid "About %s"
 msgstr "Om %s"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "Skriv ut"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Enkel textredigerare"
@@ -291,9 +299,6 @@ msgstr "Enkel textredigerare"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "Kan inte skriva till temporär fil"
-
-#~ msgid "Print"
-#~ msgstr "Skriv ut"
 
 #~ msgid "Printer _name:"
 #~ msgstr "Skrivar_namn:"

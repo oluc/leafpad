@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2005-08-23 05:55+0100\n"
 "Last-Translator: Alessio D'Ascanio <g3ntaro@gmail.com>\n"
 "Language-Team: \n"
@@ -276,6 +276,14 @@ msgstr "_Ringraziamenti"
 msgid "About %s"
 msgstr "Informazioni su %s"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "Stampa"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Semplice editor testuale"
@@ -287,9 +295,6 @@ msgstr "Semplice editor testuale"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "Impossibile aprire il file temporaneo"
-
-#~ msgid "Print"
-#~ msgstr "Stampa"
 
 #~ msgid "Printer _name:"
 #~ msgstr "_Nome stampante:"

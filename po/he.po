@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2005-07-31 22:54+0300\n"
 "Last-Translator: Yo'av Moshe <black_jesus@myrealbox.com>\n"
 "Language-Team: Hebrew\n"
@@ -278,6 +278,14 @@ msgstr "_תודות"
 msgid "About %s"
 msgstr "אודות %s"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "הדפס"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "עורך טקסט פשוט"
@@ -287,9 +295,6 @@ msgstr "עורך טקסט פשוט"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "אי-אפשר לכתוב קובץ זמני"
-
-#~ msgid "Print"
-#~ msgstr "הדפס"
 
 #~ msgid "Printer _name:"
 #~ msgstr "שם המ_דפסת:"

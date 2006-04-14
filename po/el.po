@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2005-09-03 01:09+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <i18ngr@hellug.gr>\n"
@@ -280,6 +280,14 @@ msgstr "_Μνεία"
 msgid "About %s"
 msgstr "Περί %s"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "Εκτύπωση"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Απλός Επεξεργαστής Κειμένου"
@@ -289,9 +297,6 @@ msgstr "Απλός Επεξεργαστής Κειμένου"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "Αδύνατη η εγγραφή του προσωρινού αρχείου"
-
-#~ msgid "Print"
-#~ msgstr "Εκτύπωση"
 
 #~ msgid "Printer _name:"
 #~ msgstr "Ό_νομα εκτυπωτή"

@@ -296,7 +296,9 @@ gint main(gint argc, gchar **argv)
 	g_free(conf->fontname);
 	g_free(conf);
 	
-//	check_emacs_key_theme(GTK_WINDOW(pub->mw->window), ifactory);
+#ifdef ENABLE_EMACS
+	check_emacs_key_theme(GTK_WINDOW(pub->mw->window), ifactory);
+#endif
 	
 	hlight_init(pub->mw->buffer);
 	undo_init(pub->mw->view,

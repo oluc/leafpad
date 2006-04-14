@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -277,6 +277,14 @@ msgstr ""
 #: src/about.c:209
 #, c-format
 msgid "About %s"
+msgstr ""
+
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr ""
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
 msgstr ""
 
 #: leafpad.desktop.in.h:1

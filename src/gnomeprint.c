@@ -34,11 +34,12 @@ static GnomeFont *font;
 static GnomeGlyphList *gl;
 static gdouble margin_left, margin_right, margin_top, margin_bottom;
 static gdouble page_height, page_width, page_x, page_y;
-static gdouble line_height, line_width, gl_width, tab_width;
+static gdouble line_height, tab_width, gl_width;
 
 static void move_pen_to_nextpage(void)
 {
 	gnome_print_showpage(gpx);
+	gnome_print_context_close(gpx);
 	g_object_unref(gpx);
 	gpx = gnome_print_job_get_context(job);
 	gnome_print_beginpage(gpx, NULL);
@@ -67,35 +68,33 @@ static void print_glyph_list(gboolean is_newline)
 	gl = gnome_glyphlist_from_text_dumb(font, 0x000000ff, 0, 0, (guchar *)"");
 	gl_width = 0;
 }
-/*
-static const gchar *unicode_font_table[] = {
-	"DejaVu Serif",
-	"Thorndale AMT",
-	"Kochi Mincho",
-	"AR PL SungtiL",
-	"AR PL Mingti2L Big5",
-	"Baekmuk Batang",
-	"FreeSerif",
-	"MgOpen Canonica",
-	"Serif Regular",
-	NULL
-};
 
-static void find_proper_font(gunichar ch)
+static GnomeFont *find_proper_font(gunichar ch)
 {
-	GList *font_list = gnome_font_list();
-	do {
-		GnomeFont *tmp_font =
-			gnome_font_find(font_list->data, FONT_SIZE);
-		gint tmp_glyph = gnome_font_lookup_default(tmp_font, ch);
-//		if (tmp_glyph)
-			g_print("%d:%s\n", tmp_glyph, gnome_font_get_name(tmp_font));
-		gnome_font_unref(tmp_font);
-		font_list = font_list->next;
-	} while (font_list);
-//	gnome_font_list_free(font_list);
+//	GnomeFont *gfont;
+	GnomeFontFace *gface;
+	PangoFont *pfont;
+	PangoFontset *pfontset;
+	
+	pfontset = pango_context_load_fontset(
+		gtk_widget_get_pango_context(pub->mw->view),
+		gtk_widget_get_style(pub->mw->view)->font_desc,
+		gtk_get_default_language());
+	pfont = pango_fontset_get_font(pfontset, ch);
+/*	
+	g_print("\n%s\n",
+		pango_font_description_to_string(
+			pango_font_describe(pfont)
+		)
+	);
+*/	
+	gface =
+		gnome_font_face_find_closest_from_pango_font(pfont);
+	g_object_unref(pfont);
+	
+	return gnome_font_face_get_font_default(gface, FONT_SIZE);
 }
-*/
+
 static GnomePrintJob *create_job(GnomePrintConfig *gpc)
 {
 	GnomeFontFace *font_face;
@@ -135,7 +134,6 @@ g_print("margin_bottom = %f\n", margin_bottom);
 //	g_print("PANGO_SCALE = %d\n", PANGO_SCALE);
 //	g_print("font_size = %d\n", pango_font_description_get_size(font_desc));
 	line_height = gnome_font_get_size(font);
-	line_width = page_width - margin_left - margin_right;
 	tab_width = gnome_font_face_get_glyph_width(font_face,
 		gnome_font_face_lookup_default(font_face, g_utf8_get_char(" ")))
 		/ 1000 * FONT_SIZE * get_current_tab_width();
@@ -160,11 +158,10 @@ DV(	g_print("tab_width = %f\n", tab_width));
 		gint glyph = gnome_font_lookup_default(font, ch);
 		if (!glyph) {
 			if (ch == '\n') {
-DV(				g_print("LF\n"));
 				print_glyph_list(page_x + gl_width > page_width - margin_right);
 				move_pen_to_newline();
+DV(				g_print("LF\n"));
 			} else if (ch == '\t') {
-DV(				g_print("HT "));
 				print_glyph_list(page_x + gl_width > page_width - margin_right);
 /*				page_x = page_x + tab_width
 					- ((page_x - margin_left) % tab_width); */
@@ -172,6 +169,7 @@ DV(				g_print("HT "));
 				do {
 					tmp_x += tab_width;
 				} while (tmp_x < page_x + 0.000001); // FIXME
+DV(				g_print("HT "));
 DV(				g_print("%f -> %f\n", page_x, tmp_x));
 				page_x = tmp_x;
 				gnome_print_moveto(gpx, page_x, page_y);
@@ -179,8 +177,25 @@ DV(				g_print("%f -> %f\n", page_x, tmp_x));
 DV(				g_print("FF\n"));
 				print_glyph_list(page_x + gl_width > page_width - margin_right);
 				move_pen_to_nextpage();
-*/			} else {	// TODO: find proper font
-//				find_proper_font(ch);
+*/			} else {
+				GnomeFont *tmp_font = find_proper_font(ch);
+				GnomeFontFace *tmp_face = gnome_font_get_face(tmp_font);
+				gdouble g_width;
+				
+				glyph = gnome_font_lookup_default(tmp_font, ch);
+				g_width = gnome_font_face_get_glyph_width(tmp_face, glyph)
+					/ 1000 * FONT_SIZE;
+				if (page_x + gl_width + g_width > page_width - margin_right) {
+					if (g_unichar_iswide(ch)) {
+						print_glyph_list(FALSE);
+						move_pen_to_newline();
+					} else
+						print_glyph_list(TRUE);
+				}
+				gnome_glyphlist_font(gl, tmp_font);
+				gnome_glyphlist_glyph(gl, glyph);
+				gnome_glyphlist_font(gl, font);
+				gl_width += g_width;
 DV(				g_print("** "));
 			}
 		} else {
@@ -190,15 +205,21 @@ DV(				g_print("SP "));
 DV(				g_print("\n"));
 				print_glyph_list(page_x + gl_width > page_width - margin_right);
 				page_x +=
-					+ gnome_font_face_get_glyph_width(font_face, glyph) / 1000 * FONT_SIZE;
+					gnome_font_face_get_glyph_width(font_face, glyph) / 1000 * FONT_SIZE;
 				gnome_print_moveto(gpx, page_x, page_y);
 			} else {
-				if (gl_width
-					+ gnome_font_face_get_glyph_width(font_face, glyph) / 1000 * FONT_SIZE
-					> line_width)
-					print_glyph_list(TRUE);
+				gdouble g_width
+					= gnome_font_face_get_glyph_width(font_face, glyph)
+						/ 1000 * FONT_SIZE;
+				if (page_x + gl_width + g_width > page_width - margin_right) {
+					if (g_unichar_iswide(ch)) {
+						print_glyph_list(FALSE);
+						move_pen_to_newline();
+					} else
+						print_glyph_list(TRUE);
+				}
 				gnome_glyphlist_glyph(gl, glyph);
-				gl_width += gnome_font_face_get_glyph_width(font_face, glyph) / 1000 * FONT_SIZE;
+				gl_width += g_width;
 DV(				g_print("%02X ", glyph));
 DV(				g_print("%f (%f)\n", gl_width, gnome_font_get_glyph_width(font, glyph)));
 			}
@@ -208,15 +229,7 @@ DV(				g_print("%f (%f)\n", gl_width, gnome_font_get_glyph_width(font, glyph)));
 	print_glyph_list(page_x + gl_width > page_width - margin_right);
 DV(	g_print("\n[EOT]\n"));
 	
-/*	if ((page_x - margin_left > 0.000001)
-		|| ((page_height - margin_top - line_height) - page_y > 0.000001))
-	{
-		gnome_print_showpage(gpx);
-g_print("%f %f\n",page_x,margin_left);
-g_print("%f %f\n",page_y,page_height - margin_top - line_height);
-	}
-*/	gnome_print_showpage(gpx);
-			
+	gnome_print_showpage(gpx);
 	gnome_print_context_close(gpx);
 	g_object_unref(gpx);
 	
@@ -241,7 +254,7 @@ gint create_gnomeprint_session(void)
 	
 	job = gnome_print_job_new(gpc);
 	if (job == NULL)
-		return -1;	/* TODO: error handle */
+		return -1;
 	
 	dialog = gnome_print_dialog_new(job, (guchar *)_("Print"), 0);
 	notebook = gtk_container_get_children(

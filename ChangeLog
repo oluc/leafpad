@@ -1,3 +1,9 @@
+2006-04-14
+
+  version 0.8.9:
+	* Find proper font if no glyph found from current font when printing.
+	* Fixed word wrapping of wide character string when printing.
+
 2006-04-07
 
   version 0.8.8:

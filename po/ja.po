@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2004-09-09 21:32+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -278,6 +278,14 @@ msgstr "クレジット(_C)"
 msgid "About %s"
 msgstr "%s について"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "印刷"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr "印刷プレビュー"
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "シンプルなテキストエディタ"
@@ -287,9 +295,6 @@ msgstr "シンプルなテキストエディタ"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "テンポラリファイルに書きこめませんでした"
-
-#~ msgid "Print"
-#~ msgstr "印刷"
 
 #~ msgid "Printer _name:"
 #~ msgstr "プリンタ名:"

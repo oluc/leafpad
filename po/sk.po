@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2005-07-10 21:20+0100\n"
 "Last-Translator: Peter Chabada <sk-i18n_chabada_sk>\n"
 "Language-Team: Slovak <sk-i18n@linux.sk>\n"
@@ -279,6 +279,14 @@ msgstr "_Poďakovanie"
 msgid "About %s"
 msgstr "O %s"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "Tlač"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Jednoduchý textový editor"
@@ -288,9 +296,6 @@ msgstr "Jednoduchý textový editor"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "Nemôžem vytvoriť dočasný súbor"
-
-#~ msgid "Print"
-#~ msgstr "Tlač"
 
 #~ msgid "Printer _name:"
 #~ msgstr "T_lačiareň"

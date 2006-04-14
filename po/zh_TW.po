@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2004-10-04 08:21+0800\n"
 "Last-Translator: OLS3 <ols3@lxer.idv.tw>\n"
 "Language-Team: OLS3 <ols3@lxer.idv.tw>\n"
@@ -278,6 +278,14 @@ msgstr "誌謝(_C)"
 msgid "About %s"
 msgstr "關於 %s"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "列印"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "簡易文字編輯器"
@@ -287,9 +295,6 @@ msgstr "簡易文字編輯器"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "無法寫入暫存檔案"
-
-#~ msgid "Print"
-#~ msgstr "列印"
 
 #~ msgid "Printer _name:"
 #~ msgstr "印表機名稱(_n):"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2005-08-05 17:26+0300\n"
 "Last-Translator: kaya oğuz <kaya@kuzeykutbu.org>\n"
 "Language-Team: Türkçe <yerellestirme@kde.org.tr>\n"
@@ -280,6 +280,14 @@ msgstr "_Katkıda Bulunanlar"
 msgid "About %s"
 msgstr "%s Hakkında"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "Yazdır"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Basit metin düzenleyicisi"
@@ -289,9 +297,6 @@ msgstr "Basit metin düzenleyicisi"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "Geçici dosyaya yazılamıyor"
-
-#~ msgid "Print"
-#~ msgstr "Yazdır"
 
 #~ msgid "Printer _name:"
 #~ msgstr "Yazıcı _adı:"

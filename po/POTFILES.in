@@ -8,6 +8,7 @@ src/selector.c
 src/file.c
 src/search.c
 src/about.c
+src/gnomeprint.c
 
 # files added by intltool-prepare
 leafpad.desktop.in

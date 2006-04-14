@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2004-05-07 01:10+0100\n"
 "Last-Translator: Quy NGUYEN DAI <nguyendaiquy@gmail.com>\n"
 "Language-Team: Vietnamese <vi@vnoss.org>\n"
@@ -276,6 +276,14 @@ msgstr "Đóng _góp"
 msgid "About %s"
 msgstr "Thông tin về %s"
 
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "In ấn"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Một trình soạn thảo đơn giản"
@@ -285,9 +293,6 @@ msgstr "Một trình soạn thảo đơn giản"
 
 #~ msgid "Can't write temporary file"
 #~ msgstr "Không thể ghi file tạm"
-
-#~ msgid "Print"
-#~ msgstr "In ấn"
 
 #~ msgid "Printer _name:"
 #~ msgstr "_Tên máy in:"

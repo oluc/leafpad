@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2005-07-07 09:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -406,6 +406,16 @@ msgstr "Zasługo"
 msgid "About %s"
 msgstr "O %s"
 
+# src/print.c:101
+# src/print.c:101
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr "Drukuj"
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
+
 # leafpad.desktop.in.h:2
 # leafpad.desktop.in.h:2
 #: leafpad.desktop.in.h:1
@@ -421,11 +431,6 @@ msgstr "Prosty edytor tekstu"
 # src/print.c:70
 #~ msgid "Can't write temporary file"
 #~ msgstr "Nie można zapisać pliku tymczasowego"
-
-# src/print.c:101
-# src/print.c:101
-#~ msgid "Print"
-#~ msgstr "Drukuj"
 
 # src/print.c:124
 # src/print.c:124

@@ -1,4 +1,4 @@
-AC_INIT(Leafpad, 0.8.8, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.8.9, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
@@ -27,6 +27,11 @@ if test "$enable_print" != "no"; then
 		AC_DEFINE(ENABLE_PRINT, 1, [Define if print feature is enabled.])
 	], echo "no")
 fi
+
+AC_ARG_ENABLE(emacs,
+	AC_HELP_STRING([--enable-emacs], [implement Emacs key theme (experimental)]),
+	AC_DEFINE(ENABLE_EMACS, 1, [Define if Emacs key theme is enabled.])
+)
 
 ALL_LINGUAS="bg ca cs de el es fr he hu it ja lt pl pt ru sk sv ta tr vi zh_CN zh_TW"
 GETTEXT_PACKAGE="$PACKAGE"

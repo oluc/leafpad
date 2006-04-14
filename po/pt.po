@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-06 22:42+0100\n"
+"POT-Creation-Date: 2006-04-14 16:40+0100\n"
 "PO-Revision-Date: 2004-12-28 19:56:59-0300\n"
 "Last-Translator: Alan Kelon Oliveira de Moraes <alankelon@yahoo.com.br>\n"
 "Language-Team: \n"
@@ -283,6 +283,14 @@ msgstr ""
 #, c-format
 msgid "About %s"
 msgstr "Sobre %s"
+
+#: src/gnomeprint.c:259
+msgid "Print"
+msgstr ""
+
+#: src/gnomeprint.c:289
+msgid "Print Preview"
+msgstr ""
 
 #: leafpad.desktop.in.h:1
 msgid "Simple text editor"
