@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2005-07-10 21:20+0100\n"
 "Last-Translator: Peter Chabada <sk-i18n_chabada_sk>\n"
 "Language-Team: Slovak <sk-i18n@linux.sk>\n"
@@ -132,7 +132,7 @@ msgstr "/Pomocník/_O programe"
 msgid "GTK+ based simple text editor"
 msgstr "Jednoduchý textový editor"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Peter Chabada"
 
@@ -287,9 +287,12 @@ msgstr "Tlač"
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Jednoduchý textový editor"
+#~ msgid "Simple text editor"
+#~ msgstr "Jednoduchý textový editor"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Súbor"
 
 #~ msgid "Can't convert codeset to current locale"
 #~ msgstr "Nemôžem skonvertovať znakovú sadu do lokálneho nastavenia"

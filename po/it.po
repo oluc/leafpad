@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2005-08-23 05:55+0100\n"
 "Last-Translator: Alessio D'Ascanio <g3ntaro@gmail.com>\n"
 "Language-Team: \n"
@@ -129,7 +129,7 @@ msgstr "/Aiuto/I_nformazioni"
 msgid "GTK+ based simple text editor"
 msgstr "Semplice editor testuale basato su GTK+"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Alessio D'Ascanio <g3ntaro@gmail.com>"
 
@@ -284,9 +284,12 @@ msgstr "Stampa"
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Semplice editor testuale"
+#~ msgid "Simple text editor"
+#~ msgstr "Semplice editor testuale"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_File "
 
 #~ msgid "Can't convert codeset to current locale"
 #~ msgstr ""

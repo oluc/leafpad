@@ -2,12 +2,12 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Leafpad package.
 # Tarot Osuji <tarot@sdf.lonestar.org>, 2004.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-09-09 21:32+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -131,7 +131,7 @@ msgstr "/ヘルプ/情報(_A)"
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ ベースのシンプルなテキストエディタ"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Tarot Osuji <tarot@sdf.lonestar.org>"
 
@@ -286,9 +286,12 @@ msgstr "印刷"
 msgid "Print Preview"
 msgstr "印刷プレビュー"
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "シンプルなテキストエディタ"
+#~ msgid "Simple text editor"
+#~ msgstr "シンプルなテキストエディタ"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/ファイル(_F)"
 
 #~ msgid "Can't convert codeset to current locale"
 #~ msgstr "文字コードを現在のロケールに変換できませんでした"

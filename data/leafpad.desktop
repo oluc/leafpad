@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Leafpad
-_Comment=Simple text editor
+Comment=Simple text editor
 Exec=leafpad %f
-Icon=leafpad.png
+Icon=leafpad
 Terminal=false
 Type=Application
 MimeType=text/plain

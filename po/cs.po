@@ -2,12 +2,12 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the leafpad package.
 # Petr Vysloužil <evyslouz@volny.cz>, 2004.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-11-18 23:58+0100\n"
 "Last-Translator: Petr Vysloužil <evyslouz@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -132,7 +132,7 @@ msgstr "/Nápověda/O _aplikaci"
 msgid "GTK+ based simple text editor"
 msgstr "Jednoduchý GTK+ textový editor"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Petr Vyslouzil <evyslouz@volny.cz>"
 
@@ -292,9 +292,12 @@ msgstr ""
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Jednoduchý textový editor"
+#~ msgid "Simple text editor"
+#~ msgstr "Jednoduchý textový editor"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Soubor"
 
 #, fuzzy
 #~ msgid "Can't convert codeset to current locale"

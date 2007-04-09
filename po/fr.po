@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-11-02 20:47+0200\n"
 "Last-Translator: Luc Pionchon <luc@handhelds.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -132,7 +132,7 @@ msgstr "/_Aide/À _propos"
 msgid "GTK+ based simple text editor"
 msgstr "Un éditeur de texte tout simple, basé sur GTK+"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Luc Pionchon <luc@handhelds.org>"
 
@@ -294,9 +294,12 @@ msgstr ""
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Un éditeur de texte tout simple"
+#~ msgid "Simple text editor"
+#~ msgstr "Un éditeur de texte tout simple"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Fichier"
 
 #, fuzzy
 #~ msgid "Can't convert codeset to current locale"

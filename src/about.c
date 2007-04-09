@@ -260,6 +260,7 @@ GtkWidget *create_about_dialog(
 	const gchar *copyright,
 	const gchar *comments,
 	const gchar **authors,
+	const gchar **artists,
 	const gchar **documenters,
 	const gchar *translator_credits,
 	GdkPixbuf *logo)
@@ -283,6 +284,7 @@ GtkWidget *create_about_dialog(
 	gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(about), copyright);
 	gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(about), comments);
 	gtk_about_dialog_set_authors(GTK_ABOUT_DIALOG(about), authors);
+	gtk_about_dialog_set_artists(GTK_ABOUT_DIALOG(about), artists);
 	gtk_about_dialog_set_translator_credits(GTK_ABOUT_DIALOG(about), translator_credits);
 	gtk_about_dialog_set_logo(GTK_ABOUT_DIALOG(about), logo);
 	g_signal_connect(G_OBJECT(about), "response",

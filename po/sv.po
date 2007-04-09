@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2005-12-05 20:30+0100\n"
 "Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -131,7 +131,7 @@ msgstr "/Hjälp/_Om"
 msgid "GTK+ based simple text editor"
 msgstr "Enkel GTK+-baserad textredigerare"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Isak Savo <isak.savo@gmail.com>"
 
@@ -290,9 +290,12 @@ msgstr "Skriv ut"
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Enkel textredigerare"
+#~ msgid "Simple text editor"
+#~ msgstr "Enkel textredigerare"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Arkiv"
 
 #~ msgid "Can't convert codeset to current locale"
 #~ msgstr "Kan inte konvertera teckenkodning till aktuell lokal"

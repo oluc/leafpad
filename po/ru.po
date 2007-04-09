@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date:2004-10-24 00:40+0400\n"
 "Last-Translator: Artem Vakhitov <temcat@mail.ru>\n"
 "Language-Team: RUSSIAN <ru@li.org>\n"
@@ -132,7 +132,7 @@ msgstr "/Справка/_О программе"
 msgid "GTK+ based simple text editor"
 msgstr "Простой текстовый редактор на основе GTK+"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Artem Vakhitov <temcat@mail.ru>"
 
@@ -292,9 +292,12 @@ msgstr ""
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Простой текстовый редактор"
+#~ msgid "Simple text editor"
+#~ msgstr "Простой текстовый редактор"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Файл"
 
 #, fuzzy
 #~ msgid "Can't convert codeset to current locale"

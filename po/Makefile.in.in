@@ -21,7 +21,6 @@ SHELL = /bin/sh
 
 srcdir = @srcdir@
 top_srcdir = @top_srcdir@
-top_builddir = ..
 VPATH = @srcdir@
 
 prefix = @prefix@
@@ -42,10 +41,7 @@ GENCAT = @GENCAT@
 GMSGFMT = @GMSGFMT@
 MSGFMT = @MSGFMT@
 XGETTEXT = @XGETTEXT@
-INTLTOOL_UPDATE = @INTLTOOL_UPDATE@
-INTLTOOL_EXTRACT = @INTLTOOL_EXTRACT@
-MSGMERGE = INTLTOOL_EXTRACT=$(INTLTOOL_EXTRACT) $(INTLTOOL_UPDATE) --gettext-package $(GETTEXT_PACKAGE) --dist
-GENPOT   = INTLTOOL_EXTRACT=$(INTLTOOL_EXTRACT) $(INTLTOOL_UPDATE) --gettext-package $(GETTEXT_PACKAGE) --pot
+MSGMERGE = msgmerge
 
 DEFS = @DEFS@
 CFLAGS = @CFLAGS@
@@ -75,14 +71,14 @@ INSTOBJEXT = @INSTOBJEXT@
 
 .po.pox:
 	$(MAKE) $(GETTEXT_PACKAGE).pot
-	$(MSGMERGE) $< $(srcdir)/$(GETTEXT_PACKAGE).pot -o $*pox
+	$(MSGMERGE) $< $(srcdir)/$(GETTEXT_PACKAGE).pot -o $*.pox
 
 .po.mo:
 	$(MSGFMT) -o $@ $<
 
 .po.gmo:
 	file=$(srcdir)/`echo $* | sed 's,.*/,,'`.gmo \
-	  && rm -f $$file && $(GMSGFMT) -o $$file $<
+	  && rm -f $$file && $(GMSGFMT) -c -o $$file $<
 
 .po.cat:
 	sed -f ../intl/po2msg.sed < $< > $*.msg \
@@ -95,7 +91,27 @@ all-yes: $(CATALOGS)
 all-no:
 
 $(srcdir)/$(GETTEXT_PACKAGE).pot: $(POTFILES)
-	$(GENPOT)
+	$(XGETTEXT) --default-domain=$(GETTEXT_PACKAGE) --directory=$(top_srcdir) \
+	  --add-comments --keyword=_ --keyword=N_ \
+          --flag=g_strdup_printf:1:c-format \
+          --flag=g_string_printf:2:c-format \
+          --flag=g_string_append_printf:2:c-format \
+          --flag=g_error_new:3:c-format \
+          --flag=g_set_error:4:c-format \
+          --flag=g_markup_printf_escaped:1:c-format \
+          --flag=g_log:3:c-format \
+          --flag=g_print:1:c-format \
+          --flag=g_printerr:1:c-format \
+          --flag=g_printf:1:c-format \
+          --flag=g_fprintf:2:c-format \
+          --flag=g_sprintf:2:c-format \
+          --flag=g_snprintf:3:c-format \
+          --flag=g_scanner_error:2:c-format \
+          --flag=g_scanner_warn:2:c-format \
+	  --files-from=$(srcdir)/POTFILES.in \
+	&& test ! -f $(GETTEXT_PACKAGE).po \
+	   || ( rm -f $(srcdir)/$(GETTEXT_PACKAGE).pot \
+		&& mv $(GETTEXT_PACKAGE).po $(srcdir)/$(GETTEXT_PACKAGE).pot )
 
 install: install-exec install-data
 install-exec:
@@ -179,7 +195,6 @@ dvi info tags TAGS ID:
 mostlyclean:
 	rm -f core core.* *.pox $(GETTEXT_PACKAGE).po *.old.po cat-id-tbl.tmp
 	rm -fr *.o
-	rm -f .intltool-merge-cache
 
 clean: mostlyclean
 
@@ -208,7 +223,7 @@ update-po: Makefile
 	  cat=`basename $$cat`; \
 	  lang=`echo $$cat | sed 's/\$(CATOBJEXT)$$//'`; \
 	  echo "$$lang:"; \
-	  if $$tmpdir/$(INTLTOOL_UPDATE) --gettext-package $(GETTEXT_PACKAGE) --dist -o $$tmpdir/$$lang.new.po $$lang; then \
+	  if $(MSGMERGE) $$lang.po $(GETTEXT_PACKAGE).pot -o $$tmpdir/$$lang.new.po; then \
 	    if cmp $$lang.po $$tmpdir/$$lang.new.po >/dev/null 2>&1; then \
 	      rm -f $$tmpdir/$$lang.new.po; \
             else \

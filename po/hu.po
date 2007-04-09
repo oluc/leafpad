@@ -1,14 +1,14 @@
 # Hungarian translation of Leafpad
-# Copyright (C) 2005 Free Software Foundation, Inc.
+# Copyright (C) 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Leafpad package.
-# Reviczky Ádám János <reviczky@freemail.hu>, 2005.
+# Reviczky Ádám János <reviczky@freemail.hu>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.8.0\n"
+"Project-Id-Version: Leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
-"PO-Revision-Date: 2005-04-29 20:00+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
+"PO-Revision-Date: 2007-02-16 03:30+0100\n"
 "Last-Translator: Reviczky Ádám János <reviczky@freemail.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgstr "/Súgó/_Névjegy"
 msgid "GTK+ based simple text editor"
 msgstr "GTK+-ra épülő egyszerű szöveg szerkesztő"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Reviczky Ádám János <reviczky@freemail.hu>"
 
@@ -172,7 +172,7 @@ msgstr "Megnyit"
 
 #: src/selector.c:305
 msgid "Save As"
-msgstr "Mentés másként"
+msgstr "Mentés Másként"
 
 #: src/selector.c:329
 msgid "Ch_aracter Coding:"
@@ -231,7 +231,7 @@ msgstr "Ki_cserél erre:"
 
 #: src/search.c:349
 msgid "_Match case"
-msgstr "_Kis/nagybetű számít"
+msgstr "_Kis/Nagybetű számít"
 
 #: src/search.c:354
 msgid "Replace _all at once"
@@ -284,53 +284,7 @@ msgstr "Nyomtatás"
 
 #: src/gnomeprint.c:289
 msgid "Print Preview"
-msgstr ""
+msgstr "Nyomtatási Kép"
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Egyszerű szöveg szerkesztő"
-
-#~ msgid "Can't convert codeset to current locale"
-#~ msgstr "A kódtáblát nem lehet a jelenlegi locale-ra konvertálni"
-
-#~ msgid "Can't write temporary file"
-#~ msgstr "Nem lehet ideiglenes fájlt írni"
-
-#~ msgid "Printer _name:"
-#~ msgstr "Nyomtató _neve:"
-
-#~ msgid "N_umber of copies:"
-#~ msgstr "_Másolatok száma:"
-
-#~ msgid "_Format page"
-#~ msgstr "_Oldal szerkesztése"
-
-#~ msgid "Other Codeset (%s)"
-#~ msgstr "Más Kódtábla (%s)"
-
-#~ msgid "Other Codeset..."
-#~ msgstr "Más Kódtábla..."
-
-#~ msgid "Unicode (UTF-8)"
-#~ msgstr "Unicode"
-
-#~ msgid "Western"
-#~ msgstr "Nyugat Európai"
-
-#~ msgid "Cyrillic"
-#~ msgstr "Cirill"
-
-#~ msgid "Chinese Simplified"
-#~ msgstr "Kínai egyszerűsített"
-
-#~ msgid "Chinese Traditional"
-#~ msgstr "Kínai hagyományos"
-
-#~ msgid "Japanese"
-#~ msgstr "Japán"
-
-#~ msgid "Korean"
-#~ msgstr "Kóreai"
-
-#~ msgid "Enter Codeset"
-#~ msgstr "Kódtábla megadása"
+#~ msgid "Simple text editor"
+#~ msgstr "Egyszerű szöveg szerkesztő"

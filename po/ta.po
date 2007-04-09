@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-11-25 03:24-0700\n"
 "Last-Translator: Vijay Durairaj <vjd81@yahoo.com>\n"
 "Language-Team: Tamil <tamilinix@yahoogroups.com>\n"
@@ -134,7 +134,7 @@ msgstr "/உதவி(_H)/பற்றி(_A)"
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ சார்ந்த ஒரு எளிமையான உரை பதிப்பான்"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr ""
 
@@ -293,9 +293,12 @@ msgstr ""
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "எளிமையான உரை பதிப்பான்"
+#~ msgid "Simple text editor"
+#~ msgstr "எளிமையான உரை பதிப்பான்"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/கோப்பு(_F)"
 
 #, fuzzy
 #~ msgid "Can't write temporary file"

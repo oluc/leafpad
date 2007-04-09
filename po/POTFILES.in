@@ -11,4 +11,4 @@ src/about.c
 src/gnomeprint.c
 
 # files added by intltool-prepare
-leafpad.desktop.in
+data/leafpad.desktop.in

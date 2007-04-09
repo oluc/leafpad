@@ -2,12 +2,12 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the leafpad package.
 # Carlos Z.F. Liu <carlos_liu@yahoo.com>, 2004.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2005-05-21 02:26+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -131,7 +131,7 @@ msgstr "/帮助(H)/关于(_A)"
 msgid "GTK+ based simple text editor"
 msgstr "基于 GTK+ 的简易文字编辑器"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Carlos Z.F. Liu <carlos_liu@yahoo.com>"
 
@@ -286,9 +286,12 @@ msgstr "打印"
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "简易文字编辑器"
+#~ msgid "Simple text editor"
+#~ msgstr "简易文字编辑器"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/文件(_F)"
 
 #~ msgid "Can't convert codeset to current locale"
 #~ msgstr "无法将代码转换到当前区域设置"

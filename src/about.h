@@ -29,6 +29,7 @@ GtkWidget *create_about_dialog(
 	const gchar *copyright,
 	const gchar *comments,
 	const gchar **authors,
+	const gchar **artists,
 	const gchar **documenters,
 	const gchar *translator_credits,
 	GdkPixbuf *logo);

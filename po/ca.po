@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-11-04 10:10+0100\n"
 "Last-Translator: David Rosal <davidrr@users.sourceforge.net>\n"
 "Language-Team: Catalan\n"
@@ -132,7 +132,7 @@ msgstr "/Ajut/_Respecte a"
 msgid "GTK+ based simple text editor"
 msgstr "Editor de text simple, basat en GTK+"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "David Rosal <davidrr@users.sourceforge.net>"
 
@@ -292,9 +292,12 @@ msgstr ""
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Editor de text simple"
+#~ msgid "Simple text editor"
+#~ msgstr "Editor de text simple"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Fitxer"
 
 #, fuzzy
 #~ msgid "Can't convert codeset to current locale"

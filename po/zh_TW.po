@@ -2,12 +2,12 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the leafpad package.
 # OLS3 <ols3@lxer.idv.tw>, 2005.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-10-04 08:21+0800\n"
 "Last-Translator: OLS3 <ols3@lxer.idv.tw>\n"
 "Language-Team: OLS3 <ols3@lxer.idv.tw>\n"
@@ -131,7 +131,7 @@ msgstr "/說明(H)/關於(_A)"
 msgid "GTK+ based simple text editor"
 msgstr "基於 GTK+ 的簡易文字編輯器"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "OLS3 <ols3@lxer.idv.tw>"
 
@@ -286,9 +286,12 @@ msgstr "列印"
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "簡易文字編輯器"
+#~ msgid "Simple text editor"
+#~ msgstr "簡易文字編輯器"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/檔案(_F)"
 
 #~ msgid "Can't convert codeset to current locale"
 #~ msgstr "無法將編碼轉換為 “%s”"

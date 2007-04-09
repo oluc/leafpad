@@ -2,12 +2,12 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Alan Kelon Oliveira de Moraes <alankelon@yahoo.com.br>, 2004.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-12-28 19:56:59-0300\n"
 "Last-Translator: Alan Kelon Oliveira de Moraes <alankelon@yahoo.com.br>\n"
 "Language-Team: \n"
@@ -132,7 +132,7 @@ msgstr "_Ajuda/_Sobre"
 msgid "GTK+ based simple text editor"
 msgstr "Simples editor de texto feito em GTK+"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Alan Kelon <alankelon@yahoo.com.br>"
 
@@ -292,9 +292,12 @@ msgstr ""
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Simples editor de texto"
+#~ msgid "Simple text editor"
+#~ msgstr "Simples editor de texto"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Arquivo"
 
 #, fuzzy
 #~ msgid "Can't convert codeset to current locale"

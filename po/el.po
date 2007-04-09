@@ -1,16 +1,16 @@
 # Greek translation of leafpad.pot 
 # Copyright (C) 2004-2005 Tarot Osuji <tarot@sdf.lonestar.org>
 # This file is distributed under the same license as the leafpad package.
-# Stavros Giannouris <stavrosg2002@freemail.gr>, 2005
-#
+# Stavros Giannouris <stavrosg2002@freemail.gr>, 2005-2006
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.8.3\n"
+"Project-Id-Version: leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
-"PO-Revision-Date: 2005-09-03 01:09+0200\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
+"PO-Revision-Date: 2006-04-23 00:52+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
-"Language-Team: Greek <i18ngr@hellug.gr>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -91,7 +91,7 @@ msgstr "/Αναζήτηση/Εύρεση Επόμε_νου"
 
 #: src/menu.c:75
 msgid "/Search/Find _Previous"
-msgstr "/Αναζήτηση/Εύρεση _Προηγούμενου"
+msgstr "/Αναζήτηση/Εύρεση _προηγούμενου"
 
 #: src/menu.c:77
 msgid "/Search/_Replace..."
@@ -115,11 +115,11 @@ msgstr "/Επιλογές/_Αναδίπλωση λέξεων"
 
 #: src/menu.c:89
 msgid "/Options/_Line Numbers"
-msgstr "/Επιλογές/Α_ριθμοί Γραμμών"
+msgstr "/Επιλογές/Α_ριθμοί γραμμών"
 
 #: src/menu.c:93
 msgid "/Options/_Auto Indent"
-msgstr "/Επιλογές/Αυ_τόματες Εσοχές"
+msgstr "/Επιλογές/Αυ_τόματες εσοχές"
 
 #: src/menu.c:95
 msgid "/_Help"
@@ -133,9 +133,9 @@ msgstr "/Βοήθεια/_Περί"
 msgid "GTK+ based simple text editor"
 msgstr "Ένας απλός επεξεργαστής κειμένου σε GTK+"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
-msgstr "Stavros Giannouris <stavrosg2002@freemail.gr>"
+msgstr "Σταύρος Γιαννούρης <stavrosg2002@freemail.gr>"
 
 #: src/view.c:62
 #, c-format
@@ -157,7 +157,7 @@ msgstr "Άλλες κωδικοποίησεις"
 
 #: src/selector.c:170
 msgid "Code_set:"
-msgstr "Σετ Χαρακτήρων:"
+msgstr "Σετ χαρακτήρων:"
 
 #: src/selector.c:192
 #, c-format
@@ -166,7 +166,7 @@ msgstr "το '%s' δεν υποστηρίζεται"
 
 #: src/selector.c:253
 msgid "Auto-Detect"
-msgstr "Αυτόματη Αναγνώριση"
+msgstr "Αυτόματη αναγνώριση"
 
 #: src/selector.c:305
 msgid "Open"
@@ -174,7 +174,7 @@ msgstr "Άνοιγμα"
 
 #: src/selector.c:305
 msgid "Save As"
-msgstr "Αποθήκευση Ως"
+msgstr "Αποθήκευση ως"
 
 #: src/selector.c:329
 msgid "Ch_aracter Coding:"
@@ -183,11 +183,11 @@ msgstr "Κωδικοποίηση χ_αρακτήρων:"
 #: src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "Το '%s' υπάρχει ήδη. Αντικατάσταση;"
+msgstr "Το '%s' υπάρχει ήδη. Να αντικατασταθεί;"
 
 #: src/file.c:55
 msgid "Untitled"
-msgstr "Χωρίς Τίτλο"
+msgstr "Χωρίς τίτλο"
 
 #: src/file.c:212
 #, c-format
@@ -225,7 +225,7 @@ msgstr "Εύρεση"
 
 #: src/search.c:319
 msgid "Fi_nd what:"
-msgstr "Εύ_ρεση Κειμένου:"
+msgstr "Εύ_ρεση κειμένου:"
 
 #: src/search.c:335
 msgid "Re_place with:"
@@ -286,23 +286,19 @@ msgstr "Εκτύπωση"
 
 #: src/gnomeprint.c:289
 msgid "Print Preview"
-msgstr ""
+msgstr "Προεπισκόπιση εκτύπωσης"
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Απλός Επεξεργαστής Κειμένου"
+#~ msgid "Simple text editor"
+#~ msgstr "Απλός επεξεργαστής κειμένου"
 
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Αρχείο"
+
+#, fuzzy
 #~ msgid "Can't convert codeset to current locale"
-#~ msgstr "Αδυναμία μετατροπής της κωδικοσελίδας στο τρέχον locale"
+#~ msgstr "Αδυναμία μετατροπής της κωδικοσελίδας σε '%s'"
 
+#, fuzzy
 #~ msgid "Can't write temporary file"
-#~ msgstr "Αδύνατη η εγγραφή του προσωρινού αρχείου"
-
-#~ msgid "Printer _name:"
-#~ msgstr "Ό_νομα εκτυπωτή"
-
-#~ msgid "N_umber of copies:"
-#~ msgstr "Α_ριθμός αντιγράφων:"
-
-#~ msgid "_Format page"
-#~ msgstr "Μορ_φοποίηση σελίδας"
+#~ msgstr "Αδύνατη η εγγραφή του αρχείου"

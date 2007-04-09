@@ -290,7 +290,7 @@ void on_help_about(void)
 {
 	static GtkWidget *about = NULL;
 	
-	const gchar *copyright = "Copyright \xc2\xa9 2004-2006 Tarot Osuji";
+	const gchar *copyright = "Copyright \xc2\xa9 2004-2007 Tarot Osuji";
 	const gchar *comments = _("GTK+ based simple text editor");
 	const gchar *authors[] = {
 		"Tarot Osuji <tarot@sdf.lonestar.org>",
@@ -299,9 +299,22 @@ void on_help_about(void)
 	const gchar *documenters[] = {
 		NULL
 	};
+	const gchar *artists[] = {
+		"Lapo Calamandrei <calamandrei@gmail.com>",
+		NULL
+	};
 	const gchar *translator_credits = _("translator-credits");
+#if GTK_CHECK_VERSION(2, 4, 0)
+	GdkPixbuf *logo = gtk_icon_theme_load_icon(
+		gtk_icon_theme_get_default(),
+		PACKAGE,
+		48, /* size */
+		0,  /* flags */
+		NULL);
+#else
 	GdkPixbuf *logo = gdk_pixbuf_new_from_file(
 		ICONDIR G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
+#endif
 
 	if (about != NULL) {
 		gtk_window_present(GTK_WINDOW(about));
@@ -316,6 +329,7 @@ void on_help_about(void)
 		copyright,
 		comments,
 		authors,
+		artists,
 		documenters,
 		translator_credits,
 		logo);

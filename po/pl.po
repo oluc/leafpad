@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2005-07-07 09:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -191,7 +191,7 @@ msgstr "Prosty edytor tekstowy oparty na GTK+"
 
 # src/callback.c:294
 # src/callback.c:300
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Michal Wrobel <wrobel@task.gda.pl>"
 
@@ -418,9 +418,14 @@ msgstr ""
 
 # leafpad.desktop.in.h:2
 # leafpad.desktop.in.h:2
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Prosty edytor tekstu"
+#~ msgid "Simple text editor"
+#~ msgstr "Prosty edytor tekstu"
+
+# src/menu.c:31
+# src/menu.c:31
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Plik"
 
 # src/print.c:57
 # src/print.c:57

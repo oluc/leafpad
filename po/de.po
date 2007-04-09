@@ -2,12 +2,12 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Leafpad package.
 # Sebastian Stach <sebsta@t-online.de>, 2004.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-11-14 18:33+0100\n"
 "Last-Translator: Ruediger Arp <ruediger@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -36,9 +36,8 @@ msgid "/File/Save _As..."
 msgstr "/Datei/Speichern _unter"
 
 #: src/menu.c:44
-#, fuzzy
 msgid "/File/_Print..."
-msgstr "/Datei/_Beenden"
+msgstr "/Datei/_Drucken"
 
 #: src/menu.c:47
 msgid "/File/_Quit"
@@ -130,9 +129,9 @@ msgstr "/Hilfe/_Info"
 
 #: src/callback.c:294
 msgid "GTK+ based simple text editor"
-msgstr "Einfacher Texteditor"
+msgstr "GTK+ basierter, einfacher Texteditor"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr ""
 "Sebastian Stach <sebsta@t-online.de>\n"
@@ -166,7 +165,6 @@ msgid "'%s' is not supported"
 msgstr "'%s' wird nicht unterstützt"
 
 #: src/selector.c:253
-#, fuzzy
 msgid "Auto-Detect"
 msgstr "Automatisch erkennen"
 
@@ -179,7 +177,6 @@ msgid "Save As"
 msgstr "Speichern unter"
 
 #: src/selector.c:329
-#, fuzzy
 msgid "Ch_aracter Coding:"
 msgstr "Zeichenkodierung: "
 
@@ -227,12 +224,10 @@ msgid "Find"
 msgstr "Suchen"
 
 #: src/search.c:319
-#, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Suchen nach: "
 
 #: src/search.c:335
-#, fuzzy
 msgid "Re_place with:"
 msgstr "_Ersetzen durch: "
 
@@ -253,33 +248,32 @@ msgid "_Jump"
 msgstr "_Gehe zu"
 
 #: src/search.c:418
-#, fuzzy
 msgid "_Line number:"
 msgstr "Zeilen_nummer: "
 
 #: src/about.c:102
 msgid "Credits"
-msgstr ""
+msgstr "Mitwirkende"
 
 #: src/about.c:137
 msgid "Written by"
-msgstr ""
+msgstr "Programm von"
 
 #: src/about.c:140
 msgid "Documented by"
-msgstr ""
+msgstr "Dokumentation von"
 
 #: src/about.c:146
 msgid "Translated by"
-msgstr ""
+msgstr "Übersetzung von"
 
 #: src/about.c:197
 msgid "C_redits"
-msgstr ""
+msgstr "M_itwirkende"
 
 #: src/about.c:199
 msgid "_Credits"
-msgstr ""
+msgstr "_Mitwirkende"
 
 #: src/about.c:209
 #, c-format
@@ -288,15 +282,18 @@ msgstr "Info zu %s"
 
 #: src/gnomeprint.c:259
 msgid "Print"
-msgstr ""
+msgstr "Drucken"
 
 #: src/gnomeprint.c:289
 msgid "Print Preview"
-msgstr ""
+msgstr "Druckvorschau"
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Einfacher Texteditor"
+#~ msgid "Simple text editor"
+#~ msgstr "Einfacher Texteditor"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Datei"
 
 #, fuzzy
 #~ msgid "Can't convert codeset to current locale"

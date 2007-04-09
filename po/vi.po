@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: 2004-05-07 01:10+0100\n"
 "Last-Translator: Quy NGUYEN DAI <nguyendaiquy@gmail.com>\n"
 "Language-Team: Vietnamese <vi@vnoss.org>\n"
@@ -129,7 +129,7 @@ msgstr "/Trợ giúp/_Thông tin"
 msgid "GTK+ based simple text editor"
 msgstr "Một trình soạn thảo đơn giản dựa trên GTK+"
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr "Nguyễn Đại Quý <nguyendaiquy@gmail.com>"
 
@@ -284,9 +284,12 @@ msgstr "In ấn"
 msgid "Print Preview"
 msgstr ""
 
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
-msgstr "Một trình soạn thảo đơn giản"
+#~ msgid "Simple text editor"
+#~ msgstr "Một trình soạn thảo đơn giản"
+
+#, fuzzy
+#~ msgid "/_View"
+#~ msgstr "/_Hồ sơ"
 
 #~ msgid "Can't convert codeset to current locale"
 #~ msgstr "Không thể chuyển bảng mã sang locale hiện dùng '%s'"

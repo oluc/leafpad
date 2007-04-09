@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 16:40+0100\n"
+"POT-Creation-Date: 2007-04-08 22:24+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,7 +132,7 @@ msgstr ""
 msgid "GTK+ based simple text editor"
 msgstr ""
 
-#: src/callback.c:302
+#: src/callback.c:306
 msgid "translator-credits"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgid "Untitled"
 msgstr ""
 
 #: src/file.c:212
-#, c-format
+#, possible-c-format
 msgid "Can't convert codeset to '%s'"
 msgstr ""
 
@@ -210,7 +210,7 @@ msgid "Replace?"
 msgstr ""
 
 #: src/search.c:253
-#, c-format
+#, possible-c-format
 msgid "%d strings replaced"
 msgstr ""
 
@@ -285,8 +285,4 @@ msgstr ""
 
 #: src/gnomeprint.c:289
 msgid "Print Preview"
-msgstr ""
-
-#: leafpad.desktop.in.h:1
-msgid "Simple text editor"
 msgstr ""
