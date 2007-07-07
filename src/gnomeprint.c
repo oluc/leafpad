@@ -19,6 +19,8 @@
 
 #include "leafpad.h"
 
+#if !GTK_CHECK_VERSION(2, 10, 0)
+
 #ifdef ENABLE_PRINT
 
 #include <libgnomeprint/gnome-print.h>
@@ -303,3 +305,6 @@ gint create_gnomeprint_session(void)
 }
 
 #endif
+
+#endif
+

@@ -7,4 +7,4 @@ Icon=leafpad
 Terminal=false
 Type=Application
 MimeType=text/plain
-Categories=Application;Utility;TextEditor;
+Categories=GTK;Utility;TextEditor;

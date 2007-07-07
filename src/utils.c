@@ -28,6 +28,7 @@
 #define GEDIT_STDIN_BUFSIZE 1024
 
 // imported from gedit
+#ifdef G_OS_UNIX
 gchar *gedit_utils_get_stdin (void)
 {
 	GString * file_contents;
@@ -72,6 +73,7 @@ gchar *gedit_utils_get_stdin (void)
 
 	return g_string_free (file_contents, FALSE);
 }
+#endif
 
 GtkWidget *create_button_with_stock_image(const gchar *text, const gchar *stock_id)
 {

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-08 22:24+0900\n"
+"POT-Creation-Date: 2007-07-07 12:47+0900\n"
 "PO-Revision-Date: 2005-07-31 22:54+0300\n"
 "Last-Translator: Yo'av Moshe <black_jesus@myrealbox.com>\n"
 "Language-Team: Hebrew\n"
@@ -15,279 +15,280 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/menu.c:31
+#: ../src/menu.c:31
 msgid "/_File"
 msgstr "/_קובץ"
 
-#: src/menu.c:33
+#: ../src/menu.c:33
 msgid "/File/_New"
 msgstr "/קובץ/_חדש"
 
-#: src/menu.c:35
+#: ../src/menu.c:35
 msgid "/File/_Open..."
 msgstr "/קובץ/_פתח..."
 
-#: src/menu.c:37
+#: ../src/menu.c:37
 msgid "/File/_Save"
 msgstr "/קובץ/_שמור"
 
-#: src/menu.c:39
+#: ../src/menu.c:39
 msgid "/File/Save _As..."
 msgstr "/קובץ/שמור _בשם..."
 
-#: src/menu.c:44
+#: ../src/menu.c:44
 msgid "/File/_Print..."
 msgstr "/קובץ/_הדפס..."
 
-#: src/menu.c:47
+#: ../src/menu.c:47
 msgid "/File/_Quit"
 msgstr "/קובץ/י_ציאה"
 
-#: src/menu.c:49
+#: ../src/menu.c:49
 msgid "/_Edit"
 msgstr "/_עריכה"
 
-#: src/menu.c:51
+#: ../src/menu.c:51
 msgid "/Edit/_Undo"
 msgstr "/עריכה/_בטל"
 
-#: src/menu.c:53
+#: ../src/menu.c:53
 msgid "/Edit/_Redo"
 msgstr "/עריכה/ב_צע שוב"
 
-#: src/menu.c:57
+#: ../src/menu.c:57
 msgid "/Edit/Cu_t"
 msgstr "/עריכה/_גזור"
 
-#: src/menu.c:59
+#: ../src/menu.c:59
 msgid "/Edit/_Copy"
 msgstr "/עריכה/_העתק"
 
-#: src/menu.c:61
+#: ../src/menu.c:61
 msgid "/Edit/_Paste"
 msgstr "/עריכה/ה_דבק"
 
-#: src/menu.c:63
+#: ../src/menu.c:63
 msgid "/Edit/_Delete"
 msgstr "/עריכה/_מחק"
 
-#: src/menu.c:67
+#: ../src/menu.c:67
 msgid "/Edit/Select _All"
 msgstr "/עריכה/בחר בה_כל"
 
-#: src/menu.c:69
+#: ../src/menu.c:69
 msgid "/_Search"
 msgstr "/_חיפוש"
 
-#: src/menu.c:71
+#: ../src/menu.c:71
 msgid "/Search/_Find..."
 msgstr "/חיפוש/_חפש..."
 
-#: src/menu.c:73
+#: ../src/menu.c:73
 msgid "/Search/Find _Next"
 msgstr "/חיפוש/מצא את ה_בא"
 
-#: src/menu.c:75
+#: ../src/menu.c:75
 msgid "/Search/Find _Previous"
 msgstr "/חיפוש/מצא את ה_קודם"
 
-#: src/menu.c:77
+#: ../src/menu.c:77
 msgid "/Search/_Replace..."
 msgstr "/חיפוש/_החלף..."
 
-#: src/menu.c:81
+#: ../src/menu.c:81
 msgid "/Search/_Jump To..."
 msgstr "/חיפוש/_עבור אל..."
 
-#: src/menu.c:83
+#: ../src/menu.c:83
 msgid "/_Options"
 msgstr "/_אפשרויות"
 
-#: src/menu.c:85
+#: ../src/menu.c:85
 msgid "/Options/_Font..."
 msgstr "/אפשרויות/_גופן..."
 
-#: src/menu.c:87
+#: ../src/menu.c:87
 msgid "/Options/_Word Wrap"
 msgstr "/אפשרויות/ג_לישת שורות"
 
-#: src/menu.c:89
+#: ../src/menu.c:89
 msgid "/Options/_Line Numbers"
 msgstr "/אפשרויות/_מספרי שורות"
 
-#: src/menu.c:93
+#: ../src/menu.c:93
 msgid "/Options/_Auto Indent"
 msgstr "/אפשרויות/_עימוד אוטומטי"
 
-#: src/menu.c:95
+#: ../src/menu.c:95
 msgid "/_Help"
 msgstr "/_עזרה"
 
-#: src/menu.c:97
+#: ../src/menu.c:97
 msgid "/Help/_About"
 msgstr "/עזרה/_אודות"
 
-#: src/callback.c:294
+#: ../src/callback.c:305
 msgid "GTK+ based simple text editor"
 msgstr "עורך טקסט פשוט מבוסס GTK+"
 
-#: src/callback.c:306
+#: ../src/callback.c:314
 msgid "translator-credits"
 msgstr "Yo´av Moshe <black_jesus@myrealbox.com>"
 
-#: src/view.c:62
+#: ../src/view.c:63
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "לשמור שינויים לקובץ '%s'?"
 
-#: src/font.c:44
+#: ../src/font.c:44
 msgid "Font"
 msgstr "גופן"
 
-#: src/selector.c:99
+#: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
 msgstr "השפה שבשימוש (%s)"
 
-#: src/selector.c:130
+#: ../src/selector.c:130
 msgid "Other Codeset"
 msgstr "מערך תוים אחר"
 
-#: src/selector.c:170
+#: ../src/selector.c:170
 msgid "Code_set:"
 msgstr "_מערך תוים:"
 
-#: src/selector.c:192
+#: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' לא נתמך"
 
-#: src/selector.c:253
+#: ../src/selector.c:253
 msgid "Auto-Detect"
 msgstr "זיהוי אוטומטי"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Open"
 msgstr "פתח"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Save As"
 msgstr "שמור בשם"
 
-#: src/selector.c:329
+#: ../src/selector.c:329
 msgid "Ch_aracter Coding:"
 msgstr "מערך תוים:"
 
-#: src/selector.c:400
+#: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' כבר קיים. להחליף?"
 
-#: src/file.c:55
+#: ../src/file.c:55
 msgid "Untitled"
 msgstr "ללא שם"
 
-#: src/file.c:212
+#: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "אי-אפשר להמיר את מערך התוים אל '%s'"
 
-#: src/file.c:225
+#: ../src/file.c:225
 msgid "Can't open file to write"
 msgstr "אי-אפשר לפתוח קובץ לכתיבה"
 
-#: src/file.c:230
+#: ../src/file.c:230
 msgid "Can't write file"
 msgstr "אי-אפשר לכתוב קובץ"
 
-#: src/search.c:140
+#: ../src/search.c:140
 msgid "Search string not found"
 msgstr "מחרוזת החיפוש לא נמצאה"
 
-#: src/search.c:193
+#: ../src/search.c:193
 msgid "Replace?"
 msgstr "להחליף?"
 
-#: src/search.c:253
+#: ../src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d מחרוזות הוחלפו"
 
-#: src/search.c:299
+#: ../src/search.c:299
 msgid "Replace"
 msgstr "החלף"
 
-#: src/search.c:306
+#: ../src/search.c:306
 msgid "Find"
 msgstr "חפש"
 
-#: src/search.c:319
+#: ../src/search.c:319
 msgid "Fi_nd what:"
 msgstr "מה ל_חפש:"
 
-#: src/search.c:335
+#: ../src/search.c:335
 msgid "Re_place with:"
 msgstr "להח_ליף ב:"
 
-#: src/search.c:349
+#: ../src/search.c:349
 msgid "_Match case"
 msgstr "התייחס לאותיות גדולות וקטנות"
 
-#: src/search.c:354
+#: ../src/search.c:354
 msgid "Replace _all at once"
 msgstr "החלף ה_כל בבת אחת"
 
-#: src/search.c:405
+#: ../src/search.c:405
 msgid "Jump To"
 msgstr "עבור אל"
 
-#: src/search.c:411
+#: ../src/search.c:411
 msgid "_Jump"
 msgstr "_עבור"
 
-#: src/search.c:418
+#: ../src/search.c:418
 msgid "_Line number:"
 msgstr "_שורה מספר:"
 
-#: src/about.c:102
+#: ../src/about.c:102
 msgid "Credits"
 msgstr "תודות"
 
-#: src/about.c:137
+#: ../src/about.c:137
 msgid "Written by"
 msgstr "נכתב ע\"י"
 
-#: src/about.c:140
+#: ../src/about.c:140
 msgid "Documented by"
 msgstr "תועד ע\"י"
 
-#: src/about.c:146
+#: ../src/about.c:146
 msgid "Translated by"
 msgstr "תורגם ע\"י"
 
-#: src/about.c:197
+#: ../src/about.c:197
 msgid "C_redits"
 msgstr "_תודות"
 
-#: src/about.c:199
+#: ../src/about.c:199
 msgid "_Credits"
 msgstr "_תודות"
 
-#: src/about.c:209
+#: ../src/about.c:209
 #, c-format
 msgid "About %s"
 msgstr "אודות %s"
 
-#: src/gnomeprint.c:259
+#: ../src/gnomeprint.c:261
 msgid "Print"
 msgstr "הדפס"
 
-#: src/gnomeprint.c:289
+#: ../src/gnomeprint.c:291
 msgid "Print Preview"
 msgstr ""
 
-#~ msgid "Simple text editor"
-#~ msgstr "עורך טקסט פשוט"
+#: ../data/leafpad.desktop.in.h:1
+msgid "Simple text editor"
+msgstr "עורך טקסט פשוט"
 
 #, fuzzy
 #~ msgid "/_View"

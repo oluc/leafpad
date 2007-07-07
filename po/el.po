@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-08 22:24+0900\n"
+"POT-Creation-Date: 2007-07-07 12:47+0900\n"
 "PO-Revision-Date: 2006-04-23 00:52+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -17,279 +17,280 @@ msgstr ""
 "X-Poedit-Language: Greek\n"
 "X-Poedit-Country: GREECE\n"
 
-#: src/menu.c:31
+#: ../src/menu.c:31
 msgid "/_File"
 msgstr "/_Αρχείο"
 
-#: src/menu.c:33
+#: ../src/menu.c:33
 msgid "/File/_New"
 msgstr "/Αρχείο/_Νέο"
 
-#: src/menu.c:35
+#: ../src/menu.c:35
 msgid "/File/_Open..."
 msgstr "/Αρχείο/Άν_οιγμα..."
 
-#: src/menu.c:37
+#: ../src/menu.c:37
 msgid "/File/_Save"
 msgstr "/Αρχείο/Α_ποθήκευση"
 
-#: src/menu.c:39
+#: ../src/menu.c:39
 msgid "/File/Save _As..."
 msgstr "/Αρχείο/Αποθήκευση _ως..."
 
-#: src/menu.c:44
+#: ../src/menu.c:44
 msgid "/File/_Print..."
 msgstr "/Αρχείο/Ε_κτύπωση..."
 
-#: src/menu.c:47
+#: ../src/menu.c:47
 msgid "/File/_Quit"
 msgstr "/Αρχείο/_Έξοδος"
 
-#: src/menu.c:49
+#: ../src/menu.c:49
 msgid "/_Edit"
 msgstr "/_Επεξεργασία"
 
-#: src/menu.c:51
+#: ../src/menu.c:51
 msgid "/Edit/_Undo"
 msgstr "/Επεξεργασία/_Αναίρεση"
 
-#: src/menu.c:53
+#: ../src/menu.c:53
 msgid "/Edit/_Redo"
 msgstr "/Επεξεργασία/Ε_πανάληψη"
 
-#: src/menu.c:57
+#: ../src/menu.c:57
 msgid "/Edit/Cu_t"
 msgstr "/Επεξεργασία/_Αποκοπή"
 
-#: src/menu.c:59
+#: ../src/menu.c:59
 msgid "/Edit/_Copy"
 msgstr "/Επεξεργασία/Α_ντιγραφή"
 
-#: src/menu.c:61
+#: ../src/menu.c:61
 msgid "/Edit/_Paste"
 msgstr "/Επεξεργασία/_Επικόλληση"
 
-#: src/menu.c:63
+#: ../src/menu.c:63
 msgid "/Edit/_Delete"
 msgstr "/Επεξεργασία/_Διαγραφή"
 
-#: src/menu.c:67
+#: ../src/menu.c:67
 msgid "/Edit/Select _All"
 msgstr "/Επεξεργασία/Επιλογή _όλων"
 
-#: src/menu.c:69
+#: ../src/menu.c:69
 msgid "/_Search"
 msgstr "/Ανα_ζήτηση:"
 
-#: src/menu.c:71
+#: ../src/menu.c:71
 msgid "/Search/_Find..."
 msgstr "/Αναζήτηση/_Εύρεση..."
 
-#: src/menu.c:73
+#: ../src/menu.c:73
 msgid "/Search/Find _Next"
 msgstr "/Αναζήτηση/Εύρεση Επόμε_νου"
 
-#: src/menu.c:75
+#: ../src/menu.c:75
 msgid "/Search/Find _Previous"
 msgstr "/Αναζήτηση/Εύρεση _προηγούμενου"
 
-#: src/menu.c:77
+#: ../src/menu.c:77
 msgid "/Search/_Replace..."
 msgstr "/Αναζήτηση/_Αντικατάσταση..."
 
-#: src/menu.c:81
+#: ../src/menu.c:81
 msgid "/Search/_Jump To..."
 msgstr "/Αναζήτηση/_Μετάβαση σε..."
 
-#: src/menu.c:83
+#: ../src/menu.c:83
 msgid "/_Options"
 msgstr "/Ε_πιλογές"
 
-#: src/menu.c:85
+#: ../src/menu.c:85
 msgid "/Options/_Font..."
 msgstr "/Επιλογές/_Γραμματοσειρά..."
 
-#: src/menu.c:87
+#: ../src/menu.c:87
 msgid "/Options/_Word Wrap"
 msgstr "/Επιλογές/_Αναδίπλωση λέξεων"
 
-#: src/menu.c:89
+#: ../src/menu.c:89
 msgid "/Options/_Line Numbers"
 msgstr "/Επιλογές/Α_ριθμοί γραμμών"
 
-#: src/menu.c:93
+#: ../src/menu.c:93
 msgid "/Options/_Auto Indent"
 msgstr "/Επιλογές/Αυ_τόματες εσοχές"
 
-#: src/menu.c:95
+#: ../src/menu.c:95
 msgid "/_Help"
 msgstr "/_Βοήθεια"
 
-#: src/menu.c:97
+#: ../src/menu.c:97
 msgid "/Help/_About"
 msgstr "/Βοήθεια/_Περί"
 
-#: src/callback.c:294
+#: ../src/callback.c:305
 msgid "GTK+ based simple text editor"
 msgstr "Ένας απλός επεξεργαστής κειμένου σε GTK+"
 
-#: src/callback.c:306
+#: ../src/callback.c:314
 msgid "translator-credits"
 msgstr "Σταύρος Γιαννούρης <stavrosg2002@freemail.gr>"
 
-#: src/view.c:62
+#: ../src/view.c:63
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Αποθήκευση αλλαγών στο '%s' ;"
 
-#: src/font.c:44
+#: ../src/font.c:44
 msgid "Font"
 msgstr "Γραμματοσειρά"
 
-#: src/selector.c:99
+#: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
 msgstr "Τρέχον Locale (%s)"
 
-#: src/selector.c:130
+#: ../src/selector.c:130
 msgid "Other Codeset"
 msgstr "Άλλες κωδικοποίησεις"
 
-#: src/selector.c:170
+#: ../src/selector.c:170
 msgid "Code_set:"
 msgstr "Σετ χαρακτήρων:"
 
-#: src/selector.c:192
+#: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
 msgstr "το '%s' δεν υποστηρίζεται"
 
-#: src/selector.c:253
+#: ../src/selector.c:253
 msgid "Auto-Detect"
 msgstr "Αυτόματη αναγνώριση"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Save As"
 msgstr "Αποθήκευση ως"
 
-#: src/selector.c:329
+#: ../src/selector.c:329
 msgid "Ch_aracter Coding:"
 msgstr "Κωδικοποίηση χ_αρακτήρων:"
 
-#: src/selector.c:400
+#: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "Το '%s' υπάρχει ήδη. Να αντικατασταθεί;"
 
-#: src/file.c:55
+#: ../src/file.c:55
 msgid "Untitled"
 msgstr "Χωρίς τίτλο"
 
-#: src/file.c:212
+#: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Αδυναμία μετατροπής της κωδικοσελίδας σε '%s'"
 
-#: src/file.c:225
+#: ../src/file.c:225
 msgid "Can't open file to write"
 msgstr "Αδυναμία εγγραφής σε αυτό το αρχείο."
 
-#: src/file.c:230
+#: ../src/file.c:230
 msgid "Can't write file"
 msgstr "Αδύνατη η εγγραφή του αρχείου"
 
-#: src/search.c:140
+#: ../src/search.c:140
 msgid "Search string not found"
 msgstr "Δεν βρέθηκε ταίρι"
 
-#: src/search.c:193
+#: ../src/search.c:193
 msgid "Replace?"
 msgstr "Αντικατάσταση;"
 
-#: src/search.c:253
+#: ../src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d επαναλήψεις αντικαταστάθηκαν."
 
-#: src/search.c:299
+#: ../src/search.c:299
 msgid "Replace"
 msgstr "Αντικατάσταση"
 
-#: src/search.c:306
+#: ../src/search.c:306
 msgid "Find"
 msgstr "Εύρεση"
 
-#: src/search.c:319
+#: ../src/search.c:319
 msgid "Fi_nd what:"
 msgstr "Εύ_ρεση κειμένου:"
 
-#: src/search.c:335
+#: ../src/search.c:335
 msgid "Re_place with:"
 msgstr "Α_ντικατάσταση με:"
 
-#: src/search.c:349
+#: ../src/search.c:349
 msgid "_Match case"
 msgstr "_Ταίριασμα πεζών-κεφαλαίων"
 
-#: src/search.c:354
+#: ../src/search.c:354
 msgid "Replace _all at once"
 msgstr "Αντικατάσταση _όλων"
 
-#: src/search.c:405
+#: ../src/search.c:405
 msgid "Jump To"
 msgstr "Μετάβαση σε"
 
-#: src/search.c:411
+#: ../src/search.c:411
 msgid "_Jump"
 msgstr "_Μετάβαση"
 
-#: src/search.c:418
+#: ../src/search.c:418
 msgid "_Line number:"
 msgstr "_Αριθμός γραμμής:"
 
-#: src/about.c:102
+#: ../src/about.c:102
 msgid "Credits"
 msgstr "Μνεία"
 
-#: src/about.c:137
+#: ../src/about.c:137
 msgid "Written by"
 msgstr "Γράφτηκε από"
 
-#: src/about.c:140
+#: ../src/about.c:140
 msgid "Documented by"
 msgstr "Τεκμηριώθηκε από"
 
-#: src/about.c:146
+#: ../src/about.c:146
 msgid "Translated by"
 msgstr "Μεταφράστηκε από"
 
-#: src/about.c:197
+#: ../src/about.c:197
 msgid "C_redits"
 msgstr "Μ_νεία"
 
-#: src/about.c:199
+#: ../src/about.c:199
 msgid "_Credits"
 msgstr "_Μνεία"
 
-#: src/about.c:209
+#: ../src/about.c:209
 #, c-format
 msgid "About %s"
 msgstr "Περί %s"
 
-#: src/gnomeprint.c:259
+#: ../src/gnomeprint.c:261
 msgid "Print"
 msgstr "Εκτύπωση"
 
-#: src/gnomeprint.c:289
+#: ../src/gnomeprint.c:291
 msgid "Print Preview"
 msgstr "Προεπισκόπιση εκτύπωσης"
 
-#~ msgid "Simple text editor"
-#~ msgstr "Απλός επεξεργαστής κειμένου"
+#: ../data/leafpad.desktop.in.h:1
+msgid "Simple text editor"
+msgstr "Απλός επεξεργαστής κειμένου"
 
 #, fuzzy
 #~ msgid "/_View"

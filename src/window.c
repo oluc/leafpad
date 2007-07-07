@@ -31,30 +31,35 @@ MainWin *create_main_window(void)
  	GtkWidget *menubar;
  	GtkWidget *sw;
  	GtkWidget *view;
- 	GdkPixbuf *icon;
 // 	gint size;
 //	GtkAdjustment *hadj, *vadj;
 	
 	MainWin *mw = g_malloc(sizeof(MainWin));
 	
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-	gtk_window_set_title(GTK_WINDOW(window), PACKAGE_NAME);
+//	gtk_window_set_title(GTK_WINDOW(window), PACKAGE_NAME);
+	
+/*
 #if GTK_CHECK_VERSION(2, 4, 0)
 //	size = gtk_icon_size_lookup(GTK_ICON_SIZE_LARGE_TOOLBAR, &size, NULL);
 	icon = gtk_icon_theme_load_icon(
 		gtk_icon_theme_get_default(),
 		PACKAGE,
-		22, /* size */
-		0,  /* flags */
+		16, // size
+		0,  // flags
 		NULL);
 	gtk_window_set_default_icon(icon);
+*/
+#if GTK_CHECK_VERSION(2, 6, 0)
+	gtk_window_set_default_icon_name(PACKAGE);
 #else
-	icon = gdk_pixbuf_new_from_file(
+ 	GdkPixbuf *icon = gdk_pixbuf_new_from_file(
 		ICONDIR G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
 	gtk_window_set_icon(GTK_WINDOW(window), icon);
-#endif
 	if (icon)
 		g_object_unref(icon);
+#endif
+	
 	g_signal_connect(G_OBJECT(window), "delete-event",
 		G_CALLBACK(on_file_quit), NULL);
 	g_signal_connect_after(G_OBJECT(window), "delete-event",
@@ -99,3 +104,4 @@ void set_main_window_title(void)
 	gtk_window_set_title(GTK_WINDOW(pub->mw->window), title);
 	g_free(title);
 }
+

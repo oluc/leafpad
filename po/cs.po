@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-08 22:24+0900\n"
+"POT-Creation-Date: 2007-07-07 12:47+0900\n"
 "PO-Revision-Date: 2004-11-18 23:58+0100\n"
 "Last-Translator: Petr Vysloužil <evyslouz@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -15,285 +15,286 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bitReport-Msgid-Bugs-To: tarot@sdf.lonestar.org\n"
 
-#: src/menu.c:31
+#: ../src/menu.c:31
 msgid "/_File"
 msgstr "/_Soubor"
 
-#: src/menu.c:33
+#: ../src/menu.c:33
 msgid "/File/_New"
 msgstr "/Soubor/_Nový"
 
-#: src/menu.c:35
+#: ../src/menu.c:35
 msgid "/File/_Open..."
 msgstr "/Soubor/_Otevřít"
 
-#: src/menu.c:37
+#: ../src/menu.c:37
 msgid "/File/_Save"
 msgstr "/Soubor/_Uložit"
 
-#: src/menu.c:39
+#: ../src/menu.c:39
 msgid "/File/Save _As..."
 msgstr "/Soubor/Uložit _jako..."
 
-#: src/menu.c:44
+#: ../src/menu.c:44
 #, fuzzy
 msgid "/File/_Print..."
 msgstr "/Soubor/_Konec"
 
-#: src/menu.c:47
+#: ../src/menu.c:47
 msgid "/File/_Quit"
 msgstr "/Soubor/_Konec"
 
-#: src/menu.c:49
+#: ../src/menu.c:49
 msgid "/_Edit"
 msgstr "/Ú_pravy"
 
-#: src/menu.c:51
+#: ../src/menu.c:51
 msgid "/Edit/_Undo"
 msgstr "/Ú_pravy/_Zpět"
 
-#: src/menu.c:53
+#: ../src/menu.c:53
 msgid "/Edit/_Redo"
 msgstr "/Ú_pravy/Zn_ovu"
 
-#: src/menu.c:57
+#: ../src/menu.c:57
 msgid "/Edit/Cu_t"
 msgstr "/Ú_pravy/_Vyjmout"
 
-#: src/menu.c:59
+#: ../src/menu.c:59
 msgid "/Edit/_Copy"
 msgstr "/Ú_pravy/_Kopírovat"
 
-#: src/menu.c:61
+#: ../src/menu.c:61
 msgid "/Edit/_Paste"
 msgstr "/Ú_pravy/V_ložit"
 
-#: src/menu.c:63
+#: ../src/menu.c:63
 msgid "/Edit/_Delete"
 msgstr "/Ú_pravy/_Odstranit"
 
-#: src/menu.c:67
+#: ../src/menu.c:67
 msgid "/Edit/Select _All"
 msgstr "/Ú_pravy/_Vybrat vše"
 
-#: src/menu.c:69
+#: ../src/menu.c:69
 msgid "/_Search"
 msgstr "/_Hledat"
 
-#: src/menu.c:71
+#: ../src/menu.c:71
 msgid "/Search/_Find..."
 msgstr "/Hledat/_Hledat"
 
-#: src/menu.c:73
+#: ../src/menu.c:73
 msgid "/Search/Find _Next"
 msgstr "/Hledat/Hledat _následující"
 
-#: src/menu.c:75
+#: ../src/menu.c:75
 msgid "/Search/Find _Previous"
 msgstr "/Hledat/Hledat _předchozí"
 
-#: src/menu.c:77
+#: ../src/menu.c:77
 msgid "/Search/_Replace..."
 msgstr "/Hledat/Nah_radit"
 
-#: src/menu.c:81
+#: ../src/menu.c:81
 msgid "/Search/_Jump To..."
 msgstr "/Hledat/_Přejít na"
 
-#: src/menu.c:83
+#: ../src/menu.c:83
 msgid "/_Options"
 msgstr "/_Nástroje"
 
-#: src/menu.c:85
+#: ../src/menu.c:85
 msgid "/Options/_Font..."
 msgstr "/_Nástroje/_Písmo"
 
-#: src/menu.c:87
+#: ../src/menu.c:87
 msgid "/Options/_Word Wrap"
 msgstr "/Nástroje/_Zalamovat řádky"
 
-#: src/menu.c:89
+#: ../src/menu.c:89
 msgid "/Options/_Line Numbers"
 msgstr "/_Nástroje/Čí_slovat řádky"
 
-#: src/menu.c:93
+#: ../src/menu.c:93
 msgid "/Options/_Auto Indent"
 msgstr "/Nastavení/_Automatické odsazování"
 
-#: src/menu.c:95
+#: ../src/menu.c:95
 msgid "/_Help"
 msgstr "/_Nápověda"
 
-#: src/menu.c:97
+#: ../src/menu.c:97
 msgid "/Help/_About"
 msgstr "/Nápověda/O _aplikaci"
 
-#: src/callback.c:294
+#: ../src/callback.c:305
 msgid "GTK+ based simple text editor"
 msgstr "Jednoduchý GTK+ textový editor"
 
-#: src/callback.c:306
+#: ../src/callback.c:314
 msgid "translator-credits"
 msgstr "Petr Vyslouzil <evyslouz@volny.cz>"
 
-#: src/view.c:62
+#: ../src/view.c:63
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Uložit změny v '%s'?"
 
-#: src/font.c:44
+#: ../src/font.c:44
 msgid "Font"
 msgstr "Písmo"
 
-#: src/selector.c:99
+#: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
 msgstr "Aktuální locale (%s)"
 
-#: src/selector.c:130
+#: ../src/selector.c:130
 msgid "Other Codeset"
 msgstr "Jiná znaková sada"
 
-#: src/selector.c:170
+#: ../src/selector.c:170
 msgid "Code_set:"
 msgstr "Znaková _sada:"
 
-#: src/selector.c:192
+#: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' není podporována"
 
-#: src/selector.c:253
+#: ../src/selector.c:253
 #, fuzzy
 msgid "Auto-Detect"
 msgstr "Autodetekce"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Open"
 msgstr "Otevřít"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Save As"
 msgstr "Uložit jako"
 
-#: src/selector.c:329
+#: ../src/selector.c:329
 #, fuzzy
 msgid "Ch_aracter Coding:"
 msgstr "_Kódování znaků:"
 
-#: src/selector.c:400
+#: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' již existuje. Přepsat?"
 
-#: src/file.c:55
+#: ../src/file.c:55
 msgid "Untitled"
 msgstr "Nepojmenovaný"
 
-#: src/file.c:212
+#: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Nemohu převést znakovou sadu na '%s'"
 
-#: src/file.c:225
+#: ../src/file.c:225
 msgid "Can't open file to write"
 msgstr "Nemohu otevřít soubor k zápisu"
 
-#: src/file.c:230
+#: ../src/file.c:230
 msgid "Can't write file"
 msgstr "Nemohu zapsat soubor"
 
-#: src/search.c:140
+#: ../src/search.c:140
 msgid "Search string not found"
 msgstr "Hledaný řetězec nenalezen"
 
-#: src/search.c:193
+#: ../src/search.c:193
 msgid "Replace?"
 msgstr "Nahradit?"
 
-#: src/search.c:253
+#: ../src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "nahrazeno '%d' řetězců"
 
-#: src/search.c:299
+#: ../src/search.c:299
 msgid "Replace"
 msgstr "Nahradit"
 
-#: src/search.c:306
+#: ../src/search.c:306
 msgid "Find"
 msgstr "Hledat"
 
-#: src/search.c:319
+#: ../src/search.c:319
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Hledat:"
 
-#: src/search.c:335
+#: ../src/search.c:335
 #, fuzzy
 msgid "Re_place with:"
 msgstr "Nahra_dit čím:"
 
-#: src/search.c:349
+#: ../src/search.c:349
 msgid "_Match case"
 msgstr "_Rozlišovat velikost písmen"
 
-#: src/search.c:354
+#: ../src/search.c:354
 msgid "Replace _all at once"
 msgstr "Nahradit vš_e"
 
-#: src/search.c:405
+#: ../src/search.c:405
 msgid "Jump To"
 msgstr "Jit na _řádek"
 
-#: src/search.c:411
+#: ../src/search.c:411
 msgid "_Jump"
 msgstr "_Přejít"
 
-#: src/search.c:418
+#: ../src/search.c:418
 #, fuzzy
 msgid "_Line number:"
 msgstr "_Číslo řádku:"
 
-#: src/about.c:102
+#: ../src/about.c:102
 msgid "Credits"
 msgstr ""
 
-#: src/about.c:137
+#: ../src/about.c:137
 msgid "Written by"
 msgstr ""
 
-#: src/about.c:140
+#: ../src/about.c:140
 msgid "Documented by"
 msgstr ""
 
-#: src/about.c:146
+#: ../src/about.c:146
 msgid "Translated by"
 msgstr ""
 
-#: src/about.c:197
+#: ../src/about.c:197
 msgid "C_redits"
 msgstr ""
 
-#: src/about.c:199
+#: ../src/about.c:199
 msgid "_Credits"
 msgstr ""
 
-#: src/about.c:209
+#: ../src/about.c:209
 #, c-format
 msgid "About %s"
 msgstr "O %s"
 
-#: src/gnomeprint.c:259
+#: ../src/gnomeprint.c:261
 msgid "Print"
 msgstr ""
 
-#: src/gnomeprint.c:289
+#: ../src/gnomeprint.c:291
 msgid "Print Preview"
 msgstr ""
 
-#~ msgid "Simple text editor"
-#~ msgstr "Jednoduchý textový editor"
+#: ../data/leafpad.desktop.in.h:1
+msgid "Simple text editor"
+msgstr "Jednoduchý textový editor"
 
 #, fuzzy
 #~ msgid "/_View"

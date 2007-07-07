@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-08 22:24+0900\n"
+"POT-Creation-Date: 2007-07-07 12:47+0900\n"
 "PO-Revision-Date: 2004-11-02 20:47+0200\n"
 "Last-Translator: Luc Pionchon <luc@handhelds.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -15,287 +15,288 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/menu.c:31
+#: ../src/menu.c:31
 msgid "/_File"
 msgstr "/_Fichier"
 
-#: src/menu.c:33
+#: ../src/menu.c:33
 msgid "/File/_New"
 msgstr "/Fichier/_Nouveau"
 
-#: src/menu.c:35
+#: ../src/menu.c:35
 msgid "/File/_Open..."
 msgstr "/Fichier/_Ouvrir..."
 
-#: src/menu.c:37
+#: ../src/menu.c:37
 msgid "/File/_Save"
 msgstr "/Fichier/_Enregistrer"
 
-#: src/menu.c:39
+#: ../src/menu.c:39
 msgid "/File/Save _As..."
 msgstr "/Fichier/Enregistrer _sous..."
 
-#: src/menu.c:44
+#: ../src/menu.c:44
 #, fuzzy
 msgid "/File/_Print..."
 msgstr "/Fichier/_Quitter"
 
-#: src/menu.c:47
+#: ../src/menu.c:47
 msgid "/File/_Quit"
 msgstr "/Fichier/_Quitter"
 
-#: src/menu.c:49
+#: ../src/menu.c:49
 msgid "/_Edit"
 msgstr "/_Édition"
 
-#: src/menu.c:51
+#: ../src/menu.c:51
 msgid "/Edit/_Undo"
 msgstr "/Édition/_Annuler"
 
-#: src/menu.c:53
+#: ../src/menu.c:53
 msgid "/Edit/_Redo"
 msgstr "/Édition/_Refaire"
 
-#: src/menu.c:57
+#: ../src/menu.c:57
 msgid "/Edit/Cu_t"
 msgstr "/Édition/Co_uper"
 
-#: src/menu.c:59
+#: ../src/menu.c:59
 msgid "/Edit/_Copy"
 msgstr "/Édition/_Copier"
 
-#: src/menu.c:61
+#: ../src/menu.c:61
 msgid "/Edit/_Paste"
 msgstr "/Édition/C_oller"
 
-#: src/menu.c:63
+#: ../src/menu.c:63
 msgid "/Edit/_Delete"
 msgstr "/Édition/_Supprimer"
 
-#: src/menu.c:67
+#: ../src/menu.c:67
 msgid "/Edit/Select _All"
 msgstr "/Édition/_Tout sélectionner"
 
-#: src/menu.c:69
+#: ../src/menu.c:69
 msgid "/_Search"
 msgstr "/_Rechercher"
 
-#: src/menu.c:71
+#: ../src/menu.c:71
 msgid "/Search/_Find..."
 msgstr "/Rechercher/_Rechercher..."
 
-#: src/menu.c:73
+#: ../src/menu.c:73
 msgid "/Search/Find _Next"
 msgstr "/Rechercher/Rechercher le _suivant"
 
-#: src/menu.c:75
+#: ../src/menu.c:75
 msgid "/Search/Find _Previous"
 msgstr "/Rechercher/Rechercher le _précédent"
 
-#: src/menu.c:77
+#: ../src/menu.c:77
 msgid "/Search/_Replace..."
 msgstr "/Rechercher/Re_mplacer..."
 
-#: src/menu.c:81
+#: ../src/menu.c:81
 msgid "/Search/_Jump To..."
 msgstr "/Rechercher/Aller à la _ligne..."
 
-#: src/menu.c:83
+#: ../src/menu.c:83
 msgid "/_Options"
 msgstr "/_Options"
 
-#: src/menu.c:85
+#: ../src/menu.c:85
 msgid "/Options/_Font..."
 msgstr "/Options/_Fonte..."
 
-#: src/menu.c:87
+#: ../src/menu.c:87
 msgid "/Options/_Word Wrap"
 msgstr "/Options/_Retour à la ligne automatique"
 
-#: src/menu.c:89
+#: ../src/menu.c:89
 msgid "/Options/_Line Numbers"
 msgstr "/Options/_Numérotation des lignes"
 
-#: src/menu.c:93
+#: ../src/menu.c:93
 msgid "/Options/_Auto Indent"
 msgstr "/Options/_Indentation automatique"
 
-#: src/menu.c:95
+#: ../src/menu.c:95
 msgid "/_Help"
 msgstr "/_Aide"
 
-#: src/menu.c:97
+#: ../src/menu.c:97
 msgid "/Help/_About"
 msgstr "/_Aide/À _propos"
 
-#: src/callback.c:294
+#: ../src/callback.c:305
 msgid "GTK+ based simple text editor"
 msgstr "Un éditeur de texte tout simple, basé sur GTK+"
 
-#: src/callback.c:306
+#: ../src/callback.c:314
 msgid "translator-credits"
 msgstr "Luc Pionchon <luc@handhelds.org>"
 
-#: src/view.c:62
+#: ../src/view.c:63
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Enregistrer les changements pour '%s' ?"
 
-#: src/font.c:44
+#: ../src/font.c:44
 msgid "Font"
 msgstr "Fonte"
 
-#: src/selector.c:99
+#: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
 msgstr "Locale courante (%s)"
 
-#: src/selector.c:130
+#: ../src/selector.c:130
 msgid "Other Codeset"
 msgstr "Autre jeu de caractères"
 
-#: src/selector.c:170
+#: ../src/selector.c:170
 msgid "Code_set:"
 msgstr "Jeu de _caractères : "
 
-#: src/selector.c:192
+#: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' n'est pas supporté"
 
-#: src/selector.c:253
+#: ../src/selector.c:253
 #, fuzzy
 msgid "Auto-Detect"
 msgstr "Auto-détecté"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Open"
 msgstr "Ouvrir"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Save As"
 msgstr "Enregistrer sous"
 
-#: src/selector.c:329
+#: ../src/selector.c:329
 #, fuzzy
 msgid "Ch_aracter Coding:"
 msgstr "Jeu de _caractères : "
 
-#: src/selector.c:400
+#: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr ""
 "Le fichier '%s' existe déjà. Voulez-vous remplacer le fichier existant par "
 "celui-ci ?"
 
-#: src/file.c:55
+#: ../src/file.c:55
 msgid "Untitled"
 msgstr "Sans titre"
 
-#: src/file.c:212
+#: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Erreur de conversion avec le jeu de caractères '%s'"
 
-#: src/file.c:225
+#: ../src/file.c:225
 msgid "Can't open file to write"
 msgstr "Impossible d'ouvrir le fichier en écriture"
 
-#: src/file.c:230
+#: ../src/file.c:230
 msgid "Can't write file"
 msgstr "Impossible d'enregistrer le fichier"
 
-#: src/search.c:140
+#: ../src/search.c:140
 msgid "Search string not found"
 msgstr "Le texte recherché n'a pas été trouvé"
 
-#: src/search.c:193
+#: ../src/search.c:193
 msgid "Replace?"
 msgstr "Remplacer ?"
 
-#: src/search.c:253
+#: ../src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d occurences trouvées et remplacées."
 
-#: src/search.c:299
+#: ../src/search.c:299
 msgid "Replace"
 msgstr "Remplacer"
 
-#: src/search.c:306
+#: ../src/search.c:306
 msgid "Find"
 msgstr "Trouver"
 
-#: src/search.c:319
+#: ../src/search.c:319
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Rechercher :"
 
-#: src/search.c:335
+#: ../src/search.c:335
 #, fuzzy
 msgid "Re_place with:"
 msgstr "Remplacer _avec :"
 
-#: src/search.c:349
+#: ../src/search.c:349
 msgid "_Match case"
 msgstr "Respecter la _casse"
 
-#: src/search.c:354
+#: ../src/search.c:354
 msgid "Replace _all at once"
 msgstr "_Tout remplacer"
 
-#: src/search.c:405
+#: ../src/search.c:405
 msgid "Jump To"
 msgstr "Aller à la ligne"
 
-#: src/search.c:411
+#: ../src/search.c:411
 msgid "_Jump"
 msgstr "Aller à la ligne"
 
-#: src/search.c:418
+#: ../src/search.c:418
 #, fuzzy
 msgid "_Line number:"
 msgstr "Numéro de _ligne : "
 
-#: src/about.c:102
+#: ../src/about.c:102
 msgid "Credits"
 msgstr ""
 
-#: src/about.c:137
+#: ../src/about.c:137
 msgid "Written by"
 msgstr ""
 
-#: src/about.c:140
+#: ../src/about.c:140
 msgid "Documented by"
 msgstr ""
 
-#: src/about.c:146
+#: ../src/about.c:146
 msgid "Translated by"
 msgstr ""
 
-#: src/about.c:197
+#: ../src/about.c:197
 msgid "C_redits"
 msgstr ""
 
-#: src/about.c:199
+#: ../src/about.c:199
 msgid "_Credits"
 msgstr ""
 
-#: src/about.c:209
+#: ../src/about.c:209
 #, c-format
 msgid "About %s"
 msgstr "À propos de %s"
 
-#: src/gnomeprint.c:259
+#: ../src/gnomeprint.c:261
 msgid "Print"
 msgstr ""
 
-#: src/gnomeprint.c:289
+#: ../src/gnomeprint.c:291
 msgid "Print Preview"
 msgstr ""
 
-#~ msgid "Simple text editor"
-#~ msgstr "Un éditeur de texte tout simple"
+#: ../data/leafpad.desktop.in.h:1
+msgid "Simple text editor"
+msgstr "Un éditeur de texte tout simple"
 
 #, fuzzy
 #~ msgid "/_View"

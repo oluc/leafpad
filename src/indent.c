@@ -41,7 +41,7 @@ gboolean indent_get_state(void)
 	return auto_indent;
 }
 
-static gchar *compute_indentation(GtkTextBuffer *buffer, gint line) // from gedit
+static gchar *compute_indentation(GtkTextBuffer *buffer, GtkTextIter *iter, gint line)
 {
 	GtkTextIter start_iter, end_iter;
 	gunichar ch;
@@ -57,6 +57,8 @@ static gchar *compute_indentation(GtkTextBuffer *buffer, gint line) // from gedi
 	if (gtk_text_iter_equal(&start_iter, &end_iter))
 		return NULL;
 	
+	if (iter && gtk_text_iter_compare(iter, &end_iter) < 0)
+		return gtk_text_iter_get_text(&start_iter, iter);
 	return gtk_text_iter_get_text(&start_iter, &end_iter);
 }
 
@@ -70,7 +72,7 @@ void indent_real(GtkWidget *text_view)
 	g_signal_emit_by_name(G_OBJECT(buffer), "begin-user-action");
 	gtk_text_buffer_delete_selection(buffer, TRUE, TRUE);
 	gtk_text_buffer_get_iter_at_mark(buffer, &iter, gtk_text_buffer_get_insert(buffer));
-	ind = compute_indentation(buffer, gtk_text_iter_get_line(&iter));
+	ind = compute_indentation(buffer, &iter, gtk_text_iter_get_line(&iter));
 	str = g_strconcat("\n", ind, NULL);
 	gtk_text_buffer_insert(buffer, &iter, str, -1);
 	g_signal_emit_by_name(G_OBJECT(buffer), "end-user-action");
@@ -82,7 +84,7 @@ void indent_real(GtkWidget *text_view)
 		gtk_text_buffer_get_insert(buffer));
 }
 
-static gint calculate_real_tab_width(GtkWidget *text_view, guint tab_size) //from gtesourceview
+static gint calculate_real_tab_width(GtkWidget *text_view, guint tab_size) //from gtksourceview
 {
 	PangoLayout *layout;
 	gchar *tab_string;
@@ -191,7 +193,7 @@ void indent_multi_line_unindent(GtkTextBuffer *buffer)
 	pos = gtk_text_iter_equal(&iter, &start_iter);
 	i = start_line;
 	do {
-		ind = compute_indentation(buffer, i);
+		ind = compute_indentation(buffer, NULL, i);
 		if (ind && strlen(ind)) {
 			len = compute_indent_offset_length(ind);
 			gtk_text_buffer_get_iter_at_line(buffer, &start_iter, i);
@@ -219,3 +221,4 @@ void indent_multi_line_unindent(GtkTextBuffer *buffer)
 		gtk_text_buffer_move_mark_by_name(buffer, "insert", &end_iter);
 	}
 }
+

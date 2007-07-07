@@ -23,6 +23,7 @@
 
 static gint keyval;
 static gboolean view_scroll_flag = FALSE;
+static gboolean always_on_top_flag = FALSE;
 
 gint get_current_keyval(void)
 {
@@ -174,6 +175,12 @@ static gboolean cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 	case GDK_Tab:
 		if (event->state & GDK_CONTROL_MASK) {
 			indent_toggle_tab_width(view);
+			if (always_on_top_flag)
+				always_on_top_flag = FALSE;
+			else
+				always_on_top_flag = TRUE;
+			gtk_window_set_keep_above(GTK_WINDOW(pub->mw->window),
+				always_on_top_flag);
 			return TRUE;
 		}
 	case GDK_ISO_Left_Tab:

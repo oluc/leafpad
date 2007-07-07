@@ -42,6 +42,7 @@ void on_search_jump_to(void);
 void on_option_font(void);
 void on_option_word_wrap(void);
 void on_option_line_numbers(void);
+void on_option_always_on_top(void);
 void on_option_auto_indent(void);
 void on_help_about(void);
 

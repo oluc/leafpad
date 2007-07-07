@@ -175,7 +175,7 @@ sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
-icondir = $(datadir)/icons/Tango/scalable/apps
+icondir = $(datadir)/icons/hicolor/scalable/apps
 icon_DATA = leafpad.svg
 EXTRA_DIST = $(icon_DATA)
 all: all-am

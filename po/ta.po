@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-08 22:24+0900\n"
+"POT-Creation-Date: 2007-07-07 12:47+0900\n"
 "PO-Revision-Date: 2004-11-25 03:24-0700\n"
 "Last-Translator: Vijay Durairaj <vjd81@yahoo.com>\n"
 "Language-Team: Tamil <tamilinix@yahoogroups.com>\n"
@@ -17,284 +17,285 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/menu.c:31
+#: ../src/menu.c:31
 msgid "/_File"
 msgstr "/கோப்பு(_F)"
 
-#: src/menu.c:33
+#: ../src/menu.c:33
 msgid "/File/_New"
 msgstr "/கோப்பு(F)/புதிது(_N)"
 
-#: src/menu.c:35
+#: ../src/menu.c:35
 msgid "/File/_Open..."
 msgstr "/கோப்பு(F)/திற(_O)..."
 
-#: src/menu.c:37
+#: ../src/menu.c:37
 msgid "/File/_Save"
 msgstr "/கோப்பு(F)/சேமி(_S)"
 
-#: src/menu.c:39
+#: ../src/menu.c:39
 msgid "/File/Save _As..."
 msgstr "/கோப்பு(F)/வேறு பேரில் சேமி(_A)..."
 
-#: src/menu.c:44
+#: ../src/menu.c:44
 #, fuzzy
 msgid "/File/_Print..."
 msgstr "/கோப்பு(F)/வெளிச்செல்(_Q)"
 
-#: src/menu.c:47
+#: ../src/menu.c:47
 msgid "/File/_Quit"
 msgstr "/கோப்பு(F)/வெளிச்செல்(_Q)"
 
-#: src/menu.c:49
+#: ../src/menu.c:49
 msgid "/_Edit"
 msgstr "/தொகு(_E)"
 
-#: src/menu.c:51
+#: ../src/menu.c:51
 msgid "/Edit/_Undo"
 msgstr "/தொகு(E)/கவில் செய்(_U)"
 
-#: src/menu.c:53
+#: ../src/menu.c:53
 msgid "/Edit/_Redo"
 msgstr "/தொகு(E)/மீண்டும்(_R)"
 
-#: src/menu.c:57
+#: ../src/menu.c:57
 msgid "/Edit/Cu_t"
 msgstr "/தொகு(E)/வெட்டு(_T)"
 
-#: src/menu.c:59
+#: ../src/menu.c:59
 msgid "/Edit/_Copy"
 msgstr "/தொகு(E)/நகல்(_C)"
 
-#: src/menu.c:61
+#: ../src/menu.c:61
 msgid "/Edit/_Paste"
 msgstr "/தொகு(E)/ஒட்டு(_P)"
 
-#: src/menu.c:63
+#: ../src/menu.c:63
 msgid "/Edit/_Delete"
 msgstr "/தொகு(E)/நீக்கு(_D)"
 
-#: src/menu.c:67
+#: ../src/menu.c:67
 msgid "/Edit/Select _All"
 msgstr "/தொகு(E)/அனைத்தையும் தேர்வு செய்க(_A)"
 
-#: src/menu.c:69
+#: ../src/menu.c:69
 msgid "/_Search"
 msgstr "/தேடுக(_S)"
 
-#: src/menu.c:71
+#: ../src/menu.c:71
 msgid "/Search/_Find..."
 msgstr "/தேடுக(S)/கண்டுபிடி(_F).."
 
-#: src/menu.c:73
+#: ../src/menu.c:73
 msgid "/Search/Find _Next"
 msgstr "/தேடுக(S)/அடுத்ததை கண்டுபிடி(_N)"
 
-#: src/menu.c:75
+#: ../src/menu.c:75
 msgid "/Search/Find _Previous"
 msgstr "/தேர்வுகள்(O)/தேடலை பின்னோக்கு(_p)"
 
-#: src/menu.c:77
+#: ../src/menu.c:77
 msgid "/Search/_Replace..."
 msgstr "/தேடுக(S)/இடமாற்று(_R)..."
 
-#: src/menu.c:81
+#: ../src/menu.c:81
 msgid "/Search/_Jump To..."
 msgstr "/தேடுக(S)/இங்கு போ(_J)..."
 
-#: src/menu.c:83
+#: ../src/menu.c:83
 msgid "/_Options"
 msgstr "/தேர்வுகள்(_O)"
 
-#: src/menu.c:85
+#: ../src/menu.c:85
 msgid "/Options/_Font..."
 msgstr "/தேர்வுகள்(O)/எழுத்துரு(_F).."
 
-#: src/menu.c:87
+#: ../src/menu.c:87
 msgid "/Options/_Word Wrap"
 msgstr "/தேர்வுகள்(O)/சொல் மடிப்பு(_W)"
 
-#: src/menu.c:89
+#: ../src/menu.c:89
 msgid "/Options/_Line Numbers"
 msgstr "/தேர்வுகள்(O)/வரி எண்கள்(_L)"
 
-#: src/menu.c:93
+#: ../src/menu.c:93
 msgid "/Options/_Auto Indent"
 msgstr "/தேர்வுகள்(O)/தன்னியக்க தள்ளல்(_A)"
 
-#: src/menu.c:95
+#: ../src/menu.c:95
 msgid "/_Help"
 msgstr "/உதவி(_H)"
 
-#: src/menu.c:97
+#: ../src/menu.c:97
 msgid "/Help/_About"
 msgstr "/உதவி(_H)/பற்றி(_A)"
 
-#: src/callback.c:294
+#: ../src/callback.c:305
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ சார்ந்த ஒரு எளிமையான உரை பதிப்பான்"
 
-#: src/callback.c:306
+#: ../src/callback.c:314
 msgid "translator-credits"
 msgstr ""
 
-#: src/view.c:62
+#: ../src/view.c:63
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "மாற்றங்களை '%s' இல் சேமி?"
 
-#: src/font.c:44
+#: ../src/font.c:44
 msgid "Font"
 msgstr "எழுத்துரு"
 
-#: src/selector.c:99
+#: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
 msgstr "தற்பொழுதுள்ள Locale (%s)"
 
-#: src/selector.c:130
+#: ../src/selector.c:130
 msgid "Other Codeset"
 msgstr ""
 
-#: src/selector.c:170
+#: ../src/selector.c:170
 msgid "Code_set:"
 msgstr ""
 
-#: src/selector.c:192
+#: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' க்கு ஆதரவு எதுவும் இல்லை"
 
-#: src/selector.c:253
+#: ../src/selector.c:253
 #, fuzzy
 msgid "Auto-Detect"
 msgstr "தானாக கண்டுபிடி"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Open"
 msgstr "திற"
 
-#: src/selector.c:305
+#: ../src/selector.c:305
 msgid "Save As"
 msgstr "எனச் சேமி..."
 
-#: src/selector.c:329
+#: ../src/selector.c:329
 msgid "Ch_aracter Coding:"
 msgstr ""
 
-#: src/selector.c:400
+#: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' ஏற்கனவே உள்ளது. மேல் எழுதவா?"
 
-#: src/file.c:55
+#: ../src/file.c:55
 msgid "Untitled"
 msgstr "தலைப்பில்லாதது"
 
-#: src/file.c:212
+#: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr ""
 
-#: src/file.c:225
+#: ../src/file.c:225
 msgid "Can't open file to write"
 msgstr "கோப்பை எழுதுவதற்காக திறக்க முடியவில்லை"
 
-#: src/file.c:230
+#: ../src/file.c:230
 msgid "Can't write file"
 msgstr "கோப்பை எழுத முடியவில்லை"
 
-#: src/search.c:140
+#: ../src/search.c:140
 msgid "Search string not found"
 msgstr "தேடல் சரம் கண்டுபிடிக்க முடியவில்லை"
 
-#: src/search.c:193
+#: ../src/search.c:193
 msgid "Replace?"
 msgstr "மாற்றவா?"
 
-#: src/search.c:253
+#: ../src/search.c:253
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d சரங்கள் மாற்றப்பட்டுள்ளது"
 
-#: src/search.c:299
+#: ../src/search.c:299
 msgid "Replace"
 msgstr "மாற்று"
 
-#: src/search.c:306
+#: ../src/search.c:306
 msgid "Find"
 msgstr "கண்டுபிடி"
 
-#: src/search.c:319
+#: ../src/search.c:319
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "எதை கண்டுப்பிடிக்க: (_N)"
 
-#: src/search.c:335
+#: ../src/search.c:335
 #, fuzzy
 msgid "Re_place with:"
 msgstr "எதை கொண்டு மாற்ற(_P)): "
 
-#: src/search.c:349
+#: ../src/search.c:349
 msgid "_Match case"
 msgstr "எழுத்து வகை பொருத்து(_M)"
 
-#: src/search.c:354
+#: ../src/search.c:354
 msgid "Replace _all at once"
 msgstr "எல்லாவற்றையும் ஒரே நேரத்தில் மாற்று(_A)"
 
-#: src/search.c:405
+#: ../src/search.c:405
 msgid "Jump To"
 msgstr "இங்கு போ"
 
-#: src/search.c:411
+#: ../src/search.c:411
 msgid "_Jump"
 msgstr "தாவு(_J)"
 
-#: src/search.c:418
+#: ../src/search.c:418
 #, fuzzy
 msgid "_Line number:"
 msgstr "வரி எண்(_L): "
 
-#: src/about.c:102
+#: ../src/about.c:102
 msgid "Credits"
 msgstr ""
 
-#: src/about.c:137
+#: ../src/about.c:137
 msgid "Written by"
 msgstr ""
 
-#: src/about.c:140
+#: ../src/about.c:140
 msgid "Documented by"
 msgstr ""
 
-#: src/about.c:146
+#: ../src/about.c:146
 msgid "Translated by"
 msgstr ""
 
-#: src/about.c:197
+#: ../src/about.c:197
 msgid "C_redits"
 msgstr ""
 
-#: src/about.c:199
+#: ../src/about.c:199
 msgid "_Credits"
 msgstr ""
 
-#: src/about.c:209
+#: ../src/about.c:209
 #, c-format
 msgid "About %s"
 msgstr "பற்றி %s"
 
-#: src/gnomeprint.c:259
+#: ../src/gnomeprint.c:261
 msgid "Print"
 msgstr ""
 
-#: src/gnomeprint.c:289
+#: ../src/gnomeprint.c:291
 msgid "Print Preview"
 msgstr ""
 
-#~ msgid "Simple text editor"
-#~ msgstr "எளிமையான உரை பதிப்பான்"
+#: ../data/leafpad.desktop.in.h:1
+msgid "Simple text editor"
+msgstr "எளிமையான உரை பதிப்பான்"
 
 #, fuzzy
 #~ msgid "/_View"

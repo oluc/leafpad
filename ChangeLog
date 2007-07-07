@@ -1,3 +1,13 @@
+2007-07-07
+
+  version 0.8.11:
+	* Followed GNOME Goals (AppIcon, ApplicationCategory, PoLinguas).
+	* Added GTK+ 2.10 Printing feature.
+	* Added "--jump=LINENUM" command line option.
+	* Added temporal "Always on Top" feature invoked by Ctrl+T.
+	* Fixed auto indentation behaviour.
+	* Updated Simplified Chinese translation (Li Daobing).
+
 2007-04-08
 
   version 0.8.10:

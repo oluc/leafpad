@@ -118,6 +118,7 @@ static struct option longopts[] = {
 //	{ "charset", required_argument, 0, 0 },
 //	{ "encoding", required_argument, 0, 0 },
 	{ "tab-width", required_argument, 0, 't' },
+	{ "jump", required_argument, 0, 'j' },
 	{ "version", no_argument, 0, 'v' },
 	{ 0, 0, 0, 0 }
 };
@@ -130,6 +131,7 @@ static void print_usage(void)
 	g_print("Options:\n");
 	g_print("  --codeset=CODESET        Set codeset to open file\n");
 	g_print("  --tab-width=WIDTH        Set tab width\n");
+	g_print("  --jump=LINENUM           Jump to specified line\n");
 	g_print("  --display=DISPLAY        X display to use\n");
 	g_print("  --screen=SCREEN          X screen to use\n");
 	g_print("  --sync                   Make X calls synchronous\n");
@@ -137,6 +139,8 @@ static void print_usage(void)
 	g_print("  --help                   Show this help\n");
 }
 #endif
+
+gint jump_linenum = 0;
 
 static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 {
@@ -148,11 +152,13 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 	GOptionContext *context;
 	gchar *opt_codeset = NULL;
 	gint opt_tab_width = 0;
+	gboolean opt_jump = 0;
 	gboolean opt_version = FALSE;
 	GOptionEntry entries[] = 
 	{
 		{ "codeset", 0, 0, G_OPTION_ARG_STRING, &opt_codeset, "Set codeset to open file", "CODESET" },
 		{ "tab-width", 0, 0, G_OPTION_ARG_INT, &opt_tab_width, "Set tab width", "WIDTH" },
+		{ "jump", 0, 0, G_OPTION_ARG_INT, &opt_jump, "Jump to specified line", "LINENUM" },
 		{ "version", 0, 0, G_OPTION_ARG_NONE, &opt_version, "Show version number", NULL },
 		{ NULL }
 	};
@@ -185,6 +191,8 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 	}
 	if (opt_tab_width)
 		indent_set_default_tab_width(opt_tab_width);
+	if (opt_jump)
+		jump_linenum = opt_jump;
 	
 #else
 	gint c;
@@ -207,6 +215,10 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 		case 't':
 			if (optarg)
 				indent_set_default_tab_width(atoi(optarg));
+			break;
+		case 'j':
+			if (optarg)
+				jump_linenum = optarg;
 			break;
 		case 'v':
 			g_print("%s\n", PACKAGE_STRING);
@@ -259,6 +271,7 @@ gint main(gint argc, gchar **argv)
 	parse_args(argc, argv, pub->fi);
 	
 	gtk_init(&argc, &argv);
+	g_set_application_name(PACKAGE_NAME);
 	
 #if !GTK_CHECK_VERSION(2, 6, 0)
 	add_about_stock();
@@ -269,7 +282,7 @@ gint main(gint argc, gchar **argv)
 	conf = g_malloc(sizeof(Conf));
 	conf->width       = 600;
 	conf->height      = 400;
-	conf->fontname    = g_strdup("Monospace 12");
+	conf->fontname    = g_strdup("Monospace 10");
 	conf->wordwrap    = FALSE;
 	conf->linenumbers = FALSE;
 	conf->autoindent  = FALSE;
@@ -309,8 +322,10 @@ gint main(gint argc, gchar **argv)
 	
 	if (pub->fi->filename)
 		file_open_real(pub->mw->view, pub->fi);
+#ifdef G_OS_UNIX
 	else
 		stdin_data = gedit_utils_get_stdin();
+#endif
 	if (stdin_data) {
 		gchar *str;
 		GtkTextIter iter;
@@ -327,6 +342,15 @@ gint main(gint argc, gchar **argv)
 		gtk_text_buffer_set_modified(pub->mw->buffer, FALSE);
 		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(pub->mw->view), &iter, 0, FALSE, 0, 0);
 		g_free(str);
+	}
+	
+	if (jump_linenum) {
+		GtkTextIter iter;
+		
+		gtk_text_buffer_get_iter_at_line(pub->mw->buffer, &iter, jump_linenum - 1);
+		gtk_text_buffer_place_cursor(pub->mw->buffer, &iter);
+//		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(textview), &iter, 0.1, FALSE, 0.5, 0.5);
+		scroll_to_cursor(pub->mw->buffer, 0.25);
 	}
 	
 	set_main_window_title();

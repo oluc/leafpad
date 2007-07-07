@@ -54,10 +54,10 @@ am_leafpad_OBJECTS = leafpad-main.$(OBJEXT) leafpad-window.$(OBJEXT) \
 	leafpad-indent.$(OBJEXT) leafpad-hlight.$(OBJEXT) \
 	leafpad-selector.$(OBJEXT) leafpad-file.$(OBJEXT) \
 	leafpad-encoding.$(OBJEXT) leafpad-search.$(OBJEXT) \
-	leafpad-dialog.$(OBJEXT) leafpad-gnomeprint.$(OBJEXT) \
-	leafpad-about.$(OBJEXT) leafpad-dnd.$(OBJEXT) \
-	leafpad-utils.$(OBJEXT) leafpad-emacs.$(OBJEXT) \
-	leafpad-gtksourceiter.$(OBJEXT)
+	leafpad-dialog.$(OBJEXT) leafpad-gtkprint.$(OBJEXT) \
+	leafpad-gnomeprint.$(OBJEXT) leafpad-about.$(OBJEXT) \
+	leafpad-dnd.$(OBJEXT) leafpad-utils.$(OBJEXT) \
+	leafpad-emacs.$(OBJEXT) leafpad-gtksourceiter.$(OBJEXT)
 leafpad_OBJECTS = $(am_leafpad_OBJECTS)
 am__DEPENDENCIES_1 =
 leafpad_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
@@ -211,6 +211,7 @@ leafpad_SOURCES = \
 	encoding.h encoding.c \
 	search.h search.c \
 	dialog.h dialog.c \
+	gtkprint.h gtkprint.c \
 	gnomeprint.h gnomeprint.c \
 	about.h about.c \
 	dnd.h dnd.c \
@@ -296,6 +297,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-file.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-font.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-gnomeprint.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-gtkprint.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-gtksourceiter.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-hlight.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/leafpad-indent.Po@am__quote@
@@ -532,6 +534,20 @@ leafpad-dialog.obj: dialog.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='dialog.c' object='leafpad-dialog.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dialog.obj `if test -f 'dialog.c'; then $(CYGPATH_W) 'dialog.c'; else $(CYGPATH_W) '$(srcdir)/dialog.c'; fi`
+
+leafpad-gtkprint.o: gtkprint.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-gtkprint.o -MD -MP -MF "$(DEPDIR)/leafpad-gtkprint.Tpo" -c -o leafpad-gtkprint.o `test -f 'gtkprint.c' || echo '$(srcdir)/'`gtkprint.c; \
+@am__fastdepCC_TRUE@	then mv -f "$(DEPDIR)/leafpad-gtkprint.Tpo" "$(DEPDIR)/leafpad-gtkprint.Po"; else rm -f "$(DEPDIR)/leafpad-gtkprint.Tpo"; exit 1; fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='gtkprint.c' object='leafpad-gtkprint.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-gtkprint.o `test -f 'gtkprint.c' || echo '$(srcdir)/'`gtkprint.c
+
+leafpad-gtkprint.obj: gtkprint.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-gtkprint.obj -MD -MP -MF "$(DEPDIR)/leafpad-gtkprint.Tpo" -c -o leafpad-gtkprint.obj `if test -f 'gtkprint.c'; then $(CYGPATH_W) 'gtkprint.c'; else $(CYGPATH_W) '$(srcdir)/gtkprint.c'; fi`; \
+@am__fastdepCC_TRUE@	then mv -f "$(DEPDIR)/leafpad-gtkprint.Tpo" "$(DEPDIR)/leafpad-gtkprint.Po"; else rm -f "$(DEPDIR)/leafpad-gtkprint.Tpo"; exit 1; fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='gtkprint.c' object='leafpad-gtkprint.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-gtkprint.obj `if test -f 'gtkprint.c'; then $(CYGPATH_W) 'gtkprint.c'; else $(CYGPATH_W) '$(srcdir)/gtkprint.c'; fi`
 
 leafpad-gnomeprint.o: gnomeprint.c
 @am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-gnomeprint.o -MD -MP -MF "$(DEPDIR)/leafpad-gnomeprint.Tpo" -c -o leafpad-gnomeprint.o `test -f 'gnomeprint.c' || echo '$(srcdir)/'`gnomeprint.c; \

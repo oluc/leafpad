@@ -18,6 +18,7 @@ leafpad_SOURCES = \
 	encoding.h encoding.c \
 	search.h search.c \
 	dialog.h dialog.c \
+	gtkprint.h gtkprint.c \
 	gnomeprint.h gnomeprint.c \
 	about.h about.c \
 	dnd.h dnd.c \

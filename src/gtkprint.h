@@ -1,6 +1,6 @@
 /*
  *  Leafpad - GTK+ based simple text editor
- *  Copyright (C) 2004-2005 Tarot Osuji
+ *  Copyright (C) 2004-2007 Tarot Osuji
  *  
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -14,23 +14,12 @@
  *  
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#ifndef _ABOUT_H
-#define _ABOUT_H
+#ifndef _GTKPRINT_H
+#define _GTKPRINT_H
 
-#if !GTK_CHECK_VERSION(2, 6, 0)
-void add_about_stock(void);
-GtkWidget *create_about_dialog(
-	const gchar *name,
-	const gchar *version,
-	const gchar *copyright,
-	const gchar *comments,
-	const gchar **authors,
-	const gchar **documenters,
-	const gchar *translator_credits,
-	GdkPixbuf *logo);
-#endif
+void create_gtkprint_session(GtkTextView *text_view, const gchar *title);
 
-#endif /* _ABOUT_H */
+#endif /* _GTKPRINT_H */

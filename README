@@ -49,6 +49,7 @@ Ctrl-N                          New
 Ctrl-O                          Open
 Ctrl-S                          Save
 Shift-Ctrl-S                    Save As
+Ctrl-W                          Close
 Ctrl-P                          Print
 Ctrl-Q                          Quit
 Ctrl-Z                          Undo
@@ -62,6 +63,7 @@ Ctrl-G (F3)                     Find Next
 Shift-Ctrl-G (Shift-F3)         Find Previous
 Ctrl-H (Ctrl-R)                 Replace
 Ctrl-J                          Jump To
+Ctrl-T                          Always on Top
 Ctrl-Tab                        toggle tab width
 Tab with selection bound        multi-line indent
 Shift-Tab with selection bound  multi-line unindent

@@ -128,7 +128,12 @@ gint on_file_save_as(void)
 #ifdef ENABLE_PRINT
 void on_file_print(void)
 {
+#	if GTK_CHECK_VERSION(2, 10, 0)
+	create_gtkprint_session(GTK_TEXT_VIEW(pub->mw->view),
+		get_file_basename(pub->fi->filename, FALSE));
+#	else
 	create_gnomeprint_session();
+#	endif
 }
 #endif
 void on_file_close(void)
@@ -275,6 +280,14 @@ void on_option_line_numbers(void)
 	show_line_numbers(pub->mw->view, state);
 }
 
+void on_option_always_on_top(void)
+{
+	static gboolean flag = FALSE;
+	
+	flag =! flag;
+	gtk_window_set_keep_above(GTK_WINDOW(pub->mw->window), flag);
+}
+
 void on_option_auto_indent(void)
 {
 	GtkItemFactory *ifactory;
@@ -288,15 +301,10 @@ void on_option_auto_indent(void)
 
 void on_help_about(void)
 {
-	static GtkWidget *about = NULL;
-	
 	const gchar *copyright = "Copyright \xc2\xa9 2004-2007 Tarot Osuji";
 	const gchar *comments = _("GTK+ based simple text editor");
 	const gchar *authors[] = {
 		"Tarot Osuji <tarot@sdf.lonestar.org>",
-		NULL
-	};
-	const gchar *documenters[] = {
 		NULL
 	};
 	const gchar *artists[] = {
@@ -304,25 +312,34 @@ void on_help_about(void)
 		NULL
 	};
 	const gchar *translator_credits = _("translator-credits");
-#if GTK_CHECK_VERSION(2, 4, 0)
-	GdkPixbuf *logo = gtk_icon_theme_load_icon(
-		gtk_icon_theme_get_default(),
-		PACKAGE,
-		48, /* size */
-		0,  /* flags */
+	
+	translator_credits = strcmp(translator_credits, "translator-credits")
+		? translator_credits : NULL;
+	
+#if GTK_CHECK_VERSION(2, 6, 0)
+	gtk_show_about_dialog(GTK_WINDOW(pub->mw->window),
+//		"name", PACKAGE_NAME,
+		"version", PACKAGE_VERSION,
+		"copyright", copyright,
+		"comments", comments,
+		"authors", authors,
+		"artists", artists,
+		"translator-credits", translator_credits,
+		"logo-icon-name", PACKAGE,
 		NULL);
 #else
-	GdkPixbuf *logo = gdk_pixbuf_new_from_file(
-		ICONDIR G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
-#endif
+	static GtkWidget *about = NULL;
 
 	if (about != NULL) {
 		gtk_window_present(GTK_WINDOW(about));
 		return;
 	}
-	translator_credits = strcmp(translator_credits, "translator-credits")
-		? translator_credits : NULL;
 	
+	const gchar *documenters[] = {
+		NULL
+	};
+	GdkPixbuf *logo = gdk_pixbuf_new_from_file(
+		ICONDIR G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
 	about = create_about_dialog(
 		PACKAGE_NAME,
 		PACKAGE_VERSION,
@@ -333,7 +350,6 @@ void on_help_about(void)
 		documenters,
 		translator_credits,
 		logo);
-	
 	if (logo)
 		g_object_unref(logo);
 	gtk_window_set_transient_for(GTK_WINDOW(about),
@@ -343,4 +359,5 @@ void on_help_about(void)
 		G_CALLBACK(gtk_widget_destroyed), &about);
 
 	gtk_widget_show(about);
+#endif
 }

@@ -252,7 +252,6 @@ static GtkWidget *my_gtk_about_new(
 	
 	return dialog;
 }
-#endif
 
 GtkWidget *create_about_dialog(
 	const gchar *name,
@@ -260,36 +259,12 @@ GtkWidget *create_about_dialog(
 	const gchar *copyright,
 	const gchar *comments,
 	const gchar **authors,
-	const gchar **artists,
 	const gchar **documenters,
 	const gchar *translator_credits,
 	GdkPixbuf *logo)
 {
 	GtkWidget *about;
 	
-#if GTK_CHECK_VERSION(2, 6, 0)
-/*	about = g_object_new(GTK_TYPE_ABOUT_DIALOG,
-		"name",               name,
-		"version",            version,
-		"copyright",          copyright,
-		"comments",           comments,
-		"authors",            authors,
-		"documenters",        documenters,
-		"translator_credits", translator_credits,
-		"logo",               logo,
-		NULL);	*/
-	about = gtk_about_dialog_new();
-	gtk_about_dialog_set_name(GTK_ABOUT_DIALOG(about), name);
-	gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(about), version);
-	gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(about), copyright);
-	gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(about), comments);
-	gtk_about_dialog_set_authors(GTK_ABOUT_DIALOG(about), authors);
-	gtk_about_dialog_set_artists(GTK_ABOUT_DIALOG(about), artists);
-	gtk_about_dialog_set_translator_credits(GTK_ABOUT_DIALOG(about), translator_credits);
-	gtk_about_dialog_set_logo(GTK_ABOUT_DIALOG(about), logo);
-	g_signal_connect(G_OBJECT(about), "response",
-		G_CALLBACK(gtk_widget_destroy), about);
-#else
 	about = my_gtk_about_new(
 		name,
 		version,
@@ -299,7 +274,8 @@ GtkWidget *create_about_dialog(
 		documenters,
 		translator_credits,
 		logo);
-#endif
 	
 	return about;
 }
+#endif
+

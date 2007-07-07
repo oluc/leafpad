@@ -20,7 +20,9 @@
 #ifndef _UTILS_H
 #define _UTILS_H
 
+#ifdef G_OS_UNIX
 gchar *gedit_utils_get_stdin(void);
+#endif
 GtkWidget *create_button_with_stock_image(const gchar *text, const gchar *stock_id);
 
 #endif /* _UTILS_H */

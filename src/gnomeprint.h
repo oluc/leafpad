@@ -20,6 +20,12 @@
 #ifndef _GNOMEPRINT_H
 #define _GNOMEPRINT_H
 
+#if !GTK_CHECK_VERSION(2, 10, 0)
+#	ifdef ENABLE_PRINT
+
 gint create_gnomeprint_session(void);
+
+#	endif
+#endif
 
 #endif /* _GNOMEPRINT_H */
