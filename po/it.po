@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-07 12:47+0900\n"
+"POT-Creation-Date: 2007-09-17 20:43+0900\n"
 "PO-Revision-Date: 2005-08-23 05:55+0100\n"
 "Last-Translator: Alessio D'Ascanio <g3ntaro@gmail.com>\n"
 "Language-Team: \n"
@@ -33,107 +33,112 @@ msgstr "/File/_Salva"
 msgid "/File/Save _As..."
 msgstr "/File/Sa_lva come..."
 
-#: ../src/menu.c:44
+#: ../src/menu.c:45
+#, fuzzy
+msgid "/File/Print Pre_view"
+msgstr "/File/_Stampa..."
+
+#: ../src/menu.c:48
 msgid "/File/_Print..."
 msgstr "/File/_Stampa..."
 
-#: ../src/menu.c:47
+#: ../src/menu.c:55
 msgid "/File/_Quit"
 msgstr "/File/_Esci"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:57
 msgid "/_Edit"
 msgstr "/_Modifica"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:59
 msgid "/Edit/_Undo"
 msgstr "/Modifica/Ann_ulla"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:61
 msgid "/Edit/_Redo"
 msgstr "/Modifica/_Ripeti"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:65
 msgid "/Edit/Cu_t"
 msgstr "/Modifica/_Taglia"
 
-#: ../src/menu.c:59
+#: ../src/menu.c:67
 msgid "/Edit/_Copy"
 msgstr "/Modifica/_Copia"
 
-#: ../src/menu.c:61
+#: ../src/menu.c:69
 msgid "/Edit/_Paste"
 msgstr "/Modifica/_Incolla"
 
-#: ../src/menu.c:63
+#: ../src/menu.c:71
 msgid "/Edit/_Delete"
 msgstr "/Modifica/_Elimina"
 
-#: ../src/menu.c:67
+#: ../src/menu.c:75
 msgid "/Edit/Select _All"
 msgstr "/Modifica/_Seleziona tutto"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:77
 msgid "/_Search"
 msgstr "/_Cerca"
 
-#: ../src/menu.c:71
+#: ../src/menu.c:79
 msgid "/Search/_Find..."
 msgstr "/Cerca/_Trova..."
 
-#: ../src/menu.c:73
+#: ../src/menu.c:81
 msgid "/Search/Find _Next"
 msgstr "/"
 
-#: ../src/menu.c:75
+#: ../src/menu.c:83
 msgid "/Search/Find _Previous"
 msgstr "/Cerca/Trova _Precedente"
 
-#: ../src/menu.c:77
+#: ../src/menu.c:85
 msgid "/Search/_Replace..."
 msgstr "Trova/_Sostituisci..."
 
-#: ../src/menu.c:81
+#: ../src/menu.c:89
 msgid "/Search/_Jump To..."
 msgstr "/Cerca/Salta a _Riga..."
 
-#: ../src/menu.c:83
+#: ../src/menu.c:91
 msgid "/_Options"
 msgstr "/_Opzioni"
 
-#: ../src/menu.c:85
+#: ../src/menu.c:93
 msgid "/Options/_Font..."
 msgstr "/Opzioni/_Font..."
 
-#: ../src/menu.c:87
+#: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
 msgstr "/Opzioni/A capo automatico"
 
-#: ../src/menu.c:89
+#: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
 msgstr "/Opzioni/Visualizza numeri di _linea"
 
-#: ../src/menu.c:93
+#: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
 msgstr "/Opzioni/Indenta _automaticamente"
 
-#: ../src/menu.c:95
+#: ../src/menu.c:103
 msgid "/_Help"
 msgstr "/_Aiuto"
 
-#: ../src/menu.c:97
+#: ../src/menu.c:105
 msgid "/Help/_About"
 msgstr "/Aiuto/I_nformazioni"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:313
 msgid "GTK+ based simple text editor"
 msgstr "Semplice editor testuale basato su GTK+"
 
-#: ../src/callback.c:314
+#: ../src/callback.c:322
 msgid "translator-credits"
 msgstr "Alessio D'Ascanio <g3ntaro@gmail.com>"
 
-#: ../src/view.c:63
+#: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Salvare le modifiche a '%s'?"
@@ -173,7 +178,7 @@ msgid "Save As"
 msgstr "Salva con nome"
 
 #: ../src/selector.c:329
-msgid "Ch_aracter Coding:"
+msgid "C_haracter Coding:"
 msgstr "Codifica dei Caratteri:"
 
 #: ../src/selector.c:400
@@ -206,44 +211,44 @@ msgstr "Stringa non trovata"
 msgid "Replace?"
 msgstr "Sostituire? "
 
-#: ../src/search.c:253
+#: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d stringhe sostituite"
 
-#: ../src/search.c:299
+#: ../src/search.c:306
 msgid "Replace"
 msgstr "Sostituisci"
 
-#: ../src/search.c:306
+#: ../src/search.c:313
 msgid "Find"
 msgstr "Trova"
 
-#: ../src/search.c:319
+#: ../src/search.c:326
 msgid "Fi_nd what:"
 msgstr "_Cerca:"
 
-#: ../src/search.c:335
+#: ../src/search.c:342
 msgid "Re_place with:"
 msgstr "_Sostituisci con:"
 
-#: ../src/search.c:349
+#: ../src/search.c:356
 msgid "_Match case"
 msgstr "Distingui MAIUSCOLE/minuscole"
 
-#: ../src/search.c:354
+#: ../src/search.c:361
 msgid "Replace _all at once"
 msgstr "Sostituisci _Tutti"
 
-#: ../src/search.c:405
+#: ../src/search.c:412
 msgid "Jump To"
 msgstr "_Salta a"
 
-#: ../src/search.c:411
+#: ../src/search.c:418
 msgid "_Jump"
 msgstr "_Vai"
 
-#: ../src/search.c:418
+#: ../src/search.c:425
 msgid "_Line number:"
 msgstr "Numero di _riga:"
 

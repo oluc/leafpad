@@ -1,3 +1,11 @@
+2007-09-17
+
+  version 0.8.12:
+	* Added Print Preview menu (GTK+ >= 2.10).
+	* Fixed one-by-one replace behaviour (GTK+ >= 2.10).
+	* Updated Simplified Chinese translation (Li Daobing).
+	* Updated Vietnamese translation (Clytie Siddall).
+
 2007-07-07
 
   version 0.8.11:

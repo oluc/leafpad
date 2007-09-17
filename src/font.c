@@ -36,7 +36,7 @@ gchar *get_font_name_from_widget(GtkWidget *widget) /* MUST BE FREED */
 	return pango_font_description_to_string(style->font_desc);
 }
 
-gchar *get_font_name_by_selector(GtkWidget *window, gchar *current_fontname)
+static gchar *get_font_name_by_selector(GtkWidget *window, gchar *current_fontname)
 {
 	GtkWidget *dialog;
 	gchar *fontname;
@@ -62,7 +62,7 @@ void change_text_font_by_selector(GtkWidget *widget)
 		gtk_widget_get_toplevel(widget), current_fontname);
 	if (fontname) {
 		set_text_font_by_name(widget, fontname);
-//		indent_refresh_tab_width(widget);
+		indent_refresh_tab_width(widget);
 	}
 	
 	g_free(fontname);

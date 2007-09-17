@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-07 12:47+0900\n"
+"POT-Creation-Date: 2007-09-17 20:43+0900\n"
 "PO-Revision-Date: 2006-04-30 18:20+0300\n"
 "Last-Translator: Eero Tamminen <eerot@sf>\n"
 "Language-Team: Suomi\n"
@@ -34,107 +34,112 @@ msgstr "/Tiedosto/_Tallenna"
 msgid "/File/Save _As..."
 msgstr "/Tiedosto/Tallenna _nimellä..."
 
-#: ../src/menu.c:44
+#: ../src/menu.c:45
+#, fuzzy
+msgid "/File/Print Pre_view"
+msgstr "Esikatselu"
+
+#: ../src/menu.c:48
 msgid "/File/_Print..."
 msgstr "Tiedosto/_Tulosta..."
 
-#: ../src/menu.c:47
+#: ../src/menu.c:55
 msgid "/File/_Quit"
 msgstr "Tiedosto/_Lopeta"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:57
 msgid "/_Edit"
 msgstr "/_Muokkaa"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:59
 msgid "/Edit/_Undo"
 msgstr "/Muokkaa/Per_u"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:61
 msgid "/Edit/_Redo"
 msgstr "/Muokkaa/Uu_delleen"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:65
 msgid "/Edit/Cu_t"
 msgstr "/Muokkaa/L_eikkaa"
 
-#: ../src/menu.c:59
+#: ../src/menu.c:67
 msgid "/Edit/_Copy"
 msgstr "/Muokkaa/_Kopioi"
 
-#: ../src/menu.c:61
+#: ../src/menu.c:69
 msgid "/Edit/_Paste"
 msgstr "/Muokkaa/_Liitä"
 
-#: ../src/menu.c:63
+#: ../src/menu.c:71
 msgid "/Edit/_Delete"
 msgstr "/Muokkaa/_Poista"
 
-#: ../src/menu.c:67
+#: ../src/menu.c:75
 msgid "/Edit/Select _All"
 msgstr "/Muokkaa/_Valitse kaikki"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:77
 msgid "/_Search"
 msgstr "/_Hae"
 
-#: ../src/menu.c:71
+#: ../src/menu.c:79
 msgid "/Search/_Find..."
 msgstr "/Hae/_Hae..."
 
-#: ../src/menu.c:73
+#: ../src/menu.c:81
 msgid "/Search/Find _Next"
 msgstr "/Hae/Hae _seuraava"
 
-#: ../src/menu.c:75
+#: ../src/menu.c:83
 msgid "/Search/Find _Previous"
 msgstr "/Hae/Hae _edellinen"
 
-#: ../src/menu.c:77
+#: ../src/menu.c:85
 msgid "/Search/_Replace..."
 msgstr "/Hae/_Korvaa..."
 
-#: ../src/menu.c:81
+#: ../src/menu.c:89
 msgid "/Search/_Jump To..."
 msgstr "/Hae/_Siirry riville..."
 
-#: ../src/menu.c:83
+#: ../src/menu.c:91
 msgid "/_Options"
 msgstr "/_Asetukset"
 
-#: ../src/menu.c:85
+#: ../src/menu.c:93
 msgid "/Options/_Font..."
 msgstr "/Asetukset/_Kirjasin..."
 
-#: ../src/menu.c:87
+#: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
 msgstr "/Asetukset/_Rivitys"
 
-#: ../src/menu.c:89
+#: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
 msgstr "/Asetukset/Rivi_numerot"
 
-#: ../src/menu.c:93
+#: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
 msgstr "/Asetukset/Automaattinen sisennys"
 
-#: ../src/menu.c:95
+#: ../src/menu.c:103
 msgid "/_Help"
 msgstr "/_Ohje"
 
-#: ../src/menu.c:97
+#: ../src/menu.c:105
 msgid "/Help/_About"
 msgstr "/Ohje/_Tietoja"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:313
 msgid "GTK+ based simple text editor"
 msgstr "GTK+-pohjainen yksinkertainen tekstieditori"
 
-#: ../src/callback.c:314
+#: ../src/callback.c:322
 msgid "translator-credits"
 msgstr "Eero Tamminen"
 
-#: ../src/view.c:63
+#: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Tallenna '%s' muutokset?"
@@ -174,7 +179,7 @@ msgid "Save As"
 msgstr "Tallenna nimellä"
 
 #: ../src/selector.c:329
-msgid "Ch_aracter Coding:"
+msgid "C_haracter Coding:"
 msgstr "_Merkistökoodaus:"
 
 #: ../src/selector.c:400
@@ -207,44 +212,44 @@ msgstr "Haettua merkkijonoa ei löydy"
 msgid "Replace?"
 msgstr "Korvaa?"
 
-#: ../src/search.c:253
+#: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d merkkijonoa korvattu"
 
-#: ../src/search.c:299
+#: ../src/search.c:306
 msgid "Replace"
 msgstr "Korvaa"
 
-#: ../src/search.c:306
+#: ../src/search.c:313
 msgid "Find"
 msgstr "Hae"
 
-#: ../src/search.c:319
+#: ../src/search.c:326
 msgid "Fi_nd what:"
 msgstr "_Etsi:"
 
-#: ../src/search.c:335
+#: ../src/search.c:342
 msgid "Re_place with:"
 msgstr "Ko_rvaa:"
 
-#: ../src/search.c:349
+#: ../src/search.c:356
 msgid "_Match case"
 msgstr "_Tarkista pienet/ISOT"
 
-#: ../src/search.c:354
+#: ../src/search.c:361
 msgid "Replace _all at once"
 msgstr "_Korvaa kaikki kerralla"
 
-#: ../src/search.c:405
+#: ../src/search.c:412
 msgid "Jump To"
 msgstr "Siirry riville"
 
-#: ../src/search.c:411
+#: ../src/search.c:418
 msgid "_Jump"
 msgstr "_Siirry"
 
-#: ../src/search.c:418
+#: ../src/search.c:425
 msgid "_Line number:"
 msgstr "_Rivinumero:"
 

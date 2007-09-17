@@ -282,7 +282,7 @@ gint main(gint argc, gchar **argv)
 	conf = g_malloc(sizeof(Conf));
 	conf->width       = 600;
 	conf->height      = 400;
-	conf->fontname    = g_strdup("Monospace 10");
+	conf->fontname    = g_strdup("Monospace 12");
 	conf->wordwrap    = FALSE;
 	conf->linenumbers = FALSE;
 	conf->autoindent  = FALSE;

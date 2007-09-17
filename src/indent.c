@@ -96,7 +96,7 @@ static gint calculate_real_tab_width(GtkWidget *text_view, guint tab_size) //fro
 	tab_string = g_strnfill(tab_size, 0x20);
 	layout = gtk_widget_create_pango_layout(text_view, tab_string);
 	g_free (tab_string);
-
+	
 	if (layout != NULL) {
 		pango_layout_get_pixel_size(layout, &tab_width, NULL);
 		g_object_unref(G_OBJECT(layout));

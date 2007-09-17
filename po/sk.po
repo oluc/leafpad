@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-07 12:47+0900\n"
+"POT-Creation-Date: 2007-09-17 20:43+0900\n"
 "PO-Revision-Date: 2005-07-10 21:20+0100\n"
 "Last-Translator: Peter Chabada <sk-i18n_chabada_sk>\n"
 "Language-Team: Slovak <sk-i18n@linux.sk>\n"
@@ -36,107 +36,112 @@ msgstr "/Súbor/_Uložiť"
 msgid "/File/Save _As..."
 msgstr "/Súbor/Uložiť _ako..."
 
-#: ../src/menu.c:44
+#: ../src/menu.c:45
+#, fuzzy
+msgid "/File/Print Pre_view"
+msgstr "/Súbor/_Tlačiť..."
+
+#: ../src/menu.c:48
 msgid "/File/_Print..."
 msgstr "/Súbor/_Tlačiť..."
 
-#: ../src/menu.c:47
+#: ../src/menu.c:55
 msgid "/File/_Quit"
 msgstr "/Súbor/_Koniec"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:57
 msgid "/_Edit"
 msgstr "/_Upraviť"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:59
 msgid "/Edit/_Undo"
 msgstr "/Upraviť/Vrátiť _späť"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:61
 msgid "/Edit/_Redo"
 msgstr "/Upraviť/O_pakovať vrátené"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:65
 msgid "/Edit/Cu_t"
 msgstr "/Upraviť/_Vystrihnúť"
 
-#: ../src/menu.c:59
+#: ../src/menu.c:67
 msgid "/Edit/_Copy"
 msgstr "/Upraviť/_Kopírovať"
 
-#: ../src/menu.c:61
+#: ../src/menu.c:69
 msgid "/Edit/_Paste"
 msgstr "/Upraviť/V_ložiť"
 
-#: ../src/menu.c:63
+#: ../src/menu.c:71
 msgid "/Edit/_Delete"
 msgstr "/Upraviť/_Odstrániť"
 
-#: ../src/menu.c:67
+#: ../src/menu.c:75
 msgid "/Edit/Select _All"
 msgstr "/Upraviť/Vybr_ať všetko"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:77
 msgid "/_Search"
 msgstr "/_Nájsť"
 
-#: ../src/menu.c:71
+#: ../src/menu.c:79
 msgid "/Search/_Find..."
 msgstr "/Nájsť/_Nájsť"
 
-#: ../src/menu.c:73
+#: ../src/menu.c:81
 msgid "/Search/Find _Next"
 msgstr "/Nájsť/_Hľadať ďalšie"
 
-#: ../src/menu.c:75
+#: ../src/menu.c:83
 msgid "/Search/Find _Previous"
 msgstr "/Nájsť/Nájsť pre_dchádzajúce"
 
-#: ../src/menu.c:77
+#: ../src/menu.c:85
 msgid "/Search/_Replace..."
 msgstr "/Nájsť/N_ahradiť..."
 
-#: ../src/menu.c:81
+#: ../src/menu.c:89
 msgid "/Search/_Jump To..."
 msgstr "/Nájsť/Prejsť na _riadok"
 
-#: ../src/menu.c:83
+#: ../src/menu.c:91
 msgid "/_Options"
 msgstr "/_Nástroje"
 
-#: ../src/menu.c:85
+#: ../src/menu.c:93
 msgid "/Options/_Font..."
 msgstr "/Nástroje/_Písmo"
 
-#: ../src/menu.c:87
+#: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
 msgstr "/Nástroje/_Zalamovanie textu"
 
-#: ../src/menu.c:89
+#: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
 msgstr "/Nástroje/Zobraziť čísla _riadkov"
 
-#: ../src/menu.c:93
+#: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
 msgstr "/Nástroje/Povoliť automatické _odsadzovanie"
 
-#: ../src/menu.c:95
+#: ../src/menu.c:103
 msgid "/_Help"
 msgstr "/_Pomocník"
 
-#: ../src/menu.c:97
+#: ../src/menu.c:105
 msgid "/Help/_About"
 msgstr "/Pomocník/_O programe"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:313
 msgid "GTK+ based simple text editor"
 msgstr "Jednoduchý textový editor"
 
-#: ../src/callback.c:314
+#: ../src/callback.c:322
 msgid "translator-credits"
 msgstr "Peter Chabada"
 
-#: ../src/view.c:63
+#: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Uložiť zmeny v dokumente '%s'?"
@@ -176,7 +181,7 @@ msgid "Save As"
 msgstr "Uložiť ako"
 
 #: ../src/selector.c:329
-msgid "Ch_aracter Coding:"
+msgid "C_haracter Coding:"
 msgstr "_Kódovanie znakov: "
 
 #: ../src/selector.c:400
@@ -209,44 +214,44 @@ msgstr "Hľadaný reťazec nenájdený."
 msgid "Replace?"
 msgstr "Nahradiť?"
 
-#: ../src/search.c:253
+#: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
 msgstr "Bolo nahradených '%d' reťazcov."
 
-#: ../src/search.c:299
+#: ../src/search.c:306
 msgid "Replace"
 msgstr "Nahradiť"
 
-#: ../src/search.c:306
+#: ../src/search.c:313
 msgid "Find"
 msgstr "Hľadať"
 
-#: ../src/search.c:319
+#: ../src/search.c:326
 msgid "Fi_nd what:"
 msgstr "Náj_sť:"
 
-#: ../src/search.c:335
+#: ../src/search.c:342
 msgid "Re_place with:"
 msgstr "Nahradiť _s:"
 
-#: ../src/search.c:349
+#: ../src/search.c:356
 msgid "_Match case"
 msgstr "_Rozlišovať veľkosť písmen"
 
-#: ../src/search.c:354
+#: ../src/search.c:361
 msgid "Replace _all at once"
 msgstr "Nahradiť _všetko"
 
-#: ../src/search.c:405
+#: ../src/search.c:412
 msgid "Jump To"
 msgstr "Prejsť na riadok"
 
-#: ../src/search.c:411
+#: ../src/search.c:418
 msgid "_Jump"
 msgstr "_Prejsť na riadok"
 
-#: ../src/search.c:418
+#: ../src/search.c:425
 msgid "_Line number:"
 msgstr "Číslo _riadku:"
 

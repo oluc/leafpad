@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-07 12:47+0900\n"
+"POT-Creation-Date: 2007-09-17 20:43+0900\n"
 "PO-Revision-Date: 2006-11-01 10:50+0900\n"
 "Last-Translator: Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -35,107 +35,112 @@ msgstr "/파일/저장(_S)"
 msgid "/File/Save _As..."
 msgstr "/파일/다른 이름으로 저장(_A)..."
 
-#: ../src/menu.c:44
+#: ../src/menu.c:45
+#, fuzzy
+msgid "/File/Print Pre_view"
+msgstr "인쇄 미리보기"
+
+#: ../src/menu.c:48
 msgid "/File/_Print..."
 msgstr "/파일/인쇄(_P)..."
 
-#: ../src/menu.c:47
+#: ../src/menu.c:55
 msgid "/File/_Quit"
 msgstr "/파일/끝내기(_Q)"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:57
 msgid "/_Edit"
 msgstr "/편집(_E)"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:59
 msgid "/Edit/_Undo"
 msgstr "/편집/실행 취소(_U)"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:61
 msgid "/Edit/_Redo"
 msgstr "/편집/다시 실행(_R)"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:65
 msgid "/Edit/Cu_t"
 msgstr "/편집/잘라내기(_T)"
 
-#: ../src/menu.c:59
+#: ../src/menu.c:67
 msgid "/Edit/_Copy"
 msgstr "/편집/복사(_C)"
 
-#: ../src/menu.c:61
+#: ../src/menu.c:69
 msgid "/Edit/_Paste"
 msgstr "/편집/붙여넣기(_P)"
 
-#: ../src/menu.c:63
+#: ../src/menu.c:71
 msgid "/Edit/_Delete"
 msgstr "/편집/삭제(_D)"
 
-#: ../src/menu.c:67
+#: ../src/menu.c:75
 msgid "/Edit/Select _All"
 msgstr "/편집/모두 선택(_A)"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:77
 msgid "/_Search"
 msgstr "/검색(_S)"
 
-#: ../src/menu.c:71
+#: ../src/menu.c:79
 msgid "/Search/_Find..."
 msgstr "/검색/찾기(_F)..."
 
-#: ../src/menu.c:73
+#: ../src/menu.c:81
 msgid "/Search/Find _Next"
 msgstr "/검색/다음 찾기(_N)"
 
-#: ../src/menu.c:75
+#: ../src/menu.c:83
 msgid "/Search/Find _Previous"
 msgstr "/검색/이전 찾기(_P)"
 
-#: ../src/menu.c:77
+#: ../src/menu.c:85
 msgid "/Search/_Replace..."
 msgstr "/검색/바꾸기(_R)..."
 
-#: ../src/menu.c:81
+#: ../src/menu.c:89
 msgid "/Search/_Jump To..."
 msgstr "/검색/이동(_J)..."
 
-#: ../src/menu.c:83
+#: ../src/menu.c:91
 msgid "/_Options"
 msgstr "/설정(_O)"
 
-#: ../src/menu.c:85
+#: ../src/menu.c:93
 msgid "/Options/_Font..."
 msgstr "/설정/글꼴(_F)..."
 
-#: ../src/menu.c:87
+#: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
 msgstr "/설정/자동 줄 바꿈(_W)"
 
-#: ../src/menu.c:89
+#: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
 msgstr "/설정/줄 번호(_L)"
 
-#: ../src/menu.c:93
+#: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
 msgstr "/설정/자동 들여쓰기(_A)"
 
-#: ../src/menu.c:95
+#: ../src/menu.c:103
 msgid "/_Help"
 msgstr "/도움말(_H)"
 
-#: ../src/menu.c:97
+#: ../src/menu.c:105
 msgid "/Help/_About"
 msgstr "/도움말/정보(_A)"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:313
 msgid "GTK+ based simple text editor"
 msgstr "GTK+로 만든 간단한 텍스트 편집기"
 
-#: ../src/callback.c:314
+#: ../src/callback.c:322
 msgid "translator-credits"
 msgstr "Seo Sanghyeon <sanxiyn@gmail.com>"
 
-#: ../src/view.c:63
+#: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "'%s'의 변경된 내용을 저장할까요?"
@@ -175,8 +180,8 @@ msgid "Save As"
 msgstr "다른 이름으로 저장"
 
 #: ../src/selector.c:329
-msgid "Ch_aracter Coding:"
-msgstr "문자 인코딩(_A):"
+msgid "C_haracter Coding:"
+msgstr "문자 인코딩(_H):"
 
 #: ../src/selector.c:400
 #, c-format
@@ -208,44 +213,44 @@ msgstr "찾지 못했습니다"
 msgid "Replace?"
 msgstr "바꿀까요?"
 
-#: ../src/search.c:253
+#: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d번 바꿨습니다"
 
-#: ../src/search.c:299
+#: ../src/search.c:306
 msgid "Replace"
 msgstr "바꾸기"
 
-#: ../src/search.c:306
+#: ../src/search.c:313
 msgid "Find"
 msgstr "찾기"
 
-#: ../src/search.c:319
+#: ../src/search.c:326
 msgid "Fi_nd what:"
 msgstr "찾을 내용(_N):"
 
-#: ../src/search.c:335
+#: ../src/search.c:342
 msgid "Re_place with:"
 msgstr "바꿀 내용(_P):"
 
-#: ../src/search.c:349
+#: ../src/search.c:356
 msgid "_Match case"
 msgstr "대/소문자 구분(_M)"
 
-#: ../src/search.c:354
+#: ../src/search.c:361
 msgid "Replace _all at once"
 msgstr "모두 바꾸기"
 
-#: ../src/search.c:405
+#: ../src/search.c:412
 msgid "Jump To"
 msgstr "이동"
 
-#: ../src/search.c:411
+#: ../src/search.c:418
 msgid "_Jump"
 msgstr "이동(_J)"
 
-#: ../src/search.c:418
+#: ../src/search.c:425
 msgid "_Line number:"
 msgstr "줄 번호(_L):"
 

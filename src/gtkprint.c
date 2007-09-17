@@ -18,7 +18,6 @@
  */
 
 #include <gtk/gtk.h>
-#include "dialog.h"
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -29,14 +28,29 @@ static gint n_pages;
 static gdouble page_width, page_height;
 static const gchar *page_title = NULL;
 
+static void get_tab_array(PangoTabArray **tabs,
+	GtkPrintContext *ctx, GtkTextView *text_view)
+{
+	gint xft_dpi, loc;
+	GtkSettings *settings = gtk_settings_get_default();
+	
+	g_object_get(settings, "gtk-xft-dpi", &xft_dpi, NULL);
+	if ((*tabs = gtk_text_view_get_tabs(text_view))) {
+		pango_tab_array_get_tab(*tabs, 0, NULL, &loc);
+		pango_tab_array_set_tab(*tabs, 0, PANGO_TAB_LEFT,
+			loc * gtk_print_context_get_dpi_x(ctx) / (xft_dpi / PANGO_SCALE));
+	}
+}
+
 static void cb_begin_print(GtkPrintOperation *op,
 		GtkPrintContext *ctx, gpointer data)
 {
 	gint layout_height;
-	
 	gchar *text;
 	GtkTextIter start, end;
 	GtkTextBuffer *buffer = gtk_text_view_get_buffer(data);
+	PangoTabArray *tabs;
+	
 	gtk_text_buffer_get_bounds(buffer, &start, &end);
 	text = g_strchomp(gtk_text_buffer_get_text(buffer, &start, &end, FALSE));
 	
@@ -47,6 +61,12 @@ static void cb_begin_print(GtkPrintOperation *op,
 	pango_layout_set_width(layout, page_width * PANGO_SCALE);
 	pango_layout_set_font_description(layout, font_desc);
 	pango_layout_set_text(layout, text, -1);
+	
+	get_tab_array(&tabs, ctx, data);
+	if (tabs) {
+		pango_layout_set_tabs(layout, tabs);
+		pango_tab_array_free(tabs);
+	}
 	pango_layout_get_size(layout, NULL, &layout_height);
 	
 	line_count = pango_layout_get_line_count(layout);
@@ -108,19 +128,18 @@ static void cb_end_print(GtkPrintOperation *op,
 	g_object_unref(layout);
 }
 
-void create_gtkprint_session(GtkTextView *text_view, const gchar *title)
+static GtkPrintSettings *settings = NULL;
+
+static GtkPrintOperation *create_print_operation(GtkTextView *text_view)
 {
 	GtkPrintOperation *op;
-	GtkPrintOperationResult res;
-	static GtkPrintSettings *settings = NULL;
 	static GtkPageSetup *page_setup = NULL;
-	GError *err = NULL;
 	
 	op = gtk_print_operation_new();
 	
-	page_title = title;
 	if (settings)
 		gtk_print_operation_set_print_settings(op, settings);
+	
 	if (!page_setup) {
 		page_setup = gtk_page_setup_new();
 		gtk_page_setup_set_top_margin(page_setup, 25.0, GTK_UNIT_MM);
@@ -134,13 +153,41 @@ void create_gtkprint_session(GtkTextView *text_view, const gchar *title)
 	g_signal_connect(op, "draw-page", G_CALLBACK(cb_draw_page), NULL);
 	g_signal_connect(op, "end-print", G_CALLBACK(cb_end_print), NULL);
 	
+	return op;
+}
+
+static void create_error_dialog(GtkTextView *text_view, gchar *message)
+{
+	GtkWidget *dialog;
+	
+	dialog = gtk_message_dialog_new(
+		GTK_WINDOW(gtk_widget_get_toplevel(GTK_WIDGET(text_view))),
+		GTK_DIALOG_DESTROY_WITH_PARENT,
+		GTK_MESSAGE_ERROR,
+		GTK_BUTTONS_NONE,
+		message);
+	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
+	gtk_dialog_add_buttons(GTK_DIALOG(dialog),
+		GTK_STOCK_OK, GTK_RESPONSE_CANCEL, NULL);
+	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_CANCEL);
+	gtk_dialog_run(GTK_DIALOG(dialog));
+	gtk_widget_destroy(dialog);
+}
+
+void create_gtkprint_session(GtkTextView *text_view, const gchar *title)
+{
+	GtkPrintOperation *op;
+	GtkPrintOperationResult res;
+	GError *err = NULL;
+	
+	page_title = title;
+	op = create_print_operation(text_view);
+	
 	res = gtk_print_operation_run(op, GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG,
 		GTK_WINDOW(gtk_widget_get_toplevel(GTK_WIDGET(text_view))), &err);
-	
 	switch (res) {
 	case GTK_PRINT_OPERATION_RESULT_ERROR:
-		run_dialog_message(gtk_widget_get_toplevel(GTK_WIDGET(text_view)),
-			GTK_MESSAGE_ERROR, err->message);
+		create_error_dialog(text_view, err->message);
 		g_error_free(err);
 	case GTK_PRINT_OPERATION_RESULT_APPLY:
 		if (settings)
@@ -148,6 +195,25 @@ void create_gtkprint_session(GtkTextView *text_view, const gchar *title)
 		settings = g_object_ref(gtk_print_operation_get_print_settings(op));
 	default:
 		break;
+	}
+	
+	g_object_unref(op);
+}
+
+void create_gtkprint_preview_session(GtkTextView *text_view, const gchar *title)
+{
+	GtkPrintOperation *op;
+	GtkPrintOperationResult res;
+	GError *err = NULL;
+	
+	page_title = title;
+	op = create_print_operation(text_view);
+	
+	res = gtk_print_operation_run(op, GTK_PRINT_OPERATION_ACTION_PREVIEW,
+		GTK_WINDOW(gtk_widget_get_toplevel(GTK_WIDGET(text_view))), &err);
+	if (res == GTK_PRINT_OPERATION_RESULT_ERROR) {
+		create_error_dialog(text_view, err->message);
+		g_error_free(err);
 	}
 	
 	g_object_unref(op);

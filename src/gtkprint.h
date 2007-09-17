@@ -21,5 +21,6 @@
 #define _GTKPRINT_H
 
 void create_gtkprint_session(GtkTextView *text_view, const gchar *title);
+void create_gtkprint_preview_session(GtkTextView *text_view, const gchar *title);
 
 #endif /* _GTKPRINT_H */

@@ -1,151 +1,160 @@
-# Leafpad - GTK+ based simple text editor
-# Copyright (C) 2004 Tarot Osuji <tarot@sdf.lonestar.org>
-# 
+# Vietnamese translation for Leafpad.
+# Copyright © 2007 Tarot Osuji <tarot@sdf.lonestar.org>.
+# Nguyễn Đại Quý <nguyendaiquy@gmail.com>, 2004.
+# Clytie Siddall <clytie@riverland.net.au>, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.8.0\n"
+"Project-Id-Version: leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-07 12:47+0900\n"
-"PO-Revision-Date: 2004-05-07 01:10+0100\n"
-"Last-Translator: Quy NGUYEN DAI <nguyendaiquy@gmail.com>\n"
-"Language-Team: Vietnamese <vi@vnoss.org>\n"
+"POT-Creation-Date: 2007-09-17 20:43+0900\n"
+"PO-Revision-Date: 2007-07-14 14:26+0930\n"
+"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.6.4a5\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
-msgstr "/_Hồ sơ"
+msgstr "/_Tập tin"
 
 #: ../src/menu.c:33
 msgid "/File/_New"
-msgstr "/Hồ sơ/_Mới"
+msgstr "/Tập tin/Mớ_i"
 
 #: ../src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/Hồ sơ/_Mở..."
+msgstr "/Tập tin/_Mở..."
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
-msgstr "/Hồ sơ/_Lưu lại"
+msgstr "/Tập tin/_Lưu"
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/Hồ sơ/Lưu _với tên khác..."
+msgstr "/Tập tin/Lưu _dạng..."
 
-#: ../src/menu.c:44
+#: ../src/menu.c:45
+#, fuzzy
+msgid "/File/Print Pre_view"
+msgstr "Xem thử bản in"
+
+#: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "/Hồ sơ/_In ấn..."
+msgstr "/Tập tin/_In..."
 
-#: ../src/menu.c:47
+#: ../src/menu.c:55
 msgid "/File/_Quit"
-msgstr "/Hồ sơ/_Thoát"
-
-#: ../src/menu.c:49
-msgid "/_Edit"
-msgstr "/_Sửa đổi"
-
-#: ../src/menu.c:51
-msgid "/Edit/_Undo"
-msgstr "/Sửa đổi/_Hủy bỏ"
-
-#: ../src/menu.c:53
-msgid "/Edit/_Redo"
-msgstr "/Sửa đổi/_Làm lại"
+msgstr "/Tập tin/T_hoát"
 
 #: ../src/menu.c:57
-msgid "/Edit/Cu_t"
-msgstr "/Sửa đổi/_Cắt"
+msgid "/_Edit"
+msgstr "/_Sửa"
 
 #: ../src/menu.c:59
-msgid "/Edit/_Copy"
-msgstr "/Sửa đổi/_Sao chép"
+msgid "/Edit/_Undo"
+msgstr "/Sửa/_Hủy bước"
 
 #: ../src/menu.c:61
-msgid "/Edit/_Paste"
-msgstr "/Sửa đổi/_Dán"
+msgid "/Edit/_Redo"
+msgstr "/Sửa/_Làm lại"
 
-#: ../src/menu.c:63
-msgid "/Edit/_Delete"
-msgstr "/Sửa đổi/_Xóa"
+#: ../src/menu.c:65
+msgid "/Edit/Cu_t"
+msgstr "/Sửa/Cắ_t"
 
 #: ../src/menu.c:67
-msgid "/Edit/Select _All"
-msgstr "/Sửa đổi/_Chọn tất cả"
+msgid "/Edit/_Copy"
+msgstr "/Sửa/_Chép"
 
 #: ../src/menu.c:69
+msgid "/Edit/_Paste"
+msgstr "/Sửa/_Dán"
+
+#: ../src/menu.c:71
+msgid "/Edit/_Delete"
+msgstr "/Sửa/_Xoá"
+
+#: ../src/menu.c:75
+msgid "/Edit/Select _All"
+msgstr "/Sửa/Chọn _tất cả"
+
+#: ../src/menu.c:77
 msgid "/_Search"
 msgstr "/_Tìm kiếm"
 
-#: ../src/menu.c:71
+#: ../src/menu.c:79
 msgid "/Search/_Find..."
 msgstr "/Tìm kiếm/_Tìm..."
 
-#: ../src/menu.c:73
+#: ../src/menu.c:81
 msgid "/Search/Find _Next"
-msgstr "/Tìm kiếm/Tìm t_iếp"
+msgstr "/Tìm kiếm/Tìm _kế"
 
-#: ../src/menu.c:75
+#: ../src/menu.c:83
 msgid "/Search/Find _Previous"
-msgstr "/Tìm kiếm/Tìm _ngược"
+msgstr "/Tìm kiếm/Tìm _lùi"
 
-#: ../src/menu.c:77
+#: ../src/menu.c:85
 msgid "/Search/_Replace..."
 msgstr "/Tìm kiếm/T_hay thế..."
 
-#: ../src/menu.c:81
-msgid "/Search/_Jump To..."
-msgstr "/Tìm kiếm/Đi đến _dòng..."
-
-#: ../src/menu.c:83
-msgid "/_Options"
-msgstr "/_Tùy chọn"
-
-#: ../src/menu.c:85
-msgid "/Options/_Font..."
-msgstr "/Tùy chọn/_Font chữ..."
-
-#: ../src/menu.c:87
-msgid "/Options/_Word Wrap"
-msgstr "/Tùy chọn/_Xuống dòng tự động"
-
 #: ../src/menu.c:89
-msgid "/Options/_Line Numbers"
-msgstr "/Tùy chọn/_Hiển thị số dòng"
+msgid "/Search/_Jump To..."
+msgstr "/Tìm kiếm/_Nhảy tới..."
+
+#: ../src/menu.c:91
+msgid "/_Options"
+msgstr "/Tù_y chọn"
 
 #: ../src/menu.c:93
-msgid "/Options/_Auto Indent"
-msgstr "/Tùy chọn/_Thụt dòng tự động"
+msgid "/Options/_Font..."
+msgstr "/Tùy chọn/_Phông..."
 
 #: ../src/menu.c:95
-msgid "/_Help"
-msgstr "/_Trợ giúp"
+msgid "/Options/_Word Wrap"
+msgstr "/Tùy chọn/Ngắt _dòng"
 
 #: ../src/menu.c:97
+msgid "/Options/_Line Numbers"
+msgstr "/Tùy chọn/_Số hiệu dòng"
+
+#: ../src/menu.c:101
+msgid "/Options/_Auto Indent"
+msgstr "/Tùy chọn/_Tự thụt lề"
+
+#: ../src/menu.c:103
+msgid "/_Help"
+msgstr "/Trợ g_iúp"
+
+#: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/Trợ giúp/_Thông tin"
+msgstr "/Trợ giúp/_Giới thiệu"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:313
 msgid "GTK+ based simple text editor"
-msgstr "Một trình soạn thảo đơn giản dựa trên GTK+"
+msgstr "Một trình soạn thảo văn bản đơn giản dựa trên GTK+"
 
-#: ../src/callback.c:314
+#: ../src/callback.c:322
 msgid "translator-credits"
-msgstr "Nguyễn Đại Quý <nguyendaiquy@gmail.com>"
+msgstr "Nhóm Việt hoá Phần mềm Tự do <vi-VN@googlegroups.com>"
 
-#: ../src/view.c:63
+#: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Lưu lại các thay đổi cho '%s' ?"
+msgstr "Lưu các thay đổi cho « %s » không?"
 
 #: ../src/font.c:44
 msgid "Font"
-msgstr "Font chữ"
+msgstr "Phông"
 
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Locale hiện tại (%s)"
+msgstr "Miền địa phương hiện tại (%s)"
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
@@ -158,7 +167,7 @@ msgstr "Bảng _mã:"
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' là không được hỗ trợ"
+msgstr "Không hỗ trợ « %s »"
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
@@ -170,33 +179,33 @@ msgstr "Mở"
 
 #: ../src/selector.c:305
 msgid "Save As"
-msgstr "Lưu với tên khác"
+msgstr "Lưu dạng"
 
 #: ../src/selector.c:329
-msgid "Ch_aracter Coding:"
+msgid "C_haracter Coding:"
 msgstr "_Bảng mã:"
 
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "File '%s' đã có. Bạn có muốn thay thế nó bởi file đang soạn thảo ?"
+msgstr "Tập tin « %s » đã có. Ghi đè ?"
 
 #: ../src/file.c:55
 msgid "Untitled"
-msgstr "Không tiêu đề"
+msgstr "Không tên"
 
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Không thể chuyển bảng mã sang '%s'"
+msgstr "Không thể chuyển đổi bảng mã sang « %s »"
 
 #: ../src/file.c:225
 msgid "Can't open file to write"
-msgstr "Không thể mở file để ghi"
+msgstr "Không thể mở tập tin để ghi"
 
 #: ../src/file.c:230
 msgid "Can't write file"
-msgstr "Không thể ghi file"
+msgstr "Không thể ghi tập tin"
 
 #: ../src/search.c:140
 msgid "Search string not found"
@@ -204,52 +213,52 @@ msgstr "Không tìm thấy"
 
 #: ../src/search.c:193
 msgid "Replace?"
-msgstr "Thay thế?"
+msgstr "Thay thế ?"
 
-#: ../src/search.c:253
+#: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
-msgstr "Đã tìm thấy và thay thế %d lần."
+msgstr "Đã thay thế %d lần"
 
-#: ../src/search.c:299
+#: ../src/search.c:306
 msgid "Replace"
 msgstr "Thay thế"
 
-#: ../src/search.c:306
+#: ../src/search.c:313
 msgid "Find"
 msgstr "Tìm"
 
-#: ../src/search.c:319
+#: ../src/search.c:326
 msgid "Fi_nd what:"
 msgstr "_Tìm kiếm:"
 
-#: ../src/search.c:335
+#: ../src/search.c:342
 msgid "Re_place with:"
 msgstr "Thay thế _bởi:"
 
-#: ../src/search.c:349
+#: ../src/search.c:356
 msgid "_Match case"
-msgstr "Phân biệt _chữ hoa/thường"
+msgstr "_Phân biệt chữ hoa/thường"
 
-#: ../src/search.c:354
+#: ../src/search.c:361
 msgid "Replace _all at once"
 msgstr "_Thay thế tất cả"
 
-#: ../src/search.c:405
+#: ../src/search.c:412
 msgid "Jump To"
-msgstr "Chuyển đến dòng"
-
-#: ../src/search.c:411
-msgid "_Jump"
-msgstr "Chuyển đến dòng"
+msgstr "Nhảy tới"
 
 #: ../src/search.c:418
+msgid "_Jump"
+msgstr "_Nhảy"
+
+#: ../src/search.c:425
 msgid "_Line number:"
 msgstr "Dòng _số :"
 
 #: ../src/about.c:102
 msgid "Credits"
-msgstr ""
+msgstr "Công trạng"
 
 #: ../src/about.c:137
 msgid "Written by"
@@ -261,60 +270,29 @@ msgstr "Tài liệu của"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "Dịch bởi"
+msgstr "Dịch giả"
 
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr "Đóng _góp"
+msgstr "Công t_rạng"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr "Đóng _góp"
+msgstr "_Công trạng"
 
 #: ../src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "Thông tin về %s"
+msgstr "Giới thiệu %s"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr "In ấn"
+msgstr "In"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr ""
+msgstr "Xem thử bản in"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
-msgstr "Một trình soạn thảo đơn giản"
-
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/_Hồ sơ"
-
-#~ msgid "Can't convert codeset to current locale"
-#~ msgstr "Không thể chuyển bảng mã sang locale hiện dùng '%s'"
-
-#~ msgid "Can't write temporary file"
-#~ msgstr "Không thể ghi file tạm"
-
-#~ msgid "Printer _name:"
-#~ msgstr "_Tên máy in:"
-
-#~ msgid "N_umber of copies:"
-#~ msgstr "_Số bản in:"
-
-#~ msgid "_Format page"
-#~ msgstr "Định _dạng trang"
-
-#~ msgid "_Selection:"
-#~ msgstr "_Lựa chọn:"
-
-#~ msgid "_Calcel"
-#~ msgstr "_Hủy bỏ"
-
-#~ msgid "_No"
-#~ msgstr "_Không"
-
-#~ msgid "_Yes"
-#~ msgstr "_Vâng"
+msgstr "Một trình soạn thảo văn bản đơn giản"

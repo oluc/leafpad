@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-07 12:47+0900\n"
+"POT-Creation-Date: 2007-09-17 20:43+0900\n"
 "PO-Revision-Date: 2004-11-04 10:10+0100\n"
 "Last-Translator: David Rosal <davidrr@users.sourceforge.net>\n"
 "Language-Team: Catalan\n"
@@ -35,108 +35,113 @@ msgstr "/Fitxer/_Guardar"
 msgid "/File/Save _As..."
 msgstr "/Fitxer/Guardar com _a..."
 
-#: ../src/menu.c:44
+#: ../src/menu.c:45
+#, fuzzy
+msgid "/File/Print Pre_view"
+msgstr "/Fitxer/_Sortir"
+
+#: ../src/menu.c:48
 #, fuzzy
 msgid "/File/_Print..."
 msgstr "/Fitxer/_Sortir"
 
-#: ../src/menu.c:47
+#: ../src/menu.c:55
 msgid "/File/_Quit"
 msgstr "/Fitxer/_Sortir"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:57
 msgid "/_Edit"
 msgstr "/_Editar"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:59
 msgid "/Edit/_Undo"
 msgstr "/Editar/_Desfer"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:61
 msgid "/Edit/_Redo"
 msgstr "/Editar/_Refer"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:65
 msgid "/Edit/Cu_t"
 msgstr "/Editar/_Tallar"
 
-#: ../src/menu.c:59
+#: ../src/menu.c:67
 msgid "/Edit/_Copy"
 msgstr "/Editar/_Copiar"
 
-#: ../src/menu.c:61
+#: ../src/menu.c:69
 msgid "/Edit/_Paste"
 msgstr "/Editar/_Enganxar"
 
-#: ../src/menu.c:63
+#: ../src/menu.c:71
 msgid "/Edit/_Delete"
 msgstr "/Editar/Es_borrar"
 
-#: ../src/menu.c:67
+#: ../src/menu.c:75
 msgid "/Edit/Select _All"
 msgstr "/Editar/_Seleccionar-ho tot"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:77
 msgid "/_Search"
 msgstr "/_Cercar"
 
-#: ../src/menu.c:71
+#: ../src/menu.c:79
 msgid "/Search/_Find..."
 msgstr "/Cercar/_Cercar..."
 
-#: ../src/menu.c:73
+#: ../src/menu.c:81
 msgid "/Search/Find _Next"
 msgstr "/Cercar/Cercar el _següent"
 
-#: ../src/menu.c:75
+#: ../src/menu.c:83
 msgid "/Search/Find _Previous"
 msgstr "/Cercar/Cercar l'_anterior"
 
-#: ../src/menu.c:77
+#: ../src/menu.c:85
 msgid "/Search/_Replace..."
 msgstr "/Cercar/_Substituir"
 
-#: ../src/menu.c:81
+#: ../src/menu.c:89
 msgid "/Search/_Jump To..."
 msgstr "/Cercar/Saltar a la _línia..."
 
-#: ../src/menu.c:83
+#: ../src/menu.c:91
 msgid "/_Options"
 msgstr "/_Opcions"
 
-#: ../src/menu.c:85
+#: ../src/menu.c:93
 msgid "/Options/_Font..."
 msgstr "/Opcions/_Tipografia..."
 
-#: ../src/menu.c:87
+#: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
 msgstr "/Opcions/_Ajust de línia"
 
-#: ../src/menu.c:89
+#: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
 msgstr "/Opcions/_Numerar les línies"
 
-#: ../src/menu.c:93
+#: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
 msgstr "/Opcions/Auto_indentació"
 
-#: ../src/menu.c:95
+#: ../src/menu.c:103
 msgid "/_Help"
 msgstr "/A_jut"
 
-#: ../src/menu.c:97
+#: ../src/menu.c:105
 msgid "/Help/_About"
 msgstr "/Ajut/_Respecte a"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:313
 msgid "GTK+ based simple text editor"
 msgstr "Editor de text simple, basat en GTK+"
 
-#: ../src/callback.c:314
+#: ../src/callback.c:322
 msgid "translator-credits"
 msgstr "David Rosal <davidrr@users.sourceforge.net>"
 
-#: ../src/view.c:63
+#: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Vols desar els canvis fets a '%s'?"
@@ -177,8 +182,7 @@ msgid "Save As"
 msgstr "Guardar com a"
 
 #: ../src/selector.c:329
-#, fuzzy
-msgid "Ch_aracter Coding:"
+msgid "C_haracter Coding:"
 msgstr "Codificació de c_aràcters: "
 
 #: ../src/selector.c:400
@@ -211,46 +215,46 @@ msgstr "No s'ha trobat la cadena desitjada"
 msgid "Replace?"
 msgstr "Substituir?"
 
-#: ../src/search.c:253
+#: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
 msgstr "S'han substituit %d cadenes"
 
-#: ../src/search.c:299
+#: ../src/search.c:306
 msgid "Replace"
 msgstr "Substituir"
 
-#: ../src/search.c:306
+#: ../src/search.c:313
 msgid "Find"
 msgstr "Cercar"
 
-#: ../src/search.c:319
+#: ../src/search.c:326
 #, fuzzy
 msgid "Fi_nd what:"
 msgstr "_Cercar: "
 
-#: ../src/search.c:335
+#: ../src/search.c:342
 #, fuzzy
 msgid "Re_place with:"
 msgstr "_Substituir per: "
 
-#: ../src/search.c:349
+#: ../src/search.c:356
 msgid "_Match case"
 msgstr "Distingir _majúscules / minúscules"
 
-#: ../src/search.c:354
+#: ../src/search.c:361
 msgid "Replace _all at once"
 msgstr "Substituir-les _totes de cop"
 
-#: ../src/search.c:405
+#: ../src/search.c:412
 msgid "Jump To"
 msgstr "Saltar a"
 
-#: ../src/search.c:411
+#: ../src/search.c:418
 msgid "_Jump"
 msgstr "_Saltar"
 
-#: ../src/search.c:418
+#: ../src/search.c:425
 #, fuzzy
 msgid "_Line number:"
 msgstr "Número de _línia: "

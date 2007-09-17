@@ -41,8 +41,16 @@ static GtkItemFactoryEntry menu_items[] =
 	{ "/File/---", NULL,
 		NULL, 0, "<Separator>" },
 #ifdef ENABLE_PRINT
+#	if GTK_CHECK_VERSION(2, 10, 0)
+	{ N_("/File/Print Pre_view"), "<shift><control>P",
+		G_CALLBACK(on_file_print_preview), 0, "<StockItem>", GTK_STOCK_PRINT_PREVIEW },
+#	endif
 	{ N_("/File/_Print..."), "<control>P",
 		G_CALLBACK(on_file_print), 0, "<StockItem>", GTK_STOCK_PRINT },
+#	if GTK_CHECK_VERSION(2, 10, 0)
+	{ "/File/---", NULL,
+		NULL, 0, "<Separator>" },
+#	endif
 #endif
 	{ N_("/File/_Quit"), "<control>Q",
 		G_CALLBACK(on_file_quit), 0, "<StockItem>", GTK_STOCK_QUIT },

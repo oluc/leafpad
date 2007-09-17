@@ -326,7 +326,7 @@ static GtkWidget *create_file_selector(FileInfo *selected_fi)
 	table = gtk_table_new(2, 2, FALSE);
 	gtk_container_add(GTK_CONTAINER(align), table);
 	option_menu_charset = create_charset_menu(selected_fi);
-	label = gtk_label_new_with_mnemonic(_("Ch_aracter Coding:"));
+	label = gtk_label_new_with_mnemonic(_("C_haracter Coding:"));
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label), option_menu_charset);
 	gtk_table_attach_defaults(GTK_TABLE(table), label, 0, 1, 0, 1);
 //	gtk_table_set_row_spacings(GTK_TABLE(table), 5);
