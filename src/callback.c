@@ -140,6 +140,7 @@ void on_file_print(void)
 }
 #	else
 void on_file_print(void)
+{
 	create_gnomeprint_session();
 }
 #	endif
@@ -290,10 +291,12 @@ void on_option_line_numbers(void)
 
 void on_option_always_on_top(void)
 {
+#if GTK_CHECK_VERSION(2, 4, 0)
 	static gboolean flag = FALSE;
 	
 	flag =! flag;
 	gtk_window_set_keep_above(GTK_WINDOW(pub->mw->window), flag);
+#endif
 }
 
 void on_option_auto_indent(void)
@@ -315,16 +318,16 @@ void on_help_about(void)
 		"Tarot Osuji <tarot@sdf.lonestar.org>",
 		NULL
 	};
-	const gchar *artists[] = {
-		"Lapo Calamandrei <calamandrei@gmail.com>",
-		NULL
-	};
 	const gchar *translator_credits = _("translator-credits");
 	
 	translator_credits = strcmp(translator_credits, "translator-credits")
 		? translator_credits : NULL;
 	
 #if GTK_CHECK_VERSION(2, 6, 0)
+	const gchar *artists[] = {
+		"Lapo Calamandrei <calamandrei@gmail.com>",
+		NULL
+	};
 	gtk_show_about_dialog(GTK_WINDOW(pub->mw->window),
 //		"name", PACKAGE_NAME,
 		"version", PACKAGE_VERSION,
@@ -354,7 +357,6 @@ void on_help_about(void)
 		copyright,
 		comments,
 		authors,
-		artists,
 		documenters,
 		translator_credits,
 		logo);

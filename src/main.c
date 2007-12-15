@@ -19,6 +19,9 @@
 
 #define GLOBAL_VARIABLE_DEFINE
 #include "leafpad.h"
+#if GLIB_CHECK_VERSION(2, 6, 0)
+#	include <glib/gstdio.h>
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -42,7 +45,12 @@ static void load_config_file(Conf *conf)
 	gchar buf[BUFSIZ];
 	gchar **num;
 	
+#if GLIB_CHECK_VERSION(2, 6, 0)
+	path = g_build_filename(g_get_user_config_dir(),
+	    PACKAGE, PACKAGE "rc", NULL);
+#else
 	path = g_build_filename(g_get_home_dir(), "." PACKAGE, NULL);
+#endif
 	fp = fopen(path, "r");
 	g_free(path);
 	if (!fp)
@@ -91,7 +99,22 @@ void save_config_file(void)
 		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory,
 			"/Options/Auto Indent")));
 	
+#if GLIB_CHECK_VERSION(2, 6, 0)
+	path = g_build_filename(g_get_user_config_dir(), PACKAGE, NULL);
+	if (!g_file_test(path, G_FILE_TEST_IS_DIR)) {
+# if GLIB_CHECK_VERSION(2, 8, 0)
+		g_mkdir_with_parents(path, 0700);
+# else
+		g_mkdir(g_get_user_config_dir(), 0700);
+		g_mkdir(path, 0700);
+# endif
+	}
+	g_free(path);
+	path = g_build_filename(g_get_user_config_dir(),
+	    PACKAGE, PACKAGE "rc", NULL);
+#else
 	path = g_build_filename(g_get_home_dir(), "." PACKAGE, NULL);
+#endif
 	fp = fopen(path, "w");
 	if (!fp) {
 		g_print("%s: can't save config file - %s\n", PACKAGE, path);
@@ -218,7 +241,7 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 			break;
 		case 'j':
 			if (optarg)
-				jump_linenum = optarg;
+				jump_linenum = atoi(optarg);
 			break;
 		case 'v':
 			g_print("%s\n", PACKAGE_STRING);

@@ -1,9 +1,16 @@
+2007-12-15
+
+  version 0.8.13:
+	* Changed configuration file directory to XDG base (Glib >= 2.6)
+	  (thanks Olivier Duclos).
+	* Fixed drag and DROP behaviour (GTK+ >= 2.10)
+	  (thanks Markus Torstensson).
+
 2007-09-17
 
   version 0.8.12:
 	* Added Print Preview menu (GTK+ >= 2.10).
 	* Fixed one-by-one replace behaviour (GTK+ >= 2.10).
-	* Updated Simplified Chinese translation (Li Daobing).
 	* Updated Vietnamese translation (Clytie Siddall).
 
 2007-07-07

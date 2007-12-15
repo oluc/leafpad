@@ -38,7 +38,10 @@ enum {
 
 static GtkTargetEntry drag_types[] =
 {
+#if !GTK_CHECK_VERSION(2, 10, 0)
+//	{ "application/x-gtk-text-buffer-rich-text", GTK_TARGET_SAME_WIDGET, TARGET_SELF },
 	{ "GTK_TEXT_BUFFER_CONTENTS", GTK_TARGET_SAME_WIDGET, TARGET_SELF },
+#endif
 	{ "UTF8_STRING", 0, TARGET_UTF8_STRING },
 	{ "COMPOUND_TEXT", 0, TARGET_COMPOUND_TEXT },
 	{ "text/plain", 0, TARGET_PLAIN },
@@ -96,7 +99,12 @@ static void dnd_drag_data_recieved_handler(GtkWidget *widget,
 #endif
 DV(g_print("DND start!\n"));
 	
+#if GTK_CHECK_VERSION(2, 10, 0)
+	if (g_strcasecmp(gdk_atom_name(context->targets->data),
+	    "GTK_TEXT_BUFFER_CONTENTS") != 0) {
+#else
 	if (info != TARGET_SELF) {
+#endif
 		if (flag_called_once) {
 			flag_called_once = FALSE;
 			g_signal_stop_emission_by_name(widget, "drag_data_received");
@@ -105,6 +113,7 @@ DV(g_print("second drop signal killed.\n"));
 		} else
 			flag_called_once = TRUE;
 	}
+	
 DV({	
 	g_print("info                      = %d\n", info);
 	g_print("time                      = %d\n", time);
@@ -156,7 +165,11 @@ DV(g_print(">%s\n", comline));
 	else {
 		clear_current_keyval();
 		undo_set_sequency(FALSE);
+#if GTK_CHECK_VERSION(2, 10, 0)
+		if (info == TARGET_UTF8_STRING) {
+#else
 		if (info == TARGET_SELF) {
+#endif
 			undo_set_sequency_reserve();
 			context->action = GDK_ACTION_MOVE;
 		} else if (info == TARGET_PLAIN 
@@ -190,6 +203,25 @@ DV(g_print("%s\n", name));
 	else
 		context->action = GDK_ACTION_COPY;
 //	g_signal_stop_emission_by_name(widget, "drag_motion");
+*/	
+/*	if (!flag) {
+		gint bx, by;
+		GtkTextIter iter;
+		
+		gtk_text_view_window_to_buffer_coords(GTK_TEXT_VIEW(widget),
+			GTK_TEXT_WINDOW_WIDGET,
+			x, y, &bx, &by);
+		gtk_text_view_get_iter_at_location(GTK_TEXT_VIEW(widget), &iter, bx, by);
+		if (!dnd_mark) {
+			dnd_mark = gtk_text_buffer_create_mark(GTK_TEXT_VIEW(widget)->buffer,
+			    NULL, &iter, TRUE);
+			gtk_text_mark_set_visible(dnd_mark, TRUE);
+		} else
+			gtk_text_mark_set_visible(dnd_mark, FALSE);
+			gtk_text_buffer_move_mark(GTK_TEXT_VIEW(widget)->buffer,
+			    dnd_mark, &iter);
+			gtk_text_mark_set_visible(dnd_mark, TRUE);
+	}
 */	
 	return flag;
 }
