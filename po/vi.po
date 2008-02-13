@@ -1,21 +1,22 @@
 # Vietnamese translation for Leafpad.
-# Copyright © 2007 Tarot Osuji <tarot@sdf.lonestar.org>.
+# Copyright © 2008 Tarot Osuji <tarot@sdf.lonestar.org>.
+# This file is distributed under the same license as the leafpad-0.8.13 package.
 # Nguyễn Đại Quý <nguyendaiquy@gmail.com>, 2004.
-# Clytie Siddall <clytie@riverland.net.au>, 2007.
-#
+# Clytie Siddall <clytie@riverland.net.au>, 2007-2008.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.8.9\n"
+"Project-Id-Version: leafpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 20:43+0900\n"
-"PO-Revision-Date: 2007-07-14 14:26+0930\n"
+"POT-Creation-Date: 2008-01-14 20:23+0900\n"
+"PO-Revision-Date: 2008-01-15 16:44+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: LocFactoryEditor 1.6.4a5\n"
+"X-Generator: LocFactoryEditor 1.7b1\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
@@ -38,9 +39,8 @@ msgid "/File/Save _As..."
 msgstr "/Tập tin/Lưu _dạng..."
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "Xem thử bản in"
+msgstr "/Tập tin/_Xem thử bản in"
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
@@ -134,11 +134,11 @@ msgstr "/Trợ g_iúp"
 msgid "/Help/_About"
 msgstr "/Trợ giúp/_Giới thiệu"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
 msgstr "Một trình soạn thảo văn bản đơn giản dựa trên GTK+"
 
-#: ../src/callback.c:322
+#: ../src/callback.c:321
 msgid "translator-credits"
 msgstr "Nhóm Việt hoá Phần mềm Tự do <vi-VN@googlegroups.com>"
 
@@ -183,7 +183,7 @@ msgstr "Lưu dạng"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "_Bảng mã:"
+msgstr "_Bảng mã ký tự :"
 
 #: ../src/selector.c:400
 #, c-format

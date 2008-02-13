@@ -1,4 +1,4 @@
-AC_INIT(Leafpad, 0.8.13, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.8.14, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 

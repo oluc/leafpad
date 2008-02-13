@@ -1,297 +1,298 @@
-# Simplified Chinese translation for LeafPad
-# Copyright (C) 2004 Free Software Foundation, Inc.
+# Basque translation for leafpad.
+# Copyright (C) 2008 Free Software Foundation, Inc
 # This file is distributed under the same license as the leafpad package.
-# Carlos Z.F. Liu <carlos_liu@yahoo.com>, 2004.
-# LI Daobing <lidaobing@gmail.com>, 2008.
+# Mikel Olasagasti Uranga <hey_neken@mundurat.net>, 2008.
+# Inko Illarramendi Arancibia <inkoia@gmail.com>, 2008.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-14 20:23+0900\n"
-"PO-Revision-Date: 2008-01-26 10:12+0800\n"
-"Last-Translator: LI Daobing <lidaobing@gmail.com>\n"
-"Language-Team: Chinese (simplified) <translation-team-zh-cn@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2008-01-14 21:35+0900\n"
+"Last-Translator: Mikel Olasagasti <hey_neken@mundurat.net>\n"
+"Language-Team: Basque <translation-team-eu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Basque\n"
+"X-Poedit-Country: SPAIN\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
-msgstr "/文件(_F)"
+msgstr "/_Fitxategia"
 
 #: ../src/menu.c:33
 msgid "/File/_New"
-msgstr "/文件(F)/新建(_N)"
+msgstr "/Fitxategia/_Berria"
 
 #: ../src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/文件(F)/打开(_O)..."
+msgstr "/Fitxategia/_Ireki"
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
-msgstr "/文件(F)/保存(_S)"
+msgstr "/Fitxategia/_Gorde"
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/文件(F)/另存为(_A)..."
+msgstr "/Fitxategia/Gorde _Honela..."
 
 #: ../src/menu.c:45
 msgid "/File/Print Pre_view"
-msgstr "/文件(F)/打印预览(_V)"
+msgstr "/Fitxategia/Inprimatze Aurre_bista"
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "/文件(F)/打印(_P)..."
+msgstr "/Fitxategia/In_primatu"
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
-msgstr "/文件(F)/退出(_Q)"
+msgstr "/Fitxategia/It_xi"
 
 #: ../src/menu.c:57
 msgid "/_Edit"
-msgstr "/编辑(_E)"
+msgstr "/_Editatu"
 
 #: ../src/menu.c:59
 msgid "/Edit/_Undo"
-msgstr "/编辑(E)/撤销(_U)"
+msgstr "/Editatu/_Desegin"
 
 #: ../src/menu.c:61
 msgid "/Edit/_Redo"
-msgstr "/编辑(E)/重复(_R)"
+msgstr "/Editatu/Be_rregin"
 
 #: ../src/menu.c:65
 msgid "/Edit/Cu_t"
-msgstr "/编辑(E)/剪切(_T)"
+msgstr "/Editatu/Eba_ki"
 
 #: ../src/menu.c:67
 msgid "/Edit/_Copy"
-msgstr "/编辑(E)/复制(_C)"
+msgstr "/Editatu/_Kopiatu"
 
 #: ../src/menu.c:69
 msgid "/Edit/_Paste"
-msgstr "/编辑(E)/粘贴(_P)"
+msgstr "/Editatu/_Itsatsi"
 
 #: ../src/menu.c:71
 msgid "/Edit/_Delete"
-msgstr "/编辑(E)/删除(_D)"
+msgstr "/Editatu/_Ezabatu"
 
 #: ../src/menu.c:75
 msgid "/Edit/Select _All"
-msgstr "/编辑(E)/选择全部(_A)"
+msgstr "/Editatu/_Hautatu Dena"
 
 #: ../src/menu.c:77
 msgid "/_Search"
-msgstr "/搜索(_S)"
+msgstr "/_Bilatu"
 
 #: ../src/menu.c:79
 msgid "/Search/_Find..."
-msgstr "/搜索(S)/查找(_F)..."
+msgstr "/Bilatu/_Bilatu"
 
 #: ../src/menu.c:81
 msgid "/Search/Find _Next"
-msgstr "/搜索(S)/查找下一个(_N)"
+msgstr "/Bilatu/Bilatu _hurrengoa"
 
 #: ../src/menu.c:83
 msgid "/Search/Find _Previous"
-msgstr "/搜索(S)/查找上一个(_P)"
+msgstr "/Bilatu/Bilatu _aurrekoa"
 
 #: ../src/menu.c:85
 msgid "/Search/_Replace..."
-msgstr "/搜索/替换(_R)..."
+msgstr "/Bilatu/_Ordezkatu"
 
 #: ../src/menu.c:89
 msgid "/Search/_Jump To..."
-msgstr "/搜索(S)/跳转到(_J)..."
+msgstr "/Bilatu/_Jauzi Hona..."
 
 #: ../src/menu.c:91
 msgid "/_Options"
-msgstr "/选项(_O)"
+msgstr "/_Aukerak"
 
 #: ../src/menu.c:93
 msgid "/Options/_Font..."
-msgstr "/选项(O)/字体(_F)..."
+msgstr "/Aukerak/Letra _Tipoa..."
 
 #: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
-msgstr "/选项(O)/自动换行(_W)"
+msgstr "/Aukerak/_Hitz doiketa"
 
 #: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
-msgstr "/选项(O)/行号(_L)"
+msgstr "/Aukerak/_Lerro Zenbakiak"
 
 #: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
-msgstr "/选项(O)/自动缩进(_A)"
+msgstr "/Aukerak/_Autoindentazioa"
 
 #: ../src/menu.c:103
 msgid "/_Help"
-msgstr "/帮助(_H)"
+msgstr "/_Laguntza"
 
 #: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/帮助(H)/关于(_A)"
+msgstr "/Laguntza/_Honi buruz"
 
 #: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
-msgstr "基于 GTK+ 的简易文字编辑器"
+msgstr "GTK+-n oinarritutako testu editore sinplea"
 
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr ""
-"Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
-"LI Daobing <lidaobing@gmail.com>"
+msgstr "Inko Illarramendi <inkoia@gmail.com>"
 
 #: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "将更改保存到“%s”吗？"
+msgstr "Aldaketak '%s'-n gorde?"
 
 #: ../src/font.c:44
 msgid "Font"
-msgstr "字体"
+msgstr "Letra tipoa"
 
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "当前区域 (%s)"
+msgstr "Uneko Locale-a (%s)"
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
-msgstr "其它编码"
+msgstr "Beste Kodeketa Multzoa"
 
 #: ../src/selector.c:170
 msgid "Code_set:"
-msgstr "编码(_S)："
+msgstr "Kodeketa_multzoa:"
 
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "“%s”不被支持"
+msgstr "'%s'-entzat ez dago sostengurik"
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
-msgstr "自动探测"
+msgstr "Auto-Detektatu"
 
 #: ../src/selector.c:305
 msgid "Open"
-msgstr "打开"
+msgstr "Ireki"
 
 #: ../src/selector.c:305
 msgid "Save As"
-msgstr "另存为"
+msgstr "Gorde Honela"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "字符编码(_H)："
+msgstr "K_araktere Kodeketa:"
 
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "文件“%s”已经存在。覆盖它吗？"
+msgstr "'%s' badago. Gainean idatzi?"
 
 #: ../src/file.c:55
 msgid "Untitled"
-msgstr "无标题"
+msgstr "Izengabea"
 
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "无法将编码转换到“%s”"
+msgstr "Ezin da kodeketa multzoa '%s'-ra bihurtu"
 
 #: ../src/file.c:225
 msgid "Can't open file to write"
-msgstr "无法打开要写入的文件"
+msgstr "Ezin da fitxategia idazketarako ireki"
 
 #: ../src/file.c:230
 msgid "Can't write file"
-msgstr "无法写入文件"
+msgstr "Ezin da fitxategian gorde"
 
 #: ../src/search.c:140
 msgid "Search string not found"
-msgstr "找不到搜索字串"
+msgstr "Bilaketa katea ez da aurkitu"
 
 #: ../src/search.c:193
 msgid "Replace?"
-msgstr "替换吗？"
+msgstr "Ordezkatu?"
 
 #: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
-msgstr "替换了 %d 个字符串"
+msgstr "%d kate ordezkatuta"
 
 #: ../src/search.c:306
 msgid "Replace"
-msgstr "替换"
+msgstr "Ordezkatu"
 
 #: ../src/search.c:313
 msgid "Find"
-msgstr "查找"
+msgstr "Bilatu"
 
 #: ../src/search.c:326
 msgid "Fi_nd what:"
-msgstr "查找(_N)："
+msgstr "Zer _bilatu:"
 
 #: ../src/search.c:342
 msgid "Re_place with:"
-msgstr "替换为(_P)："
+msgstr "Zerekin _ordezkatu:"
 
 #: ../src/search.c:356
 msgid "_Match case"
-msgstr "区分大小写(_M)"
+msgstr "_Maiuskulak/minuskulak kointziditu"
 
 #: ../src/search.c:361
 msgid "Replace _all at once"
-msgstr "全部替换(_A)"
+msgstr "_Guztiak ordezkatu"
 
 #: ../src/search.c:412
 msgid "Jump To"
-msgstr "跳转至"
+msgstr "Jauzi"
 
 #: ../src/search.c:418
 msgid "_Jump"
-msgstr "跳转(_J)"
+msgstr "_Jauzi"
 
 #: ../src/search.c:425
 msgid "_Line number:"
-msgstr "行号(_L)："
+msgstr "_Lerro zenbakia:"
 
 #: ../src/about.c:102
 msgid "Credits"
-msgstr "感谢"
+msgstr "Kredituak"
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr "作者："
+msgstr "Idazketa"
 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr "文档撰写人："
+msgstr "Dokumentatzea"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "译者："
+msgstr "Itzulpena"
 
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr "感谢(_R)"
+msgstr "K_redituak"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr "感谢(_C)"
+msgstr "_Kredituak"
 
 #: ../src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "关于 %s"
+msgstr "%s-i buruz"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr "打印"
+msgstr "Inprimatu"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr "打印预览"
+msgstr "Inprimatze Aurrebista"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
-msgstr "简易文字编辑器"
+msgstr "Testu editore sinplea"
