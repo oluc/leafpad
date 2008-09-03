@@ -1,286 +1,298 @@
-# Swedish translation of Leafpad text editor.
-# Copyright © 2005 Free Software Foundation, Inc.
+# Danish translation for Leafpad.
+# Copyright (C) 2008 Leafpad.
 # This file is distributed under the same license as the leafpad package.
-# Isak Savo <iso01001@student.mdh.se>, 2004.
-# 
+# Joe Hansen <joedalton2@yahoo.dk>, 2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.8.4\n"
+"Project-Id-Version: leafpad-0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-03 21:17+0900\n"
-"PO-Revision-Date: 2005-12-05 20:30+0100\n"
-"Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
-"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"PO-Revision-Date: 2008-08-24 00:00+0100\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
-msgstr "/_Arkiv"
+msgstr "/_Fil"
 
 #: ../src/menu.c:33
 msgid "/File/_New"
-msgstr "/Arkiv/_Ny"
+msgstr "/Fil/_Ny"
 
 #: ../src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/Arkiv/_Öppna..."
+msgstr "/Fil/_Åbn..."
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
-msgstr "/Arkiv/_Spara"
+msgstr "/Fil/_Gem"
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/Arkiv/Spara so_m..."
+msgstr "/Fil/Gem _som..."
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "Arkiv/Skriv _ut..."
+msgstr "/Fil/Vis u_dskrift"
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "Arkiv/Skriv _ut..."
+msgstr "/Fil/_Udskriv..."
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
-msgstr "Arkiv/_Avsluta"
+msgstr "/Fil/_Afslut"
 
 #: ../src/menu.c:57
 msgid "/_Edit"
-msgstr "/_Redigera"
+msgstr "/_Rediger"
 
 #: ../src/menu.c:59
 msgid "/Edit/_Undo"
-msgstr "/Redigera/_Ångra"
+msgstr "/Rediger/_Fortryd"
 
 #: ../src/menu.c:61
 msgid "/Edit/_Redo"
-msgstr "/Redigera/_Gör om"
+msgstr "/Rediger/G_endan"
 
 #: ../src/menu.c:65
 msgid "/Edit/Cu_t"
-msgstr "/Redigera/Klipp _ut"
+msgstr "/Rediger/K_lip"
 
 #: ../src/menu.c:67
 msgid "/Edit/_Copy"
-msgstr "/Redigera/_Kopiera"
+msgstr "/Rediger/_Kopier"
 
 #: ../src/menu.c:69
 msgid "/Edit/_Paste"
-msgstr "/Redigera/Klistra _in"
+msgstr "/Rediger/Sæt i_nd"
 
 #: ../src/menu.c:71
 msgid "/Edit/_Delete"
-msgstr "/Redigera/_Ta bort"
+msgstr "/Rediger/_Slet"
 
 #: ../src/menu.c:75
 msgid "/Edit/Select _All"
-msgstr "/Redigera/Markera _allt"
+msgstr "/Rediger/Marker _alt"
 
 #: ../src/menu.c:77
 msgid "/_Search"
-msgstr "/_Sök"
+msgstr "/_Søg"
 
 #: ../src/menu.c:79
 msgid "/Search/_Find..."
-msgstr "/Sök/_Sök..."
+msgstr "/Søg/_Find..."
 
 #: ../src/menu.c:81
 msgid "/Search/Find _Next"
-msgstr "/Sök/Sök n_ästa"
+msgstr "/Søg/Find _Næste"
 
 #: ../src/menu.c:83
 msgid "/Search/Find _Previous"
-msgstr "/Sök/Sök före_gående"
+msgstr "/Søg/Find _foregående"
 
 #: ../src/menu.c:85
 msgid "/Search/_Replace..."
-msgstr "/Sök/_Ersätt..."
+msgstr "/Søg/_Erstat..."
 
 #: ../src/menu.c:89
 msgid "/Search/_Jump To..."
-msgstr "/Sök/_Hoppa till..."
+msgstr "/Search/_Gå til..."
 
+# Men det er jo ikke rigtigt, altså "options"
+# betyder da ikke "funktioner".
+# Det må være en eller anden form for specielt brug i OO,
+# det kan være at OO folkene ved at det rent faktisk er funktioner der gemmer
+# sig i den menu, men det er ikke rigtigt generelt. Når option står i et
+# menupunkt sådan som det gør her, så oversættes det til
+# "Indstillinger", hvis det ikke er i et menu-punkt er der lidt flere muligheder
+# "valgmuligheder" og "indstillinger".
 #: ../src/menu.c:91
 msgid "/_Options"
-msgstr "/_Inställningar"
+msgstr "/_Indstillinger"
 
 #: ../src/menu.c:93
 msgid "/Options/_Font..."
-msgstr "/Inställningar/_Typsnitt..."
+msgstr "/Funktioner/_Skrifttype..."
 
 #: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
-msgstr "/Inställningar/_Radbrytning"
+msgstr "/Funktioner/_Ordombrydning"
 
 #: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
-msgstr "/Inställningar/Rad_nummer"
+msgstr "/Funktioner/_Linjenumre"
 
 #: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
-msgstr "/Inställningar/Automatisk _indrag"
+msgstr "/Funktioner/_Automatisk indryk"
 
 #: ../src/menu.c:103
 msgid "/_Help"
-msgstr "/_Hjälp"
+msgstr "/_Hjælp"
 
 #: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/Hjälp/_Om"
+msgstr "/Hjælp/_Om"
 
 #: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
-msgstr "Enkel GTK+-baserad textredigerare"
+msgstr "En simpel GTK+-baseret tekstbehandler"
 
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr "Isak Savo <isak.savo@gmail.com>"
+msgstr ""
+"Joe Hansen <joedalton2@yahoo.dk>\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
 
 #: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Spara ändringar till \"%s\"?"
+msgstr "Gem ændringer til »%s«?"
 
 #: ../src/font.c:44
 msgid "Font"
-msgstr "Typsnitt"
+msgstr "Skrifttype"
 
-# Här syftar 'Locale' på teckenkodning när man sparar/öppnar dokument.
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Nuvarande lokal (%s)"
+msgstr "Nuværende lokalitet (%s)"
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
-msgstr "Annan teckenkodning"
+msgstr "Andre kodesæt"
 
 #: ../src/selector.c:170
 msgid "Code_set:"
-msgstr "_Kodning:"
+msgstr "Kode_sæt:"
 
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "\"%s\" stöds inte"
+msgstr "»%s« understøttes ikke"
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
-msgstr "Känn av automatiskt"
+msgstr "Automatisk detektering"
 
 #: ../src/selector.c:305
 msgid "Open"
-msgstr "Öppna"
+msgstr "Åbn"
 
 #: ../src/selector.c:305
 msgid "Save As"
-msgstr "Spara som"
+msgstr "Gem som"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "Tecken_kodning: "
+msgstr "_Karakterkodning:"
 
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "\"%s\" finns redan. Vill du skriva över?"
+msgstr "»%s« eksisterer allerede. Overskriv?"
 
 #: ../src/file.c:55
 msgid "Untitled"
-msgstr "Namnlös"
+msgstr "Unavngivet"
 
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Kan inte konvertera kodning till \"%s\""
+msgstr "Kan ikke konvertere kodesæt til »%s«"
 
+# jeg ville tilføje "..til skrivning (ikke afklaret oversættelse)
 #: ../src/file.c:225
 msgid "Can't open file to write"
-msgstr "Kan inte öppna fil att skriva till"
+msgstr "Kan ikke åbne fil"
 
 #: ../src/file.c:230
 msgid "Can't write file"
-msgstr "Kan inte skriva till fil"
+msgstr "Kan ikke skrive fil"
 
 #: ../src/search.c:140
 msgid "Search string not found"
-msgstr "Söksträngen fanns inte"
+msgstr "Søgestrengen blev ikke fundet"
 
 #: ../src/search.c:193
 msgid "Replace?"
-msgstr "Ersätt?"
+msgstr "Erstat?"
 
 #: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d strängar har ersatts"
+msgstr "%d strenge erstattet"
 
 #: ../src/search.c:306
 msgid "Replace"
-msgstr "Ersätt"
+msgstr "Erstat"
 
 #: ../src/search.c:313
 msgid "Find"
-msgstr "Sök"
+msgstr "Søg"
 
 #: ../src/search.c:326
 msgid "Fi_nd what:"
-msgstr "_Sök efter:"
+msgstr "Sø_g hvad:"
 
 #: ../src/search.c:342
 msgid "Re_place with:"
-msgstr "Ersätt _med:"
+msgstr "_Erstat med:"
 
 #: ../src/search.c:356
 msgid "_Match case"
-msgstr "_Gör skillnad på gemener/VERSALER"
+msgstr "_Søgestreng"
 
+# på en gang" ligesom i originalen (ikke afklaret oversættelse af
+# den her streng.
 #: ../src/search.c:361
 msgid "Replace _all at once"
-msgstr "_Ändra alla på en gång"
+msgstr "Erstat _alle"
 
 #: ../src/search.c:412
 msgid "Jump To"
-msgstr "Hoppa till"
+msgstr "Gå til"
 
+# Måske enkeltords-versionen virker bedre hvis du bruger
+# "hop"
 #: ../src/search.c:418
 msgid "_Jump"
-msgstr "_Hoppa"
+msgstr "_Gå"
 
 #: ../src/search.c:425
 msgid "_Line number:"
-msgstr "_Radnummer: "
+msgstr "_Linjenummer:"
 
-# Osäker på den här, men så här är den översatt i GNOMEs "about"-dialoger
 #: ../src/about.c:102
 msgid "Credits"
-msgstr "Tack"
+msgstr "Bidragydere"
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr "Skrivet av"
+msgstr "Skrevet af"
 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr "Dokumenterat av"
+msgstr "Dokumenteret af"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "Översatt av"
+msgstr "Oversat af"
 
-# Verkar som om nedanstående har olika mnemonics beroende på GTK-version. 
-# Jag använder 'a' p.g.a. att 't' används av "Stäng"-knappen
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr "T_ack"
+msgstr "Bidragyde_re"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr "T_ack"
+msgstr "_Bidragydere"
 
 #: ../src/about.c:209
 #, c-format
@@ -289,31 +301,12 @@ msgstr "Om %s"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr "Skriv ut"
+msgstr "Udskriv"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr ""
+msgstr "Udskriv forhåndsvisning"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
-msgstr "Enkel textredigerare"
-
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/_Arkiv"
-
-#~ msgid "Can't convert codeset to current locale"
-#~ msgstr "Kan inte konvertera teckenkodning till aktuell lokal"
-
-#~ msgid "Can't write temporary file"
-#~ msgstr "Kan inte skriva till temporär fil"
-
-#~ msgid "Printer _name:"
-#~ msgstr "Skrivar_namn:"
-
-#~ msgid "N_umber of copies:"
-#~ msgstr "_Antal kopior:"
-
-#~ msgid "_Format page"
-#~ msgstr "_Formatera sida"
+msgstr "Enkel tekstbehandler"

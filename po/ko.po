@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 20:43+0900\n"
+"POT-Creation-Date: 2008-09-03 21:17+0900\n"
 "PO-Revision-Date: 2006-11-01 10:50+0900\n"
 "Last-Translator: Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -132,11 +132,11 @@ msgstr "/도움말(_H)"
 msgid "/Help/_About"
 msgstr "/도움말/정보(_A)"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
 msgstr "GTK+로 만든 간단한 텍스트 편집기"
 
-#: ../src/callback.c:322
+#: ../src/callback.c:321
 msgid "translator-credits"
 msgstr "Seo Sanghyeon <sanxiyn@gmail.com>"
 

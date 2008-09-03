@@ -1,19 +1,21 @@
-# Traditional Chinese translation for LeafPad
+# Traditional Chinese translation for leafpad.
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the leafpad package.
 # OLS3 <ols3@lxer.idv.tw>, 2005.
-# 
+# Wei-Lun Chao <chaoweilun@gmail.com>, 2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.7.2\n"
+"Project-Id-Version: leafpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 20:43+0900\n"
-"PO-Revision-Date: 2004-10-04 08:21+0800\n"
-"Last-Translator: OLS3 <ols3@lxer.idv.tw>\n"
-"Language-Team: OLS3 <ols3@lxer.idv.tw>\n"
+"POT-Creation-Date: 2008-09-03 21:17+0900\n"
+"PO-Revision-Date: 2008-03-20 20:21+0800\n"
+"Last-Translator: Wei-Lun Chao <chaoweilun@gmail.com>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
@@ -25,7 +27,7 @@ msgstr "/檔案(F)/新建(_N)"
 
 #: ../src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/檔案(F)/開啟(_O)..."
+msgstr "/檔案(F)/開啟(_O)…"
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
@@ -33,16 +35,15 @@ msgstr "/檔案(F)/儲存(_S)"
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/檔案(F)/另存為(_A)..."
+msgstr "/檔案(F)/另存為(_A)…"
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "/檔案(F)/列印(_P)..."
+msgstr "/檔案(F)/列印預覽(_V)"
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "/檔案(F)/列印(_P)..."
+msgstr "/檔案(F)/列印(_P)…"
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
@@ -86,7 +87,7 @@ msgstr "/搜尋(_S)"
 
 #: ../src/menu.c:79
 msgid "/Search/_Find..."
-msgstr "/搜尋(S)/尋找(_F)..."
+msgstr "/搜尋(S)/尋找(_F)…"
 
 #: ../src/menu.c:81
 msgid "/Search/Find _Next"
@@ -98,11 +99,11 @@ msgstr "/搜尋(S)/尋找上一個(_P)"
 
 #: ../src/menu.c:85
 msgid "/Search/_Replace..."
-msgstr "/搜尋/置換(_R)..."
+msgstr "/搜尋/置換(_R)…"
 
 #: ../src/menu.c:89
 msgid "/Search/_Jump To..."
-msgstr "/搜尋(S)/跳到(_J)..."
+msgstr "/搜尋(S)/跳至(_J)…"
 
 #: ../src/menu.c:91
 msgid "/_Options"
@@ -110,11 +111,11 @@ msgstr "/選項(_O)"
 
 #: ../src/menu.c:93
 msgid "/Options/_Font..."
-msgstr "/選項(O)/字型(_F)..."
+msgstr "/選項(O)/字型(_F)…"
 
 #: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
-msgstr "/選項(O)/自動換行(_W)"
+msgstr "/選項(O)/自動換列(_W)"
 
 #: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
@@ -126,24 +127,26 @@ msgstr "/選項(O)/自動縮排(_A)"
 
 #: ../src/menu.c:103
 msgid "/_Help"
-msgstr "/說明(_H)"
+msgstr "/求助(_H)"
 
 #: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/說明(H)/關於(_A)"
+msgstr "/求助(H)/關於(_A)"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
 msgstr "基於 GTK+ 的簡易文字編輯器"
 
-#: ../src/callback.c:322
+#: ../src/callback.c:321
 msgid "translator-credits"
-msgstr "OLS3 <ols3@lxer.idv.tw>"
+msgstr ""
+"OLS3 <ols3@lxer.idv.tw>\n"
+"趙惟倫 <chaoweilun@gmail.com>"
 
 #: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "要將變更儲存到“%s”?"
+msgstr "要將變更儲存到「%s」？"
 
 #: ../src/font.c:44
 msgid "Font"
@@ -152,7 +155,7 @@ msgstr "字型"
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "目前語系 (%s)"
+msgstr "目前語區 (%s)"
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
@@ -165,7 +168,7 @@ msgstr "編碼(_S):"
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "“%s”尚未支援"
+msgstr "「%s」尚未支援"
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
@@ -177,7 +180,7 @@ msgstr "開啟"
 
 #: ../src/selector.c:305
 msgid "Save As"
-msgstr "另存為"
+msgstr "另存新檔"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
@@ -186,16 +189,16 @@ msgstr "字元編碼(_H):"
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "檔案“%s”已經存在. 要覆蓋它嗎?"
+msgstr "檔案「%s」已經存在。要覆蓋它嗎？"
 
 #: ../src/file.c:55
 msgid "Untitled"
-msgstr "無標題"
+msgstr "未命名"
 
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "無法將編碼轉換為 “%s”"
+msgstr "無法將編碼轉換為「%s」"
 
 #: ../src/file.c:225
 msgid "Can't open file to write"
@@ -211,7 +214,7 @@ msgstr "找不到搜尋字串"
 
 #: ../src/search.c:193
 msgid "Replace?"
-msgstr "要置換嗎?"
+msgstr "要置換嗎？"
 
 #: ../src/search.c:260
 #, c-format
@@ -232,7 +235,7 @@ msgstr "尋找(_N):"
 
 #: ../src/search.c:342
 msgid "Re_place with:"
-msgstr "置換成(_A):"
+msgstr "置換成(_P):"
 
 #: ../src/search.c:356
 msgid "_Match case"
@@ -244,11 +247,11 @@ msgstr "全部置換(_A)"
 
 #: ../src/search.c:412
 msgid "Jump To"
-msgstr "跳到"
+msgstr "跳至"
 
 #: ../src/search.c:418
 msgid "_Jump"
-msgstr "跳(_J)"
+msgstr "跳至(_J)"
 
 #: ../src/search.c:425
 msgid "_Line number:"
@@ -256,7 +259,7 @@ msgstr "列號(_L):"
 
 #: ../src/about.c:102
 msgid "Credits"
-msgstr "誌謝"
+msgstr "鳴謝"
 
 #: ../src/about.c:137
 msgid "Written by"
@@ -268,15 +271,15 @@ msgstr "文件作者"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "中譯者"
+msgstr "翻譯者"
 
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr "誌謝(_r)"
+msgstr "鳴謝(_R)"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr "誌謝(_C)"
+msgstr "鳴謝(_C)"
 
 #: ../src/about.c:209
 #, c-format
@@ -289,60 +292,8 @@ msgstr "列印"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr ""
+msgstr "列印預覽"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "簡易文字編輯器"
-
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/檔案(_F)"
-
-#~ msgid "Can't convert codeset to current locale"
-#~ msgstr "無法將編碼轉換為 “%s”"
-
-#~ msgid "Can't write temporary file"
-#~ msgstr "無法寫入暫存檔案"
-
-#~ msgid "Printer _name:"
-#~ msgstr "印表機名稱(_n):"
-
-#~ msgid "N_umber of copies:"
-#~ msgstr "列印份數(_u):"
-
-#~ msgid "_Format page"
-#~ msgstr "格式化頁面(_F)"
-
-#~ msgid "Other Codeset (%s)"
-#~ msgstr "其它編碼(%s)"
-
-#~ msgid "Other Codeset..."
-#~ msgstr "其它編碼..."
-
-#~ msgid "Unicode (UTF-8)"
-#~ msgstr "統一碼"
-
-#~ msgid "Western"
-#~ msgstr "西方"
-
-#~ msgid "Cyrillic"
-#~ msgstr "西里爾文"
-
-#~ msgid "Chinese Simplified"
-#~ msgstr "簡体中文"
-
-#~ msgid "Chinese Traditional"
-#~ msgstr "繁體中文"
-
-#~ msgid "Japanese"
-#~ msgstr "日文"
-
-#~ msgid "Korean"
-#~ msgstr "韓文"
-
-#~ msgid "Enter Codeset"
-#~ msgstr "輸入編碼"
-
-#~ msgid "GTK-based Notepad clone"
-#~ msgstr "基於 GTK 的記事本"

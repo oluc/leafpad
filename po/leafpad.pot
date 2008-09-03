@@ -1,295 +1,291 @@
-# Swedish translation of Leafpad text editor.
-# Copyright © 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the leafpad package.
-# Isak Savo <iso01001@student.mdh.se>, 2004.
-# 
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.8.4\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-03 21:17+0900\n"
-"PO-Revision-Date: 2005-12-05 20:30+0100\n"
-"Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
-"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
-msgstr "/_Arkiv"
+msgstr ""
 
 #: ../src/menu.c:33
 msgid "/File/_New"
-msgstr "/Arkiv/_Ny"
+msgstr ""
 
 #: ../src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/Arkiv/_Öppna..."
+msgstr ""
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
-msgstr "/Arkiv/_Spara"
+msgstr ""
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/Arkiv/Spara so_m..."
+msgstr ""
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "Arkiv/Skriv _ut..."
+msgstr ""
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "Arkiv/Skriv _ut..."
+msgstr ""
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
-msgstr "Arkiv/_Avsluta"
+msgstr ""
 
 #: ../src/menu.c:57
 msgid "/_Edit"
-msgstr "/_Redigera"
+msgstr ""
 
 #: ../src/menu.c:59
 msgid "/Edit/_Undo"
-msgstr "/Redigera/_Ångra"
+msgstr ""
 
 #: ../src/menu.c:61
 msgid "/Edit/_Redo"
-msgstr "/Redigera/_Gör om"
+msgstr ""
 
 #: ../src/menu.c:65
 msgid "/Edit/Cu_t"
-msgstr "/Redigera/Klipp _ut"
+msgstr ""
 
 #: ../src/menu.c:67
 msgid "/Edit/_Copy"
-msgstr "/Redigera/_Kopiera"
+msgstr ""
 
 #: ../src/menu.c:69
 msgid "/Edit/_Paste"
-msgstr "/Redigera/Klistra _in"
+msgstr ""
 
 #: ../src/menu.c:71
 msgid "/Edit/_Delete"
-msgstr "/Redigera/_Ta bort"
+msgstr ""
 
 #: ../src/menu.c:75
 msgid "/Edit/Select _All"
-msgstr "/Redigera/Markera _allt"
+msgstr ""
 
 #: ../src/menu.c:77
 msgid "/_Search"
-msgstr "/_Sök"
+msgstr ""
 
 #: ../src/menu.c:79
 msgid "/Search/_Find..."
-msgstr "/Sök/_Sök..."
+msgstr ""
 
 #: ../src/menu.c:81
 msgid "/Search/Find _Next"
-msgstr "/Sök/Sök n_ästa"
+msgstr ""
 
 #: ../src/menu.c:83
 msgid "/Search/Find _Previous"
-msgstr "/Sök/Sök före_gående"
+msgstr ""
 
 #: ../src/menu.c:85
 msgid "/Search/_Replace..."
-msgstr "/Sök/_Ersätt..."
+msgstr ""
 
 #: ../src/menu.c:89
 msgid "/Search/_Jump To..."
-msgstr "/Sök/_Hoppa till..."
+msgstr ""
 
 #: ../src/menu.c:91
 msgid "/_Options"
-msgstr "/_Inställningar"
+msgstr ""
 
 #: ../src/menu.c:93
 msgid "/Options/_Font..."
-msgstr "/Inställningar/_Typsnitt..."
+msgstr ""
 
 #: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
-msgstr "/Inställningar/_Radbrytning"
+msgstr ""
 
 #: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
-msgstr "/Inställningar/Rad_nummer"
+msgstr ""
 
 #: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
-msgstr "/Inställningar/Automatisk _indrag"
+msgstr ""
 
 #: ../src/menu.c:103
 msgid "/_Help"
-msgstr "/_Hjälp"
+msgstr ""
 
 #: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/Hjälp/_Om"
+msgstr ""
 
 #: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
-msgstr "Enkel GTK+-baserad textredigerare"
+msgstr ""
 
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr "Isak Savo <isak.savo@gmail.com>"
+msgstr ""
 
 #: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Spara ändringar till \"%s\"?"
+msgstr ""
 
 #: ../src/font.c:44
 msgid "Font"
-msgstr "Typsnitt"
+msgstr ""
 
-# Här syftar 'Locale' på teckenkodning när man sparar/öppnar dokument.
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Nuvarande lokal (%s)"
+msgstr ""
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
-msgstr "Annan teckenkodning"
+msgstr ""
 
 #: ../src/selector.c:170
 msgid "Code_set:"
-msgstr "_Kodning:"
+msgstr ""
 
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "\"%s\" stöds inte"
+msgstr ""
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
-msgstr "Känn av automatiskt"
+msgstr ""
 
 #: ../src/selector.c:305
 msgid "Open"
-msgstr "Öppna"
+msgstr ""
 
 #: ../src/selector.c:305
 msgid "Save As"
-msgstr "Spara som"
+msgstr ""
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "Tecken_kodning: "
+msgstr ""
 
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "\"%s\" finns redan. Vill du skriva över?"
+msgstr ""
 
 #: ../src/file.c:55
 msgid "Untitled"
-msgstr "Namnlös"
+msgstr ""
 
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Kan inte konvertera kodning till \"%s\""
+msgstr ""
 
 #: ../src/file.c:225
 msgid "Can't open file to write"
-msgstr "Kan inte öppna fil att skriva till"
+msgstr ""
 
 #: ../src/file.c:230
 msgid "Can't write file"
-msgstr "Kan inte skriva till fil"
+msgstr ""
 
 #: ../src/search.c:140
 msgid "Search string not found"
-msgstr "Söksträngen fanns inte"
+msgstr ""
 
 #: ../src/search.c:193
 msgid "Replace?"
-msgstr "Ersätt?"
+msgstr ""
 
 #: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d strängar har ersatts"
+msgstr ""
 
 #: ../src/search.c:306
 msgid "Replace"
-msgstr "Ersätt"
+msgstr ""
 
 #: ../src/search.c:313
 msgid "Find"
-msgstr "Sök"
+msgstr ""
 
 #: ../src/search.c:326
 msgid "Fi_nd what:"
-msgstr "_Sök efter:"
+msgstr ""
 
 #: ../src/search.c:342
 msgid "Re_place with:"
-msgstr "Ersätt _med:"
+msgstr ""
 
 #: ../src/search.c:356
 msgid "_Match case"
-msgstr "_Gör skillnad på gemener/VERSALER"
+msgstr ""
 
 #: ../src/search.c:361
 msgid "Replace _all at once"
-msgstr "_Ändra alla på en gång"
+msgstr ""
 
 #: ../src/search.c:412
 msgid "Jump To"
-msgstr "Hoppa till"
+msgstr ""
 
 #: ../src/search.c:418
 msgid "_Jump"
-msgstr "_Hoppa"
+msgstr ""
 
 #: ../src/search.c:425
 msgid "_Line number:"
-msgstr "_Radnummer: "
+msgstr ""
 
-# Osäker på den här, men så här är den översatt i GNOMEs "about"-dialoger
 #: ../src/about.c:102
 msgid "Credits"
-msgstr "Tack"
+msgstr ""
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr "Skrivet av"
+msgstr ""
 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr "Dokumenterat av"
+msgstr ""
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "Översatt av"
+msgstr ""
 
-# Verkar som om nedanstående har olika mnemonics beroende på GTK-version. 
-# Jag använder 'a' p.g.a. att 't' används av "Stäng"-knappen
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr "T_ack"
+msgstr ""
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr "T_ack"
+msgstr ""
 
 #: ../src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "Om %s"
+msgstr ""
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr "Skriv ut"
+msgstr ""
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
@@ -297,23 +293,4 @@ msgstr ""
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
-msgstr "Enkel textredigerare"
-
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/_Arkiv"
-
-#~ msgid "Can't convert codeset to current locale"
-#~ msgstr "Kan inte konvertera teckenkodning till aktuell lokal"
-
-#~ msgid "Can't write temporary file"
-#~ msgstr "Kan inte skriva till temporär fil"
-
-#~ msgid "Printer _name:"
-#~ msgstr "Skrivar_namn:"
-
-#~ msgid "N_umber of copies:"
-#~ msgstr "_Antal kopior:"
-
-#~ msgid "_Format page"
-#~ msgstr "_Formatera sida"
+msgstr ""

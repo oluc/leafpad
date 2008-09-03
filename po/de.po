@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.7.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 20:43+0900\n"
+"POT-Creation-Date: 2008-09-03 21:17+0900\n"
 "PO-Revision-Date: 2004-11-14 18:33+0100\n"
 "Last-Translator: Ruediger Arp <ruediger@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -132,11 +132,11 @@ msgstr "/_Hilfe"
 msgid "/Help/_About"
 msgstr "/Hilfe/_Info"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ basierter, einfacher Texteditor"
 
-#: ../src/callback.c:322
+#: ../src/callback.c:321
 msgid "translator-credits"
 msgstr ""
 "Sebastian Stach <sebsta@t-online.de>\n"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.11\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 20:43+0900\n"
+"POT-Creation-Date: 2008-09-03 21:17+0900\n"
 "PO-Revision-Date: 2007-05-06 20:26+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -131,11 +131,11 @@ msgstr "/ヘルプ(_H)"
 msgid "/Help/_About"
 msgstr "/ヘルプ/情報(_A)"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ ベースのシンプルなテキストエディタ"
 
-#: ../src/callback.c:322
+#: ../src/callback.c:321
 msgid "translator-credits"
 msgstr "Tarot Osuji <tarot@sdf.lonestar.org>"
 

@@ -38,6 +38,7 @@ MainWin *create_main_window(void)
 	
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 //	gtk_window_set_title(GTK_WINDOW(window), PACKAGE_NAME);
+	gtk_widget_set_name(window, PACKAGE_NAME);
 	
 /*
 #if GTK_CHECK_VERSION(2, 4, 0)

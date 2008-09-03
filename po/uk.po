@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 20:43+0900\n"
+"POT-Creation-Date: 2008-09-03 21:17+0900\n"
 "PO-Revision-Date: 2007-03-13 11:38+0300\n"
 "Last-Translator: Youri Bulka <jblk@icmail.net>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
@@ -135,11 +135,11 @@ msgstr "/_Довідка"
 msgid "/Help/_About"
 msgstr "/Довідка/_Про"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
 msgstr "Простий текстовий редактор, базований на GTK+"
 
-#: ../src/callback.c:322
+#: ../src/callback.c:321
 msgid "translator-credits"
 msgstr "Перекладачі"
 

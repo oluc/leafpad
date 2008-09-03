@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 20:43+0900\n"
+"POT-Creation-Date: 2008-09-03 21:17+0900\n"
 "PO-Revision-Date: 2006-04-30 18:20+0300\n"
 "Last-Translator: Eero Tamminen <eerot@sf>\n"
 "Language-Team: Suomi\n"
@@ -131,11 +131,11 @@ msgstr "/_Ohje"
 msgid "/Help/_About"
 msgstr "/Ohje/_Tietoja"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
 msgstr "GTK+-pohjainen yksinkertainen tekstieditori"
 
-#: ../src/callback.c:322
+#: ../src/callback.c:321
 msgid "translator-credits"
 msgstr "Eero Tamminen"
 
