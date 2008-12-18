@@ -67,4 +67,3 @@ Ctrl-T                          Always on Top
 Ctrl-Tab                        toggle tab width
 Tab with selection bound        multi-line indent
 Shift-Tab with selection bound  multi-line unindent
-Shift-Return                    new-line with/without indent

@@ -861,7 +861,7 @@ AU_DEFUN([AM_CONFIG_HEADER], [AC_CONFIG_HEADERS($@)])
 
 
 dnl IT_PROG_INTLTOOL([MINIMUM-VERSION], [no-xml])
-# serial 36 IT_PROG_INTLTOOL
+# serial 35 IT_PROG_INTLTOOL
 AC_DEFUN([IT_PROG_INTLTOOL],
 [AC_PREREQ([2.50])dnl
 
@@ -874,7 +874,7 @@ case "$am__api_version" in
 esac
 
 if test -n "$1"; then
-    AC_MSG_CHECKING([for intltool >= $1])
+    AC_MSG_CHECKING(for intltool >= $1)
 
     INTLTOOL_REQUIRED_VERSION_AS_INT=`echo $1 | awk -F. '{ print $ 1 * 1000 + $ 2 * 100 + $ 3; }'`
     INTLTOOL_APPLIED_VERSION=`awk -F\" '/\\$VERSION / { print $ 2; }' ${ac_aux_dir}/intltool-update.in`
@@ -903,7 +903,6 @@ INTLTOOL_SOUNDLIST_RULE='%.soundlist: %.soundlist.in $(INTLTOOL_MERGE) $(wildcar
   INTLTOOL_SCHEMAS_RULE='%.schemas:   %.schemas.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -s -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@' 
     INTLTOOL_THEME_RULE='%.theme:     %.theme.in     $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@' 
     INTLTOOL_SERVICE_RULE='%.service: %.service.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@'
-   INTLTOOL_POLICY_RULE='%.policy:    %.policy.in    $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -x -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@'
 
 AC_SUBST(INTLTOOL_DESKTOP_RULE)
 AC_SUBST(INTLTOOL_DIRECTORY_RULE)
@@ -923,21 +922,6 @@ AC_SUBST(INTLTOOL_CAVES_RULE)
 AC_SUBST(INTLTOOL_SCHEMAS_RULE)
 AC_SUBST(INTLTOOL_THEME_RULE)
 AC_SUBST(INTLTOOL_SERVICE_RULE)
-AC_SUBST(INTLTOOL_POLICY_RULE)
-
-# Check the gettext tools to make sure they are GNU
-AC_PATH_PROG(XGETTEXT, xgettext)
-AC_PATH_PROG(MSGMERGE, msgmerge)
-AC_PATH_PROG(MSGFMT, msgfmt)
-if test -z "$XGETTEXT" -o -z "$MSGMERGE" -o -z "$MSGFMT"; then
-    AC_MSG_ERROR([GNU gettext tools not found; required for intltool])
-fi
-xgversion="`$XGETTEXT --version|grep '(GNU ' 2> /dev/null`"
-mmversion="`$MSGMERGE --version|grep '(GNU ' 2> /dev/null`"
-mfversion="`$MSGFMT --version|grep '(GNU ' 2> /dev/null`"
-if test -z "$xgversion" -o -z "$mmversion" -o -z "$mfversion"; then
-    AC_MSG_ERROR([GNU gettext tools not found; required for intltool])
-fi
 
 # Use the tools built into the package, not the ones that are installed.
 AC_SUBST(INTLTOOL_EXTRACT, '$(top_builddir)/intltool-extract')
@@ -960,16 +944,19 @@ if test "x$2" != "xno-xml"; then
    fi
 fi
 
+AC_PATH_PROG(INTLTOOL_ICONV, iconv, iconv)
+AC_PATH_PROG(INTLTOOL_MSGFMT, msgfmt, msgfmt)
+AC_PATH_PROG(INTLTOOL_MSGMERGE, msgmerge, msgmerge)
+AC_PATH_PROG(INTLTOOL_XGETTEXT, xgettext, xgettext)
+
 # Substitute ALL_LINGUAS so we can use it in po/Makefile
 AC_SUBST(ALL_LINGUAS)
 
 # Set DATADIRNAME correctly if it is not set yet
 # (copied from glib-gettext.m4)
 if test -z "$DATADIRNAME"; then
-  AC_LINK_IFELSE(
-    [AC_LANG_PROGRAM([[]],
-                     [[extern int _nl_msg_cat_cntr;
-                       return _nl_msg_cat_cntr]])],
+  AC_TRY_LINK(, [extern int _nl_msg_cat_cntr;
+                 return _nl_msg_cat_cntr],
     [DATADIRNAME=share],
     [case $host in
     *-*-solaris*)
@@ -1010,6 +997,10 @@ AC_CONFIG_COMMANDS([intltool], [
 for file in intltool-extract intltool-merge intltool-update; do
   sed -e "s|@INTLTOOL_EXTRACT@|`pwd`/intltool-extract|g" \
       -e "s|@INTLTOOL_LIBDIR@|${INTLTOOL_LIBDIR}|g" \
+      -e "s|@INTLTOOL_ICONV@|${INTLTOOL_ICONV}|g" \
+      -e "s|@INTLTOOL_MSGFMT@|${INTLTOOL_MSGFMT}|g" \
+      -e "s|@INTLTOOL_MSGMERGE@|${INTLTOOL_MSGMERGE}|g" \
+      -e "s|@INTLTOOL_XGETTEXT@|${INTLTOOL_XGETTEXT}|g" \
       -e "s|@INTLTOOL_PERL@|${INTLTOOL_PERL}|g" \
 	< ${ac_aux_dir}/${file}.in > ${file}.out
   if cmp -s ${file} ${file}.out 2>/dev/null; then
@@ -1024,7 +1015,9 @@ done
 ],
 [INTLTOOL_PERL='${INTLTOOL_PERL}' ac_aux_dir='${ac_aux_dir}'
 prefix="$prefix" exec_prefix="$exec_prefix" INTLTOOL_LIBDIR="$libdir" 
-INTLTOOL_EXTRACT='${INTLTOOL_EXTRACT}'])
+INTLTOOL_EXTRACT='${INTLTOOL_EXTRACT}' INTLTOOL_ICONV='${INTLTOOL_ICONV}'
+INTLTOOL_MSGFMT='${INTLTOOL_MSGFMT}' INTLTOOL_MSGMERGE='${INTLTOOL_MSGMERGE}'
+INTLTOOL_XGETTEXT='${INTLTOOL_XGETTEXT}'])
 
 ])
 
@@ -1259,7 +1252,7 @@ path to pkg-config.
 
 _PKG_TEXT
 
-To get pkg-config, see <http://pkg-config.freedesktop.org/>.])],
+To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.])],
 		[$4])
 else
 	$1[]_CFLAGS=$pkg_cv_[]$1[]_CFLAGS
@@ -1476,20 +1469,6 @@ glib_DEFUN([GLIB_WITH_NLS],
           glib_save_LIBS="$LIBS"
           LIBS="$LIBS $INTLLIBS"
 	  AC_CHECK_FUNCS(dcgettext)
-	  MSGFMT_OPTS=
-	  AC_MSG_CHECKING([if msgfmt accepts -c])
-	  GLIB_RUN_PROG([$MSGFMT -c -o /dev/null],[
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Project-Id-Version: test 1.0\n"
-"PO-Revision-Date: 2007-02-15 12:01+0100\n"
-"Last-Translator: test <foo@bar.xx>\n"
-"Language-Team: C <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Transfer-Encoding: 8bit\n"
-], [MSGFMT_OPTS=-c; AC_MSG_RESULT([yes])], [AC_MSG_RESULT([no])])
-	  AC_SUBST(MSGFMT_OPTS)
 	  AC_PATH_PROG(GMSGFMT, gmsgfmt, $MSGFMT)
 	  GLIB_PATH_PROG_WITH_TEST(XGETTEXT, xgettext,
 	    [test -z "`$ac_dir/$ac_word -h 2>&1 | grep '(HELP)'`"], :)
@@ -1684,21 +1663,4 @@ ifdef(glib_configure_in,[],[
 AC_DEFUN([AM_GLIB_GNU_GETTEXT],[GLIB_GNU_GETTEXT($@)])
 AC_DEFUN([AM_GLIB_DEFINE_LOCALEDIR],[GLIB_DEFINE_LOCALEDIR($@)])
 ])dnl
-
-# GLIB_RUN_PROG(PROGRAM, TEST-FILE, [ACTION-IF-PASS], [ACTION-IF-FAIL])
-# 
-# Create a temporary file with TEST-FILE as its contents and pass the
-# file name to PROGRAM.  Perform ACTION-IF-PASS if PROGRAM exits with
-# 0 and perform ACTION-IF-FAIL for any other exit status.
-AC_DEFUN([GLIB_RUN_PROG],
-[cat >conftest.foo <<_ACEOF
-$2
-_ACEOF
-if AC_RUN_LOG([$1 conftest.foo]); then
-  m4_ifval([$3], [$3], [:])
-m4_ifvaln([$4], [else $4])dnl
-echo "$as_me: failed input was:" >&AS_MESSAGE_LOG_FD
-sed 's/^/| /' conftest.foo >&AS_MESSAGE_LOG_FD
-fi])
-
 

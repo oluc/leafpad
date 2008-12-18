@@ -1,3 +1,10 @@
+2008-12-18
+
+  version 0.8.16:
+	* Removed "Shift+Enter" key-binding (minhsien0330).
+	* Updated French translation (Marc Veillet).
+	* Updated Italian translation (Vincenzo Campanella).
+
 2008-09-03
 
   version 0.8.15:

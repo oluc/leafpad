@@ -1,19 +1,20 @@
 # Leafpad - GTK+ based simple text editor
 # Copyright (C) 2004 Tarot Osuji <tarot@sdf.lonestar.org>
-# 
-# This file is distributed under the GPL.
-# Luc Pionchon <luc@handhelds.org>, 2004.
+# This file is distributed under the same license as the leafpad package.
+# Marc Veillet <scouigne@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.7.5\n"
+"Project-Id-Version: leafpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-03 21:17+0900\n"
-"PO-Revision-Date: 2004-11-02 20:47+0200\n"
-"Last-Translator: Luc Pionchon <luc@handhelds.org>\n"
+"POT-Creation-Date: 2008-01-14 20:23+0900\n"
+"PO-Revision-Date: 2008-09-15 09:34-0500\n"
+"Last-Translator: Marc Veillet <scouigne@gmail.com>\n"
 "Language-Team: French <traduc@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
@@ -36,14 +37,12 @@ msgid "/File/Save _As..."
 msgstr "/Fichier/Enregistrer _sous..."
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "/Fichier/_Quitter"
+msgstr "/Fichier/Aperçu avant impre_ssion"
 
 #: ../src/menu.c:48
-#, fuzzy
 msgid "/File/_Print..."
-msgstr "/Fichier/_Quitter"
+msgstr "/Fichier/Im_primer"
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
@@ -139,7 +138,7 @@ msgstr "Un éditeur de texte tout simple, basé sur GTK+"
 
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr "Luc Pionchon <luc@handhelds.org>"
+msgstr "Luc Pionchon <luc@handhelds.org>, Marc Veillet 2008 <scouigne@gmail.com>"
 
 #: ../src/view.c:62
 #, c-format
@@ -169,9 +168,8 @@ msgid "'%s' is not supported"
 msgstr "'%s' n'est pas supporté"
 
 #: ../src/selector.c:253
-#, fuzzy
 msgid "Auto-Detect"
-msgstr "Auto-détecté"
+msgstr "Détection automatique"
 
 #: ../src/selector.c:305
 msgid "Open"
@@ -183,14 +181,12 @@ msgstr "Enregistrer sous"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "Jeu de _caractères : "
+msgstr "Jeu de _caractères : "
 
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr ""
-"Le fichier '%s' existe déjà. Voulez-vous remplacer le fichier existant par "
-"celui-ci ?"
+msgstr "Le fichier '%s' existe déjà. Voulez-vous remplacer le fichier existant par celui-ci ?"
 
 #: ../src/file.c:55
 msgid "Untitled"
@@ -231,14 +227,12 @@ msgid "Find"
 msgstr "Trouver"
 
 #: ../src/search.c:326
-#, fuzzy
 msgid "Fi_nd what:"
-msgstr "_Rechercher :"
+msgstr "_Rechercher :"
 
 #: ../src/search.c:342
-#, fuzzy
 msgid "Re_place with:"
-msgstr "Remplacer _avec :"
+msgstr "Remplacer _par :"
 
 #: ../src/search.c:356
 msgid "_Match case"
@@ -257,33 +251,32 @@ msgid "_Jump"
 msgstr "Aller à la ligne"
 
 #: ../src/search.c:425
-#, fuzzy
 msgid "_Line number:"
-msgstr "Numéro de _ligne : "
+msgstr "Numéro de _ligne : "
 
 #: ../src/about.c:102
 msgid "Credits"
-msgstr ""
+msgstr "Crédits"
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr ""
+msgstr "Écrit par"
 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr ""
+msgstr "Documenté par"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr ""
+msgstr "Traduit par"
 
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr ""
+msgstr "C_rédits"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr ""
+msgstr "_Crédits"
 
 #: ../src/about.c:209
 #, c-format
@@ -292,19 +285,15 @@ msgstr "À propos de %s"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr ""
+msgstr "Imprimer"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr ""
+msgstr "Aperçu avant impression"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Un éditeur de texte tout simple"
-
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/_Fichier"
 
 #, fuzzy
 #~ msgid "Can't convert codeset to current locale"

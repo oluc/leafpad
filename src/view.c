@@ -165,8 +165,7 @@ static gboolean cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 		}
 		break;
 	case GDK_Return:
-		if ((indent_get_state() && !(event->state & GDK_SHIFT_MASK)) ||
-			(!indent_get_state() && (event->state & GDK_SHIFT_MASK))) {
+		if (indent_get_state()) {
 			indent_real(view);
 			return TRUE;
 		}
