@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-03 21:17+0900\n"
+"POT-Creation-Date: 2009-10-28 02:41+0900\n"
 "PO-Revision-Date: 2006-05-20 13:05+0300\n"
 "Last-Translator: Yavor Doganov <yavor@doganov.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -237,27 +237,27 @@ msgstr "Търсене"
 msgid "Fi_nd what:"
 msgstr "Търсене _на:"
 
-#: ../src/search.c:342
+#: ../src/search.c:345
 msgid "Re_place with:"
 msgstr "_Замяна с:"
 
-#: ../src/search.c:356
+#: ../src/search.c:359
 msgid "_Match case"
 msgstr "За_читане на малки/големи"
 
-#: ../src/search.c:361
+#: ../src/search.c:364
 msgid "Replace _all at once"
 msgstr "Замяна на _всички"
 
-#: ../src/search.c:412
+#: ../src/search.c:415
 msgid "Jump To"
 msgstr "Отиване на"
 
-#: ../src/search.c:418
+#: ../src/search.c:421
 msgid "_Jump"
 msgstr "_Отиване на ред"
 
-#: ../src/search.c:425
+#: ../src/search.c:428
 msgid "_Line number:"
 msgstr "_Ред номер:"
 

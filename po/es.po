@@ -1,17 +1,17 @@
 # Spanish/Spain translation of Leafpad
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the leafpad package.
-# Lucas Vieites <lucas@asixinformatica.com>, 2004.
-# 
-# 
+# Lucas Vieites <lucas@codexion.com>,2004-2009.
+#
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.7.5\n"
+"Project-Id-Version: leafpad-0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-03 21:17+0900\n"
-"PO-Revision-Date: 2004-11-04 10:10+0100\n"
-"Last-Translator: Lucas Vieites <lucas@asixinformatica.com>\n"
-"Language-Team: Spanish/Spain <es@li.org>\n"
+"POT-Creation-Date: 2009-10-28 02:41+0900\n"
+"PO-Revision-Date: 2009-06-24 21:49+0200\n"
+"Last-Translator: Lucas Vieites <lucas@codexion.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,14 +37,12 @@ msgid "/File/Save _As..."
 msgstr "/Archivo/Guardar _como..."
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "/Archivo/_Salir"
+msgstr "/Archivo/_Vista previa"
 
 #: ../src/menu.c:48
-#, fuzzy
 msgid "/File/_Print..."
-msgstr "/Archivo/_Salir"
+msgstr "/Archivo/Im_primir"
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
@@ -170,7 +168,6 @@ msgid "'%s' is not supported"
 msgstr "No se soporta «%s»"
 
 #: ../src/selector.c:253
-#, fuzzy
 msgid "Auto-Detect"
 msgstr "Autodetectar"
 
@@ -184,7 +181,7 @@ msgstr "Guardar como"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "Codificación de c_aracteres: "
+msgstr "Codificación de c_aracteres:"
 
 #: ../src/selector.c:400
 #, c-format
@@ -230,59 +227,56 @@ msgid "Find"
 msgstr "Buscar"
 
 #: ../src/search.c:326
-#, fuzzy
 msgid "Fi_nd what:"
-msgstr "Buscar: "
+msgstr "_Buscar: "
 
-#: ../src/search.c:342
-#, fuzzy
+#: ../src/search.c:345
 msgid "Re_place with:"
-msgstr "Reem_plazar con: "
+msgstr "Reem_plazar con:"
 
-#: ../src/search.c:356
+#: ../src/search.c:359
 msgid "_Match case"
 msgstr "Coi_ncidir con capitalización"
 
-#: ../src/search.c:361
+#: ../src/search.c:364
 msgid "Replace _all at once"
 msgstr "Reemplaz_ar todos"
 
-#: ../src/search.c:412
+#: ../src/search.c:415
 msgid "Jump To"
 msgstr "Ir a"
 
-#: ../src/search.c:418
+#: ../src/search.c:421
 msgid "_Jump"
 msgstr "_Saltar"
 
-#: ../src/search.c:425
-#, fuzzy
+#: ../src/search.c:428
 msgid "_Line number:"
-msgstr "Número de _línea: "
+msgstr "Número de _línea:"
 
 #: ../src/about.c:102
 msgid "Credits"
-msgstr ""
+msgstr "Créditos"
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr ""
+msgstr "Programado por"
 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr ""
+msgstr "Documentado por"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr ""
+msgstr "Traducido por"
 
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr ""
+msgstr "C_réditos"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr ""
+msgstr "_Créditos"
 
 #: ../src/about.c:209
 #, c-format
@@ -291,19 +285,15 @@ msgstr "Acerca de %s"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr ""
+msgstr "Imprimir"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr ""
+msgstr "Vista previa"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Editor de texto simple"
-
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/_Archivo"
 
 #, fuzzy
 #~ msgid "Can't convert codeset to current locale"

@@ -1,3 +1,47 @@
+2009-09-19  Clytie Siddall <clytie@riverland.net.au>
+
+	* vi.po: Updated Vietnamese translation.
+
+2009-09-10  Jay A. Fleming <tito.nehru.naser@gmail.com>
+
+	* sr.po: Added Serbian translation.
+
+2009-07-30  Rihards Prieditis <rprieditis@gmail.com>
+
+	* lv.po: Updated Latvian translation.
+
+2009-07-06  Eivind <meinmycell-lists@yahoo.no>
+
+	* nn.po: Added Norwegian Nynorsk translation.
+
+2009-07-06  Alan Monfort <alan.monfort@free.fr>
+
+	* br.po: Added Breton translation.
+
+2009-06-28  Mario Blattermann <mario.blaettermann@t-online.de>
+
+	* de.po: Updated German translation.
+
+2009-06-25  Marc Veillet <scouigne@gmail.com>
+
+	* fr.po: Updated French translation.
+
+2009-06-25  Andhika Padmawan <andhika.padmawan@gmail.com>
+
+	* id.po: Updated Indonesian translation.
+
+2009-06-25  Lucas Vieites <lucas@codexion.com>
+
+	* es.po: Updated Spanish translation.
+
+2009-06-25  Michal Trzebiatowski <hippie_1968@hotmail.com>
+
+	* pl.po: Updated Polish translation.
+
+2009-05-08  Alan Pepelko <alan.pepelko@gmail.com>
+
+	* sl.po: Added Slovenian translation.
+
 2008-12-07  Vincenzo Campanella <vinz65@gmail.com>
 
 	* it.po: Updated Italian translation.
@@ -58,7 +102,7 @@
 
 	* uk.po: Added Ukrainian translation.
 
-2007-02-16  Reviczky Ádám János <reviczky@freemail.hu>
+2007-02-16  Reviczky Adam Janos <reviczky@freemail.hu>
 
 	* hu.po: Updated Hungarian translation.
 

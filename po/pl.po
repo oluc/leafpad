@@ -2,18 +2,21 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Leafpad package.
 # Michal Wrobel <wrobel@task.gda.pl>, 2005.
-# 
+# Michał Trzebiatowski <hippie_1968@hotmail.com>, 2009
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.8.0\n"
+"Project-Id-Version: leafpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-03 21:17+0900\n"
-"PO-Revision-Date: 2005-07-07 09:53+0100\n"
-"Last-Translator: \n"
-"Language-Team: Polish <pl@li.org>\n"
+"POT-Creation-Date: 2009-10-28 02:41+0900\n"
+"PO-Revision-Date: 2009-06-24 21:36+0100\n"
+"Last-Translator: Michał Trzebiatowski <hippie_1968@hotmail.com>\n"
+"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
 
 # src/menu.c:31
 # src/menu.c:31
@@ -48,9 +51,8 @@ msgstr "/Plik/Z_apisz jako..."
 # src/menu.c:44
 # src/menu.c:44
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "/Plik/Wy_drukuj"
+msgstr "/Plik/Podgląd _wydruku"
 
 # src/menu.c:44
 # src/menu.c:44
@@ -200,7 +202,7 @@ msgstr "Prosty edytor tekstowy oparty na GTK+"
 # src/callback.c:300
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr "Michal Wrobel <wrobel@task.gda.pl>"
+msgstr "Michał Trzebiatowski <hippie_1968@hotmail.com>"
 
 # src/view.c:62
 # src/view.c:62
@@ -263,7 +265,7 @@ msgstr "Zapisz jako"
 # src/selector.c:329
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "Kodowanie znaków:"
+msgstr "_Kodowanie znaków:"
 
 # src/selector.c:400
 # src/selector.c:400
@@ -336,37 +338,37 @@ msgstr "_Znajdź:"
 
 # src/search.c:292
 # src/search.c:300
-#: ../src/search.c:342
+#: ../src/search.c:345
 msgid "Re_place with:"
 msgstr "Z_amień na:"
 
 # src/search.c:306
 # src/search.c:314
-#: ../src/search.c:356
+#: ../src/search.c:359
 msgid "_Match case"
 msgstr "_Uwzględniaj wielkość liter"
 
 # src/search.c:311
 # src/search.c:319
-#: ../src/search.c:361
+#: ../src/search.c:364
 msgid "Replace _all at once"
 msgstr "Zamień _wszystko"
 
 # src/search.c:362
 # src/search.c:370
-#: ../src/search.c:412
+#: ../src/search.c:415
 msgid "Jump To"
 msgstr "Idź do"
 
 # src/search.c:368
 # src/search.c:376
-#: ../src/search.c:418
+#: ../src/search.c:421
 msgid "_Jump"
 msgstr "_Idź"
 
 # src/search.c:375
 # src/search.c:383
-#: ../src/search.c:425
+#: ../src/search.c:428
 msgid "_Line number:"
 msgstr "Numer _linii:"
 
@@ -421,68 +423,10 @@ msgstr "Drukuj"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr ""
+msgstr "Podgląd wydruku"
 
 # leafpad.desktop.in.h:2
 # leafpad.desktop.in.h:2
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
 msgstr "Prosty edytor tekstu"
-
-# src/menu.c:31
-# src/menu.c:31
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/_Plik"
-
-# src/print.c:57
-# src/print.c:57
-#~ msgid "Can't convert codeset to current locale"
-#~ msgstr "Nie można przekonwertować strony kodowej do '%s'"
-
-# src/print.c:70
-# src/print.c:70
-#~ msgid "Can't write temporary file"
-#~ msgstr "Nie można zapisać pliku tymczasowego"
-
-# src/print.c:124
-# src/print.c:124
-#~ msgid "Printer _name:"
-#~ msgstr "_Nazwa drukarki"
-
-# src/print.c:136
-# src/print.c:136
-#~ msgid "N_umber of copies:"
-#~ msgstr "Ilość kopii"
-
-# src/print.c:142
-# src/print.c:142
-#~ msgid "_Format page"
-#~ msgstr "_Format strony"
-
-#~ msgid "Unicode"
-#~ msgstr "Unicode"
-
-#~ msgid "Western"
-#~ msgstr "Zachodnie"
-
-#~ msgid "Cyrillic"
-#~ msgstr "Curylica"
-
-#~ msgid "Chinese Simplified"
-#~ msgstr "Chiński uproszczony"
-
-#~ msgid "Chinese Traditional"
-#~ msgstr "Chiński tradycyjny"
-
-#~ msgid "Japanese"
-#~ msgstr "Japoński"
-
-#~ msgid "Korean"
-#~ msgstr "Koreański"
-
-#~ msgid "Other Codeset (%s)"
-#~ msgstr "Inna strona kodowa (%s)"
-
-#~ msgid "Enter Codeset"
-#~ msgstr "Wprowadź stronę kodową"

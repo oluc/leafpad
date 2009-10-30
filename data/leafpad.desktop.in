@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Leafpad
+_Name=Leafpad
 _Comment=Simple text editor
 Exec=leafpad %f
 Icon=leafpad

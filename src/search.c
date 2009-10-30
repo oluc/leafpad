@@ -336,8 +336,11 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 		G_CALLBACK(toggle_sensitivity), NULL);
 	 g_signal_connect(G_OBJECT(entry_find), "delete-text",
 		G_CALLBACK(toggle_sensitivity), NULL);
-	 if (string_find) 
+	 if (string_find) {
 		 gtk_entry_set_text(GTK_ENTRY(entry_find), string_find);
+		 gtk_dialog_set_response_sensitive(GTK_DIALOG(dialog),
+			GTK_RESPONSE_OK, TRUE);
+	 }
 	if (mode) {
 		label_replace = gtk_label_new_with_mnemonic(_("Re_place with:"));
 		 gtk_misc_set_alignment(GTK_MISC(label_replace), 0, 0.5);

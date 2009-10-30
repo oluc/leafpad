@@ -1,22 +1,22 @@
 # Vietnamese translation for Leafpad.
-# Copyright © 2008 Tarot Osuji <tarot@sdf.lonestar.org>.
-# This file is distributed under the same license as the leafpad-0.8.13 package.
+# Copyright © 2009 Tarot Osuji <tarot@sdf.lonestar.org>.
+# This file is distributed under the same license as the leafpad package.
 # Nguyễn Đại Quý <nguyendaiquy@gmail.com>, 2004.
-# Clytie Siddall <clytie@riverland.net.au>, 2007-2008.
+# Clytie Siddall <clytie@riverland.net.au>, 2007-2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad 0.8.13\n"
+"Project-Id-Version: leafpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-03 21:17+0900\n"
-"PO-Revision-Date: 2008-01-15 16:44+1030\n"
+"POT-Creation-Date: 2009-10-28 02:41+0900\n"
+"PO-Revision-Date: 2009-09-19 18:32+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: LocFactoryEditor 1.7b1\n"
+"X-Generator: LocFactoryEditor 1.8\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
@@ -232,27 +232,27 @@ msgstr "Tìm"
 msgid "Fi_nd what:"
 msgstr "_Tìm kiếm:"
 
-#: ../src/search.c:342
+#: ../src/search.c:345
 msgid "Re_place with:"
 msgstr "Thay thế _bởi:"
 
-#: ../src/search.c:356
+#: ../src/search.c:359
 msgid "_Match case"
 msgstr "_Phân biệt chữ hoa/thường"
 
-#: ../src/search.c:361
+#: ../src/search.c:364
 msgid "Replace _all at once"
 msgstr "_Thay thế tất cả"
 
-#: ../src/search.c:412
+#: ../src/search.c:415
 msgid "Jump To"
 msgstr "Nhảy tới"
 
-#: ../src/search.c:418
+#: ../src/search.c:421
 msgid "_Jump"
 msgstr "_Nhảy"
 
-#: ../src/search.c:425
+#: ../src/search.c:428
 msgid "_Line number:"
 msgstr "Dòng _số :"
 

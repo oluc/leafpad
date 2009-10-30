@@ -1,315 +1,305 @@
-# Hebrew translation of Leafpad.
-# Copyright (C) 2005 THE Leafpad'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Leafpad package.
-# Yo'av Moshe <black_jesus@myrealbox.com>, 2005.
-# 
+# Norwegian Nynorsk translation for leafpad.
+# This file is distributed under the same license as the leafpad package.
+# Robert Grønning <robertg@bitstorm.no>, 2009.
+# Åsmund Skjæveland <aasmunds@fys.uio.no>, 2009.
+# Eskild Hustvedt <eskildh@gnome.org>, 2009.
+# Eivind Ødegård <gingermig@yahoo.no>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.8.3\n"
+"Project-Id-Version: leafpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 02:41+0900\n"
-"PO-Revision-Date: 2005-07-31 22:54+0300\n"
-"Last-Translator: Yo'av Moshe <black_jesus@myrealbox.com>\n"
-"Language-Team: Hebrew\n"
+"PO-Revision-Date: 2009-07-03 13:59+0100\n"
+"Last-Translator: Eivind Ødegård <meinmycell-lists@yahoo.no>\n"
+"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Norwegian Nynorsk\n"
+"X-Poedit-Country: NORWAY\n"
+"X-Poedit-Basepath: /home/eivind/umseting/leafpad\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
-msgstr "/_קובץ"
+msgstr "/_Fil"
 
 #: ../src/menu.c:33
 msgid "/File/_New"
-msgstr "/קובץ/_חדש"
+msgstr "/Fil/_Ny"
 
 #: ../src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/קובץ/_פתח..."
+msgstr "/Fil/_Opne..."
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
-msgstr "/קובץ/_שמור"
+msgstr "/Fil/_Lagre"
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/קובץ/שמור _בשם..."
+msgstr "/Fil/Lagre som..."
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "/קובץ/_הדפס..."
+msgstr "/Fil/Førehands_vising"
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "/קובץ/_הדפס..."
+msgstr "/Fil/S_kriv ut..."
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
-msgstr "/קובץ/י_ציאה"
+msgstr "/Fil/Avslu_tt"
 
 #: ../src/menu.c:57
 msgid "/_Edit"
-msgstr "/_עריכה"
+msgstr "/R_ediger"
 
 #: ../src/menu.c:59
 msgid "/Edit/_Undo"
-msgstr "/עריכה/_בטל"
+msgstr "/Rediger/A_ngre"
 
 #: ../src/menu.c:61
 msgid "/Edit/_Redo"
-msgstr "/עריכה/ב_צע שוב"
+msgstr "/Rediger/Gje_r om"
 
 #: ../src/menu.c:65
 msgid "/Edit/Cu_t"
-msgstr "/עריכה/_גזור"
+msgstr "/Rediger/_Klypp ut"
 
 #: ../src/menu.c:67
 msgid "/Edit/_Copy"
-msgstr "/עריכה/_העתק"
+msgstr "/Rediger/K_opier"
 
 #: ../src/menu.c:69
 msgid "/Edit/_Paste"
-msgstr "/עריכה/ה_דבק"
+msgstr "/Rediger/_Lim inn"
 
 #: ../src/menu.c:71
 msgid "/Edit/_Delete"
-msgstr "/עריכה/_מחק"
+msgstr "/Rediger/_Slett"
 
 #: ../src/menu.c:75
 msgid "/Edit/Select _All"
-msgstr "/עריכה/בחר בה_כל"
+msgstr "/Rediger/Vel _alt"
 
 #: ../src/menu.c:77
 msgid "/_Search"
-msgstr "/_חיפוש"
+msgstr "/Søk"
 
 #: ../src/menu.c:79
 msgid "/Search/_Find..."
-msgstr "/חיפוש/_חפש..."
+msgstr "/Søk/_Finn..."
 
 #: ../src/menu.c:81
 msgid "/Search/Find _Next"
-msgstr "/חיפוש/מצא את ה_בא"
+msgstr "/Søk/Finn _neste"
 
 #: ../src/menu.c:83
 msgid "/Search/Find _Previous"
-msgstr "/חיפוש/מצא את ה_קודם"
+msgstr "/Søk/Finn f_ørre"
 
 #: ../src/menu.c:85
 msgid "/Search/_Replace..."
-msgstr "/חיפוש/_החלף..."
+msgstr "/Søk/_Byt ut..."
 
 #: ../src/menu.c:89
 msgid "/Search/_Jump To..."
-msgstr "/חיפוש/_עבור אל..."
+msgstr "/Søk/_Gå til..."
 
 #: ../src/menu.c:91
 msgid "/_Options"
-msgstr "/_אפשרויות"
+msgstr "/_Val"
 
 #: ../src/menu.c:93
 msgid "/Options/_Font..."
-msgstr "/אפשרויות/_גופן..."
+msgstr "/Val/Skrifttype..."
 
 #: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
-msgstr "/אפשרויות/ג_לישת שורות"
+msgstr "/Val/_Ordbryting"
 
 #: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
-msgstr "/אפשרויות/_מספרי שורות"
+msgstr "/Val/_Linjenummer"
 
 #: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
-msgstr "/אפשרויות/_עימוד אוטומטי"
+msgstr "/Val/_Autoinnrykk"
 
 #: ../src/menu.c:103
 msgid "/_Help"
-msgstr "/_עזרה"
+msgstr "/_Hjelp"
 
 #: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/עזרה/_אודות"
+msgstr "/Hjelp/_Om"
 
 #: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
-msgstr "עורך טקסט פשוט מבוסס GTK+"
+msgstr "Enkel tekstredigerar basert på GTK+"
 
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr "Yo´av Moshe <black_jesus@myrealbox.com>"
+msgstr ""
+"Robert Grønning <robertg@bitstorm.no>\n"
+"Åsmund Skjæveland <aasmunds@fys.uio.no>\n"
+"Eskild Hustvedt <eskildh@gnome.org>\n"
+"Eivind Ødegård <gingermig@yahoo.no\n"
+"\n"
+"Send feilmeldingar og kommentarar til <i18n-nn@lister.ping.uio.no>"
 
 #: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "לשמור שינויים לקובץ '%s'?"
+msgstr "Lagra endringar i «%s»?"
 
 #: ../src/font.c:44
 msgid "Font"
-msgstr "גופן"
+msgstr "Skrifttype"
 
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "השפה שבשימוש (%s)"
+msgstr "Noverande lokale (%s)"
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
-msgstr "מערך תוים אחר"
+msgstr "Anna teiknsett"
 
 #: ../src/selector.c:170
 msgid "Code_set:"
-msgstr "_מערך תוים:"
+msgstr "Teikn_sett:"
 
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' לא נתמך"
+msgstr "«%s» er ikkje støtta"
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
-msgstr "זיהוי אוטומטי"
+msgstr "Finn automatisk"
 
 #: ../src/selector.c:305
 msgid "Open"
-msgstr "פתח"
+msgstr "Opne"
 
 #: ../src/selector.c:305
 msgid "Save As"
-msgstr "שמור בשם"
+msgstr "Lagre som"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "מערך תוים:"
+msgstr "T_eiknkoding:"
 
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' כבר קיים. להחליף?"
+msgstr "Fila «%s» finst allereie. Vil du overskriva ho?"
 
 #: ../src/file.c:55
 msgid "Untitled"
-msgstr "ללא שם"
+msgstr "Utan namn"
 
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "אי-אפשר להמיר את מערך התוים אל '%s'"
+msgstr "Kan ikkje konvertera teiknsettet til «%s»"
 
 #: ../src/file.c:225
 msgid "Can't open file to write"
-msgstr "אי-אפשר לפתוח קובץ לכתיבה"
+msgstr "Klarte ikkje opna fila for lagring"
 
 #: ../src/file.c:230
 msgid "Can't write file"
-msgstr "אי-אפשר לכתוב קובץ"
+msgstr "Klarer ikkje skriva fila"
 
 #: ../src/search.c:140
 msgid "Search string not found"
-msgstr "מחרוזת החיפוש לא נמצאה"
+msgstr "Fann ikkje søkjetekst"
 
 #: ../src/search.c:193
 msgid "Replace?"
-msgstr "להחליף?"
+msgstr "Byt ut?"
 
 #: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d מחרוזות הוחלפו"
+msgstr "bytte ut %d strengar"
 
 #: ../src/search.c:306
 msgid "Replace"
-msgstr "החלף"
+msgstr "Byt ut"
 
 #: ../src/search.c:313
 msgid "Find"
-msgstr "חפש"
+msgstr "Finn"
 
 #: ../src/search.c:326
 msgid "Fi_nd what:"
-msgstr "מה ל_חפש:"
+msgstr "Fi_nn dette:"
 
 #: ../src/search.c:345
 msgid "Re_place with:"
-msgstr "להח_ליף ב:"
+msgstr "_Byt ut med:"
 
 #: ../src/search.c:359
 msgid "_Match case"
-msgstr "התייחס לאותיות גדולות וקטנות"
+msgstr "_Treff på små/store bokstavar"
 
 #: ../src/search.c:364
 msgid "Replace _all at once"
-msgstr "החלף ה_כל בבת אחת"
+msgstr "Byt ut _alle med ein gong"
 
 #: ../src/search.c:415
 msgid "Jump To"
-msgstr "עבור אל"
+msgstr "Hopp til"
 
 #: ../src/search.c:421
 msgid "_Jump"
-msgstr "_עבור"
+msgstr "_Hopp"
 
 #: ../src/search.c:428
 msgid "_Line number:"
-msgstr "_שורה מספר:"
+msgstr "_Linjenummer:"
 
 #: ../src/about.c:102
 msgid "Credits"
-msgstr "תודות"
+msgstr "Bidragsytarar"
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr "נכתב ע\"י"
+msgstr "Skrive av"
 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr "תועד ע\"י"
+msgstr "Dokumentert av"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "תורגם ע\"י"
+msgstr "Sett om av"
 
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr "_תודות"
+msgstr "Heide_r og ære"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr "_תודות"
+msgstr "Bidragsytarar"
 
 #: ../src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "אודות %s"
+msgstr "Om %s"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr "הדפס"
+msgstr "Skriv ut"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr ""
+msgstr "Førehandsvising av utskrift"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
-msgstr "עורך טקסט פשוט"
-
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/_קובץ"
-
-#~ msgid "Can't convert codeset to current locale"
-#~ msgstr "אי-אפשר להמיר את מערך התוים לשפה שבשימוש"
-
-#~ msgid "Can't write temporary file"
-#~ msgstr "אי-אפשר לכתוב קובץ זמני"
-
-#~ msgid "Printer _name:"
-#~ msgstr "שם המ_דפסת:"
-
-#~ msgid "N_umber of copies:"
-#~ msgstr "מספר _עותקים"
-
-#~ msgid "_Format page"
-#~ msgstr "_סדר עמוד"
+msgstr "Enkel tekstredigering"

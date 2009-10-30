@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Leafpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-03 21:17+0900\n"
+"POT-Creation-Date: 2009-10-28 02:41+0900\n"
 "PO-Revision-Date: 2006-11-01 10:50+0900\n"
 "Last-Translator: Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -230,27 +230,27 @@ msgstr "찾기"
 msgid "Fi_nd what:"
 msgstr "찾을 내용(_N):"
 
-#: ../src/search.c:342
+#: ../src/search.c:345
 msgid "Re_place with:"
 msgstr "바꿀 내용(_P):"
 
-#: ../src/search.c:356
+#: ../src/search.c:359
 msgid "_Match case"
 msgstr "대/소문자 구분(_M)"
 
-#: ../src/search.c:361
+#: ../src/search.c:364
 msgid "Replace _all at once"
 msgstr "모두 바꾸기"
 
-#: ../src/search.c:412
+#: ../src/search.c:415
 msgid "Jump To"
 msgstr "이동"
 
-#: ../src/search.c:418
+#: ../src/search.c:421
 msgid "_Jump"
 msgstr "이동(_J)"
 
-#: ../src/search.c:425
+#: ../src/search.c:428
 msgid "_Line number:"
 msgstr "줄 번호(_L):"
 

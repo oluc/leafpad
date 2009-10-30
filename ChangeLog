@@ -1,3 +1,11 @@
+2009-10-27
+
+  version 0.8.17:
+	* Fixed find dialog behaviour with GTK+ 2.18 (Radu-Cristian, MoD).
+	* Fixed SEGV when config file is 0 byte (Erik Suit).
+	* Added translations: br, nn, sl, sr.
+	* Updated translations: de, es, fr, id, lv, pl.
+
 2008-12-18
 
   version 0.8.16:

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-03 21:17+0900\n"
+"POT-Creation-Date: 2009-10-28 02:41+0900\n"
 "PO-Revision-Date: 2005-08-05 17:26+0300\n"
 "Last-Translator: kaya oğuz <kaya@kuzeykutbu.org>\n"
 "Language-Team: Türkçe <yerellestirme@kde.org.tr>\n"
@@ -232,27 +232,27 @@ msgstr "Bul"
 msgid "Fi_nd what:"
 msgstr "Bunu _bul:"
 
-#: ../src/search.c:342
+#: ../src/search.c:345
 msgid "Re_place with:"
 msgstr "Bununla _değiştir:"
 
-#: ../src/search.c:356
+#: ../src/search.c:359
 msgid "_Match case"
 msgstr "_Büyük/küçük harf eşleştir"
 
-#: ../src/search.c:361
+#: ../src/search.c:364
 msgid "Replace _all at once"
 msgstr "Hepsini bir kerede _değiştir"
 
-#: ../src/search.c:412
+#: ../src/search.c:415
 msgid "Jump To"
 msgstr "Satıra Git"
 
-#: ../src/search.c:418
+#: ../src/search.c:421
 msgid "_Jump"
 msgstr "_Git"
 
-#: ../src/search.c:425
+#: ../src/search.c:428
 msgid "_Line number:"
 msgstr "_Satır Numarası:"
 

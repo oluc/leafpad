@@ -1,4 +1,4 @@
-AC_INIT(Leafpad, 0.8.16, tarot@sdf.lonestar.org)
+AC_INIT(Leafpad, 0.8.17, tarot@sdf.lonestar.org)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
@@ -39,7 +39,7 @@ AC_SUBST(GETTEXT_PACKAGE)
 AM_GLIB_GNU_GETTEXT
 AM_GLIB_DEFINE_LOCALEDIR(LOCALEDIR)
 
-AC_CONFIG_FILES([
+AC_OUTPUT([
 	Makefile
 	src/Makefile
 	data/Makefile
@@ -51,5 +51,3 @@ AC_CONFIG_FILES([
 	data/icons/scalable/Makefile
 	po/Makefile.in
 ])
-AC_OUTPUT
-

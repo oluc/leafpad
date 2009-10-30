@@ -1,315 +1,308 @@
-# Hebrew translation of Leafpad.
-# Copyright (C) 2005 THE Leafpad'S COPYRIGHT HOLDER
+# Breton translation for Leafpad
+# Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Leafpad package.
-# Yo'av Moshe <black_jesus@myrealbox.com>, 2005.
+# 
+# Denis ARNAUD <denisarnuad@yahoo.fr>, 2009.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Leafpad 0.8.3\n"
+"Project-Id-Version: Leafpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 02:41+0900\n"
-"PO-Revision-Date: 2005-07-31 22:54+0300\n"
-"Last-Translator: Yo'av Moshe <black_jesus@myrealbox.com>\n"
-"Language-Team: Hebrew\n"
+"PO-Revision-Date: 2009-07-04 16:58+0100\n"
+"Last-Translator: Alan Monfort <alan.monfort@free.fr>\n"
+"Language-Team: Breton Team <brenux@free.fr>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Breton\n"
+"X-Poedit-Country: FRANCE\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
-msgstr "/_קובץ"
+msgstr "/_Restr"
 
 #: ../src/menu.c:33
 msgid "/File/_New"
-msgstr "/קובץ/_חדש"
+msgstr "/Restr/_Nevez"
 
 #: ../src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/קובץ/_פתח..."
+msgstr "/Restr/_Digerin..."
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
-msgstr "/קובץ/_שמור"
+msgstr "/Restr/_Enrollan"
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/קובץ/שמור _בשם..."
+msgstr "/Restr/Enrollan dind_an..."
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "/קובץ/_הדפס..."
+msgstr "/Restr/_Alberz ar moullan"
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "/קובץ/_הדפס..."
+msgstr "/Restr/_Moullan..."
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
-msgstr "/קובץ/י_ציאה"
+msgstr "/Restr/_Kuitaat"
 
 #: ../src/menu.c:57
 msgid "/_Edit"
-msgstr "/_עריכה"
+msgstr "/_Embann"
 
 #: ../src/menu.c:59
 msgid "/Edit/_Undo"
-msgstr "/עריכה/_בטל"
+msgstr "/Embann/_Dizober"
 
 #: ../src/menu.c:61
 msgid "/Edit/_Redo"
-msgstr "/עריכה/ב_צע שוב"
+msgstr "/Restr/_Adober"
 
 #: ../src/menu.c:65
 msgid "/Edit/Cu_t"
-msgstr "/עריכה/_גזור"
+msgstr "/Embann/_Troc'han"
 
 #: ../src/menu.c:67
 msgid "/Edit/_Copy"
-msgstr "/עריכה/_העתק"
+msgstr "/Embann/_Eilan"
 
 #: ../src/menu.c:69
 msgid "/Edit/_Paste"
-msgstr "/עריכה/ה_דבק"
+msgstr "/Embann/_Pegan"
 
 #: ../src/menu.c:71
 msgid "/Edit/_Delete"
-msgstr "/עריכה/_מחק"
+msgstr "/Embann/_Dilemel"
 
 #: ../src/menu.c:75
 msgid "/Edit/Select _All"
-msgstr "/עריכה/בחר בה_כל"
+msgstr "/Embann/Diuzan pep tr_a"
 
 #: ../src/menu.c:77
 msgid "/_Search"
-msgstr "/_חיפוש"
+msgstr "/_Klask"
 
 #: ../src/menu.c:79
 msgid "/Search/_Find..."
-msgstr "/חיפוש/_חפש..."
+msgstr "/Klask/_Kavout..."
 
 #: ../src/menu.c:81
 msgid "/Search/Find _Next"
-msgstr "/חיפוש/מצא את ה_בא"
+msgstr "/Klask/Kavout an hi_ni da heul"
 
+# Attention avec "an hini"
+# s'il s'agit d'un mot : ger g. -iou : an hini kent
+# pajenn b. -ou : an hini gent
+# Kent mute comme un adjectif.
 #: ../src/menu.c:83
 msgid "/Search/Find _Previous"
-msgstr "/חיפוש/מצא את ה_קודם"
+msgstr "/Klask/Kavout an hini ken_t"
 
 #: ../src/menu.c:85
 msgid "/Search/_Replace..."
-msgstr "/חיפוש/_החלף..."
+msgstr "/Klask/Am_savin..."
 
 #: ../src/menu.c:89
 msgid "/Search/_Jump To..."
-msgstr "/חיפוש/_עבור אל..."
+msgstr "/Klask/_Mont da..."
 
 #: ../src/menu.c:91
 msgid "/_Options"
-msgstr "/_אפשרויות"
+msgstr "/_Dibarzhiou"
 
 #: ../src/menu.c:93
 msgid "/Options/_Font..."
-msgstr "/אפשרויות/_גופן..."
+msgstr "/Dibarzhiou/_Nodrezh..."
 
 #: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
-msgstr "/אפשרויות/ג_לישת שורות"
+msgstr "/Dibarzhiou/_Distro emgefreek d'al linenn"
 
+# [fr]numerotation des lignes
 #: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
-msgstr "/אפשרויות/_מספרי שורות"
+msgstr "/Dibarzhiou/_Niver al linennou/an arroudenn"
 
 #: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
-msgstr "/אפשרויות/_עימוד אוטומטי"
+msgstr "/Dibarzhiou/_EmDilinennan"
 
 #: ../src/menu.c:103
 msgid "/_Help"
-msgstr "/_עזרה"
+msgstr "/_Skoazell"
 
 #: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/עזרה/_אודות"
+msgstr "/Skoazell/_A-zivout"
 
 #: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
-msgstr "עורך טקסט פשוט מבוסס GTK+"
+msgstr "Embanner testennou eeun diazezet war GTK+"
 
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr "Yo´av Moshe <black_jesus@myrealbox.com>"
+msgstr "Denis ARNAUD <denisarnuad@yahoo.fr>"
 
 #: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "לשמור שינויים לקובץ '%s'?"
+msgstr "Enrollan ar c'hemmou dindan '%s' ?"
 
 #: ../src/font.c:44
 msgid "Font"
-msgstr "גופן"
+msgstr "Nodrezh"
 
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "השפה שבשימוש (%s)"
+msgstr "Lec'hadur bremanel (%s)"
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
-msgstr "מערך תוים אחר"
+msgstr "Spletad arouezennou all"
 
 #: ../src/selector.c:170
 msgid "Code_set:"
-msgstr "_מערך תוים:"
+msgstr "_Spletad arouezennou :"
 
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' לא נתמך"
+msgstr "Anskoret eo '%s'"
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
-msgstr "זיהוי אוטומטי"
+msgstr "EmZinoin"
 
 #: ../src/selector.c:305
 msgid "Open"
-msgstr "פתח"
+msgstr "Digerin"
 
 #: ../src/selector.c:305
 msgid "Save As"
-msgstr "שמור בשם"
+msgstr "Enrollan dindan"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "מערך תוים:"
+msgstr "Bonegan an _arouezenn :"
 
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' כבר קיים. להחליף?"
+msgstr "'%s' zo anezhan endeo. Flastran ?"
 
 #: ../src/file.c:55
 msgid "Untitled"
-msgstr "ללא שם"
+msgstr "Hep titl"
 
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "אי-אפשר להמיר את מערך התוים אל '%s'"
+msgstr "N'haller ket amdrein spletad arouezennou da '%s'"
 
 #: ../src/file.c:225
 msgid "Can't open file to write"
-msgstr "אי-אפשר לפתוח קובץ לכתיבה"
+msgstr "N'haller ket digerin ar restr da skrivan"
 
 #: ../src/file.c:230
 msgid "Can't write file"
-msgstr "אי-אפשר לכתוב קובץ"
+msgstr "N'haller ket enrollan ar restr "
 
 #: ../src/search.c:140
 msgid "Search string not found"
-msgstr "מחרוזת החיפוש לא נמצאה"
+msgstr "Klask hedad ket kavet"
 
 #: ../src/search.c:193
 msgid "Replace?"
-msgstr "להחליף?"
+msgstr "Amsavin ?"
 
 #: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d מחרוזות הוחלפו"
+msgstr "%d hedad arouezennou amsavet"
 
 #: ../src/search.c:306
 msgid "Replace"
-msgstr "החלף"
+msgstr "Amsavin"
 
 #: ../src/search.c:313
 msgid "Find"
-msgstr "חפש"
+msgstr "Kavout"
 
 #: ../src/search.c:326
 msgid "Fi_nd what:"
-msgstr "מה ל_חפש:"
+msgstr "Kla_sk petra :"
 
 #: ../src/search.c:345
 msgid "Re_place with:"
-msgstr "להח_ליף ב:"
+msgstr "Am_savin gant :"
 
 #: ../src/search.c:359
 msgid "_Match case"
-msgstr "התייחס לאותיות גדולות וקטנות"
+msgstr "_Teurel evezh eus ar pennlizherennou"
 
 #: ../src/search.c:364
 msgid "Replace _all at once"
-msgstr "החלף ה_כל בבת אחת"
+msgstr "Amsavin pep tr_a"
 
+# [fr]aller a la ligne
+# ligne de texte : arroudenn
 #: ../src/search.c:415
 msgid "Jump To"
-msgstr "עבור אל"
+msgstr "Mont d'al linenn"
 
+# [fr]aller a la ligne
 #: ../src/search.c:421
 msgid "_Jump"
-msgstr "_עבור"
+msgstr "_Mont d'al linenn"
 
 #: ../src/search.c:428
 msgid "_Line number:"
-msgstr "_שורה מספר:"
+msgstr "Niverenn al _linenn :"
 
 #: ../src/about.c:102
 msgid "Credits"
-msgstr "תודות"
+msgstr "Pe_rzhourion"
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr "נכתב ע\"י"
+msgstr "Skrivet gant"
 
+# Les verbes en -ata ont un participe passe en -ataet :
+# Kelennata vb. kelennataet 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr "תועד ע\"י"
+msgstr "Kelennataet gant"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "תורגם ע\"י"
+msgstr "Troet gant"
 
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr "_תודות"
+msgstr "Pe_rzhourion"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr "_תודות"
+msgstr "Pe_rzhourion"
 
 #: ../src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "אודות %s"
+msgstr "A-zivout %s"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr "הדפס"
+msgstr "Moullan"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr ""
+msgstr "Alberz ar moullan"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
-msgstr "עורך טקסט פשוט"
-
-#, fuzzy
-#~ msgid "/_View"
-#~ msgstr "/_קובץ"
-
-#~ msgid "Can't convert codeset to current locale"
-#~ msgstr "אי-אפשר להמיר את מערך התוים לשפה שבשימוש"
-
-#~ msgid "Can't write temporary file"
-#~ msgstr "אי-אפשר לכתוב קובץ זמני"
-
-#~ msgid "Printer _name:"
-#~ msgstr "שם המ_דפסת:"
-
-#~ msgid "N_umber of copies:"
-#~ msgstr "מספר _עותקים"
-
-#~ msgid "_Format page"
-#~ msgstr "_סדר עמוד"
+msgstr "Embanner testennou eeun"
