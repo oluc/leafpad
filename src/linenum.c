@@ -237,6 +237,7 @@ DV({g_print("Painting line numbers %d - %d\n",
 	attr->end_index = G_MAXUINT;
 	pango_attr_list_insert(alist, attr);
 	pango_layout_set_attributes(layout, alist);
+	pango_attr_list_unref(alist);
 	
 	/* Draw fully internationalized numbers! */
 	

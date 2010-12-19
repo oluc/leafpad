@@ -69,7 +69,7 @@ g_utf8_strcasestr (const gchar *haystack, const gchar *needle)
 	g_return_val_if_fail (needle != NULL, NULL);
 
 	casefold = g_utf8_casefold (haystack, -1);
-	caseless_haystack = g_utf8_normalize (casefold, -1, G_NORMALIZE_ALL);
+	caseless_haystack = g_utf8_normalize (casefold, -1, G_NORMALIZE_DEFAULT);
 	g_free (casefold);
 
 	needle_len = g_utf8_strlen (needle, -1);

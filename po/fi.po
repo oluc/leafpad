@@ -1,18 +1,21 @@
-# translation of fi.po to Suomi
+# Finnish messages for leafpad.
+# Copyright © 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the leafpad package.
 # Eero Tamminen <eerot@sf>, 2006.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: fi\n"
+"Project-Id-Version: leafpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 02:41+0900\n"
-"PO-Revision-Date: 2006-04-30 18:20+0300\n"
-"Last-Translator: Eero Tamminen <eerot@sf>\n"
-"Language-Team: Suomi\n"
+"POT-Creation-Date: 2008-09-03 21:17+0900\n"
+"PO-Revision-Date: 2010-12-07 13:02+0200\n"
+"Last-Translator: Jorma Karvonen <karvonen.jorma@gmail.com>\n"
+"Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
@@ -28,28 +31,27 @@ msgstr "/Tiedosto/_Avaa..."
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
-msgstr "/Tiedosto/_Tallenna"
+msgstr "/Tiedosto/Talle_nna"
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/Tiedosto/Tallenna _nimellä..."
+msgstr "/Tiedosto/Tallenna ni_mellä..."
 
 #: ../src/menu.c:45
-#, fuzzy
 msgid "/File/Print Pre_view"
-msgstr "Esikatselu"
+msgstr "/Tiedosto/E_sikatselu"
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "Tiedosto/_Tulosta..."
+msgstr "/Tiedosto/Tu_losta..."
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
-msgstr "Tiedosto/_Lopeta"
+msgstr "/Tiedosto/_Poistu"
 
 #: ../src/menu.c:57
 msgid "/_Edit"
-msgstr "/_Muokkaa"
+msgstr "/Muo_kkaa"
 
 #: ../src/menu.c:59
 msgid "/Edit/_Undo"
@@ -65,7 +67,7 @@ msgstr "/Muokkaa/L_eikkaa"
 
 #: ../src/menu.c:67
 msgid "/Edit/_Copy"
-msgstr "/Muokkaa/_Kopioi"
+msgstr "/Muokkaa/Kop_ioi"
 
 #: ../src/menu.c:69
 msgid "/Edit/_Paste"
@@ -121,15 +123,15 @@ msgstr "/Asetukset/Rivi_numerot"
 
 #: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
-msgstr "/Asetukset/Automaattinen sisennys"
+msgstr "/Asetukset/Auto_maattinen sisennys"
 
 #: ../src/menu.c:103
 msgid "/_Help"
-msgstr "/_Ohje"
+msgstr "/_Opaste"
 
 #: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/Ohje/_Tietoja"
+msgstr "/Opaste/O_hjelmasta"
 
 #: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
@@ -137,12 +139,12 @@ msgstr "GTK+-pohjainen yksinkertainen tekstieditori"
 
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr "Eero Tamminen"
+msgstr "Eero Tamminen, Jorma Karvonen"
 
 #: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Tallenna '%s' muutokset?"
+msgstr "Tallenna ’%s’ muutokset?"
 
 #: ../src/font.c:44
 msgid "Font"
@@ -151,7 +153,7 @@ msgstr "Kirjasin"
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Nykyinen lokaali (%s)"
+msgstr "Nykyinen paikallisasetus (%s)"
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
@@ -164,7 +166,7 @@ msgstr "_Koodaus:"
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "'%s' ei ole tuettu"
+msgstr "’%s’ ei ole tuettu"
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
@@ -185,7 +187,7 @@ msgstr "_Merkistökoodaus:"
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' on jo olemassa. Ylikirjoita?"
+msgstr "’%s’ on jo olemassa. Korvataanko?"
 
 #: ../src/file.c:55
 msgid "Untitled"
@@ -194,7 +196,7 @@ msgstr "Nimetön"
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Koodaukseen '%s' muunnos ei onnistu"
+msgstr "Koodaukseen ’%s’ muunnos ei onnistu"
 
 #: ../src/file.c:225
 msgid "Can't open file to write"
@@ -202,7 +204,7 @@ msgstr "Tiedoston avaus kirjoitusta varten ei onnistu"
 
 #: ../src/file.c:230
 msgid "Can't write file"
-msgstr "Tiedoson kirjoitus ei onnistu"
+msgstr "Tiedoston kirjoitus ei onnistu"
 
 #: ../src/search.c:140
 msgid "Search string not found"
@@ -229,27 +231,27 @@ msgstr "Hae"
 msgid "Fi_nd what:"
 msgstr "_Etsi:"
 
-#: ../src/search.c:345
+#: ../src/search.c:342
 msgid "Re_place with:"
 msgstr "Ko_rvaa:"
 
-#: ../src/search.c:359
+#: ../src/search.c:356
 msgid "_Match case"
 msgstr "_Tarkista pienet/ISOT"
 
-#: ../src/search.c:364
+#: ../src/search.c:361
 msgid "Replace _all at once"
 msgstr "_Korvaa kaikki kerralla"
 
-#: ../src/search.c:415
+#: ../src/search.c:412
 msgid "Jump To"
 msgstr "Siirry riville"
 
-#: ../src/search.c:421
+#: ../src/search.c:418
 msgid "_Jump"
 msgstr "_Siirry"
 
-#: ../src/search.c:428
+#: ../src/search.c:425
 msgid "_Line number:"
 msgstr "_Rivinumero:"
 
@@ -259,15 +261,15 @@ msgstr "Tekijät"
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr "Tekijät"
+msgstr "Tekijät:"
 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr "Dokumentoijat"
+msgstr "Dokumentoijat:"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "Kääntäjät"
+msgstr "Kääntäjät:"
 
 #: ../src/about.c:197
 msgid "C_redits"
@@ -280,7 +282,7 @@ msgstr "_Tekijät"
 #: ../src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "Tietoja %s"
+msgstr "Ohjelmasta %s"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
@@ -294,6 +296,5 @@ msgstr "Esikatselu"
 msgid "Simple text editor"
 msgstr "Yksinkertainen tekstieditori"
 
-#, fuzzy
 #~ msgid "/_View"
-#~ msgstr "/_Tiedosto"
+#~ msgstr "/_Näkymä"

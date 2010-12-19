@@ -1,301 +1,294 @@
-# Hungarian translation of Leafpad
-# Copyright (C) 2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the Leafpad package.
-# Reviczky Ádám János <reviczky@freemail.hu>, 2007.
-# Kalman Kemenczy <kkemenczy@gmail.com>, 2010
+# Esperanto translations for leafpad.
+# This file is distributed under the same license as the leafpad package.
 #
+# Benno Schulenberg <benno@vertaalt.nl>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: leafpad-0.8.16\n"
+"Project-Id-Version: leafpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-03 21:17+0900\n"
-"PO-Revision-Date: 2010-05-04 10:02+0200\n"
-"Last-Translator: Kalman Kemenczy <kkemenczy@gmail.com>\n"
-"Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2010-07-12 20:53+0100\n"
+"Last-Translator: Benno Schulenberg <benno@vertaalt.nl>\n"
+"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.2\n"
 
 #: ../src/menu.c:31
 msgid "/_File"
-msgstr "/_Fájl"
+msgstr "/_Dosiero"
 
 #: ../src/menu.c:33
 msgid "/File/_New"
-msgstr "/Fájl/Ú_j"
+msgstr "/Dosiero/_Nova"
 
 #: ../src/menu.c:35
 msgid "/File/_Open..."
-msgstr "/Fájl/Megny_itás..."
+msgstr "/Dosiero/_Malfermi..."
 
 #: ../src/menu.c:37
 msgid "/File/_Save"
-msgstr "/Fájl/Men_tés"
+msgstr "/Dosiero/Kon_servi"
 
 #: ../src/menu.c:39
 msgid "/File/Save _As..."
-msgstr "/Fájl/Ment Má_skent..."
+msgstr "/Dosiero/Konservi _kiel..."
 
 #: ../src/menu.c:45
 msgid "/File/Print Pre_view"
-msgstr "/Fájl/Ny_omtatási kép"
+msgstr "/Dosiero/Pres-antaŭ_vido"
 
 #: ../src/menu.c:48
 msgid "/File/_Print..."
-msgstr "/Fájl/_Nyomtatás..."
+msgstr "/Dosiero/_Presi..."
 
 #: ../src/menu.c:55
 msgid "/File/_Quit"
-msgstr "/Fájl/_Kilépés"
+msgstr "/Dosiero/_Eliri"
 
 #: ../src/menu.c:57
 msgid "/_Edit"
-msgstr "/Sz_erkesztés"
+msgstr "/_Redakti"
 
 #: ../src/menu.c:59
 msgid "/Edit/_Undo"
-msgstr "/Szerkesztés/_Visszavonás"
+msgstr "/Redakti/_Malfari"
 
 #: ../src/menu.c:61
 msgid "/Edit/_Redo"
-msgstr "/Szerkesztés/Ú_jra"
+msgstr "/Redakti/_Refari"
 
 #: ../src/menu.c:65
 msgid "/Edit/Cu_t"
-msgstr "/Szerkesztés/K_ivágás"
+msgstr "/Redakti/_Eltondi"
 
 #: ../src/menu.c:67
 msgid "/Edit/_Copy"
-msgstr "/Szerkesztés/M_ásolás"
+msgstr "/Redakti/_Kopii"
 
 #: ../src/menu.c:69
 msgid "/Edit/_Paste"
-msgstr "/Szerkesztés/_Beillesztés"
+msgstr "/Redakti/_Alglui"
 
 #: ../src/menu.c:71
 msgid "/Edit/_Delete"
-msgstr "/Szerkesztés/Tö_rlés"
+msgstr "/Redakti/_Forigi"
 
 #: ../src/menu.c:75
 msgid "/Edit/Select _All"
-msgstr "/Szerkesztés/Mindent Kije_lölés"
+msgstr "/Redakti/Elekti ĉio_n"
 
 #: ../src/menu.c:77
 msgid "/_Search"
-msgstr "/Keres_és"
+msgstr "/_Serĉi"
 
 #: ../src/menu.c:79
 msgid "/Search/_Find..."
-msgstr "/Keresés/_Keres..."
+msgstr "/Serĉi/_Trovi..."
 
 #: ../src/menu.c:81
 msgid "/Search/Find _Next"
-msgstr "/Keresés/K_övetkező Keresése"
+msgstr "/Serĉi/Trovi sek_van"
 
 #: ../src/menu.c:83
 msgid "/Search/Find _Previous"
-msgstr "/Keresés/Elő_ző Keresése"
+msgstr "/Serĉi/Trovi a_ntaŭan"
 
 #: ../src/menu.c:85
 msgid "/Search/_Replace..."
-msgstr "/Keresés/_Csere..."
+msgstr "/Serĉi/_Anstataŭigi"
 
 #: ../src/menu.c:89
 msgid "/Search/_Jump To..."
-msgstr "/Keresés/_Ugrás..."
+msgstr "/Serĉi/_Salti al..."
 
 #: ../src/menu.c:91
 msgid "/_Options"
-msgstr "/_Beállítások"
+msgstr "/_Agordoj"
 
 #: ../src/menu.c:93
 msgid "/Options/_Font..."
-msgstr "/Beállítások/Betütí_pus..."
+msgstr "/Agordoj/_Tiparo..."
 
 #: ../src/menu.c:95
 msgid "/Options/_Word Wrap"
-msgstr "/Beállítások/_Sortörés"
+msgstr "/Agordoj/Lini_faldo"
 
 #: ../src/menu.c:97
 msgid "/Options/_Line Numbers"
-msgstr "/Beállítások/Sorszá_mok"
+msgstr "/Agordoj/Lini_numeroj"
 
 #: ../src/menu.c:101
 msgid "/Options/_Auto Indent"
-msgstr "/Beállítások/Automatikus Be_húzás"
+msgstr "/Agordoj/_Aŭtomate krommarĝeni"
 
 #: ../src/menu.c:103
 msgid "/_Help"
-msgstr "/_Súgó"
+msgstr "/_Helpo"
 
 #: ../src/menu.c:105
 msgid "/Help/_About"
-msgstr "/Súgó/_Névjegy"
+msgstr "/Helpo/_Pri"
 
 #: ../src/callback.c:316
 msgid "GTK+ based simple text editor"
-msgstr "GTK+-ra épülő egyszerű szöveg szerkesztő"
+msgstr "Simpla GTK+-bazita tekstredaktilo"
 
 #: ../src/callback.c:321
 msgid "translator-credits"
-msgstr ""
-"Reviczky Ádám János <reviczky@freemail.hu>\n"
-"Kéménczy Kálmán <kkemenczy@gmail.com>"
+msgstr "Benno Schulenberg <benno@vertaalt.nl>"
 
 #: ../src/view.c:62
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Elmenti a változásokat ide: '%s' ?"
+msgstr "Ĉu konservi la ŝanĝojn en '%s'?"
 
 #: ../src/font.c:44
 msgid "Font"
-msgstr "Betűtípus"
+msgstr "Tiparo"
 
 #: ../src/selector.c:99
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Jelenlegi nyelv (%s)"
+msgstr "Nuna lokaĵo (%s)"
 
 #: ../src/selector.c:130
 msgid "Other Codeset"
-msgstr "Más kódtábla"
+msgstr "Alia signaro"
 
 #: ../src/selector.c:170
 msgid "Code_set:"
-msgstr "Kód_tábla:"
+msgstr "_Signaro:"
 
 #: ../src/selector.c:192
 #, c-format
 msgid "'%s' is not supported"
-msgstr "A(z) '%s' nem támogatott"
+msgstr "'%s' ne subtenatas"
 
 #: ../src/selector.c:253
 msgid "Auto-Detect"
-msgstr "Automatikus felismerés"
+msgstr "Aŭtomate detekti"
 
 #: ../src/selector.c:305
 msgid "Open"
-msgstr "Megnyitás"
+msgstr "Malfermi"
 
 #: ../src/selector.c:305
 msgid "Save As"
-msgstr "Mentés másként"
+msgstr "Konservi kiel"
 
 #: ../src/selector.c:329
 msgid "C_haracter Coding:"
-msgstr "K_arakterkódolás:"
+msgstr "_Signara kodo:"
 
 #: ../src/selector.c:400
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "A(z) '%s' már létezik. Felülírja?"
+msgstr "Dosiero '%s' jam ekzistas. Ĉu anstataŭigi?"
 
 #: ../src/file.c:55
 msgid "Untitled"
-msgstr "Névtelen"
+msgstr "Sentitola"
 
 #: ../src/file.c:212
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "A kódtáblát nem lehet erre konvertálni: '%s'"
+msgstr "Ne eblas konverti signaron al '%s'"
 
 #: ../src/file.c:225
 msgid "Can't open file to write"
-msgstr "Nem lehet a fájlt írásra megnyitni"
+msgstr "Ne eblas malfermi dosieron por skribi"
 
 #: ../src/file.c:230
 msgid "Can't write file"
-msgstr "Nem lehet a fájlt írni"
+msgstr "Ne eblas skribi dosieron"
 
 #: ../src/search.c:140
 msgid "Search string not found"
-msgstr "A keresett szöveg nem található"
+msgstr "Serĉata ĉeno ne trovitas"
 
 #: ../src/search.c:193
 msgid "Replace?"
-msgstr "Kicseréli?"
+msgstr "Ĉu anstataŭigi?"
 
 #: ../src/search.c:260
 #, c-format
 msgid "%d strings replaced"
-msgstr "A(z) %d szövegrészlet kicserélve"
+msgstr "%d ĉenoj anstataŭigitaj"
 
 #: ../src/search.c:306
 msgid "Replace"
-msgstr "Csere"
+msgstr "Anstataŭigi"
 
 #: ../src/search.c:313
 msgid "Find"
-msgstr "Keresés"
+msgstr "Serĉi"
 
 #: ../src/search.c:326
 msgid "Fi_nd what:"
-msgstr "_Keresett szöveg:"
+msgstr "_Serĉi kion:"
 
 #: ../src/search.c:342
 msgid "Re_place with:"
-msgstr "_Csere erre:"
+msgstr "_Anstataŭigi per:"
 
 #: ../src/search.c:356
 msgid "_Match case"
-msgstr "_Kis- és nagybetű különbözik"
+msgstr "_Usklece"
 
 #: ../src/search.c:361
 msgid "Replace _all at once"
-msgstr "Mind_et egyszerre cseréli"
+msgstr "Anstataŭigi ĉiuj_n sen demandi"
 
 #: ../src/search.c:412
 msgid "Jump To"
-msgstr "Ugrás Ide"
+msgstr "Salti al"
 
 #: ../src/search.c:418
 msgid "_Jump"
-msgstr "_Ugrás"
+msgstr "_Salti"
 
 #: ../src/search.c:425
 msgid "_Line number:"
-msgstr "S_orszám:"
+msgstr "Lini_numero:"
 
 #: ../src/about.c:102
 msgid "Credits"
-msgstr "Köszönet"
+msgstr "Agnoskoj"
 
 #: ../src/about.c:137
 msgid "Written by"
-msgstr "Írta: "
+msgstr "Verkita de"
 
 #: ../src/about.c:140
 msgid "Documented by"
-msgstr "Dokumentáció: "
+msgstr "Dokumentita de"
 
 #: ../src/about.c:146
 msgid "Translated by"
-msgstr "Fordította: "
+msgstr "Tradukita de"
 
 #: ../src/about.c:197
 msgid "C_redits"
-msgstr "Köszöne_t"
+msgstr "_Agnoskoj"
 
 #: ../src/about.c:199
 msgid "_Credits"
-msgstr "_Köszönet"
+msgstr "_Agnoskoj"
 
 #: ../src/about.c:209
 #, c-format
 msgid "About %s"
-msgstr "%s névjegye"
+msgstr "Pri %s"
 
 #: ../src/gnomeprint.c:261
 msgid "Print"
-msgstr "Nyomtatás"
+msgstr "Presi"
 
 #: ../src/gnomeprint.c:291
 msgid "Print Preview"
-msgstr "Nyomtatási kép"
+msgstr "Pres-antaŭvido"
 
 #: ../data/leafpad.desktop.in.h:1
 msgid "Simple text editor"
-msgstr "Egyszerű szöveg szerkesztő"
+msgstr "Simpla tekstredaktilo"

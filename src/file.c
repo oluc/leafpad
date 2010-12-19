@@ -84,17 +84,14 @@ gchar *parse_file_uri(gchar *uri)
 	gchar *filename;
 //	gchar **strs;
 	
-	if (strstr(uri, ":")) {
-		if (g_strstr_len(uri, 5, "file:"))
-			filename = g_filename_from_uri(uri, NULL, NULL);
-		else
-			return NULL;  // other URI error
-	} else
+	if (g_strstr_len(uri, 5, "file:"))
+		filename = g_filename_from_uri(uri, NULL, NULL);
+	else {
 		if (g_path_is_absolute(uri))
 			filename = g_strdup(uri);
 		else
 			filename = g_build_filename(g_get_current_dir(), uri, NULL);
-	
+	}
 /*	if (strstr(filename, " ")) {
 		strs = g_strsplit(filename, " ", -1);
 		g_free(filename);
@@ -184,7 +181,7 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 {
 	FILE *fp;
 	GtkTextIter start, end;
-	gchar *str;
+	gchar *str, *cstr;
 	gsize rbytes, wbytes;
 	GError *err = NULL;
 	
@@ -204,7 +201,8 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 	
 	if (!fi->charset)
 		fi->charset = g_strdup(get_default_charset());
-	str = g_convert(str, -1, fi->charset, "UTF-8", &rbytes, &wbytes, &err);
+	cstr = g_convert(str, -1, fi->charset, "UTF-8", &rbytes, &wbytes, &err);
+	g_free(str);
 	if (err) {
 		switch (err->code) {
 		case G_CONVERT_ERROR_ILLEGAL_SEQUENCE:
@@ -225,7 +223,7 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 			GTK_MESSAGE_ERROR, _("Can't open file to write"));
 		return -1;
 	}
-	if (fputs(str, fp) == EOF) {
+	if (fwrite(str, 1, wbytes, fp) != wbytes) {
 		run_dialog_message(gtk_widget_get_toplevel(view),
 			GTK_MESSAGE_ERROR, _("Can't write file"));
 		return -1;
@@ -233,7 +231,7 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 	
 	gtk_text_buffer_set_modified(buffer, FALSE);
 	fclose(fp);
-	g_free(str);
+	g_free(cstr);
 	
 	return 0;
 }

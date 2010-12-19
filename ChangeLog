@@ -1,3 +1,15 @@
+2010-12-18
+
+  version 0.8.18:
+	* Fixed action when file name contains colon
+	  (John Lindgren, Mikko Viinamaki).
+	* Fixed memory leak on saving file (Dmitry Artamonow).
+	* Fixed caseless search bug (Dmitry Artamonow).
+	* Fixed memory leak on line numbering (Hongwei Xi).
+	* Fixed truncation on saving file (Alex, brian m. carlson).
+	* Added translations: eo, gl.
+	* Updated translations: fi, hu.
+
 2009-10-27
 
   version 0.8.17:
