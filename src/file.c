@@ -223,7 +223,7 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 			GTK_MESSAGE_ERROR, _("Can't open file to write"));
 		return -1;
 	}
-	if (fwrite(str, 1, wbytes, fp) != wbytes) {
+	if (fwrite(cstr, 1, wbytes, fp) != wbytes) {
 		run_dialog_message(gtk_widget_get_toplevel(view),
 			GTK_MESSAGE_ERROR, _("Can't write file"));
 		return -1;
