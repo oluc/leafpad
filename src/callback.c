@@ -313,7 +313,8 @@ void on_option_auto_indent(void)
 void on_help_about(void)
 {
 	const gchar *copyright = "Copyright \xc2\xa9 2004-2010 Tarot Osuji";
-	const gchar *comments = _("GTK+ based simple text editor");
+	const gchar *comments = _("GTK+ based simple text editor"
+							  "\nmodified by oluc");
 	const gchar *authors[] = {
 		"Tarot Osuji <tarot@sdf.lonestar.org>",
 		NULL
