@@ -24,6 +24,10 @@ void on_file_new(void);
 void on_file_open(void);
 gint on_file_save(void);
 gint on_file_save_as(void);
+
+void on_file_reopen(void);
+void on_file_reload(void);
+
 void on_file_print_preview(void);
 void on_file_print(void);
 void on_file_close(void);

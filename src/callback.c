@@ -125,6 +125,39 @@ gint on_file_save_as(void)
 //	undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 	return 0;
 }
+
+
+void on_file_reopen (void) //reopen the current file with a more advanced editor
+{
+	gchar *command = NULL;
+	gchar *advanced_editor = "emacs"; //TODO: hardcoded --> set a preference
+	GError *error = NULL;
+
+	if (pub->fi->filename == NULL)
+		return;
+
+	command = g_strdup_printf ("%s %s", advanced_editor, pub->fi->filename);
+
+	if (!g_spawn_command_line_async (command, &error))
+	{
+		g_printerr ("leafpad> ERROR *** Could not launch advanced editor\n");
+		//TODO: deal with the error
+		g_clear_error (&error);
+		g_free (command);
+		return;
+	}
+	g_free (command);
+}
+
+void on_file_reload(void)
+{
+	if (pub->fi->filename == NULL)
+		return;
+
+	file_open_real(pub->mw->view, pub->fi);
+}
+
+
 #ifdef ENABLE_PRINT
 #	if GTK_CHECK_VERSION(2, 10, 0)
 void on_file_print_preview(void)

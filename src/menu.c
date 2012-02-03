@@ -40,6 +40,14 @@ static GtkItemFactoryEntry menu_items[] =
 		G_CALLBACK(on_file_save_as), 0, "<StockItem>", GTK_STOCK_SAVE_AS },
 	{ "/File/---", NULL,
 		NULL, 0, "<Separator>" },
+
+	{ N_("/File/_Re-open with..."), "<control>R",
+		G_CALLBACK(on_file_reopen), 0, "<StockItem>", GTK_STOCK_EXECUTE },
+	{ N_("/File/Re_load"), "<control>L",
+		G_CALLBACK(on_file_reload), 0, "<StockItem>", GTK_STOCK_REFRESH },
+	{ "/File/---", NULL,
+		NULL, 0, "<Separator>" },
+
 #ifdef ENABLE_PRINT
 #	if GTK_CHECK_VERSION(2, 10, 0)
 	{ N_("/File/Print Pre_view"), "<shift><control>P",
